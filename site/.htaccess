@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^betinhos\.com\.br$ [NC]
+RewriteRule ^ https://betinhos.com.br%{REQUEST_URI} [R=301,L]
