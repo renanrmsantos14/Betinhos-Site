@@ -55,17 +55,11 @@
       }
 
       .brand-mark {
-        align-items: center;
-        border: 1px solid var(--gold);
+        border: 0;
         border-radius: 50%;
-        color: var(--gold);
-        display: inline-flex;
-        font-family: Georgia, serif;
-        font-size: 19px;
-        font-weight: 700;
+        display: block;
         height: 42px;
-        justify-content: center;
-        letter-spacing: -.08em;
+        object-fit: contain;
         width: 42px;
       }
 
@@ -88,16 +82,21 @@
       }
 
       .language button {
+        align-items: center;
         background: transparent;
         border: 0;
         border-radius: 999px;
         cursor: pointer;
-        font-size: 19px;
+        display: inline-flex;
+        height: 34px;
+        justify-content: center;
         line-height: 1;
-        padding: 7px 9px;
+        padding: 5px 8px;
         transition: background 160ms ease, transform 160ms ease;
+        width: 38px;
       }
 
+      .language img { border-radius: 2px; display: block; height: 16px; object-fit: cover; width: 24px; }
       .language button:hover { background: #f0ece4; }
       .language button:active { transform: scale(.96); }
       .language button[aria-pressed="true"] { background: var(--ink); }
@@ -227,13 +226,13 @@
     <div class="page">
       <header>
         <a class="brand" href="/" aria-label="Betinhos Executive Service">
-          <span class="brand-mark" aria-hidden="true">B</span>
+          <img class="brand-mark" src="assets/logo-betinhos-b.png" alt="">
           <span class="brand-name">Betinhos<br>Executive Service</span>
         </a>
         <nav class="language" aria-label="Sele&ccedil;&atilde;o de idioma">
-          <button type="button" data-lang="pt" aria-label="Portugu&ecirc;s" aria-pressed="true">🇧🇷</button>
-          <button type="button" data-lang="en" aria-label="English" aria-pressed="false">🇺🇸</button>
-          <button type="button" data-lang="es" aria-label="Espa&ntilde;ol" aria-pressed="false">🇪🇸</button>
+          <button type="button" data-lang="pt" aria-label="Portugu&ecirc;s" aria-pressed="true"><img src="https://flagcdn.io/flags/4x3/br.svg" alt=""></button>
+          <button type="button" data-lang="en" aria-label="English" aria-pressed="false"><img src="https://flagcdn.io/flags/4x3/us.svg" alt=""></button>
+          <button type="button" data-lang="es" aria-label="Espa&ntilde;ol" aria-pressed="false"><img src="https://flagcdn.io/flags/4x3/es.svg" alt=""></button>
         </nav>
       </header>
 
