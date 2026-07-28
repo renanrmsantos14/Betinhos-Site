@@ -289,41 +289,73 @@
             operação.
           </p>
         </div>
-        <div class="fleet-showcase">
-          <article class="fleet-feature">
+        <div class="fleet-showcase" aria-label="Categorias da frota">
+          <button
+            class="fleet-option fleet-feature is-active"
+            type="button"
+            data-fleet="executivo"
+            aria-pressed="true"
+          >
             <img
               loading="lazy"
               decoding="async"
               fetchpriority="low"
               src="/fleet/executive.png"
-              alt="Executive sedan"
+              alt="Sedan executivo Betinhos"
             />
             <div>
-              <span>EXECUTIVE CLASS</span><strong>Carros executivos</strong>
+              <span>EXECUTIVO</span><strong>Carros executivos</strong>
             </div>
-          </article>
-          <article>
+          </button>
+          <button
+            class="fleet-option"
+            type="button"
+            data-fleet="blindado"
+            aria-pressed="false"
+          >
             <img
               loading="lazy"
               decoding="async"
               fetchpriority="low"
               src="/fleet/armored.png"
-              alt="Armored executive SUV"
+              alt="SUV executivo blindado Betinhos"
             />
-            <div><span>ARMORED</span><strong>Carros blindados</strong></div>
-          </article>
-          <article>
+            <div><span>BLINDADO</span><strong>Carros blindados</strong></div>
+          </button>
+          <button
+            class="fleet-option"
+            type="button"
+            data-fleet="grupos"
+            aria-pressed="false"
+          >
             <img
               loading="lazy"
               decoding="async"
               fetchpriority="low"
               src="/fleet/van-executive.png"
-              alt="Executive van"
+              alt="Van executiva Betinhos"
             />
             <div>
-              <span>GROUP MOBILITY</span><strong>Vans executivas</strong>
+              <span>GRUPOS</span><strong>Vans executivas</strong>
             </div>
-          </article>
+          </button>
+        </div>
+        <div class="fleet-detail" aria-live="polite">
+          <div>
+            <span id="fleet-detail-tag">EXECUTIVO</span>
+            <h3 id="fleet-detail-title">Mobilidade para agendas corporativas.</h3>
+            <p id="fleet-detail-text">
+              Sedans e SUVs de alto padrão para aeroportos, reuniões, roadshows
+              e compromissos que exigem pontualidade e discrição.
+            </p>
+          </div>
+          <a
+            id="fleet-detail-cta"
+            href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20um%20ve%C3%ADculo%20executivo."
+            target="_blank"
+            rel="noreferrer"
+            >Consultar disponibilidade <span>↗</span></a
+          >
         </div>
         <div class="service-list">
           <article>
@@ -333,6 +365,12 @@
               Sedans e SUVs de alto padrão para aeroportos, reuniões, roadshows
               e agendas corporativas.
             </p>
+            <a
+              href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Quero%20planejar%20um%20transporte%20com%20carro%20executivo."
+              target="_blank"
+              rel="noreferrer"
+              >Planejar operação <span>↗</span></a
+            >
           </article>
           <article>
             <span>02</span>
@@ -341,6 +379,12 @@
               Mobilidade discreta com veículos blindados para executivos,
               autoridades e operações sensíveis.
             </p>
+            <a
+              href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Quero%20planejar%20um%20transporte%20com%20carro%20blindado."
+              target="_blank"
+              rel="noreferrer"
+              >Planejar operação <span>↗</span></a
+            >
           </article>
           <article>
             <span>03</span>
@@ -349,6 +393,12 @@
               Conforto e coordenação para grupos, delegações, eventos e equipes
               corporativas.
             </p>
+            <a
+              href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Quero%20planejar%20um%20transporte%20com%20van%20executiva."
+              target="_blank"
+              rel="noreferrer"
+              >Planejar operação <span>↗</span></a
+            >
           </article>
           <article>
             <span>04</span>
@@ -357,6 +407,12 @@
               Capacidade ampliada com proteção para deslocamentos que exigem
               planejamento e segurança adicionais.
             </p>
+            <a
+              href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Quero%20planejar%20um%20transporte%20com%20van%20blindada."
+              target="_blank"
+              rel="noreferrer"
+              >Planejar operação <span>↗</span></a
+            >
           </article>
           <article>
             <span>05</span>
@@ -365,6 +421,12 @@
               Atendimento profissional em português, inglês e espanhol, do
               receptivo à agenda completa.
             </p>
+            <a
+              href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Preciso%20de%20um%20motorista%20bil%C3%ADngue."
+              target="_blank"
+              rel="noreferrer"
+              >Planejar operação <span>↗</span></a
+            >
           </article>
           <article>
             <span>06</span>
@@ -373,6 +435,12 @@
               Transporte seguro integrado a planejamento de rotas, contingência
               e coordenação com equipes de proteção.
             </p>
+            <a
+              href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Quero%20conversar%20sobre%20prote%C3%A7%C3%A3o%20executiva."
+              target="_blank"
+              rel="noreferrer"
+              >Planejar operação <span>↗</span></a
+            >
           </article>
         </div>
       </section>
@@ -616,6 +684,11 @@
             alt="Tenaris"
           />
         </div>
+        <div class="trust-facts" aria-label="Indicadores da operação">
+          <div><strong>40</strong><span>anos de história</span></div>
+          <div><strong>24/7</strong><span>operação monitorada</span></div>
+          <div><strong>3</strong><span>idiomas de atendimento</span></div>
+        </div>
       </section>
       <section class="contact section" id="contato">
         <img src="/logo-betinhos.png" alt="" />
@@ -623,9 +696,53 @@
         <h2>
           Quando sua presença é essencial, a nossa operação já está pronta.
         </h2>
-        <a href="https://wa.me/5512997236961" target="_blank" rel="noreferrer"
-          >Falar com a Betinhos<span>↗</span></a
-        >
+        <form class="request-form" id="request-form">
+          <label>
+            Serviço
+            <select name="servico" required>
+              <option value="">Selecione</option>
+              <option>Carro executivo</option>
+              <option>Carro blindado</option>
+              <option>Van executiva</option>
+              <option>Van blindada</option>
+              <option>Motorista bilíngue</option>
+              <option>Proteção executiva</option>
+            </select>
+          </label>
+          <label>
+            Data
+            <input name="data" type="date" required />
+          </label>
+          <label>
+            Origem
+            <input
+              name="origem"
+              type="text"
+              autocomplete="street-address"
+              placeholder="Cidade ou local"
+              required
+            />
+          </label>
+          <label>
+            Destino
+            <input
+              name="destino"
+              type="text"
+              placeholder="Cidade ou local"
+              required
+            />
+          </label>
+          <label>
+            Passageiros
+            <input name="passageiros" type="number" min="1" max="99" value="1" required />
+          </label>
+          <button type="submit">
+            Enviar briefing pelo WhatsApp <span>↗</span>
+          </button>
+        </form>
+        <p class="request-note">
+          Sua solicitação será aberta no WhatsApp para você revisar antes do envio.
+        </p>
       </section>
       <footer>
         <img src="/logo-betinhos.png" alt="Betinhos Executive Service" />
@@ -638,5 +755,70 @@
       </footer>
     </main>
     <script src="/performance.js" defer></script>
+    <script>
+      const fleetContent = {
+        executivo: {
+          tag: "EXECUTIVO",
+          title: "Mobilidade para agendas corporativas.",
+          text: "Sedans e SUVs de alto padrão para aeroportos, reuniões, roadshows e compromissos que exigem pontualidade e discrição.",
+          message: "Olá, Betinhos. Gostaria de consultar a disponibilidade de um veículo executivo.",
+        },
+        blindado: {
+          tag: "BLINDADO",
+          title: "Proteção integrada ao deslocamento.",
+          text: "Veículos blindados para executivos, autoridades e operações sensíveis, combinados ao protocolo adequado para cada agenda.",
+          message: "Olá, Betinhos. Gostaria de consultar a disponibilidade de um veículo blindado.",
+        },
+        grupos: {
+          tag: "GRUPOS",
+          title: "Coordenação para equipes e delegações.",
+          text: "Vans executivas para grupos, eventos e operações corporativas com planejamento de horários, pontos de encontro e bagagens.",
+          message: "Olá, Betinhos. Gostaria de consultar a disponibilidade de uma van executiva.",
+        },
+      };
+
+      const fleetOptions = document.querySelectorAll(".fleet-option");
+      const fleetTag = document.querySelector("#fleet-detail-tag");
+      const fleetTitle = document.querySelector("#fleet-detail-title");
+      const fleetText = document.querySelector("#fleet-detail-text");
+      const fleetCta = document.querySelector("#fleet-detail-cta");
+
+      fleetOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          const content = fleetContent[option.dataset.fleet];
+          fleetOptions.forEach((item) => {
+            const active = item === option;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+          });
+          fleetTag.textContent = content.tag;
+          fleetTitle.textContent = content.title;
+          fleetText.textContent = content.text;
+          fleetCta.href = `https://wa.me/5512997236961?text=${encodeURIComponent(content.message)}`;
+        });
+      });
+
+      const requestForm = document.querySelector("#request-form");
+      requestForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(requestForm);
+        const date = new Date(`${data.get("data")}T12:00:00`);
+        const formattedDate = new Intl.DateTimeFormat("pt-BR").format(date);
+        const message = [
+          "Olá, Betinhos. Gostaria de planejar uma operação.",
+          "",
+          `Serviço: ${data.get("servico")}`,
+          `Data: ${formattedDate}`,
+          `Origem: ${data.get("origem")}`,
+          `Destino: ${data.get("destino")}`,
+          `Passageiros: ${data.get("passageiros")}`,
+        ].join("\n");
+        window.open(
+          `https://wa.me/5512997236961?text=${encodeURIComponent(message)}`,
+          "_blank",
+          "noopener,noreferrer",
+        );
+      });
+    </script>
   </body>
 </html>
