@@ -2704,12 +2704,8 @@ button:focus-visible {
   padding: 18px;
 }
 .whatsapp-brand-mark {
-  background: #fff;
-  border: 1px solid #ffffff26;
-  border-radius: 12px;
   height: 42px;
   object-fit: contain;
-  padding: 7px;
   width: 42px;
 }
 .whatsapp-panel .whatsapp-brand-copy {
