@@ -3,11 +3,26 @@
   const desktopVideo = matchMedia('(min-width: 900px)');
   const connection = navigator.connection;
   const video = document.querySelector('.hero-video');
-  const source = video?.querySelector('source[data-src]');
+  const loader = document.querySelector('.site-loader');
+  const loadingStartedAt = performance.now();
+  let loaderHidden = false;
+
+  const hideLoader = () => {
+    if (loaderHidden) return;
+    loaderHidden = true;
+    const remainingDelay = Math.max(0, 520 - (performance.now() - loadingStartedAt));
+    setTimeout(() => {
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-ready');
+      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+    }, remainingDelay);
+  };
+
+  addEventListener('load', hideLoader, { once: true });
+  setTimeout(hideLoader, 2400);
 
   const canLoadVideo = () => (
     video &&
-    source &&
     desktopVideo.matches &&
     !reducedMotion.matches &&
     !connection?.saveData &&
@@ -16,21 +31,27 @@
 
   const startVideo = () => {
     if (!canLoadVideo()) return;
-    if (!source.src) {
-      source.src = source.dataset.src;
-      video.load();
-    }
     video.play().catch(() => {});
   };
 
   if (video) {
+    if (!canLoadVideo()) {
+      video.removeAttribute('preload');
+      video.querySelector('source')?.removeAttribute('src');
+      video.load();
+    }
+
     const heroObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) startVideo();
       else video.pause();
     }, { threshold: 0.12 });
 
     heroObserver.observe(video);
-    video.addEventListener('playing', () => video.classList.add('is-playing'), { once: true });
+    video.addEventListener('canplay', hideLoader, { once: true });
+    video.addEventListener('playing', () => {
+      video.classList.add('is-playing');
+      hideLoader();
+    }, { once: true });
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) video.pause();
       else if (video.getBoundingClientRect().bottom > 0) startVideo();

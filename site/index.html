@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#021426" />
     <link rel="preload" as="image" href="/logo-betinhos.png" />
+    <link rel="preload" as="image" href="/hero-source.jpeg" fetchpriority="high" />
     <link
       rel="stylesheet"
       href="/assets/index-D7fnJsCl.css"
@@ -179,8 +180,13 @@
     </style>
   </head>
   <body
-    class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"
+    class="is-loading __variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"
   >
+    <div class="site-loader" role="status" aria-label="Carregando site">
+      <img src="/logo-betinhos.png" alt="" width="142" height="68" />
+      <span class="site-loader-line" aria-hidden="true"><i></i></span>
+      <small>EXECUTIVE SERVICE</small>
+    </div>
     <main>
       <section class="hero" id="inicio">
         <video
@@ -188,11 +194,11 @@
           muted=""
           loop=""
           playsinline=""
-          preload="none"
+          preload="metadata"
           poster="/hero-source.jpeg"
           aria-hidden="true"
         >
-          <source data-src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         <header class="site-header">
           <a href="#inicio" class="logo"
