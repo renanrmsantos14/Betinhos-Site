@@ -820,19 +820,30 @@
     <aside class="whatsapp-widget" aria-label="Atendimento pelo WhatsApp">
       <section class="whatsapp-panel" id="whatsapp-panel" hidden>
         <header>
-          <div>
-            <strong>Atendimento Betinhos</strong>
-            <span><i aria-hidden="true"></i> Operação 24/7</span>
+          <img src="/logo-betinhos.png" alt="" class="whatsapp-brand-mark" />
+          <div class="whatsapp-brand-copy">
+            <span class="whatsapp-eyebrow">Concierge executivo</span>
+            <strong>Betinhos</strong>
+            <span class="whatsapp-status"><i aria-hidden="true"></i> Atendimento 24 horas</span>
           </div>
-          <button type="button" class="whatsapp-close" aria-label="Fechar atendimento">×</button>
+          <button type="button" class="whatsapp-close" aria-label="Fechar atendimento">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="m5 5 10 10M15 5 5 15" />
+            </svg>
+          </button>
         </header>
         <div class="whatsapp-message">
-          Olá! Como podemos ajudar com seu transporte executivo?
+          <strong>Como podemos ajudar?</strong>
+          <span>Conte o que precisa. Nossa equipe orienta sua operação.</span>
         </div>
         <form id="whatsapp-widget-form">
-          <label for="whatsapp-widget-message">Sua mensagem</label>
+          <label for="whatsapp-widget-message">Mensagem</label>
           <textarea id="whatsapp-widget-message" rows="3">Olá, Betinhos. Gostaria de informações sobre transporte executivo.</textarea>
-          <button type="submit">Iniciar conversa <span aria-hidden="true">↗</span></button>
+          <button type="submit">
+            Enviar pelo WhatsApp
+            <span aria-hidden="true">↗</span>
+          </button>
+          <small>Você revisa a mensagem antes de enviar.</small>
         </form>
       </section>
       <button
@@ -840,6 +851,7 @@
         class="whatsapp-trigger"
         aria-controls="whatsapp-panel"
         aria-expanded="false"
+        aria-label="Falar no WhatsApp"
       >
         <svg viewBox="0 0 32 32" aria-hidden="true">
           <path d="M16 3a13 13 0 0 0-11 20l-2 6 6-2A13 13 0 1 0 16 3Zm0 23a10 10 0 0 1-5-1.4l-.7-.4-3.5 1.1 1.1-3.4-.4-.7A10 10 0 1 1 16 26Zm5.6-7.5c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.3 8.3 0 0 1-2.5-1.6 9.2 9.2 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.3-.6c.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4a3.7 3.7 0 0 0-1.1 2.7c0 1.6 1.1 3.1 1.3 3.3s2.3 3.6 5.7 5c.8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
