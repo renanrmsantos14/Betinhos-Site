@@ -96,7 +96,7 @@
 
 .service-car {
   position: absolute;
-  top: 50%;
+  top: 54%;
   right: -10px;
   width: min(31vw, 430px);
   aspect-ratio: 1672 / 941;
@@ -124,6 +124,21 @@
     transparent 76%
   );
   filter: blur(4px);
+}
+
+.service-car::after {
+  position: absolute;
+  top: var(--wheel-top, 54.1%);
+  left: var(--wheel-front-left, 15.6%);
+  z-index: 1;
+  width: var(--wheel-size, 13.4%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  content: "";
+  background: rgba(0, 5, 9, 0.48);
+  box-shadow:
+    calc(var(--wheel-rear-left, 70.85%) - var(--wheel-front-left, 15.6%))
+    0 0 rgba(0, 5, 9, 0.48);
 }
 
 .service-car-body {
@@ -341,7 +356,7 @@
   }
 
   .service-car {
-    top: 52%;
+    top: 56%;
     right: 50%;
     width: min(104vw, 430px);
     transform: translate3d(115vw, -50%, 0);
