@@ -70,12 +70,28 @@
     article.querySelectorAll(".service-car-wheel").forEach((wheel) => {
       wheel.src = vehicle.wheel;
     });
-
-    article.addEventListener("click", () => {
-      if (!coarsePointer.matches) return;
-      const willActivate = !article.classList.contains("is-active");
-      articles.forEach((item) => item.classList.remove("is-active"));
-      article.classList.toggle("is-active", willActivate);
-    });
   });
+
+  if (!coarsePointer.matches) return;
+
+  if (!("IntersectionObserver" in window)) {
+    articles.forEach((article) => article.classList.add("is-active"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-active");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      rootMargin: "0px 0px -4%",
+      threshold: 0.08,
+    },
+  );
+
+  articles.forEach((article) => observer.observe(article));
 })();
