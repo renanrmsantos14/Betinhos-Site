@@ -1,0 +1,360 @@
+.fleet-stage {
+  --fleet-ivory: #f4f1e9;
+  --fleet-muted: rgba(244, 241, 233, 0.72);
+  position: relative;
+  isolation: isolate;
+  width: 100vw;
+  min-height: clamp(820px, 86vw, 940px);
+  margin: 72px 0 80px calc(50% - 50vw);
+  overflow: hidden;
+  color: var(--fleet-ivory);
+  background:
+    radial-gradient(circle at 50% 48%, rgba(24, 61, 91, 0.44), transparent 42%),
+    linear-gradient(180deg, #03192d 0%, #021426 68%, #03182a 100%);
+}
+
+.fleet-stage::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: linear-gradient(to bottom, transparent 2%, #000 36%, transparent 82%);
+}
+
+.fleet-stage-word {
+  position: absolute;
+  top: clamp(24px, 2.5vw, 42px);
+  left: 50%;
+  z-index: 0;
+  width: 100%;
+  color: rgba(244, 241, 233, 0.115);
+  font-size: clamp(170px, 22vw, 350px);
+  font-weight: 650;
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateX(-51%);
+  user-select: none;
+}
+
+.fleet-vehicle-layers {
+  position: absolute;
+  top: clamp(8px, 1.2vw, 22px);
+  left: 50%;
+  z-index: 2;
+  width: min(100vw, 1500px);
+  aspect-ratio: 1672 / 941;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.fleet-vehicle-art {
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  transform: translate3d(34vw, 0, 0);
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease-out;
+  will-change: transform;
+}
+
+.fleet-stage.is-visible .fleet-vehicle-art {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.fleet-vehicle-shadow,
+.fleet-vehicle-body {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fleet-vehicle-shadow {
+  z-index: 0;
+  opacity: 0.96;
+}
+
+.fleet-vehicle-body {
+  z-index: 2;
+}
+
+.fleet-wheel {
+  position: absolute;
+  z-index: 3;
+  top: 52.18%;
+  display: block;
+  width: 13.4%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.fleet-wheel-front {
+  left: 15.07%;
+}
+
+.fleet-wheel-rear {
+  left: 70.81%;
+}
+
+.fleet-stage.is-visible .fleet-wheel {
+  transform: rotate(-1080deg);
+}
+
+.fleet-stage-copy {
+  position: absolute;
+  right: 24px;
+  bottom: clamp(48px, 4.5vw, 68px);
+  left: 24px;
+  z-index: 4;
+  display: grid;
+  justify-items: center;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 0.62s ease-out 0.64s,
+    transform 0.76s cubic-bezier(0.22, 1, 0.36, 1) 0.64s;
+}
+
+.fleet-stage.is-visible .fleet-stage-copy {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.fleet-stage-kicker {
+  margin: 0 0 13px;
+  color: rgba(244, 241, 233, 0.62);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+
+.fleet-stage-title {
+  max-width: 710px;
+  margin: 0;
+  color: var(--fleet-ivory);
+  font-size: clamp(28px, 2.8vw, 40px);
+  font-weight: 540;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.fleet-stage-description {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--fleet-muted);
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.48;
+  text-wrap: balance;
+}
+
+.fleet-stage-specs {
+  margin: 13px 0 0;
+  color: rgba(244, 241, 233, 0.54);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.025em;
+}
+
+.fleet-stage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.fleet-stage-actions a {
+  display: inline-flex;
+  min-width: 184px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid rgba(244, 241, 233, 0.34);
+  border-radius: 999px;
+  color: var(--fleet-ivory);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.fleet-stage-actions .fleet-stage-primary {
+  border-color: var(--fleet-ivory);
+  color: #021426;
+  background: var(--fleet-ivory);
+}
+
+.fleet-stage-progress {
+  position: absolute;
+  right: 4vw;
+  bottom: 24px;
+  left: 4vw;
+  z-index: 4;
+  height: 1px;
+  overflow: hidden;
+  background: rgba(244, 241, 233, 0.18);
+}
+
+.fleet-stage-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--fleet-ivory);
+  transition: width 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+
+.fleet-stage.is-visible .fleet-stage-progress span {
+  width: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fleet-stage-actions a:hover {
+    border-color: var(--fleet-ivory);
+    color: #021426;
+    background: var(--fleet-ivory);
+    transform: translateY(-2px);
+  }
+
+  .fleet-stage-actions .fleet-stage-primary:hover {
+    color: var(--fleet-ivory);
+    background: transparent;
+  }
+}
+
+@media (max-width: 800px) {
+  .fleet-stage {
+    min-height: 740px;
+    margin-block: 54px 64px;
+  }
+
+  .fleet-stage-word {
+    top: 58px;
+    font-size: clamp(100px, 30vw, 170px);
+  }
+
+  .fleet-vehicle-layers {
+    top: 76px;
+    width: 116vw;
+  }
+
+  .fleet-vehicle-art {
+    transform: translate3d(48vw, 0, 0);
+  }
+
+  .fleet-stage-copy {
+    right: 20px;
+    bottom: 50px;
+    left: 20px;
+  }
+
+  .fleet-stage-title {
+    max-width: 520px;
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.02;
+  }
+
+  .fleet-stage-description {
+    max-width: 480px;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  .fleet-stage-specs {
+    max-width: 360px;
+    margin-top: 11px;
+  }
+
+  .fleet-stage-actions {
+    width: min(100%, 440px);
+    margin-top: 20px;
+  }
+
+  .fleet-stage-actions a {
+    flex: 1 1 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fleet-stage {
+    min-height: 700px;
+  }
+
+  .fleet-stage-word {
+    top: 68px;
+  }
+
+  .fleet-vehicle-layers {
+    top: 94px;
+    width: 104vw;
+  }
+
+  .fleet-stage-copy {
+    bottom: 42px;
+  }
+
+  .fleet-stage-title {
+    font-size: 29px;
+  }
+
+  .fleet-stage-actions {
+    gap: 8px;
+  }
+
+  .fleet-stage-actions a {
+    min-height: 44px;
+    padding-inline: 18px;
+  }
+
+  .fleet-stage-progress {
+    bottom: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fleet-vehicle-art,
+  .fleet-stage-copy,
+  .fleet-wheel,
+  .fleet-stage-progress span {
+    transition: none;
+  }
+
+  .fleet-vehicle-art,
+  .fleet-stage-copy {
+    opacity: 1;
+    transform: none;
+  }
+
+  .fleet-stage.is-visible .fleet-wheel {
+    transform: none;
+  }
+
+  .fleet-stage-progress span {
+    width: 100%;
+  }
+}
