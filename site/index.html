@@ -17,8 +17,8 @@
       name="description"
       content="Transporte executivo, veículos blindados e proteção para operações corporativas em São Paulo, Vale do Paraíba e Rio de Janeiro."
     />
-    <link rel="shortcut icon" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/logo-betinhos-b.png" />
+    <link rel="icon" type="image/png" href="/assets/logo-betinhos-b.png" />
     <meta name="codex-preview" content="development" />
     <script>
       self.__VINEXT_RSC_PARAMS__ = {};
@@ -213,23 +213,24 @@
               fetchpriority="high"
           /></a>
           <nav class="desktop-nav" aria-label="Navegação principal">
-            <a href="#empresa">Empresa</a><a href="#solucoes">Frota e serviços</a
-            ><a href="#seguranca">Segurança</a><a href="#equipe">Equipe</a
-            ><a href="#contato">Contato</a>
+            <a href="#empresa" data-i18n="navCompany">Empresa</a><a href="#solucoes" data-i18n="navServices">Frota e serviços</a
+            ><a href="#seguranca" data-i18n="navSecurity">Segurança</a><a href="#equipe" data-i18n="navTeam">Equipe</a
+            ><a href="#faq">FAQ</a><a href="#contato" data-i18n="navContact">Contato</a>
           </nav>
           <div class="header-actions">
             <a class="client-area-link" href="/area-cliente?lang=pt"
               >Área do cliente<span>↗</span></a
             >
             <div class="lang-switch" aria-label="Selecionar idioma">
-              <button class="active">PT</button><button class="">EN</button
-              ><button class="">ES</button>
+              <button type="button" class="active" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true">🇧🇷</button
+              ><button type="button" data-lang="en" aria-label="English" title="English" aria-pressed="false">🇺🇸</button
+              ><button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false">🇪🇸</button>
             </div>
           </div>
         </header>
         <div class="hero-status"><i></i>Operação monitorada 24/7</div>
         <div class="hero-copy">
-          <p class="eyebrow">Transporte executivo desde 1986</p>
+          <p class="eyebrow">Uma agenda bem cuidada começa antes da partida</p>
           <h1>
             <span>Sua agenda muda.</span><span>Nossa operação</span
             ><span>responde.</span>
@@ -281,7 +282,7 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">FROTA E SERVIÇOS</p>
-            <h2>O recurso certo para cada deslocamento.</h2>
+            <h2>Cada deslocamento pede uma leitura própria.</h2>
           </div>
           <p>
             Da agenda executiva diária a movimentos de maior sensibilidade,
@@ -451,7 +452,7 @@
           </div>
         </div>
         <div class="protection-copy">
-          <p class="eyebrow gold">EXECUTIVE PROTECTION</p>
+          <p class="eyebrow gold">PROTEÇÃO EXECUTIVA</p>
           <h2>Proteção que se integra ao movimento.</h2>
           <p>
             A proteção executiva combina mobilidade de alto padrão com
@@ -690,9 +691,71 @@
           <div><strong>3</strong><span>idiomas de atendimento</span></div>
         </div>
       </section>
+      <section class="google-reviews section" aria-labelledby="google-reviews-title">
+        <div class="google-reviews-copy">
+          <p class="eyebrow gold">AVALIAÇÕES NO GOOGLE</p>
+          <h2 id="google-reviews-title">Experiências compartilhadas por nossos clientes.</h2>
+          <p>
+            Consulte a nota e as avaliações diretamente na ficha oficial da
+            Betinhos. As informações exibidas são atualizadas pelo Google.
+          </p>
+          <a
+            href="https://g.page/r/CQfpe-Ywr1wmEAI/review"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Avaliar a Betinhos no Google <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="google-reviews-widget" aria-label="Avaliações da Betinhos no Google">
+          <script
+            defer
+            async
+            src="https://cdn.trustindex.io/loader.js?09584807771b946d01368ea2d0f"
+          ></script>
+          <noscript>
+            <a href="https://g.page/r/CQfpe-Ywr1wmEAI/review">
+              Ver e publicar avaliações no Google
+            </a>
+          </noscript>
+        </div>
+      </section>
+      <section class="faq section" id="faq" aria-labelledby="faq-title">
+        <div class="faq-intro">
+          <p class="eyebrow gold" data-i18n="faqTag">PERGUNTAS FREQUENTES</p>
+          <h2 id="faq-title" data-i18n="faqTitle">O que você precisa saber antes da partida.</h2>
+          <p data-i18n="faqIntro">Respostas diretas sobre reservas, cobertura e padrão operacional.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary><span data-i18n="faqQ1">Como solicito um transporte executivo?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA1">Envie seu briefing pelo formulário ou WhatsApp. Nossa equipe confirma veículo, motorista, horários e pontos de encontro.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ2">Com quanta antecedência devo reservar?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA2">Recomendamos reservar assim que a agenda estiver definida. Demandas imediatas são atendidas conforme disponibilidade operacional.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ3">O atendimento funciona 24 horas?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA3">Sim. A operação e o concierge funcionam 24 horas por dia, todos os dias.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ4">Vocês atendem aeroportos e outras cidades?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA4">Sim. Atendemos aeroportos, hotéis, empresas e eventos em São Paulo, Vale do Paraíba, Rio de Janeiro e rotas interestaduais.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ5">Há motoristas bilíngues e veículos blindados?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA5">Sim. Disponibilizamos profissionais bilíngues, veículos executivos, vans e opções blindadas conforme cada operação.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ6">Como a segurança da viagem é acompanhada?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA6">Planejamos rotas e contingências, monitoramos a operação em tempo real e mantemos comunicação ativa com as equipes envolvidas.</p>
+          </details>
+        </div>
+      </section>
       <section class="contact section" id="contato">
         <img src="/logo-betinhos.png" alt="" />
-        <p class="eyebrow gold">CONCIERGE 24 HORAS</p>
+        <p class="eyebrow gold">FALE COM A OPERAÇÃO</p>
         <h2>
           Quando sua presença é essencial, a nossa operação já está pronta.
         </h2>
@@ -754,8 +817,96 @@
         <small>© 2026 BETINHOS EXECUTIVE SERVICE</small>
       </footer>
     </main>
+    <aside class="whatsapp-widget" aria-label="Atendimento pelo WhatsApp">
+      <section class="whatsapp-panel" id="whatsapp-panel" hidden>
+        <header>
+          <div>
+            <strong>Atendimento Betinhos</strong>
+            <span><i aria-hidden="true"></i> Operação 24/7</span>
+          </div>
+          <button type="button" class="whatsapp-close" aria-label="Fechar atendimento">×</button>
+        </header>
+        <div class="whatsapp-message">
+          Olá! Como podemos ajudar com seu transporte executivo?
+        </div>
+        <form id="whatsapp-widget-form">
+          <label for="whatsapp-widget-message">Sua mensagem</label>
+          <textarea id="whatsapp-widget-message" rows="3">Olá, Betinhos. Gostaria de informações sobre transporte executivo.</textarea>
+          <button type="submit">Iniciar conversa <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+      <button
+        type="button"
+        class="whatsapp-trigger"
+        aria-controls="whatsapp-panel"
+        aria-expanded="false"
+      >
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3a13 13 0 0 0-11 20l-2 6 6-2A13 13 0 1 0 16 3Zm0 23a10 10 0 0 1-5-1.4l-.7-.4-3.5 1.1 1.1-3.4-.4-.7A10 10 0 1 1 16 26Zm5.6-7.5c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.3 8.3 0 0 1-2.5-1.6 9.2 9.2 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.3-.6c.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4a3.7 3.7 0 0 0-1.1 2.7c0 1.6 1.1 3.1 1.3 3.3s2.3 3.6 5.7 5c.8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
+        </svg>
+        <span>Falar no WhatsApp</span>
+      </button>
+    </aside>
     <script src="/performance.js" defer></script>
     <script>
+      const translations = {
+        pt: {
+          navCompany: "Empresa", navServices: "Frota e serviços", navSecurity: "Segurança", navTeam: "Equipe", navContact: "Contato",
+          faqTag: "PERGUNTAS FREQUENTES", faqTitle: "O que você precisa saber antes da partida.", faqIntro: "Respostas diretas sobre reservas, cobertura e padrão operacional.",
+          faqQ1: "Como solicito um transporte executivo?", faqA1: "Envie seu briefing pelo formulário ou WhatsApp. Nossa equipe confirma veículo, motorista, horários e pontos de encontro.",
+          faqQ2: "Com quanta antecedência devo reservar?", faqA2: "Recomendamos reservar assim que a agenda estiver definida. Demandas imediatas são atendidas conforme disponibilidade operacional.",
+          faqQ3: "O atendimento funciona 24 horas?", faqA3: "Sim. A operação e o concierge funcionam 24 horas por dia, todos os dias.",
+          faqQ4: "Vocês atendem aeroportos e outras cidades?", faqA4: "Sim. Atendemos aeroportos, hotéis, empresas e eventos em São Paulo, Vale do Paraíba, Rio de Janeiro e rotas interestaduais.",
+          faqQ5: "Há motoristas bilíngues e veículos blindados?", faqA5: "Sim. Disponibilizamos profissionais bilíngues, veículos executivos, vans e opções blindadas conforme cada operação.",
+          faqQ6: "Como a segurança da viagem é acompanhada?", faqA6: "Planejamos rotas e contingências, monitoramos a operação em tempo real e mantemos comunicação ativa com as equipes envolvidas."
+        },
+        en: {
+          navCompany: "Company", navServices: "Fleet & services", navSecurity: "Security", navTeam: "Team", navContact: "Contact",
+          faqTag: "FREQUENTLY ASKED QUESTIONS", faqTitle: "What you need to know before departure.", faqIntro: "Clear answers about bookings, coverage and operating standards.",
+          faqQ1: "How do I request executive transportation?", faqA1: "Send your brief through the form or WhatsApp. Our team confirms the vehicle, chauffeur, schedule and meeting points.",
+          faqQ2: "How far in advance should I book?", faqA2: "We recommend booking as soon as your schedule is set. Immediate requests are handled subject to operational availability.",
+          faqQ3: "Is service available 24 hours a day?", faqA3: "Yes. Our operations team and concierge are available 24 hours a day, every day.",
+          faqQ4: "Do you serve airports and other cities?", faqA4: "Yes. We serve airports, hotels, companies and events across São Paulo, Paraíba Valley, Rio de Janeiro and interstate routes.",
+          faqQ5: "Do you offer bilingual chauffeurs and armored vehicles?", faqA5: "Yes. We provide bilingual professionals, executive vehicles, vans and armored options according to each operation.",
+          faqQ6: "How is trip security monitored?", faqA6: "We plan routes and contingencies, monitor the operation in real time and keep active communication with every team involved."
+        },
+        es: {
+          navCompany: "Empresa", navServices: "Flota y servicios", navSecurity: "Seguridad", navTeam: "Equipo", navContact: "Contacto",
+          faqTag: "PREGUNTAS FRECUENTES", faqTitle: "Lo que necesita saber antes de la salida.", faqIntro: "Respuestas directas sobre reservas, cobertura y estándar operativo.",
+          faqQ1: "¿Cómo solicito un transporte ejecutivo?", faqA1: "Envíe su información por el formulario o WhatsApp. Nuestro equipo confirma vehículo, conductor, horarios y puntos de encuentro.",
+          faqQ2: "¿Con cuánta anticipación debo reservar?", faqA2: "Recomendamos reservar cuando la agenda esté definida. Las solicitudes inmediatas se atienden según disponibilidad operativa.",
+          faqQ3: "¿La atención funciona las 24 horas?", faqA3: "Sí. La operación y la conserjería funcionan las 24 horas, todos los días.",
+          faqQ4: "¿Atienden aeropuertos y otras ciudades?", faqA4: "Sí. Atendemos aeropuertos, hoteles, empresas y eventos en São Paulo, Valle de Paraíba, Río de Janeiro y rutas interestatales.",
+          faqQ5: "¿Ofrecen conductores bilingües y vehículos blindados?", faqA5: "Sí. Disponemos de profesionales bilingües, vehículos ejecutivos, vans y opciones blindadas según cada operación.",
+          faqQ6: "¿Cómo se monitorea la seguridad del viaje?", faqA6: "Planificamos rutas y contingencias, monitoreamos la operación en tiempo real y mantenemos comunicación activa con los equipos involucrados."
+        }
+      };
+
+      const languageButtons = document.querySelectorAll(".lang-switch [data-lang]");
+      const applyLanguage = (language) => {
+        const selected = translations[language] ? language : "pt";
+        document.documentElement.lang = selected === "pt" ? "pt-BR" : selected;
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.textContent = translations[selected][element.dataset.i18n];
+        });
+        languageButtons.forEach((button) => {
+          const active = button.dataset.lang === selected;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
+        document.querySelector(".client-area-link").href = `/area-cliente?lang=${selected}`;
+        localStorage.setItem("betinhos-language", selected);
+        const url = new URL(window.location.href);
+        url.searchParams.set("lang", selected);
+        history.replaceState(null, "", url);
+      };
+
+      languageButtons.forEach((button) => {
+        button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+      });
+      const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+      applyLanguage(requestedLanguage || localStorage.getItem("betinhos-language") || "pt");
+
       const fleetContent = {
         executivo: {
           tag: "EXECUTIVO",
@@ -813,6 +964,42 @@
           `Destino: ${data.get("destino")}`,
           `Passageiros: ${data.get("passageiros")}`,
         ].join("\n");
+        window.open(
+          `https://wa.me/5512997236961?text=${encodeURIComponent(message)}`,
+          "_blank",
+          "noopener,noreferrer",
+        );
+      });
+
+      const whatsappTrigger = document.querySelector(".whatsapp-trigger");
+      const whatsappPanel = document.querySelector("#whatsapp-panel");
+      const whatsappClose = document.querySelector(".whatsapp-close");
+      const whatsappForm = document.querySelector("#whatsapp-widget-form");
+      const whatsappMessage = document.querySelector("#whatsapp-widget-message");
+
+      const setWhatsappPanel = (open) => {
+        whatsappPanel.hidden = !open;
+        whatsappTrigger.setAttribute("aria-expanded", String(open));
+        if (open) whatsappMessage.focus();
+      };
+
+      whatsappTrigger.addEventListener("click", () => {
+        setWhatsappPanel(whatsappPanel.hidden);
+      });
+      whatsappClose.addEventListener("click", () => setWhatsappPanel(false));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !whatsappPanel.hidden) {
+          setWhatsappPanel(false);
+          whatsappTrigger.focus();
+        }
+      });
+      whatsappForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const message = whatsappMessage.value.trim();
+        if (!message) {
+          whatsappMessage.focus();
+          return;
+        }
         window.open(
           `https://wa.me/5512997236961?text=${encodeURIComponent(message)}`,
           "_blank",
