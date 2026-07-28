@@ -1,0 +1,291 @@
+.solutions {
+  overflow-x: clip;
+}
+
+.service-list {
+  margin-top: clamp(64px, 8vw, 110px);
+}
+
+.service-list article {
+  position: relative;
+  min-height: 176px;
+  grid-template-columns:
+    60px minmax(190px, 0.55fr) minmax(250px, 1fr) 155px
+    minmax(270px, 380px);
+  overflow: visible;
+  outline: none;
+}
+
+.service-list article > span,
+.service-list article > h3,
+.service-list article > p {
+  position: relative;
+  z-index: 2;
+}
+
+.service-list article:focus-visible {
+  outline: 1px solid rgba(215, 167, 86, 0.72);
+  outline-offset: -1px;
+}
+
+.service-vehicle {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.service-specs {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 16px;
+  align-content: center;
+}
+
+.service-spec {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #d7a756;
+}
+
+.service-spec svg {
+  width: 23px;
+  height: 23px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-spec > span {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.service-spec strong {
+  color: #f4f1e9;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.service-spec small {
+  color: rgba(244, 241, 233, 0.58);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.service-car {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: min(31vw, 430px);
+  aspect-ratio: 1672 / 941;
+  opacity: 0;
+  transform: translate3d(105vw, -50%, 0);
+  transition:
+    transform 280ms cubic-bezier(0.55, 0, 1, 0.45),
+    opacity 180ms linear;
+  will-change: transform, opacity;
+}
+
+.service-car::before {
+  position: absolute;
+  top: var(--shadow-top, 65%);
+  left: 8%;
+  z-index: 0;
+  width: 84%;
+  height: 7%;
+  border-radius: 50%;
+  content: "";
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.3) 48%,
+    transparent 76%
+  );
+  filter: blur(4px);
+}
+
+.service-car-body {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.service-car-glass {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  background:
+    linear-gradient(128deg, transparent 24%, rgba(205, 229, 242, 0.32) 27%, transparent 31%),
+    linear-gradient(122deg, transparent 58%, rgba(173, 211, 232, 0.2) 61%, transparent 65%),
+    linear-gradient(180deg, rgba(94, 139, 165, 0.24), rgba(4, 22, 36, 0.12));
+}
+
+.service-car-glass::after {
+  position: absolute;
+  inset: 7% -30%;
+  content: "";
+  background: linear-gradient(
+    112deg,
+    transparent 32%,
+    rgba(235, 247, 252, 0.34) 34%,
+    transparent 37%
+  );
+  transform: translateX(-22%);
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1) 120ms;
+}
+
+.service-car-glass-front {
+  top: 26.5%;
+  left: 34.8%;
+  width: 20.2%;
+  height: 14.6%;
+  clip-path: polygon(9% 87%, 31% 12%, 100% 7%, 94% 91%);
+}
+
+.service-car-glass-rear {
+  top: 26%;
+  left: 56.4%;
+  width: 21.8%;
+  height: 14.9%;
+  clip-path: polygon(4% 7%, 76% 12%, 100% 89%, 2% 91%);
+}
+
+.service-car-body {
+  z-index: 2;
+}
+
+.service-car-wheel {
+  position: absolute;
+  z-index: 3;
+  top: var(--wheel-top, 52.18%);
+  display: block;
+  width: var(--wheel-size, 13.4%);
+  aspect-ratio: 1;
+  object-fit: contain;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: transform 280ms cubic-bezier(0.55, 0, 1, 0.45);
+  will-change: transform;
+}
+
+.service-car-wheel-front {
+  left: var(--wheel-front-left, 15.07%);
+}
+
+.service-car-wheel-rear {
+  left: var(--wheel-rear-left, 70.81%);
+}
+
+.service-car:not([data-vehicle="corolla"]) .service-car-glass {
+  display: none;
+}
+
+.service-list article:is(:hover, :focus, .is-active) .service-car {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+  transition:
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms linear;
+}
+
+.service-list article:is(:hover, :focus, .is-active) .service-car-wheel {
+  transform: rotate(-900deg);
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-list article:is(:hover, :focus, .is-active) .service-car-glass::after {
+  transform: translateX(38%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-list article:hover {
+    padding-inline: 18px 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .service-list article {
+    grid-template-columns:
+      50px minmax(150px, 0.65fr) minmax(205px, 1fr) 130px
+      minmax(220px, 280px);
+    gap: 16px;
+  }
+
+  .service-car {
+    width: min(34vw, 330px);
+  }
+}
+
+@media (max-width: 760px) {
+  .service-list article {
+    min-height: 286px;
+    grid-template-columns: 36px 1fr;
+    gap: 12px 16px;
+    padding-block: 26px 16px;
+  }
+
+  .service-list article > h3,
+  .service-list article > p {
+    grid-column: 2;
+  }
+
+  .service-specs {
+    display: flex;
+    grid-column: 2;
+    gap: 22px;
+  }
+
+  .service-vehicle {
+    height: 142px;
+    grid-column: 1 / -1;
+  }
+
+  .service-car {
+    top: 52%;
+    right: 50%;
+    width: min(104vw, 430px);
+    transform: translate3d(115vw, -50%, 0);
+  }
+
+  .service-list article:is(:focus, .is-active) .service-car {
+    transform: translate3d(50%, -50%, 0);
+  }
+
+  .service-list article:is(:focus, .is-active) .service-car-wheel {
+    transform: rotate(-900deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-car,
+  .service-car-wheel,
+  .service-car-glass::after {
+    transition-duration: 1ms;
+  }
+
+  .service-list article:is(:hover, :focus, .is-active) .service-car {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  .service-list article:is(:hover, :focus, .is-active) .service-car-wheel {
+    transform: none;
+  }
+
+  @media (max-width: 760px) {
+    .service-list article:is(:focus, .is-active) .service-car {
+      transform: translate3d(50%, -50%, 0);
+    }
+  }
+}

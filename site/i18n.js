@@ -35,16 +35,6 @@
       "solutions.title": "Cada deslocamento pede uma leitura própria.",
       "solutions.text": "Da agenda executiva diária a movimentos de maior sensibilidade, combinamos veículo, profissional e protocolo de acordo com a operação.",
       "fleet.label": "Categorias da frota",
-      "fleet.stage.label": "Sedan executivo em apresentação animada",
-      "fleet.stage.vehicleAria": "Sedan executivo preto da frota Betinhos",
-      "fleet.stage.word": "Sedan",
-      "fleet.stage.kicker": "SEDAN EXECUTIVO",
-      "fleet.stage.title": "Conforto executivo para agendas que não podem esperar.",
-      "fleet.stage.description": "Pontualidade, discrição e cuidado em cada trecho — do aeroporto à agenda completa.",
-      "fleet.stage.specs": "Motorista profissional · Atendimento 24/7 · Operação monitorada",
-      "fleet.stage.primary": "Consultar disponibilidade",
-      "fleet.stage.secondary": "Conhecer serviços",
-      "fleet.stage.message": "Olá, Betinhos. Gostaria de consultar a disponibilidade de um veículo executivo.",
       "fleet.executive.tag": "EXECUTIVO",
       "fleet.executive.name": "Carros executivos",
       "fleet.executive.alt": "Sedan executivo Betinhos",
@@ -64,7 +54,8 @@
       "fleet.groups.detailText": "Vans executivas para grupos, eventos e operações corporativas com planejamento de horários, pontos de encontro e bagagens.",
       "fleet.groups.message": "Olá, Betinhos. Gostaria de consultar a disponibilidade de uma van executiva.",
       "fleet.availability": "Consultar disponibilidade",
-      "services.plan": "Planejar operação",
+      "services.specs.passengers": "Passageiros",
+      "services.specs.luggage": "Bagagens",
       "services.executive.title": "Carros executivos",
       "services.executive.text": "Sedans e SUVs de alto padrão para aeroportos, reuniões, roadshows e agendas corporativas.",
       "services.executive.message": "Olá, Betinhos. Quero planejar um transporte com carro executivo.",
@@ -223,16 +214,6 @@
       "solutions.title": "Every journey calls for its own approach.",
       "solutions.text": "From daily executive schedules to highly sensitive movements, we combine the right vehicle, professional and protocol for each operation.",
       "fleet.label": "Fleet categories",
-      "fleet.stage.label": "Executive sedan animated presentation",
-      "fleet.stage.vehicleAria": "Black executive sedan from the Betinhos fleet",
-      "fleet.stage.word": "Sedan",
-      "fleet.stage.kicker": "EXECUTIVE SEDAN",
-      "fleet.stage.title": "Executive comfort for schedules that cannot wait.",
-      "fleet.stage.description": "Punctuality, discretion and care on every leg — from the airport to the full schedule.",
-      "fleet.stage.specs": "Professional chauffeur · 24/7 service · Monitored operations",
-      "fleet.stage.primary": "Check availability",
-      "fleet.stage.secondary": "Explore services",
-      "fleet.stage.message": "Hello, Betinhos. I would like to check the availability of an executive vehicle.",
       "fleet.executive.tag": "EXECUTIVE",
       "fleet.executive.name": "Executive vehicles",
       "fleet.executive.alt": "Betinhos executive sedan",
@@ -252,7 +233,8 @@
       "fleet.groups.detailText": "Executive vans for groups, events and corporate operations, with planned schedules, meeting points and luggage.",
       "fleet.groups.message": "Hello, Betinhos. I would like to check the availability of an executive van.",
       "fleet.availability": "Check availability",
-      "services.plan": "Plan operation",
+      "services.specs.passengers": "Passengers",
+      "services.specs.luggage": "Luggage",
       "services.executive.title": "Executive vehicles",
       "services.executive.text": "Premium sedans and SUVs for airports, meetings, roadshows and corporate schedules.",
       "services.executive.message": "Hello, Betinhos. I want to plan transportation with an executive vehicle.",
@@ -411,16 +393,6 @@
       "solutions.title": "Cada traslado requiere un enfoque propio.",
       "solutions.text": "Desde agendas ejecutivas diarias hasta movimientos sensibles, combinamos vehículo, profesional y protocolo para cada operación.",
       "fleet.label": "Categorías de la flota",
-      "fleet.stage.label": "Sedán ejecutivo en presentación animada",
-      "fleet.stage.vehicleAria": "Sedán ejecutivo negro de la flota Betinhos",
-      "fleet.stage.word": "Sedan",
-      "fleet.stage.kicker": "SEDÁN EJECUTIVO",
-      "fleet.stage.title": "Confort ejecutivo para agendas que no pueden esperar.",
-      "fleet.stage.description": "Puntualidad, discreción y cuidado en cada trayecto — del aeropuerto a la agenda completa.",
-      "fleet.stage.specs": "Conductor profesional · Atención 24/7 · Operación monitoreada",
-      "fleet.stage.primary": "Consultar disponibilidad",
-      "fleet.stage.secondary": "Conocer servicios",
-      "fleet.stage.message": "Hola, Betinhos. Me gustaría consultar la disponibilidad de un vehículo ejecutivo.",
       "fleet.executive.tag": "EJECUTIVO",
       "fleet.executive.name": "Vehículos ejecutivos",
       "fleet.executive.alt": "Sedán ejecutivo Betinhos",
@@ -440,7 +412,8 @@
       "fleet.groups.detailText": "Vans ejecutivas para grupos, eventos y operaciones corporativas, con planificación de horarios, puntos de encuentro y equipaje.",
       "fleet.groups.message": "Hola, Betinhos. Me gustaría consultar la disponibilidad de una van ejecutiva.",
       "fleet.availability": "Consultar disponibilidad",
-      "services.plan": "Planificar operación",
+      "services.specs.passengers": "Pasajeros",
+      "services.specs.luggage": "Equipaje",
       "services.executive.title": "Vehículos ejecutivos",
       "services.executive.text": "Sedanes y SUVs premium para aeropuertos, reuniones, roadshows y agendas corporativas.",
       "services.executive.message": "Hola, Betinhos. Quiero planificar un transporte con un vehículo ejecutivo.",
@@ -592,31 +565,18 @@
     [".solutions .section-head .eyebrow", "solutions.tag"],
     [".solutions .section-head h2", "solutions.title"],
     [".solutions .section-head > p", "solutions.text"],
-    [".fleet-stage-word", "fleet.stage.word"],
-    [".fleet-stage-kicker", "fleet.stage.kicker"],
-    [".fleet-stage-title", "fleet.stage.title"],
-    [".fleet-stage-description", "fleet.stage.description"],
-    [".fleet-stage-specs", "fleet.stage.specs"],
-    [".fleet-stage-primary", "fleet.stage.primary"],
-    [".fleet-stage-secondary", "fleet.stage.secondary"],
     [".service-list article:nth-child(1) h3", "services.executive.title"],
     [".service-list article:nth-child(1) p", "services.executive.text"],
-    [".service-list article:nth-child(1) a", "services.plan"],
     [".service-list article:nth-child(2) h3", "services.armored.title"],
     [".service-list article:nth-child(2) p", "services.armored.text"],
-    [".service-list article:nth-child(2) a", "services.plan"],
     [".service-list article:nth-child(3) h3", "services.van.title"],
     [".service-list article:nth-child(3) p", "services.van.text"],
-    [".service-list article:nth-child(3) a", "services.plan"],
     [".service-list article:nth-child(4) h3", "services.armoredVan.title"],
     [".service-list article:nth-child(4) p", "services.armoredVan.text"],
-    [".service-list article:nth-child(4) a", "services.plan"],
     [".service-list article:nth-child(5) h3", "services.bilingual.title"],
     [".service-list article:nth-child(5) p", "services.bilingual.text"],
-    [".service-list article:nth-child(5) a", "services.plan"],
     [".service-list article:nth-child(6) h3", "services.protection.title"],
     [".service-list article:nth-child(6) p", "services.protection.text"],
-    [".service-list article:nth-child(6) a", "services.plan"],
     [".protection .crosshair span", "protection.visual1", 0],
     [".protection .crosshair span", "protection.visual2", 1],
     [".protection .eyebrow", "protection.tag"],
@@ -718,8 +678,6 @@
     [".lang-switch [data-lang='es']", "aria-label", "language.es"],
     [".lang-switch [data-lang='es']", "title", "language.es"],
     [".hero-bottom > a", "aria-label", "hero.companyAria"],
-    [".fleet-stage", "aria-label", "fleet.stage.label"],
-    [".fleet-vehicle-layers", "aria-label", "fleet.stage.vehicleAria"],
     [".office-photo img", "alt", "office.alt"],
     [".route-map", "aria-label", "footprint.label"],
     [".trust-facts", "aria-label", "trust.label"],
@@ -731,7 +689,6 @@
     [".whatsapp-trigger", "aria-label", "widget.trigger"]
   ];
 
-  const SERVICE_KEYS = ["executive", "armored", "van", "armoredVan", "bilingual", "protection"];
   let activeLanguage = "pt";
 
   const textNode = (element, index = 0) =>
@@ -758,10 +715,10 @@
     });
   };
 
-  const renderWhatsAppLinks = () => {
-    document.querySelector(".fleet-stage-primary").href = whatsappUrl(CATALOG[activeLanguage]["fleet.stage.message"]);
-    document.querySelectorAll(".service-list article").forEach((article, index) => {
-      article.querySelector("a").href = whatsappUrl(CATALOG[activeLanguage][`services.${SERVICE_KEYS[index]}.message`]);
+  const renderServiceSpecs = () => {
+    document.querySelectorAll("[data-service-spec]").forEach((element) => {
+      element.textContent =
+        CATALOG[activeLanguage][`services.specs.${element.dataset.serviceSpec}`];
     });
   };
 
@@ -780,7 +737,7 @@
     });
 
     renderFormOptions();
-    renderWhatsAppLinks();
+    renderServiceSpecs();
     document.querySelector("#whatsapp-widget-message").value = CATALOG[activeLanguage]["widget.defaultMessage"];
 
     document.querySelectorAll(".lang-switch [data-lang]").forEach((button) => {
