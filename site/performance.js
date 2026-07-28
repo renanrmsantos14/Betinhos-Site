@@ -1,23 +1,60 @@
 (() => {
-  const hydrate = () => import('/assets/index-CoPFL3Sw.js').catch(() => {});
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const desktopVideo = matchMedia('(min-width: 900px)');
+  const connection = navigator.connection;
+  const video = document.querySelector('.hero-video');
+  const source = video?.querySelector('source[data-src]');
 
-  const loadHeroVideo = () => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const video = document.querySelector('.hero-video');
-    const source = video?.querySelector('source[data-src]');
-    if (!source) return;
+  const canLoadVideo = () => (
+    video &&
+    source &&
+    desktopVideo.matches &&
+    !reducedMotion.matches &&
+    !connection?.saveData &&
+    !['slow-2g', '2g'].includes(connection?.effectiveType)
+  );
 
-    source.src = source.dataset.src;
-    video.load();
+  const startVideo = () => {
+    if (!canLoadVideo()) return;
+    if (!source.src) {
+      source.src = source.dataset.src;
+      video.load();
+    }
     video.play().catch(() => {});
   };
 
-  addEventListener('load', () => {
-    hydrate();
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadHeroVideo, { timeout: 3500 });
-    } else {
-      setTimeout(loadHeroVideo, 1200);
-    }
-  }, { once: true });
+  if (video) {
+    const heroObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) startVideo();
+      else video.pause();
+    }, { threshold: 0.12 });
+
+    heroObserver.observe(video);
+    video.addEventListener('playing', () => video.classList.add('is-playing'), { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) video.pause();
+      else if (video.getBoundingClientRect().bottom > 0) startVideo();
+    });
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+  document.querySelectorAll(
+    '.section-head, .legacy-content, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .protocol-grid article, .office-photo, .office-copy, .footprint > div, .team-grid article, .trust > div, .contact > *'
+  ).forEach((element, index) => {
+    element.classList.add('reveal');
+    element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 3) * 70}ms`);
+    revealObserver.observe(element);
+  });
+
+  const header = document.querySelector('.site-header');
+  const syncHeader = () => header?.classList.toggle('is-scrolled', scrollY > 24);
+  syncHeader();
+  addEventListener('scroll', syncHeader, { passive: true });
 })();
