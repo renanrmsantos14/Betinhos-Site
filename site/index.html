@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#021426" />
     <link rel="preload" as="image" href="/logo-betinhos.png" />
-    <link rel="preload" as="image" href="/hero-source.jpeg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/hero-poster.webp" fetchpriority="high" />
     <link
       rel="stylesheet"
       href="/assets/index-D7fnJsCl.css"
@@ -192,13 +192,17 @@
         <video
           class="hero-video"
           muted=""
+          autoplay=""
           loop=""
           playsinline=""
-          preload="metadata"
-          poster="/hero-source.jpeg"
+          preload="auto"
+          poster="/hero-poster.webp"
+          width="1280"
+          height="720"
           aria-hidden="true"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video.webm" type="video/webm" media="(min-width: 900px)" />
+          <source src="/hero-video-web.mp4" type="video/mp4" media="(min-width: 900px)" />
         </video>
         <header class="site-header">
           <a href="#inicio" class="logo"

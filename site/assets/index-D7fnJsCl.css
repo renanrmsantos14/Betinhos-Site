@@ -346,7 +346,7 @@ h2 {
   background:
     linear-gradient(90deg, #021426fa 0%, #021426d1 38%, #02142638 72%),
     linear-gradient(#0000 55%, #021426a6),
-    url(/hero-source.jpeg) 50% / cover no-repeat;
+    url(/hero-poster.webp) 50% / cover no-repeat;
   flex-direction: column;
   height: 100svh;
   min-height: 720px;
@@ -2178,7 +2178,7 @@ button:focus-visible {
   .hero {
     background-image:
       linear-gradient(90deg, #021426f0, #02142678),
-      linear-gradient(#0000 48%, #021426e6), url(/hero-source.jpeg);
+      linear-gradient(#0000 48%, #021426e6), url(/hero-poster.webp);
     background-position: 62%;
     background-size: cover;
   }

@@ -37,7 +37,7 @@
   if (video) {
     if (!canLoadVideo()) {
       video.removeAttribute('preload');
-      video.querySelector('source')?.removeAttribute('src');
+      video.querySelectorAll('source').forEach((item) => item.removeAttribute('src'));
       video.load();
     }
 
