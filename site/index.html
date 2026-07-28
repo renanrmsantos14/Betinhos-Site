@@ -3,34 +3,339 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Betinhos | Teste de publica&ccedil;&atilde;o</title>
+    <meta name="description" content="Betinhos Executive Service - site em manuten&ccedil;&atilde;o.">
+    <title>Betinhos Executive Service | Manuten&ccedil;&atilde;o</title>
     <style>
-      :root { color-scheme: light; }
+      :root {
+        --ink: #112b42;
+        --muted: #5e6d7a;
+        --gold: #b58a36;
+        --gold-soft: #eadfc9;
+        --paper: #fcfcfb;
+        --line: #e4e8e9;
+        --ease-out: cubic-bezier(.23, 1, .32, 1);
+      }
+
       * { box-sizing: border-box; }
+
+      html { background: var(--paper); }
+
       body {
-        align-items: center;
-        background: #fcfcfb;
-        color: #10253f;
-        display: grid;
-        font-family: Arial, sans-serif;
+        background:
+          radial-gradient(circle at 87% 8%, rgba(181, 138, 54, .12), transparent 28rem),
+          linear-gradient(135deg, #fcfcfb 0%, #f5f3ef 100%);
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         min-height: 100vh;
-        padding: 24px;
       }
-      main { margin: auto; max-width: 620px; text-align: center; }
-      .mark { color: #b58a36; font-size: 14px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-      h1 { font-family: Georgia, serif; font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; margin: 20px 0; }
-      p { color: #4c5b6a; font-size: 1.125rem; line-height: 1.6; margin: 0 auto; max-width: 510px; }
-      .status { border-top: 1px solid #dfe3e5; color: #587063; font-size: .875rem; margin-top: 40px; padding-top: 20px; }
+
+      a { color: inherit; }
+
+      .page {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 1220px;
+        min-height: 100vh;
+        padding: 28px clamp(20px, 5vw, 72px) 30px;
+      }
+
+      header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .brand {
+        align-items: center;
+        display: inline-flex;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        align-items: center;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        color: var(--gold);
+        display: inline-flex;
+        font-family: Georgia, serif;
+        font-size: 19px;
+        font-weight: 700;
+        height: 42px;
+        justify-content: center;
+        letter-spacing: -.08em;
+        width: 42px;
+      }
+
+      .brand-name {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .14em;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+
+      .language {
+        align-items: center;
+        background: rgba(255, 255, 255, .72);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        display: flex;
+        gap: 3px;
+        padding: 4px;
+      }
+
+      .language button {
+        background: transparent;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 19px;
+        line-height: 1;
+        padding: 7px 9px;
+        transition: background 160ms ease, transform 160ms ease;
+      }
+
+      .language button:hover { background: #f0ece4; }
+      .language button:active { transform: scale(.96); }
+      .language button[aria-pressed="true"] { background: var(--ink); }
+
+      main {
+        align-items: center;
+        display: grid;
+        flex: 1;
+        gap: clamp(42px, 7vw, 88px);
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+        padding: clamp(58px, 10vh, 120px) 0 72px;
+      }
+
+      .intro { animation: rise-in 650ms var(--ease-out) both; }
+
+      .eyebrow {
+        align-items: center;
+        color: var(--gold);
+        display: flex;
+        font-size: 11px;
+        font-weight: 700;
+        gap: 11px;
+        letter-spacing: .18em;
+        margin: 0 0 24px;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        background: var(--gold);
+        content: "";
+        height: 1px;
+        width: 34px;
+      }
+
+      h1 {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(3rem, 7vw, 6.4rem);
+        font-weight: 400;
+        letter-spacing: -.055em;
+        line-height: .94;
+        margin: 0;
+        max-width: 690px;
+      }
+
+      h1 em { color: var(--gold); font-style: normal; }
+
+      .intro-text {
+        color: var(--muted);
+        font-size: clamp(1rem, 1.5vw, 1.18rem);
+        line-height: 1.7;
+        margin: 30px 0 0;
+        max-width: 570px;
+      }
+
+      .contact-panel {
+        animation: rise-in 650ms 120ms var(--ease-out) both;
+        background: rgba(255, 255, 255, .75);
+        border: 1px solid rgba(228, 232, 233, .95);
+        border-radius: 22px;
+        box-shadow: 0 24px 60px rgba(17, 43, 66, .08);
+        padding: clamp(22px, 4vw, 34px);
+      }
+
+      .panel-heading { margin-bottom: 20px; }
+
+      .panel-heading h2 {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        margin: 0 0 8px;
+      }
+
+      .panel-heading p { color: var(--muted); font-size: .9rem; line-height: 1.5; margin: 0; }
+
+      .contact-list { display: grid; gap: 10px; }
+
+      .contact {
+        border-top: 1px solid var(--line);
+        padding-top: 16px;
+      }
+
+      .contact:first-child { border-top: 0; padding-top: 0; }
+
+      .contact-name { font-size: .98rem; font-weight: 700; margin: 0; }
+      .contact-role { color: var(--muted); font-size: .83rem; margin: 4px 0 11px; }
+
+      .contact-links { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+
+      .contact-links a {
+        color: var(--ink);
+        font-size: .83rem;
+        text-decoration: none;
+        transition: color 160ms ease;
+      }
+
+      .contact-links a:hover { color: var(--gold); }
+      .contact-links a:focus-visible, .language button:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; }
+
+      footer {
+        border-top: 1px solid var(--line);
+        color: #75818a;
+        display: flex;
+        font-size: .76rem;
+        justify-content: space-between;
+        padding-top: 18px;
+      }
+
+      @keyframes rise-in {
+        from { opacity: 0; transform: translateY(16px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 760px) {
+        .page { padding-top: 20px; }
+        main { grid-template-columns: 1fr; padding: 72px 0 56px; }
+        h1 { font-size: clamp(3rem, 16vw, 5.4rem); }
+        .contact-panel { max-width: 560px; width: 100%; }
+        footer { gap: 16px; line-height: 1.5; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
     </style>
   </head>
   <body>
-    <main>
-      <div class="mark">Betinhos Executive Service</div>
-      <h1>Publica&ccedil;&atilde;o em teste</h1>
-      <p>Se esta p&aacute;gina aparece, o deploy autom&aacute;tico do GitHub para a Locaweb est&aacute; funcionando.</p>
-      <div class="status">GitHub Actions &bull; Locaweb &bull; ambiente de teste</div>
-    </main>
+    <div class="page">
+      <header>
+        <a class="brand" href="/" aria-label="Betinhos Executive Service">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span class="brand-name">Betinhos<br>Executive Service</span>
+        </a>
+        <nav class="language" aria-label="Sele&ccedil;&atilde;o de idioma">
+          <button type="button" data-lang="pt" aria-label="Portugu&ecirc;s" aria-pressed="true">🇧🇷</button>
+          <button type="button" data-lang="en" aria-label="English" aria-pressed="false">🇺🇸</button>
+          <button type="button" data-lang="es" aria-label="Espa&ntilde;ol" aria-pressed="false">🇪🇸</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow" data-i18n="eyebrow">Comunicado</p>
+          <h1 id="page-title" data-i18n="title">Estamos preparando<br><em>algo especial.</em></h1>
+          <p class="intro-text" data-i18n="description">Nosso site est&aacute; em manuten&ccedil;&atilde;o. Em breve, estaremos de volta para continuar cuidando dos seus deslocamentos com a discri&ccedil;&atilde;o, pontualidade e seguran&ccedil;a que voc&ecirc; espera.</p>
+        </section>
+
+        <aside class="contact-panel" aria-labelledby="contact-title">
+          <div class="panel-heading">
+            <h2 id="contact-title" data-i18n="contactTitle">Fale conosco</h2>
+            <p data-i18n="contactIntro">Nossa equipe continua dispon&iacute;vel durante a manuten&ccedil;&atilde;o.</p>
+          </div>
+          <div class="contact-list">
+            <article class="contact">
+              <p class="contact-name">J&uacute;nior de Paula</p>
+              <p class="contact-role" data-i18n="roleConcierge">Concierge (Bilingual)</p>
+              <div class="contact-links">
+                <a href="https://wa.me/5512997236961" target="_blank" rel="noopener" aria-label="WhatsApp J&uacute;nior de Paula">+55 12 99723 6961</a>
+                <a href="mailto:junior@betinhos.com.br">junior@betinhos.com.br</a>
+              </div>
+            </article>
+            <article class="contact">
+              <p class="contact-name">Deborah Keila</p>
+              <p class="contact-role" data-i18n="roleOperations">Operations Manager</p>
+              <div class="contact-links">
+                <a href="https://wa.me/5512996159093" target="_blank" rel="noopener" aria-label="WhatsApp Deborah Keila">+55 12 99615 9093</a>
+                <a href="mailto:deborah.keila@betinhos.com.br">deborah.keila@betinhos.com.br</a>
+              </div>
+            </article>
+            <article class="contact">
+              <p class="contact-name">Juliana Rodrigues</p>
+              <p class="contact-role" data-i18n="roleFinance">Finance Manager</p>
+              <div class="contact-links">
+                <a href="https://wa.me/5512996159085" target="_blank" rel="noopener" aria-label="WhatsApp Juliana Rodrigues">+55 12 99615 9085</a>
+                <a href="mailto:financeiro@betinhos.com.br">financeiro@betinhos.com.br</a>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <span data-i18n="footer">Betinhos Executive Service</span>
+        <span>&copy; <span id="year"></span></span>
+      </footer>
+    </div>
+
+    <script>
+      const translations = {
+        pt: {
+          eyebrow: 'Comunicado',
+          title: 'Estamos preparando<br><em>algo especial.</em>',
+          description: 'Nosso site est&aacute; em manuten&ccedil;&atilde;o. Em breve, estaremos de volta para continuar cuidando dos seus deslocamentos com a discri&ccedil;&atilde;o, pontualidade e seguran&ccedil;a que voc&ecirc; espera.',
+          contactTitle: 'Fale conosco',
+          contactIntro: 'Nossa equipe continua dispon&iacute;vel durante a manuten&ccedil;&atilde;o.',
+          roleConcierge: 'Concierge (Bilingual)',
+          roleOperations: 'Operations Manager',
+          roleFinance: 'Finance Manager',
+          footer: 'Betinhos Executive Service'
+        },
+        en: {
+          eyebrow: 'Announcement',
+          title: 'We are preparing<br><em>something special.</em>',
+          description: 'Our website is currently under maintenance. We will be back soon, continuing to care for your journeys with the discretion, punctuality, and safety you expect.',
+          contactTitle: 'Contact us',
+          contactIntro: 'Our team remains available during maintenance.',
+          roleConcierge: 'Concierge (Bilingual)',
+          roleOperations: 'Operations Manager',
+          roleFinance: 'Finance Manager',
+          footer: 'Betinhos Executive Service'
+        },
+        es: {
+          eyebrow: 'Comunicado',
+          title: 'Estamos preparando<br><em>algo especial.</em>',
+          description: 'Nuestro sitio web est&aacute; en mantenimiento. Pronto estaremos de vuelta para seguir cuidando sus desplazamientos con la discreci&oacute;n, puntualidad y seguridad que usted espera.',
+          contactTitle: 'Hable con nosotros',
+          contactIntro: 'Nuestro equipo sigue disponible durante el mantenimiento.',
+          roleConcierge: 'Concierge (Biling&uuml;e)',
+          roleOperations: 'Gerente de Operaciones',
+          roleFinance: 'Gerente de Finanzas',
+          footer: 'Betinhos Executive Service'
+        }
+      };
+
+      const buttons = document.querySelectorAll('[data-lang]');
+      const elements = document.querySelectorAll('[data-i18n]');
+      const setLanguage = (language) => {
+        const copy = translations[language] || translations.pt;
+        document.documentElement.lang = language === 'pt' ? 'pt-BR' : language;
+        elements.forEach((element) => { element.innerHTML = copy[element.dataset.i18n]; });
+        buttons.forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.lang === language)); });
+        try { localStorage.setItem('betinhos-language', language); } catch (error) { /* storage can be unavailable */ }
+      };
+
+      buttons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+      document.getElementById('year').textContent = new Date().getFullYear();
+      let savedLanguage = 'pt';
+      try { savedLanguage = localStorage.getItem('betinhos-language') || 'pt'; } catch (error) { /* storage can be unavailable */ }
+      setLanguage(savedLanguage);
+    </script>
   </body>
 </html>
