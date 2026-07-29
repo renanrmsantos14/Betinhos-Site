@@ -55,8 +55,11 @@ class BetinhosAnniversary extends HTMLElement {
     labelElement.id = `${this.instanceId}-label`;
     labelElement.setAttribute("aria-hidden", "true");
 
-    years.split("").forEach((digit) => {
+    years.split("").forEach((digit, index) => {
       const glyph = createElement("span", "anniversary-mark__glyph", digit);
+      if (index === years.length - 1) {
+        glyph.classList.add("anniversary-mark__glyph--last");
+      }
       glyph.setAttribute("aria-hidden", "true");
       number.append(glyph);
     });
