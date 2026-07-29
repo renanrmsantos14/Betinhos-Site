@@ -14,6 +14,8 @@
     />
     <link rel="stylesheet" href="/service-fleet.css" />
     <link rel="stylesheet" href="/anniversary-mark.css" />
+    <link rel="stylesheet" href="/fixed-header.css" />
+    <link rel="stylesheet" href="/office-section.css" />
     <title>Betinhos Executive Service | Transporte executivo</title>
     <meta
       name="description"
@@ -206,13 +208,20 @@
           <source src="/hero-video-web.mp4" type="video/mp4" media="(min-width: 900px)" />
         </video>
         <header class="site-header">
-          <a href="#inicio" class="logo"
+          <a href="#inicio" class="logo" aria-label="Betinhos Executive Service — início"
             ><img
+              class="logo-full"
               src="/logo-betinhos.png"
               alt="Betinhos Executive Service"
               decoding="async"
               fetchpriority="high"
-          /></a>
+            /><img
+              class="logo-mark"
+              src="/assets/logo-betinhos-b.png"
+              alt=""
+              aria-hidden="true"
+              decoding="async"
+            /></a>
           <nav class="desktop-nav" aria-label="Navegação principal">
             <a href="#solucoes" data-i18n="navServices">Frota e serviços</a
             ><a href="#seguranca" data-i18n="navSecurity">Segurança</a
@@ -231,7 +240,39 @@
               ><button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false"><img class="language-flag" src="/flags/es.svg" alt="" width="20" height="15" /></button>
             </div>
           </div>
+          <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
         </header>
+        <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+          <div class="mobile-menu-top">
+            <span>Betinhos</span>
+            <button class="mobile-menu-close" type="button" aria-label="Fechar menu">Fechar</button>
+          </div>
+          <nav class="mobile-menu-nav" aria-label="Navegação móvel">
+            <a href="#solucoes">Frota e serviços</a>
+            <a href="#seguranca">Segurança</a>
+            <a href="#empresa">Empresa</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#trabalhe-conosco">Trabalhe conosco</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <div class="mobile-menu-footer">
+            <a class="client-area-link" href="/area-cliente?lang=pt">Área do cliente</a>
+            <div class="lang-switch" aria-label="Selecionar idioma">
+              <button type="button" class="active" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true"><img class="language-flag" src="/flags/br.svg" alt="" width="20" height="15" /></button>
+              <button type="button" data-lang="en" aria-label="English" title="English" aria-pressed="false"><img class="language-flag" src="/flags/us.svg" alt="" width="20" height="15" /></button>
+              <button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false"><img class="language-flag" src="/flags/es.svg" alt="" width="20" height="15" /></button>
+            </div>
+          </div>
+        </aside>
         <div class="hero-status"><i></i>Operação monitorada 24/7</div>
         <div class="hero-copy">
           <h1>
@@ -406,78 +447,49 @@
             <span class="security-title-line-2">O cuidado permanece.</span>
           </h2>
           <p class="security-journey-copy">
-            Do planejamento à chegada, cada deslocamento é acompanhado por
-            pessoas preparadas, frota controlada e suporte operacional 24 horas.
+            Antes da partida, a equipe verifica o veículo, planeja a rota e
+            mantém comunicação com o motorista até a chegada.
           </p>
-          <div class="security-journey-status">
-            <i aria-hidden="true"></i>
-            <span>OPERAÇÃO ACOMPANHADA 24/7</span>
-          </div>
         </div>
 
         <div class="security-journey-operation">
           <div class="security-journey-heading">
-            <span>ITINERÁRIO OPERACIONAL</span>
-            <small>CENÁRIO ILUSTRATIVO</small>
-          </div>
-
-          <div class="security-journey-route" aria-hidden="true">
-            <span class="security-journey-route-base"></span>
-            <span class="security-journey-route-progress"></span>
-            <span class="security-journey-marker">
-              <svg viewBox="0 0 24 24">
-                <path d="M5 17h14M6.5 17l1-5h9l1 5M8.5 12l1.2-3h4.6l1.2 3M8 17v2M16 17v2" />
-              </svg>
-            </span>
+            <span>EXEMPLO DE ACOMPANHAMENTO</span>
           </div>
 
           <ol class="security-journey-events">
             <li class="security-journey-event" data-journey-step>
-              <span class="security-journey-dot" aria-hidden="true"></span>
-              <span class="security-journey-index">01</span>
+              <time>07:40</time>
               <div>
-                <time>07:40</time>
                 <h3>Embarque confirmado</h3>
-                <p>Motorista e veículo liberados para a operação.</p>
+                <p>Motorista e veículo verificados antes do embarque.</p>
               </div>
             </li>
             <li class="security-journey-event is-alert" data-journey-step>
-              <span class="security-journey-dot" aria-hidden="true"></span>
-              <span class="security-journey-index">02</span>
+              <time>08:15</time>
               <div>
-                <time>08:15</time>
                 <h3>Trânsito intenso</h3>
-                <p>Rota alternativa acionada pela equipe operacional.</p>
+                <p>A equipe avalia o impacto e orienta uma rota alternativa.</p>
               </div>
             </li>
             <li class="security-journey-event is-change" data-journey-step>
-              <span class="security-journey-dot" aria-hidden="true"></span>
-              <span class="security-journey-index">03</span>
+              <time>09:05</time>
               <div>
-                <time>09:05</time>
                 <h3>
                   <span class="security-destination-old">Destino original</span>
                   <span class="security-destination-new">Novo destino confirmado</span>
                 </h3>
-                <p>Operação e motorista atualizados sem interromper a agenda.</p>
+                <p>A alteração é repassada ao motorista e a nova rota é confirmada.</p>
               </div>
             </li>
             <li class="security-journey-event is-success" data-journey-step>
-              <span class="security-journey-dot" aria-hidden="true"></span>
-              <span class="security-journey-index">04</span>
+              <time>09:50</time>
               <div>
-                <time>09:50</time>
                 <h3>Chegada confirmada</h3>
-                <p>Horário preservado e deslocamento concluído.</p>
+                <p>Chegada registrada e atendimento encerrado.</p>
               </div>
             </li>
           </ol>
-
-          <div class="security-journey-proof" aria-label="Camadas da operação">
-            <span>RASTREAMENTO ATIVO</span>
-            <span>FROTA CONTROLADA</span>
-            <span>CONCIERGE 24/7</span>
-          </div>
         </div>
       </section>
       <section class="office section">
@@ -903,5 +915,6 @@
     <script src="/service-fleet.js" defer></script>
     <script src="/performance.js" defer></script>
     <script src="/i18n.js" defer></script>
+    <script src="/mobile-navigation.js" defer></script>
   </body>
 </html>

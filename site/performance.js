@@ -90,12 +90,7 @@
     let hasPlayed = false;
 
     const setStep = (activeIndex) => {
-      const progress = steps.length > 1 ? activeIndex / (steps.length - 1) : 1;
-      journey.style.setProperty('--journey-progress', progress);
-
       steps.forEach((step, index) => {
-        step.classList.toggle('is-current', index === activeIndex);
-        step.classList.toggle('is-complete', index < activeIndex);
         step.classList.toggle('is-active', index <= activeIndex);
       });
     };
