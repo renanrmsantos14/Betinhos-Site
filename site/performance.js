@@ -10,7 +10,7 @@
   const hideLoader = () => {
     if (loaderHidden) return;
     loaderHidden = true;
-    const remainingDelay = Math.max(0, 520 - (performance.now() - loadingStartedAt));
+    const remainingDelay = Math.max(0, 1000 - (performance.now() - loadingStartedAt));
     setTimeout(() => {
       document.body.classList.remove('is-loading');
       document.body.classList.add('is-ready');
@@ -67,12 +67,16 @@
   }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
 
   document.querySelectorAll(
-    '.section-head, .legacy-content, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .protocol-grid article, .office-photo, .office-copy, .footprint > div, .team-grid article, .trust > div, .contact > *'
+    '.section-head, .legacy-content, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .protocol-grid article, .office-photo, .office-copy, .footprint > div, .team-grid article, .trust > div, .google-reviews > *, .faq-intro, .faq-list details, .contact > *, footer > *'
   ).forEach((element, index) => {
     element.classList.add('reveal');
     element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 3) * 70}ms`);
     revealObserver.observe(element);
   });
+
+  document.querySelectorAll(
+    '.fleet-showcase article, .protection-visual, .office-photo, .team-grid article > div'
+  ).forEach((element) => element.classList.add('reveal-media'));
 
   const header = document.querySelector('.site-header');
   const syncHeader = () => header?.classList.toggle('is-scrolled', scrollY > 24);

@@ -421,6 +421,12 @@ h2 {
   padding: 9px 10px;
   transition: background-color 160ms ease, transform 160ms cubic-bezier(.23, 1, .32, 1);
 }
+.language-flag {
+  display: block;
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
 .lang-switch button:last-child {
   border-right: 0;
 }
@@ -795,7 +801,7 @@ h2 {
   color: #102030;
   justify-content: space-between;
   gap: 20px;
-  margin: 75px -7vw -100px;
+  margin: 75px -6vw -100px;
   padding: 28px 7vw;
   display: flex;
   overflow: hidden;
@@ -1302,6 +1308,7 @@ footer small {
 body {
   background: var(--ivory);
   color: var(--ink);
+  overflow-x: clip;
 }
 .hero {
   background:
@@ -3088,7 +3095,7 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url(/destinations-atlas-v1.jpg) var(--city-position) center / 400% 100% no-repeat;
+  background: none;
   transform: scale(1.015);
   transition: transform 700ms cubic-bezier(.23, 1, .32, 1);
 }
@@ -3221,6 +3228,213 @@ button:focus-visible {
   .hero-mark a span,
   .hero-locations article::before,
   .hero-locations article::after {
+    transition: none;
+  }
+}
+
+/* Hero destination gallery v2: full-height, independent city photography */
+.hero {
+  min-height: 980px;
+}
+.hero-copy {
+  padding-bottom: 390px;
+}
+.hero-bottom {
+  grid-template-columns: minmax(290px, 0.85fr) minmax(0, 3.15fr);
+  height: 390px;
+  background: #f4f0e8f7;
+  border-top: 0;
+  color: #102030;
+}
+.hero-mark {
+  align-content: center;
+  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 48px clamp(30px, 4vw, 64px);
+  border-right-color: #10203024;
+}
+.hero-mark strong {
+  color: #102030;
+  -webkit-text-stroke: 0;
+  font-size: clamp(88px, 8vw, 132px);
+  line-height: 0.7;
+}
+.hero-mark small {
+  max-width: 220px;
+  color: #8c6825;
+  font-size: 8px;
+}
+.hero-mark p {
+  max-width: 240px;
+  color: #102030;
+  font-size: 18px;
+  line-height: 1.35;
+}
+.hero-mark a {
+  color: #102030a8;
+  font-size: 8px;
+}
+.hero-coverage {
+  grid-template-rows: 72px minmax(0, 1fr);
+  padding: 0;
+}
+.hero-coverage > p {
+  padding: 0 24px;
+  color: #102030;
+  font-size: clamp(24px, 2vw, 34px);
+}
+.hero-locations {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-content: stretch;
+  justify-content: stretch;
+  gap: clamp(8px, 1vw, 16px);
+  padding: 0 24px 28px 0;
+  overflow: visible;
+}
+.hero-locations article {
+  min-height: 0;
+  border-radius: 20px;
+  background: #d8d2c8;
+  box-shadow: 0 14px 34px #10203014;
+}
+.hero-locations article::before {
+  display: none;
+}
+.hero-locations article::after {
+  z-index: 1;
+  background: linear-gradient(180deg, #10203008 45%, #1020308c 100%);
+  opacity: 1;
+}
+.hero-locations article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 700ms cubic-bezier(.23, 1, .32, 1);
+}
+.hero-locations article:first-child img {
+  object-position: 53% center;
+}
+.hero-locations article span {
+  position: absolute;
+  inset: 14px auto auto 14px;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 11px;
+  border: 1px solid #ffffff9e;
+  border-radius: 999px;
+  background: #f8f5eee8;
+  box-shadow: 0 6px 18px #10203014;
+  backdrop-filter: blur(6px);
+}
+.hero-locations article small {
+  color: #8c6825;
+  font-size: 6px;
+}
+.hero-locations article strong {
+  color: #102030;
+  font-size: clamp(7px, 0.65vw, 10px);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-locations article:hover img {
+    transform: scale(1.055);
+  }
+  .hero-locations article:hover::after {
+    opacity: 0.72;
+  }
+}
+@media (width <= 1050px) {
+  .hero {
+    min-height: 940px;
+  }
+  .hero-bottom {
+    grid-template-columns: 230px minmax(0, 1fr);
+    height: 360px;
+  }
+  .hero-copy {
+    padding-bottom: 355px;
+  }
+  .hero-mark {
+    padding: 38px 24px;
+  }
+  .hero-mark p {
+    font-size: 15px;
+  }
+  .hero-locations {
+    overflow-x: auto;
+    grid-template-columns: repeat(5, 170px);
+    justify-content: start;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .hero-locations article {
+    scroll-snap-align: start;
+  }
+}
+@media (width <= 680px) {
+  .hero {
+    min-height: 1060px;
+  }
+  .hero-copy {
+    padding-bottom: 432px;
+  }
+  .hero-bottom {
+    grid-template-columns: 138px minmax(0, 1fr);
+    height: 410px;
+  }
+  .hero-mark {
+    justify-content: center;
+    gap: 16px;
+    padding: 28px 14px 24px 18px;
+  }
+  .hero-mark strong {
+    font-size: 66px;
+  }
+  .hero-mark p {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+  }
+  .hero-mark a {
+    margin-top: 4px;
+    font-size: 5px;
+  }
+  .hero-coverage {
+    grid-template-rows: 58px minmax(0, 1fr);
+  }
+  .hero-coverage > p {
+    padding-inline: 14px;
+    font-size: 18px;
+  }
+  .hero-locations {
+    grid-template-columns: repeat(5, 178px);
+    gap: 8px;
+    padding: 0 12px 18px 0;
+  }
+  .hero-locations article {
+    height: 100%;
+    border-radius: 18px;
+  }
+  .hero-locations article span {
+    inset: 10px auto auto 10px;
+    padding: 7px 9px;
+  }
+  .hero-locations article strong {
+    font-size: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-locations article img {
     transition: none;
   }
 }
