@@ -604,54 +604,67 @@
         </div>
       </section>
       <section class="legacy section history-section" id="empresa" aria-labelledby="history-title">
-        <div class="history-intro">
-          <div class="history-heading">
-            <p class="eyebrow">Desde 1986</p>
-            <h2 id="history-title">O caminho que nos trouxe até aqui.</h2>
+        <div class="history-shell">
+          <header class="history-intro">
+            <div class="history-heading">
+              <p class="eyebrow">Uma história de cuidado</p>
+              <h2 id="history-title">O caminho que nos trouxe até aqui.</h2>
+            </div>
+            <div class="history-copy">
+              <p class="lead">Em 1986, com as mãos firmes no volante de um Fusca, o Sr. Betinho começou uma jornada feita de presença, trabalho e respeito.</p>
+              <p class="history-details">Em cada madrugada, em cada dia de chuva ou de correria, transportava mais que passageiros: levava sonhos e construía confiança. A frota cresceu, a operação evoluiu e a essência permaneceu a mesma.</p>
+            </div>
+          </header>
+
+          <div class="history-carousel" data-history-carousel aria-roledescription="carrossel" aria-label="Fotos da história da Betinhos">
+            <div class="history-carousel__topline">
+              <span>MEMÓRIA EM MOVIMENTO</span>
+              <span class="history-carousel__counter" aria-live="polite">01 / 03</span>
+            </div>
+
+            <div class="history-slides">
+              <figure class="history-slide is-active" id="history-slide-1" data-history-slide role="tabpanel" aria-labelledby="history-tab-1" aria-hidden="false">
+                <div class="history-slide__media">
+                  <img src="/history/fusca-1986.png" alt="Fusca branco, primeiro veículo da história da Betinhos" width="816" height="558" />
+                </div>
+                <figcaption><span>1986</span><strong>O começo</strong><p>Um Fusca, uma visão de futuro e muito caminho pela frente.</p></figcaption>
+              </figure>
+              <figure class="history-slide" id="history-slide-2" data-history-slide role="tabpanel" aria-labelledby="history-tab-2" aria-hidden="true">
+                <div class="history-slide__media">
+                  <img src="/history/primeiro-seda.png" alt="Sedã branco utilizado nos primeiros anos de operação da Betinhos" width="1024" height="768" loading="lazy" />
+                </div>
+                <figcaption><span>PRIMEIROS ANOS</span><strong>Os primeiros destinos</strong><p>Cada novo trajeto firmava uma relação de confiança.</p></figcaption>
+              </figure>
+              <figure class="history-slide" id="history-slide-3" data-history-slide role="tabpanel" aria-labelledby="history-tab-3" aria-hidden="true">
+                <div class="history-slide__media">
+                  <img src="/history/sr-betinho.png" alt="Sr. Betinho ao lado de um veículo branco da operação" width="1050" height="738" loading="lazy" />
+                </div>
+                <figcaption><span>40 ANOS</span><strong>Trabalho que permanece</strong><p>Tradição é seguir cuidando de cada pessoa no caminho.</p></figcaption>
+              </figure>
+            </div>
+
+            <div class="history-carousel__controls">
+              <div class="history-carousel__dots" role="tablist" aria-label="Selecionar foto">
+                <button class="is-active" id="history-tab-1" type="button" role="tab" data-history-dot aria-controls="history-slide-1" aria-label="Ver foto 1 de 3" aria-selected="true"><span>01</span><strong>O começo</strong></button>
+                <button id="history-tab-2" type="button" role="tab" data-history-dot aria-controls="history-slide-2" aria-label="Ver foto 2 de 3" aria-selected="false" tabindex="-1"><span>02</span><strong>Os primeiros destinos</strong></button>
+                <button id="history-tab-3" type="button" role="tab" data-history-dot aria-controls="history-slide-3" aria-label="Ver foto 3 de 3" aria-selected="false" tabindex="-1"><span>03</span><strong>Trabalho que permanece</strong></button>
+              </div>
+              <div class="history-carousel__buttons">
+                <button class="history-carousel__button" type="button" data-history-prev aria-label="Foto anterior">
+                  <span aria-hidden="true">←</span>
+                </button>
+                <button class="history-carousel__button" type="button" data-history-next aria-label="Próxima foto">
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="history-copy">
-            <p class="lead">Em 1986, com as mãos firmes no volante de um Fusca, o Sr. Betinho começou uma jornada feita de presença, trabalho e respeito.</p>
-            <p class="history-details">Em cada madrugada, em cada dia de chuva ou de correria, transportava mais que passageiros: levava sonhos e construía confiança. A frota cresceu, a operação evoluiu e a essência permaneceu a mesma.</p>
+
+          <div class="history-closing">
+            <span aria-hidden="true">1986 — 2026</span>
+            <blockquote>Alcançamos muitos destinos sem esquecer o ponto de partida: o amor pelo que fazemos e o trabalho duro que nos guia até aqui.</blockquote>
           </div>
         </div>
-
-        <div class="history-carousel" data-history-carousel aria-roledescription="carrossel" aria-label="Fotos da história da Betinhos">
-          <div class="history-carousel__topline">
-            <span>MEMÓRIA EM MOVIMENTO</span>
-            <span class="history-carousel__counter" aria-live="polite">01 / 03</span>
-          </div>
-          <div class="history-slides">
-            <figure class="history-slide is-active" data-history-slide aria-hidden="false">
-              <img src="/history/fusca-1986.png" alt="Fusca branco, primeiro veículo da história da Betinhos" width="816" height="558" />
-              <figcaption><span>01</span><strong>O começo</strong><p>Um Fusca, uma visão de futuro e muito caminho pela frente.</p></figcaption>
-            </figure>
-            <figure class="history-slide" data-history-slide aria-hidden="true">
-              <img src="/history/primeiro-seda.png" alt="Sedã branco utilizado nos primeiros anos de operação da Betinhos" width="1024" height="768" loading="lazy" />
-              <figcaption><span>02</span><strong>Os primeiros destinos</strong><p>Cada novo trajeto firmava uma relação de confiança.</p></figcaption>
-            </figure>
-            <figure class="history-slide" data-history-slide aria-hidden="true">
-              <img src="/history/sr-betinho.png" alt="Sr. Betinho ao lado de um veículo branco da operação" width="1050" height="738" loading="lazy" />
-              <figcaption><span>03</span><strong>Trabalho que permanece</strong><p>Tradição é seguir cuidando de cada pessoa no caminho.</p></figcaption>
-            </figure>
-          </div>
-          <div class="history-carousel__controls">
-            <div class="history-carousel__buttons">
-              <button class="history-carousel__button" type="button" data-history-prev aria-label="Foto anterior">
-                <span aria-hidden="true">←</span>
-              </button>
-              <button class="history-carousel__button" type="button" data-history-next aria-label="Próxima foto">
-                <span aria-hidden="true">→</span>
-              </button>
-            </div>
-            <div class="history-carousel__dots" aria-label="Selecionar foto">
-              <button class="is-active" type="button" data-history-dot aria-label="Ver foto 1 de 3" aria-current="true"></button>
-              <button type="button" data-history-dot aria-label="Ver foto 2 de 3" aria-current="false"></button>
-              <button type="button" data-history-dot aria-label="Ver foto 3 de 3" aria-current="false"></button>
-            </div>
-          </div>
-        </div>
-
-        <blockquote>Alcançamos muitos destinos sem esquecer o ponto de partida: o amor pelo que fazemos e o trabalho duro que nos guia até aqui.</blockquote>
       </section>
       <section class="team section" id="equipe">
         <div class="team-head">

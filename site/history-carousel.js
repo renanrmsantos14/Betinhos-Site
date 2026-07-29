@@ -26,7 +26,8 @@
     dots.forEach((dot, dotIndex) => {
       const isActive = dotIndex === activeIndex;
       dot.classList.toggle("is-active", isActive);
-      dot.setAttribute("aria-current", String(isActive));
+      dot.setAttribute("aria-selected", String(isActive));
+      dot.tabIndex = isActive ? 0 : -1;
     });
 
     counter.textContent =
@@ -38,24 +39,30 @@
   dots.forEach((dot, index) => dot.addEventListener("click", () => selectSlide(index)));
 
   carousel.addEventListener("keydown", (event) => {
+    const moveTabFocus = event.target.matches("[data-history-dot]");
+
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       selectSlide(activeIndex - 1);
+      if (moveTabFocus) dots[activeIndex]?.focus();
     }
 
     if (event.key === "ArrowRight") {
       event.preventDefault();
       selectSlide(activeIndex + 1);
+      if (moveTabFocus) dots[activeIndex]?.focus();
     }
 
     if (event.key === "Home") {
       event.preventDefault();
       selectSlide(0);
+      if (moveTabFocus) dots[activeIndex]?.focus();
     }
 
     if (event.key === "End") {
       event.preventDefault();
       selectSlide(slides.length - 1);
+      if (moveTabFocus) dots[activeIndex]?.focus();
     }
   });
 
