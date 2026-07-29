@@ -8,7 +8,7 @@
   const previous = carousel.querySelector("[data-history-prev]");
   const next = carousel.querySelector("[data-history-next]");
 
-  if (!slides.length || !counter || !previous || !next) return;
+  if (!slides.length || !previous || !next) return;
 
   let activeIndex = 0;
   let pointerStartX = null;
@@ -30,8 +30,10 @@
       dot.tabIndex = isActive ? 0 : -1;
     });
 
-    counter.textContent =
-      `${String(activeIndex + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+    if (counter) {
+      counter.textContent =
+        `${String(activeIndex + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+    }
   };
 
   previous.addEventListener("click", () => selectSlide(activeIndex - 1));
