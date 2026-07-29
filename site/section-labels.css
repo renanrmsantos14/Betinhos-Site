@@ -1,16 +1,35 @@
-/* Section labels: human hierarchy, without micro uppercase. */
+/* One editorial label system: navy on light, yellow on dark. */
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   margin: 0 0 22px;
-  color: var(--gold);
+  color: #001a3d !important;
   font-family: "Manrope", "Segoe UI", sans-serif;
   font-size: clamp(15px, 1.25vw, 17px);
-  font-weight: 600;
+  font-weight: 600 !important;
   letter-spacing: -0.01em;
   line-height: 1.25;
   text-transform: none;
+}
+
+.hero .eyebrow,
+.protocol .eyebrow,
+.office .eyebrow,
+.team .eyebrow,
+.contact .eyebrow,
+.google-reviews .eyebrow {
+  color: #d9b263 !important;
+}
+
+.solutions .section-head .eyebrow {
+  color: #d9b263 !important;
+  font-family: "Manrope", "Segoe UI", sans-serif !important;
+  font-size: clamp(15px, 1.25vw, 17px) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.25 !important;
+  text-transform: none !important;
 }
 
 .eyebrow::before {

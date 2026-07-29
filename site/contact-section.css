@@ -100,10 +100,10 @@
 }
 
 .careers-form {
-  background: #fcfcfb;
-  border: 1px solid #e2e8f0;
+  background: #f4f0e7;
+  border: 1px solid #d4cec2;
   border-radius: 12px;
-  box-shadow: 0 10px 28px rgb(0 26 61 / 0.045);
+  box-shadow: 0 10px 28px rgb(16 32 43 / 0.06);
   gap: 16px;
   padding: clamp(18px, 2.5vw, 28px);
 }
@@ -114,10 +114,10 @@
 
 .careers-form > label:not(.careers-file):not(.careers-consent),
 .careers-form-row > label {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #fbfaf6;
+  border: 1px solid #d9d4ca;
   border-radius: 10px;
-  color: #475569;
+  color: #5d656a;
   gap: 4px;
   min-height: 72px;
   padding: 10px 12px 8px;
@@ -126,13 +126,13 @@
 
 .careers-form > label:not(.careers-file):not(.careers-consent):hover,
 .careers-form-row > label:hover {
-  border-color: #c7d2e2;
+  border-color: #c4b99f;
 }
 
 .careers-form > label:not(.careers-file):not(.careers-consent):focus-within,
 .careers-form-row > label:focus-within {
-  border-color: #6c91e8;
-  box-shadow: 0 0 0 3px rgb(33 89 210 / 0.11);
+  border-color: #9a6d27;
+  box-shadow: 0 0 0 3px rgb(154 109 39 / 0.14);
 }
 
 .careers-form input,
@@ -163,16 +163,16 @@
 }
 
 .careers-file {
-  background: #ffffff;
-  border: 1px dashed #94a3b8;
+  background: #fbfaf6;
+  border: 1px dashed #b9ad93;
   border-radius: 10px;
   gap: 8px;
   padding: 12px;
 }
 
 .careers-file:focus-within {
-  border-color: #6c91e8;
-  box-shadow: 0 0 0 3px rgb(33 89 210 / 0.11);
+  border-color: #9a6d27;
+  box-shadow: 0 0 0 3px rgb(154 109 39 / 0.14);
 }
 
 .careers-form input[type="file"] {
@@ -196,7 +196,7 @@
 
 .careers-consent {
   border-radius: 8px;
-  color: #475569 !important;
+  color: #5d656a !important;
   padding: 4px 0;
 }
 
@@ -232,7 +232,7 @@
 }
 
 .careers-form button:focus-visible {
-  box-shadow: 0 0 0 3px rgb(33 89 210 / 0.28);
+  box-shadow: 0 0 0 3px rgb(154 109 39 / 0.28);
   outline: 0;
 }
 

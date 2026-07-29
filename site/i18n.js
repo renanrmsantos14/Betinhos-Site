@@ -10,6 +10,7 @@
       "nav.services": "Frota e serviços",
       "nav.security": "Segurança",
       "nav.team": "Equipe",
+      "nav.faq": "FAQ",
       "nav.contact": "Contato",
       "nav.careers": "Trabalhe conosco",
       "language.label": "Selecionar idioma",
@@ -31,12 +32,12 @@
       "hero.coverage": "Destinos em operação",
       "hero.coverageText": "Presença nos principais eixos executivos do Sudeste.",
       "hero.companyAria": "Conheça a empresa",
-      "legacy.tag": "UMA HISTÓRIA DE CUIDADO",
+      "legacy.tag": "Uma história de cuidado",
       "legacy.title": "O caminho que nos trouxe até aqui.",
       "legacy.text": "Em 1986, com as mãos firmes no volante de um Fusca, o Sr. Betinho começou uma jornada feita de presença, trabalho e respeito.",
       "legacy.details": "Em cada madrugada, em cada dia de chuva ou de correria, transportava mais que passageiros: levava sonhos e construía confiança. A frota cresceu, a operação evoluiu e a essência permaneceu a mesma.",
       "legacy.quote": "Alcançamos muitos destinos sem esquecer o ponto de partida: o amor pelo que fazemos e o trabalho duro que nos guia até aqui.",
-      "solutions.tag": "FROTA E SERVIÇOS",
+      "solutions.tag": "Frota e serviços",
       "solutions.title": "Cada deslocamento pede uma leitura própria.",
       "solutions.text": "Da agenda executiva diária a movimentos de maior sensibilidade, combinamos veículo, profissional e protocolo de acordo com a operação.",
       "fleet.label": "Categorias da frota",
@@ -94,7 +95,7 @@
       "services.protection.title": "Proteção executiva",
       "services.protection.text": "Transporte seguro integrado a planejamento de rotas, contingência e coordenação com equipes de proteção.",
       "services.protection.message": "Olá, Betinhos. Quero conversar sobre proteção executiva.",
-      "security.tag": "SEGURANÇA EM MOVIMENTO",
+      "security.tag": "Segurança em movimento",
       "security.title.line1": "A agenda muda.",
       "security.title.line2": "O cuidado permanece.",
       "security.text": "Cada viagem passa por uma sequência de decisões antes, durante e depois do deslocamento.",
@@ -118,7 +119,7 @@
       "security.step7.text": "Registramos a chegada e concluímos o atendimento.",
       "office.alt": "Base operacional da Betinhos em São José dos Campos",
       "office.caption": "BASE OPERACIONAL · SÃO JOSÉ DOS CAMPOS",
-      "office.tag": "ESTRUTURA REAL",
+      "office.tag": "Estrutura real",
       "office.title": "Uma operação com base, equipe e comando.",
       "office.text": "Nossa base em São José dos Campos concentra atendimento, coordenação, tecnologia e treinamento. A estrutura que o passageiro não vê é justamente o que sustenta cada viagem.",
       "metrics.operation": "OPERAÇÃO",
@@ -132,14 +133,14 @@
       "team.juliana.role": "Gerente Financeira",
       "team.renan.role": "Gerente de T.I.",
       "team.marcos.role": "Estagiário",
-      "trust.tag": "RELAÇÕES DE LONGO PRAZO",
+      "trust.tag": "Relações de longo prazo",
       "trust.title": "Confiança construída em operações reais.",
       "trust.text": "Experiência no atendimento a organizações globais, com disciplina de prazo, infraestrutura e alinhamento corporativo.",
       "trust.label": "Indicadores da operação",
       "trust.history": "anos de história",
       "trust.operation": "operação monitorada",
       "trust.languages": "idiomas de atendimento",
-      "reviews.tag": "AVALIAÇÕES NO GOOGLE",
+      "reviews.tag": "Avaliações no Google",
       "reviews.title": "Experiências compartilhadas por nossos clientes.",
       "reviews.text": "Consulte a nota e as avaliações diretamente na ficha oficial da Betinhos. As informações exibidas são atualizadas pelo Google.",
       "reviews.cta": "Avaliar a Betinhos no Google",
@@ -159,7 +160,7 @@
       "faq.a5": "Sim. Disponibilizamos profissionais bilíngues, veículos executivos, vans e opções blindadas conforme cada operação.",
       "faq.q6": "Como a segurança da viagem é acompanhada?",
       "faq.a6": "Planejamos rotas e contingências, monitoramos a operação em tempo real e mantemos comunicação ativa com as equipes envolvidas.",
-      "contact.tag": "FALE COM A OPERAÇÃO",
+      "contact.tag": "Fale com a operação",
       "contact.title": "Quando sua presença é essencial, a nossa operação já está pronta.",
       "form.service": "Serviço",
       "form.date": "Data",
@@ -180,6 +181,7 @@
       "footer.services": "Transporte executivo · Proteção executiva · Operação corporativa",
       "footer.location": "São José dos Campos · SP · Brasil",
       "footer.country": "Brasil",
+      "footer.languages": "Idiomas",
       "widget.label": "Atendimento pelo WhatsApp",
       "widget.eyebrow": "Concierge executivo",
       "widget.status": "Atendimento 24 horas",
@@ -200,6 +202,7 @@
       "nav.services": "Fleet & services",
       "nav.security": "Security",
       "nav.team": "Team",
+      "nav.faq": "FAQ",
       "nav.contact": "Contact",
       "nav.careers": "Work with us",
       "language.label": "Select language",
@@ -221,12 +224,12 @@
       "hero.coverage": "Destinations in operation",
       "hero.coverageText": "Present across the Southeast's main executive corridors.",
       "hero.companyAria": "Learn about the company",
-      "legacy.tag": "A STORY OF CARE",
+      "legacy.tag": "A story of care",
       "legacy.title": "The road that brought us here.",
       "legacy.text": "In 1986, with steady hands on the wheel of a Volkswagen Beetle, Mr. Betinho began a journey built on presence, hard work and respect.",
       "legacy.details": "Through quiet early mornings, rain and busy days, he carried more than passengers: he carried dreams and built trust. The fleet grew, the operation evolved and the essence remained the same.",
       "legacy.quote": "We have reached many destinations without forgetting our starting point: love for what we do and the hard work that guides us here.",
-      "solutions.tag": "FLEET & SERVICES",
+      "solutions.tag": "Fleet & services",
       "solutions.title": "Every journey calls for its own approach.",
       "solutions.text": "From daily executive schedules to highly sensitive movements, we combine the right vehicle, professional and protocol for each operation.",
       "fleet.label": "Fleet categories",
@@ -284,7 +287,7 @@
       "services.protection.title": "Executive protection",
       "services.protection.text": "Secure transportation integrated with route planning, contingencies and protection-team coordination.",
       "services.protection.message": "Hello, Betinhos. I would like to discuss executive protection.",
-      "security.tag": "SECURITY IN MOTION",
+      "security.tag": "Security in motion",
       "security.title.line1": "Schedules change.",
       "security.title.line2": "Care remains.",
       "security.text": "Every journey follows a sequence of decisions before, during and after the ride.",
@@ -308,7 +311,7 @@
       "security.step7.text": "We record the arrival and complete the service.",
       "office.alt": "Betinhos operations office in São José dos Campos",
       "office.caption": "OPERATIONS BASE · SÃO JOSÉ DOS CAMPOS",
-      "office.tag": "REAL INFRASTRUCTURE",
+      "office.tag": "Real infrastructure",
       "office.title": "An operation with a base, team and command.",
       "office.text": "Our São José dos Campos base brings together service, coordination, technology and training. What passengers do not see is precisely what supports every journey.",
       "metrics.operation": "OPERATIONS",
@@ -322,14 +325,14 @@
       "team.juliana.role": "Finance Manager",
       "team.renan.role": "I.T. Manager",
       "team.marcos.role": "Trainee",
-      "trust.tag": "LONG-TERM RELATIONSHIPS",
+      "trust.tag": "Long-term relationships",
       "trust.title": "Trust built through real operations.",
       "trust.text": "Experience serving global organizations with deadline discipline, infrastructure and corporate alignment.",
       "trust.label": "Operations indicators",
       "trust.history": "years of history",
       "trust.operation": "monitored operations",
       "trust.languages": "service languages",
-      "reviews.tag": "GOOGLE REVIEWS",
+      "reviews.tag": "Google reviews",
       "reviews.title": "Experiences shared by our clients.",
       "reviews.text": "View the rating and reviews directly on Betinhos' official profile. The information shown is updated by Google.",
       "reviews.cta": "Review Betinhos on Google",
@@ -349,7 +352,7 @@
       "faq.a5": "Yes. We provide bilingual professionals, executive vehicles, vans and armored options according to each operation.",
       "faq.q6": "How is trip security monitored?",
       "faq.a6": "We plan routes and contingencies, monitor the operation in real time and keep active communication with every team involved.",
-      "contact.tag": "TALK TO OPERATIONS",
+      "contact.tag": "Talk to operations",
       "contact.title": "When your presence is essential, our operation is ready.",
       "form.service": "Service",
       "form.date": "Date",
@@ -370,6 +373,7 @@
       "footer.services": "Executive transportation · Executive protection · Corporate operations",
       "footer.location": "São José dos Campos · SP · Brazil",
       "footer.country": "Brazil",
+      "footer.languages": "Languages",
       "widget.label": "WhatsApp support",
       "widget.eyebrow": "Executive concierge",
       "widget.status": "24-hour service",
@@ -390,6 +394,7 @@
       "nav.services": "Flota y servicios",
       "nav.security": "Seguridad",
       "nav.team": "Equipo",
+      "nav.faq": "Preguntas frecuentes",
       "nav.contact": "Contacto",
       "nav.careers": "Trabaje con nosotros",
       "language.label": "Seleccionar idioma",
@@ -411,12 +416,12 @@
       "hero.coverage": "Destinos en operación",
       "hero.coverageText": "Presencia en los principales ejes ejecutivos del Sudeste.",
       "hero.companyAria": "Conozca la empresa",
-      "legacy.tag": "UNA HISTORIA DE CUIDADO",
+      "legacy.tag": "Una historia de cuidado",
       "legacy.title": "El camino que nos trajo hasta aquí.",
       "legacy.text": "En 1986, con las manos firmes al volante de un Volkswagen Escarabajo, el Sr. Betinho inició un recorrido hecho de presencia, trabajo y respeto.",
       "legacy.details": "En cada madrugada, día de lluvia o jornada intensa, llevaba más que pasajeros: llevaba sueños y construía confianza. La flota creció, la operación evolucionó y la esencia se mantuvo.",
       "legacy.quote": "Llegamos a muchos destinos sin olvidar nuestro punto de partida: el amor por lo que hacemos y el trabajo que nos guía hasta aquí.",
-      "solutions.tag": "FLOTA Y SERVICIOS",
+      "solutions.tag": "Flota y servicios",
       "solutions.title": "Cada traslado requiere un enfoque propio.",
       "solutions.text": "Desde agendas ejecutivas diarias hasta movimientos sensibles, combinamos vehículo, profesional y protocolo para cada operación.",
       "fleet.label": "Categorías de la flota",
@@ -474,7 +479,7 @@
       "services.protection.title": "Protección ejecutiva",
       "services.protection.text": "Transporte seguro integrado con planificación de rutas, contingencias y coordinación con equipos de protección.",
       "services.protection.message": "Hola, Betinhos. Quiero conversar sobre protección ejecutiva.",
-      "security.tag": "SEGURIDAD EN MOVIMIENTO",
+      "security.tag": "Seguridad en movimiento",
       "security.title.line1": "La agenda cambia.",
       "security.title.line2": "El cuidado permanece.",
       "security.text": "Cada viaje sigue una secuencia de decisiones antes, durante y después del traslado.",
@@ -498,7 +503,7 @@
       "security.step7.text": "Registramos la llegada y concluimos el servicio.",
       "office.alt": "Base operativa de Betinhos en São José dos Campos",
       "office.caption": "BASE OPERATIVA · SÃO JOSÉ DOS CAMPOS",
-      "office.tag": "ESTRUCTURA REAL",
+      "office.tag": "Estructura real",
       "office.title": "Una operación con base, equipo y comando.",
       "office.text": "Nuestra base en São José dos Campos reúne atención, coordinación, tecnología y capacitación. La estructura que el pasajero no ve es precisamente lo que sostiene cada viaje.",
       "metrics.operation": "OPERACIÓN",
@@ -512,14 +517,14 @@
       "team.juliana.role": "Gerente Financiera",
       "team.renan.role": "Gerente de T.I.",
       "team.marcos.role": "Pasante",
-      "trust.tag": "RELACIONES A LARGO PLAZO",
+      "trust.tag": "Relaciones a largo plazo",
       "trust.title": "Confianza construida en operaciones reales.",
       "trust.text": "Experiencia atendiendo organizaciones globales con disciplina de plazos, infraestructura y alineación corporativa.",
       "trust.label": "Indicadores de la operación",
       "trust.history": "años de historia",
       "trust.operation": "operación monitoreada",
       "trust.languages": "idiomas de atención",
-      "reviews.tag": "RESEÑAS EN GOOGLE",
+      "reviews.tag": "Reseñas en Google",
       "reviews.title": "Experiencias compartidas por nuestros clientes.",
       "reviews.text": "Consulte la calificación y las reseñas directamente en el perfil oficial de Betinhos. La información mostrada es actualizada por Google.",
       "reviews.cta": "Calificar a Betinhos en Google",
@@ -539,7 +544,7 @@
       "faq.a5": "Sí. Disponemos de profesionales bilingües, vehículos ejecutivos, vans y opciones blindadas según cada operación.",
       "faq.q6": "¿Cómo se monitorea la seguridad del viaje?",
       "faq.a6": "Planificamos rutas y contingencias, monitoreamos la operación en tiempo real y mantenemos comunicación activa con los equipos involucrados.",
-      "contact.tag": "HABLE CON OPERACIONES",
+      "contact.tag": "Hable con operaciones",
       "contact.title": "Cuando su presencia es esencial, nuestra operación ya está preparada.",
       "form.service": "Servicio",
       "form.date": "Fecha",
@@ -560,6 +565,7 @@
       "footer.services": "Transporte ejecutivo · Protección ejecutiva · Operación corporativa",
       "footer.location": "São José dos Campos · SP · Brasil",
       "footer.country": "Brasil",
+      "footer.languages": "Idiomas",
       "widget.label": "Atención por WhatsApp",
       "widget.eyebrow": "Conserjería ejecutiva",
       "widget.status": "Atención 24 horas",
@@ -579,9 +585,9 @@
     [".desktop-nav a:nth-child(2), .mobile-menu-nav a:nth-child(2)", "nav.security"],
     [".desktop-nav a:nth-child(3), .mobile-menu-nav a:nth-child(3)", "nav.company"],
     [".desktop-nav a:nth-child(4), .mobile-menu-nav a:nth-child(4)", "nav.team"],
-    [".desktop-nav a:nth-child(5), .mobile-menu-nav a:nth-child(5)", "nav.careers"],
-    [".desktop-nav a:nth-child(7), .mobile-menu-nav a:nth-child(7)", "nav.contact"],
-    [".hero-status", "hero.status"],
+    [".desktop-nav a:nth-child(5), .mobile-menu-nav a:nth-child(5)", "nav.faq"],
+    [".desktop-nav a:nth-child(6), .mobile-menu-nav a:nth-child(6)", "nav.contact"],
+    [".desktop-nav a:nth-child(7), .mobile-menu-nav a:nth-child(7)", "nav.careers"],
     [".hero-copy h1 span:nth-child(1)", "hero.line1"],
     [".hero-copy h1 span:nth-child(2)", "hero.line2"],
     [".hero-copy h1 span:nth-child(3)", "hero.line3"],
@@ -686,9 +692,8 @@
     [".request-form button", "form.submit"],
     [".request-note", "form.note"],
     ["footer p:nth-of-type(1)", "footer.services"],
-    ["footer p:nth-of-type(2)", "footer.location", 0],
+    [".site-footer__languages", "footer.languages"],
     [".whatsapp-eyebrow", "widget.eyebrow"],
-    [".whatsapp-status", "widget.status"],
     [".whatsapp-message strong", "widget.title"],
     [".whatsapp-message span", "widget.text"],
     ["label[for='whatsapp-widget-message']", "widget.messageLabel"],
@@ -706,6 +711,9 @@
     [".lang-switch [data-lang='en']", "title", "language.en"],
     [".lang-switch [data-lang='es']", "aria-label", "language.es"],
     [".lang-switch [data-lang='es']", "title", "language.es"],
+    [".site-footer__channels img[src='/flags/br.svg']", "alt", "language.pt"],
+    [".site-footer__channels img[src='/flags/us.svg']", "alt", "language.en"],
+    [".site-footer__channels img[src='/flags/es.svg']", "alt", "language.es"],
     [".service-list", "aria-label", "fleet.label"],
     [".fleet-catalog-prev", "aria-label", "fleet.previous"],
     [".fleet-catalog-next", "aria-label", "fleet.next"],
@@ -721,16 +729,28 @@
 
   let activeLanguage = "pt";
 
+  const languageLocale = { pt: "pt-BR", en: "en-US", es: "es-ES" };
+
+  const translate = (key) => {
+    const value = CATALOG[activeLanguage][key];
+    if (typeof value === "string") return value;
+    console.warn(`Missing i18n key for ${activeLanguage}: ${key}`);
+    return CATALOG.pt[key] || key;
+  };
+
   const textNode = (element, index = 0) =>
     Array.from(element.childNodes).filter((node) => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim())[index];
 
   const setBoundText = (selector, key, index = 0) => {
     const elements = document.querySelectorAll(selector);
-    if (!elements.length) throw new Error(`Missing i18n target: ${selector}`);
+    if (!elements.length) {
+      console.warn(`Missing i18n target: ${selector}`);
+      return;
+    }
     elements.forEach((element) => {
       const node = textNode(element, index);
-      if (node) node.nodeValue = CATALOG[activeLanguage][key];
-      else element.textContent = CATALOG[activeLanguage][key];
+      if (node) node.nodeValue = translate(key);
+      else element.textContent = translate(key);
       element.dataset.i18n = key;
     });
   };
@@ -765,18 +785,22 @@
     });
   };
 
-  const applyLanguage = (language) => {
+  const applyLanguage = (language, { historyMode = "replace" } = {}) => {
+    const previousLanguage = activeLanguage;
     activeLanguage = CATALOG[language] ? language : "pt";
-    document.documentElement.lang = activeLanguage === "pt" ? "pt-BR" : activeLanguage;
-    document.title = CATALOG[activeLanguage]["meta.title"];
-    document.querySelector('meta[name="description"]').content = CATALOG[activeLanguage]["meta.description"];
+    document.documentElement.lang = languageLocale[activeLanguage];
+    document.title = translate("meta.title");
+    document.querySelector('meta[name="description"]').content = translate("meta.description");
 
     TEXT_BINDINGS.forEach(([selector, key, index]) => setBoundText(selector, key, index));
     ATTRIBUTE_BINDINGS.forEach(([selector, attribute, key]) => {
       const elements = document.querySelectorAll(selector);
-      if (!elements.length) throw new Error(`Missing i18n attribute target: ${selector}`);
+      if (!elements.length) {
+        console.warn(`Missing i18n attribute target: ${selector}`);
+        return;
+      }
       elements.forEach((element) => {
-        element.setAttribute(attribute, CATALOG[activeLanguage][key]);
+        element.setAttribute(attribute, translate(key));
         element.dataset[`i18n${attribute.replace(/(^|-)(\w)/g, (_, __, letter) => letter.toUpperCase())}`] = key;
       });
     });
@@ -784,7 +808,11 @@
     renderFormOptions();
     renderServiceSpecs();
     renderFleetLinks();
-    document.querySelector("#whatsapp-widget-message").value = CATALOG[activeLanguage]["widget.defaultMessage"];
+    const whatsappMessage = document.querySelector("#whatsapp-widget-message");
+    const previousDefaultMessage = CATALOG[previousLanguage]["widget.defaultMessage"];
+    if (!whatsappMessage.value.trim() || whatsappMessage.value === previousDefaultMessage) {
+      whatsappMessage.value = translate("widget.defaultMessage");
+    }
 
     document.querySelectorAll(".lang-switch [data-lang]").forEach((button) => {
       const active = button.dataset.lang === activeLanguage;
@@ -792,14 +820,27 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    localStorage.setItem("betinhos-language", activeLanguage);
+    try {
+      localStorage.setItem("betinhos-language", activeLanguage);
+    } catch (error) {
+      console.warn("Could not persist selected language", error);
+    }
     const url = new URL(window.location.href);
     url.searchParams.set("lang", activeLanguage);
-    history.replaceState(null, "", url);
+    if (historyMode === "push" && url.href !== window.location.href) {
+      history.pushState(null, "", url);
+    } else if (historyMode === "replace") {
+      history.replaceState(null, "", url);
+    }
+    document.dispatchEvent(new CustomEvent("betinhos:languagechange", { detail: { language: activeLanguage } }));
   };
 
   document.querySelectorAll(".lang-switch [data-lang]").forEach((button) => {
-    button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    button.addEventListener("click", () => applyLanguage(button.dataset.lang, { historyMode: "push" }));
+  });
+
+  window.addEventListener("popstate", () => {
+    applyLanguage(new URLSearchParams(window.location.search).get("lang"), { historyMode: "none" });
   });
 
   document.querySelector("#request-form").addEventListener("submit", (event) => {
@@ -849,5 +890,11 @@
   });
 
   const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
-  applyLanguage(requestedLanguage || localStorage.getItem("betinhos-language") || "pt");
+  let storedLanguage;
+  try {
+    storedLanguage = localStorage.getItem("betinhos-language");
+  } catch (error) {
+    console.warn("Could not restore selected language", error);
+  }
+  applyLanguage(requestedLanguage || storedLanguage || "pt");
 })();
