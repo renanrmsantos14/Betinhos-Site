@@ -36,6 +36,7 @@ betinhos-anniversary.anniversary-mark[tone="transparent"] {
 }
 
 .anniversary-mark__number {
+  position: relative;
   display: flex;
   align-items: baseline;
   gap: 0;
@@ -351,12 +352,13 @@ betinhos-anniversary.anniversary-mark[variant="hero"] {
 }
 
 betinhos-anniversary.anniversary-mark
-  .anniversary-mark__glyph
+  .anniversary-mark__number
+  >
   .anniversary-mark__label {
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: 87%;
+  left: 93.5%;
   width: max-content;
   max-width: calc(100% - 16px);
   margin: 0;
