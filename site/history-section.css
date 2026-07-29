@@ -8,8 +8,8 @@
 
 .history-shell {
   margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 clamp(24px, 7vw, 112px);
+  max-width: none;
+  padding: 0 clamp(24px, 6vw, 96px);
 }
 
 .history-carousel__topline {
@@ -75,7 +75,7 @@
   border-top: 1px solid #c9b78f;
   color: #394850;
   font: 500 13px/1.65 var(--sans);
-  margin: auto 0 0;
+  margin: clamp(28px, 3vw, 42px) 0 0;
   max-width: 44ch;
   padding-top: 20px;
 }
@@ -154,27 +154,29 @@
 }
 
 .history-slide figcaption {
-  align-items: end;
-  background: var(--navy);
+  align-items: flex-start;
+  background: #071d2c;
   color: #f7f4ec;
-  display: grid;
-  gap: 8px 24px;
-  grid-template-columns: minmax(110px, .35fr) minmax(180px, .65fr);
-  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 112px;
+  padding: 18px clamp(24px, 3vw, 36px) 20px;
 }
 
 .history-slide figcaption span {
   color: var(--gold2);
   font: 700 9px/1.25 var(--sans);
-  grid-row: 1 / 3;
   letter-spacing: .16em;
-  padding-top: 5px;
+  margin: 0 0 8px;
+  padding: 0;
 }
 
 .history-slide figcaption strong {
   color: #f7f4ec;
   font: 400 clamp(25px, 2.2vw, 34px)/.98 var(--serif);
   letter-spacing: -.035em;
+  padding: 0;
 }
 
 .history-slide figcaption p {
@@ -182,6 +184,7 @@
   font: 400 12px/1.55 var(--sans);
   margin: 0;
   max-width: 39ch;
+  padding: 6px 0 0;
 }
 
 .history-carousel__controls {
@@ -305,7 +308,7 @@
   }
 
   .history-intro blockquote {
-    margin-top: 28px;
+    margin: 28px 0 0;
   }
 
   .history-slides,
@@ -315,19 +318,24 @@
 
   .history-slide figcaption {
     display: block;
+    min-height: 0;
+    padding: 18px 24px;
   }
 
   .history-slide figcaption span {
     display: block;
     margin-bottom: 10px;
+    padding: 0;
   }
 
   .history-slide figcaption strong {
     display: block;
+    padding: 0;
   }
 
   .history-slide figcaption p {
-    margin-top: 9px;
+    margin-top: 0;
+    padding: 6px 0 0;
   }
 
   .history-carousel__dots button {
@@ -364,7 +372,7 @@
   }
 
   .history-intro blockquote {
-    margin-top: 20px;
+    margin: 20px 0 0;
     padding-top: 16px;
   }
 
@@ -382,8 +390,8 @@
   }
 
   .history-slide figcaption {
-    min-height: 146px;
-    padding: 22px 24px;
+    min-height: 112px;
+    padding: 18px 24px;
   }
 
   .history-slide figcaption strong {
@@ -427,4 +435,81 @@
   .history-carousel__dots button::before {
     transition: none;
   }
+}
+
+/* Modernized history carousel controls. */
+.history-carousel__controls {
+  align-items: center;
+  border-top: 1px solid #c9c1b2;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 14px;
+  min-height: 74px;
+}
+
+.history-carousel__status {
+  align-items: baseline;
+  color: #7d8790;
+  display: flex;
+  flex: 0 0 auto;
+  font: 700 9px/1 var(--sans);
+  gap: 5px;
+  letter-spacing: .14em;
+  margin: 0;
+}
+
+.history-carousel__status strong {
+  color: #9a6d27;
+  font-size: 17px;
+  letter-spacing: -.02em;
+}
+
+.history-carousel__navigation { align-items: center; display: flex; gap: 18px; }
+
+.history-carousel__dots button {
+  border: 1px solid transparent;
+  min-height: 52px;
+  min-width: 130px;
+  padding: 10px 15px;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, opacity 160ms ease, transform 120ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.history-carousel__dots button.is-active { border-color: #b7a991; }
+
+.history-carousel__buttons {
+  border-left: 1px solid #d6cfc2;
+  gap: 5px;
+  padding: 0 0 0 12px;
+}
+
+.history-carousel__button { align-items: center; display: inline-flex; justify-content: center; }
+
+.history-carousel__button svg {
+  fill: none;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 18px;
+}
+
+.history-carousel__button:active,
+.history-carousel__dots button:active { transform: scale(.96); }
+
+.history-carousel__button:focus-visible,
+.history-carousel__dots button:focus-visible { outline-offset: 3px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .history-carousel__button:hover { background: var(--ink); border-color: var(--ink); color: #f7f4ec; }
+  .history-carousel__dots button:hover { border-color: #d6cfc2; }
+}
+
+@media (max-width: 680px) {
+  .history-carousel__controls { align-items: stretch; display: flex; flex-direction: column; gap: 0; padding: 12px 0; }
+  .history-carousel__navigation { justify-content: space-between; }
+  .history-carousel__dots { flex: 1; }
+  .history-carousel__dots button { min-height: 44px; min-width: 0; padding: 8px 5px; }
+  .history-carousel__buttons { padding: 0 0 0 8px; }
 }
