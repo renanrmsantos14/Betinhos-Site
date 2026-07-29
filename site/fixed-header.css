@@ -1,21 +1,17 @@
 /* Fixed navigation: visual state is driven by .is-scrolled in performance.js. */
 :root {
-  --fixed-header-height: 76px;
-  --fixed-header-height-compact: 64px;
+  --fixed-header-height: 88px;
+  --fixed-header-height-compact: 68px;
 }
 
 .site-header {
   position: fixed;
   inset: 0 0 auto;
   width: 100%;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   height: var(--fixed-header-height);
   z-index: 40;
-  padding-inline: clamp(20px, 3vw, 48px);
-  background: transparent;
-  border-bottom-color: transparent;
-  backdrop-filter: none;
+  background: rgb(2 20 38 / 0.82);
+  border-bottom-color: rgb(255 255 255 / 0.18);
   transition:
     height 200ms cubic-bezier(0.23, 1, 0.32, 1),
     background-color 200ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -24,17 +20,15 @@
 
 .site-header.is-scrolled {
   height: var(--fixed-header-height-compact);
-  background: rgb(2 20 38 / 0.97);
-  border-bottom-color: rgb(255 255 255 / 0.14);
-  box-shadow: 0 6px 20px rgb(0 18 45 / 0.2);
+  background: rgb(2 20 38 / 0.96);
+  box-shadow: 0 8px 24px rgb(0 18 45 / 0.22);
 }
 
 .site-header .logo {
-  grid-column: 2;
   display: grid;
-  place-items: center;
-  width: 132px;
-  height: 60px;
+  place-items: center start;
+  width: 142px;
+  height: 68px;
 }
 
 .site-header .logo img {
@@ -49,8 +43,8 @@
 }
 
 .site-header .logo-full {
-  width: 132px;
-  height: 60px;
+  width: 142px;
+  height: 68px;
 }
 
 .site-header .logo-mark {
@@ -70,49 +64,13 @@
   transform: scale(1);
 }
 
-.site-header .desktop-nav {
-  grid-column: 1;
-  justify-self: start;
-  justify-content: flex-start;
-  gap: clamp(12px, 1.3vw, 22px);
-  font-size: 9px;
-}
-
-.site-header .header-actions {
-  grid-column: 3;
-  justify-self: end;
-  gap: 12px;
-}
-
-.site-header .desktop-nav a,
-.site-header .client-area-link {
-  min-height: 40px;
-  display: inline-flex;
-  align-items: center;
-}
-
-@media (width <= 1050px) and (width >= 681px) {
-  .site-header {
-    grid-template-columns: 1fr auto;
-  }
-
-  .site-header .logo {
-    grid-column: 1;
-    justify-self: start;
-  }
-
-  .site-header .header-actions {
-    grid-column: 2;
-  }
-}
-
 main > section[id] {
   scroll-margin-top: calc(var(--fixed-header-height) + 16px);
 }
 
 @media (width <= 680px) {
   :root {
-    --fixed-header-height: 68px;
+    --fixed-header-height: 78px;
     --fixed-header-height-compact: 62px;
   }
 
