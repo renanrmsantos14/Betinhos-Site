@@ -6,6 +6,12 @@
     <meta name="theme-color" content="#021426" />
     <link rel="preload" as="image" href="/assets/logo-betinhos-faknu7rk.png" />
     <link rel="preload" as="image" href="/assets/hero-poster-C3fsc8YH.webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
+    />
     <title>Betinhos Executive Service | Transporte executivo</title>
     <meta
       name="description"
@@ -172,8 +178,8 @@
         --font-geist-mono: "Geist Mono", sans-serif;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-D6_arh2k.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DPgkU-ew.css">
+    <script type="module" crossorigin src="/assets/index-B9AGl9kA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cp5le9tE.css">
   </head>
   <body
     class="is-loading __variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"
@@ -450,46 +456,42 @@
 
           <ol class="security-journey-events">
             <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Agendamento recebido</h3>
-                <p>Recebemos horários, passageiros, endereços e necessidades da viagem.</p>
-              </div>
+              <span class="security-journey-phase">ANTES DA VIAGEM</span>
+              <span class="security-journey-number" aria-hidden="true">01</span>
+              <h3>Agendamento recebido</h3>
+              <p>Recebemos horários, passageiros, endereços e necessidades da viagem.</p>
             </li>
             <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Análise de rota e trânsito</h3>
-                <p>Avaliamos o trajeto, o trânsito previsto, restrições e alternativas.</p>
-              </div>
+              <span class="security-journey-number" aria-hidden="true">02</span>
+              <h3>Análise de rota e trânsito</h3>
+              <p>Avaliamos o trajeto, o trânsito previsto, restrições e alternativas.</p>
             </li>
             <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Planejamento operacional</h3>
-                <p>Definimos margens, horários de apresentação e pontos que exigem atenção.</p>
-              </div>
+              <span class="security-journey-number" aria-hidden="true">03</span>
+              <h3>Planejamento operacional</h3>
+              <p>Definimos margens, horários de apresentação e pontos que exigem atenção.</p>
             </li>
             <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Briefing da equipe</h3>
-                <p>O motorista recebe agenda, rota, contatos e orientações específicas.</p>
-              </div>
+              <span class="security-journey-number" aria-hidden="true">04</span>
+              <h3>Briefing da equipe</h3>
+              <p>O motorista recebe agenda, rota, contatos e orientações específicas.</p>
             </li>
             <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Verificação pré-embarque</h3>
-                <p>Conferimos o veículo, a apresentação do motorista e os itens do embarque.</p>
-              </div>
+              <span class="security-journey-number" aria-hidden="true">05</span>
+              <h3>Verificação pré-embarque</h3>
+              <p>Conferimos o veículo, a apresentação do motorista e os itens do embarque.</p>
             </li>
-            <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Acompanhamento da viagem</h3>
-                <p>A equipe acompanha os marcos combinados e permanece disponível ao motorista.</p>
-              </div>
+            <li class="security-journey-event security-journey-event--phase" data-journey-step>
+              <span class="security-journey-phase">DURANTE A VIAGEM</span>
+              <span class="security-journey-number" aria-hidden="true">06</span>
+              <h3>Acompanhamento da viagem</h3>
+              <p>A equipe acompanha os marcos combinados e permanece disponível ao motorista.</p>
             </li>
-            <li class="security-journey-event" data-journey-step>
-              <div>
-                <h3>Chegada e encerramento</h3>
-                <p>Registramos a chegada e concluímos o atendimento.</p>
-              </div>
+            <li class="security-journey-event security-journey-event--phase" data-journey-step>
+              <span class="security-journey-phase">ENCERRAMENTO</span>
+              <span class="security-journey-number" aria-hidden="true">07</span>
+              <h3>Chegada e encerramento</h3>
+              <p>Registramos a chegada e concluímos o atendimento.</p>
             </li>
           </ol>
         </div>
@@ -611,7 +613,7 @@
       <section class="team section" id="equipe">
         <div class="team-head">
           <div>
-            <p class="eyebrow gold">NOSSO TIME</p>
+            <p class="eyebrow gold">Nosso time</p>
             <h2>A operação tem nome, rosto e responsabilidade.</h2>
           </div>
           <p>
@@ -689,7 +691,7 @@
       </section>
       <section class="careers section" id="trabalhe-conosco" aria-labelledby="careers-title">
         <div class="careers-intro">
-          <p class="eyebrow">TRABALHE CONOSCO</p>
+          <p class="eyebrow">Trabalhe conosco</p>
           <h2 id="careers-title">Faça parte de uma operação que cuida de vidas.</h2>
           <p>
             Procuramos profissionais responsáveis, discretos e comprometidos com cada
@@ -767,7 +769,13 @@
               oportunidades profissionais. *
             </span>
           </label>
-          <button type="submit">Enviar candidatura <span aria-hidden="true">↗</span></button>
+          <button type="submit">
+            <svg class="careers-form__submit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+            Enviar candidatura <span aria-hidden="true">↗</span>
+          </button>
           <p class="careers-note">
             O envio é protegido contra spam. No primeiro uso, a Betinhos precisará
             confirmar o endereço de recebimento.
@@ -776,7 +784,7 @@
       </section>
       <section class="faq section" id="faq" aria-labelledby="faq-title">
         <div class="faq-intro">
-          <p class="eyebrow gold" data-i18n="faqTag">PERGUNTAS FREQUENTES</p>
+          <p class="eyebrow gold" data-i18n="faqTag">Perguntas frequentes</p>
           <h2 id="faq-title" data-i18n="faqTitle">O que você precisa saber antes da partida.</h2>
           <p data-i18n="faqIntro">Respostas diretas sobre reservas, cobertura e padrão operacional.</p>
         </div>
@@ -854,6 +862,10 @@
             <input name="passageiros" type="number" min="1" max="99" value="1" required />
           </label>
           <button type="submit">
+            <svg class="request-form__submit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2 11 13" />
+              <path d="m22 2-7 20-4-9-9-4Z" />
+            </svg>
             Enviar briefing pelo WhatsApp <span>↗</span>
           </button>
         </form>
@@ -885,12 +897,50 @@
           <a href="mailto:junior@betinhos.com.br">junior@betinhos.com.br</a>
           <a href="tel:+5512997236961">+55 12 99723-6961</a>
         </nav>
+        <section class="site-footer__contacts" aria-labelledby="footer-contacts-title">
+          <h2 id="footer-contacts-title">Contatos diretos</h2>
+          <ul>
+            <li>
+              <strong>Júnior de Paula</strong>
+              <span>Concierge bilíngue</span>
+              <a href="tel:+5512997236961">+55 12 99723-6961</a>
+              <a href="mailto:junior@betinhos.com.br">junior@betinhos.com.br</a>
+            </li>
+            <li>
+              <strong>Deborah Keila</strong>
+              <span>Operations Manager</span>
+              <a href="tel:+5512996159093">+55 12 99615-9093</a>
+              <a href="mailto:deborah.keila@betinhos.com.br">deborah.keila@betinhos.com.br</a>
+            </li>
+            <li>
+              <strong>Juliana Rodrigues</strong>
+              <span>Finance Manager</span>
+              <a href="tel:+5512996159085">+55 12 99615-9085</a>
+              <a href="mailto:financeiro@betinhos.com.br">financeiro@betinhos.com.br</a>
+            </li>
+          </ul>
+        </section>
         <div class="site-footer__location">
-          <h2>Base operacional</h2>
-          <p>São José dos Campos<br />São Paulo · Brasil</p>
+          <h2>Cobertura</h2>
+          <ul class="site-footer__coverage">
+            <li>São José dos Campos</li>
+            <li>Pindamonhangaba</li>
+            <li>Vale do Paraíba</li>
+            <li>Rio de Janeiro</li>
+            <li>São Paulo</li>
+          </ul>
         </div>
         <div class="site-footer__bottom">
           <small>© 2026 Betinhos Executive Service. Todos os direitos reservados.</small>
+          <div class="site-footer__channels" aria-label="Canais e idiomas">
+            <span>Siga-nos</span>
+            <span class="site-footer__social" aria-label="Instagram">Instagram</span>
+            <a href="https://br.linkedin.com/company/betinhosexecutiveservice" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>Idiomas</span>
+            <img src="/assets/br-REPataop.svg" alt="Português" width="20" height="15" />
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%207410%203900'%3e%3cpath%20fill='%23b22234'%20d='M0%200h7410v3900H0z'/%3e%3cpath%20d='M0%20450h7410m0%20600H0m0%20600h7410m0%20600H0m0%20600h7410m0%20600H0'%20stroke='%23fff'%20stroke-width='300'/%3e%3cpath%20fill='%233c3b6e'%20d='M0%200h2964v2100H0z'/%3e%3cg%20fill='%23fff'%3e%3cg%20id='d'%3e%3cg%20id='c'%3e%3cg%20id='e'%3e%3cg%20id='b'%3e%3cpath%20id='a'%20d='M247%2090l70.534%20217.082-184.66-134.164h228.253L176.466%20307.082z'/%3e%3cuse%20xlink:href='%23a'%20y='420'/%3e%3cuse%20xlink:href='%23a'%20y='840'/%3e%3cuse%20xlink:href='%23a'%20y='1260'/%3e%3c/g%3e%3cuse%20xlink:href='%23a'%20y='1680'/%3e%3c/g%3e%3cuse%20xlink:href='%23b'%20x='247'%20y='210'/%3e%3c/g%3e%3cuse%20xlink:href='%23c'%20x='494'/%3e%3c/g%3e%3cuse%20xlink:href='%23d'%20x='988'/%3e%3cuse%20xlink:href='%23c'%20x='1976'/%3e%3cuse%20xlink:href='%23e'%20x='2470'/%3e%3c/g%3e%3c/svg%3e" alt="English" width="20" height="15" />
+            <img src="/assets/es-CGzi5tm8.svg" alt="Español" width="20" height="15" />
+          </div>
           <a href="#contato">Privacidade e uso de dados</a>
         </div>
       </footer>

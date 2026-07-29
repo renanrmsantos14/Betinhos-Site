@@ -1,0 +1,34 @@
+/* Section labels: human hierarchy, without micro uppercase. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 22px;
+  color: var(--gold);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(15px, 1.25vw, 17px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.eyebrow::before {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  opacity: 0.72;
+}
+
+@media (max-width: 560px) {
+  .eyebrow {
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+
+  .eyebrow::before {
+    width: 20px;
+  }
+}
