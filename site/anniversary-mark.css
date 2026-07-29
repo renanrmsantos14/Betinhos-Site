@@ -58,6 +58,14 @@ betinhos-anniversary.anniversary-mark[tone="transparent"] {
   margin-inline-start: 0;
 }
 
+.anniversary-mark__glyph:last-child {
+  -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  -webkit-mask-size: 100% 100%, 54% 16%;
+  -webkit-mask-position: 0 0, 100% 50%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: xor;
+}
+
 .anniversary-mark__content {
   position: relative;
   display: flex;

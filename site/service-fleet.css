@@ -407,8 +407,3 @@
   --anniversary-background: transparent;
   background: transparent;
 }
-
-.hero-anniversary-panel .anniversary-mark__label {
-  --anniversary-background: #061d33;
-  background: #061d33;
-}
