@@ -1,38 +1,38 @@
 # Evidências
 
-## Escopo auditado
+## Estrutura
 
-- Bloco `#seguranca` em `site/index.html`.
-- Estilos entre `.protocol.security-journey` e as regras responsivas em `site/assets/index-D7fnJsCl.css`.
-- Animação em `site/performance.js`.
-- Copy PT, EN e ES em `site/i18n.js`.
-- Três recortes fornecidos pelo usuário.
+- `site/index.html:439-494`: zero controles; quatro eventos repetem `time + h3 + p`.
+- Profundidade máxima: sete níveis no evento de mudança de destino.
+- `is-alert` e `is-success` não possuem consumidor visual atual.
+- `site/performance.js:86-124`: quatro etapas são ativadas por timers, não por dados operacionais.
 
-## Estrutura e comportamento
+## Visual
 
-- Zero controles interativos no bloco.
-- Quatro eventos cronológicos e cinco headings.
-- A versão auditada usava linha, quatro nós, marcador automotivo, moldura, selo superior e três selos inferiores.
-- `is-complete` era ativado em JavaScript sem consumidor em CSS.
-- Os estados eram gerados por quatro timers; não havia integração com rastreamento ou dados reais.
+- `site/assets/index-D7fnJsCl.css:768-910`: escala de espaçamento observada de 8, 16, 18, 24, 28, 48, 64, 96, 112 e 136 px.
+- Escala tipográfica observada de 10, 11, 12, 15, 34 e 66 px.
+- Nove cores ou variações alpha no bloco; contraste mínimo de texto medido em aproximadamente 7,74:1.
+- `site/assets/index-D7fnJsCl.css:1949-1952`: regra fora de breakpoint força uma coluna também no desktop.
+- `site/assets/index-D7fnJsCl.css:1994-2024`: movimento reduzido desativa as transições.
 
-## Visual e conteúdo
+## Copy e honestidade
 
-- Dez valores de cor eram usados nos três pequenos conjuntos ornamentais.
-- O rodapé usava texto de 10 px, abaixo do mínimo de 11 px do Design System.
-- A moldura e as linhas de baixa opacidade tinham contraste inferido inferior a 3:1.
-- `RASTREAMENTO ATIVO`, `FROTA CONTROLADA` e `CONCIERGE 24/7` não exibiam dado, fonte ou ação.
-- `CENÁRIO ILUSTRATIVO` reduzia o risco de interpretação, mas contradizia a aparência de painel ativo.
+- `site/index.html:444-489`: o bloco atual descreve um exemplo de quatro eventos, não o processo completo.
+- “EXEMPLO DE ACOMPANHAMENTO” reduz a chance de interpretar os eventos como dados reais.
+- “Mantém comunicação até a chegada” pode sugerir contato contínuo sem explicar frequência ou canal.
+- A proposta de sete etapas não contém superlativos nem garantia de resultado.
+- Termos internos como “briefing” e “planejamento operacional” precisam de descrições em linguagem simples.
 
-## Peso após a simplificação
+## Peso e atenção
 
-- 32 descendentes, 18 strings visíveis, quatro eventos, zero controles e zero mídia.
-- Zero animações contínuas em repouso.
-- Uma sequência automática de quatro etapas, com suporte a `prefers-reduced-motion`.
-- JS local inicial medido: 64.379 bytes. O bloco não adiciona biblioteca.
+- JS local inicial medido: 62.806 bytes brutos, sem contar Trustindex e scripts inline.
+- 31 requests no Vite; projeção de 29 em produção.
+- Proxy até `load`: mediana de 217 ms em localhost, sem throttle.
+- Zero loops em repouso; uma sequência automática com quatro timers.
+- Zero badges, notificações ou modais no bloco.
 
 ## Lacunas
 
-- Não foi executado Lighthouse com CPU e rede simuladas.
-- Claims operacionais não foram validados contra SLA ou telemetria.
-- Acessibilidade interativa não se aplica ao escopo, pois não há controles.
+- Sem protocolo público que comprove checklist, margem operacional, frequência de contato ou registro de chegada.
+- Sem Lighthouse ou Web Vitals de produção.
+- O bloco não possui controles; estados de foco e disabled não se aplicam.

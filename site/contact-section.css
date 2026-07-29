@@ -1,0 +1,109 @@
+/* Contact finish: institutional blue background and WCAG-aware contrast. */
+.contact {
+  background: #061d33;
+  color: #ffffff;
+}
+
+.contact .eyebrow {
+  color: #e8edf5;
+}
+
+.contact h2,
+.request-note {
+  color: #ffffff;
+}
+
+.request-form {
+  background: #fcfcfb;
+  color: #172033;
+}
+
+.request-form input,
+.request-form select {
+  color: #172033;
+  border-bottom-color: #64748b;
+}
+
+.request-form input:focus,
+.request-form select:focus {
+  border-color: #001a3d;
+  outline: 3px solid rgb(232 237 245 / 0.72);
+  outline-offset: 2px;
+}
+
+.request-form button,
+.request-form button:hover {
+  background: #001a3d;
+  color: #ffffff;
+}
+
+.careers {
+  background: #f7f4ec;
+  color: #10202b;
+}
+
+.careers-intro .eyebrow,
+.careers-intro li strong {
+  color: #9a6d27;
+}
+
+.careers-intro h2,
+.careers-form label {
+  color: #10202b;
+}
+
+.careers-intro > p:last-of-type,
+.careers-file small,
+.careers-note,
+.careers-required {
+  color: #475569;
+}
+
+.careers-intro ul,
+.careers-intro li,
+.careers-form {
+  border-color: #cfc8bb;
+}
+
+.careers-form input,
+.careers-form select,
+.careers-form textarea {
+  color: #10202b;
+  border-bottom-color: #64748b;
+}
+
+.careers-form select {
+  color-scheme: light;
+}
+
+.careers-form option {
+  background: #f7f4ec;
+  color: #10202b;
+}
+
+.careers-form textarea::placeholder {
+  color: #64748b;
+}
+
+.careers-form input:focus-visible,
+.careers-form select:focus-visible,
+.careers-form textarea:focus-visible {
+  border-color: #001a3d;
+  box-shadow: 0 0 0 3px rgb(33 89 210 / 0.18);
+}
+
+.careers-form input[type="file"] {
+  border-color: #64748b;
+}
+
+.careers-form input[type="file"]::file-selector-button,
+.careers-form button,
+.careers-form button:hover {
+  background: #001a3d;
+  border-color: #001a3d;
+  color: #ffffff;
+}
+
+.careers-consent input {
+  accent-color: #001a3d;
+}

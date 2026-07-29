@@ -1,28 +1,29 @@
-# Handoff de implementação
+# Handoff
 
-Redesenhar o bloco `#seguranca` como uma composição editorial premium em duas colunas.
+```text
+/make-plan Refine o bloco #seguranca com base em uma auditoria Dieter Rams de 20/30.
 
-## Remover
+Verdict:
+O bloco já abandonou o painel artificial e possui uma base editorial coerente, mas precisa trocar o exemplo de quatro eventos por um processo completo, corrigir o desktop e retirar os sinais de status automático.
 
-- Status superior “operação acompanhada”.
-- Linha vertical, nós, índices e ícone de carro.
-- Moldura, fundo interno, raio e sombra de dashboard.
-- “Cenário ilustrativo” flutuante.
-- Rodapé com rastreamento, frota e concierge.
-- Estados JS `is-current`, `is-complete` e progresso visual.
+Keep:
+- Princípio #7, 3/3: fundo sólido, tipografia e regras simples. Regressão: confirmar ausência de cards, glows, badges e trilhos.
+- Princípio #9, 3/3: JS local abaixo de 100 KB e reduced motion. Regressão: verificar bundle e prefers-reduced-motion.
 
-## Manter
+Fix:
+1. Princípio #2 - Utilidade: apresentar as sete etapas solicitadas, do agendamento ao encerramento. Evidência: site/index.html:460-491.
+2. Princípio #8 - Detalhe: corrigir a regra que força uma coluna no desktop. Evidência: site/assets/index-D7fnJsCl.css:1949-1952.
+3. Princípio #6 - Honestidade: representar etapas habituais, não estados concluídos por timer. Evidência: site/performance.js:86-124.
+4. Princípio #10 - Mínimo: remover horários ilustrativos e a troca de destino. Evidência: site/index.html:462-489.
+5. Princípio #4 - Clareza: explicar termos operacionais em frases simples. Evidência: site/i18n.js:96-109.
 
-- Título principal e identidade Betinhos.
-- Quatro eventos com horários.
-- Transição do destino antigo para o novo.
-- Revelação sequencial curta e `prefers-reduced-motion`.
-- Traduções PT, EN e ES.
+Out of scope:
+- Alterações fora de #seguranca.
+- Novos cards, ícones, imagens, controles ou bibliotecas.
 
-## Resultado esperado
-
-- Lista aberta com divisores horizontais.
-- Horário em uma coluna e explicação em outra.
-- Tipografia e espaçamento como hierarquia principal.
-- Zero indicadores que sugiram telemetria ao vivo.
-- Sem overflow horizontal em desktop e mobile.
+Deliverables:
+- Mudanças exatas em HTML, CSS, JS e i18n.
+- Duas colunas no desktop, uma no mobile.
+- Stagger curto de leitura e reduced motion.
+- QA desktop/mobile, console e build.
+```

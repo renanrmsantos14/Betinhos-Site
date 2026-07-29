@@ -89,11 +89,7 @@
     const timers = [];
     let hasPlayed = false;
 
-    const setStep = (activeIndex) => {
-      steps.forEach((step, index) => {
-        step.classList.toggle('is-active', index <= activeIndex);
-      });
-    };
+    const showAllSteps = () => steps.forEach((step) => step.classList.add('is-active'));
 
     const playJourney = () => {
       if (hasPlayed) return;
@@ -101,12 +97,12 @@
       journey.classList.add('is-journey-visible');
 
       if (reducedMotion.matches) {
-        setStep(steps.length - 1);
+        showAllSteps();
         return;
       }
 
-      steps.forEach((_, index) => {
-        timers.push(setTimeout(() => setStep(index), 280 + index * 620));
+      steps.forEach((step, index) => {
+        timers.push(setTimeout(() => step.classList.add('is-active'), 180 + index * 70));
       });
     };
 
@@ -121,7 +117,7 @@
       if (!reducedMotion.matches) return;
       timers.forEach(clearTimeout);
       playJourney();
-      setStep(steps.length - 1);
+      showAllSteps();
     });
   }
 })();
