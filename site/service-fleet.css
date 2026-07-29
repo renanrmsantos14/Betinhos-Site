@@ -410,9 +410,20 @@
 
 /* Center hero copy inside the actual viewport gap: fixed header to anniversary rail. */
 @media (min-width: 681px) {
+  .hero {
+    --hero-rail-height: 220px;
+    --hero-video-min-height: 720px;
+    height: max(100svh, calc(var(--hero-video-min-height) + var(--hero-rail-height)));
+    min-height: calc(var(--hero-video-min-height) + var(--hero-rail-height));
+  }
+
+  .hero-bottom {
+    height: var(--hero-rail-height);
+  }
+
   .hero-copy {
     position: absolute;
-    inset: var(--fixed-header-height) auto 220px 0;
+    inset: var(--fixed-header-height) auto var(--hero-rail-height) 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -423,7 +434,7 @@
 }
 
 @media (min-width: 681px) and (max-width: 1050px) {
-  .hero-copy {
-    bottom: 210px;
+  .hero {
+    --hero-rail-height: 210px;
   }
 }
