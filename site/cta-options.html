@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Betinhos · Opções de CTA</title>
+    <style>
+      @font-face { font-family: Geist; src: url('/assets/geist-001175b1-Dr5IBr7O.woff2') format('woff2'); font-display: swap; }
+      :root { --navy: #061d33; --navy-deep: #021426; --gold: #d9b263; --gold-light: #f0d89a; --paper: #f4f0e7; --line: #ffffff38; }
+      * { box-sizing: border-box; }
+      body { min-width: 320px; margin: 0; color: var(--paper); background: var(--navy-deep); font-family: Geist, Arial, sans-serif; }
+      main { min-height: 100svh; padding: clamp(28px, 5vw, 72px); background: url('/hero-poster.webp') center / cover no-repeat; position: relative; isolation: isolate; }
+      main::before { content: ''; position: absolute; inset: 0; z-index: -1; background: #021426e8; }
+      header { max-width: 1180px; margin: 0 auto clamp(42px, 8vw, 96px); }
+      .eyebrow { margin: 0 0 12px; color: var(--gold-light); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+      h1 { max-width: 760px; margin: 0; font-family: Georgia, serif; font-size: clamp(38px, 6vw, 78px); font-weight: 400; letter-spacing: -.045em; line-height: .96; }
+      h1 em { color: var(--gold-light); }
+      .intro { max-width: 580px; margin: 18px 0 0; color: #d1d8de; font-size: 15px; line-height: 1.6; }
+      .options { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      article { min-height: 210px; padding: 24px; border: 1px solid var(--line); background: #061d33d9; display: flex; flex-direction: column; justify-content: space-between; }
+      .option-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+      .option-meta strong { color: var(--gold-light); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+      .option-meta span { color: #aeb9c0; font-size: 11px; }
+      .option-copy { max-width: 340px; margin: 26px 0 22px; color: #d1d8de; font-size: 13px; line-height: 1.5; }
+      .cta { width: max-content; min-height: 48px; display: inline-flex; align-items: center; gap: 18px; color: var(--gold-light); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-decoration: none; text-transform: uppercase; transition: transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease; }
+      .cta span { font-size: 16px; line-height: 1; transition: transform .2s ease; }
+      .cta:hover span { transform: translate(3px, -3px); }
+      .cta:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+      .cta:active { transform: scale(.97); }
+      .cta-a { padding: 0 20px; border-radius: 10px; color: var(--navy-deep); background: var(--gold); }
+      .cta-a:hover { background: var(--gold-light); }
+      .cta-b { padding: 0 20px; border: 1px solid var(--gold); border-radius: 10px; }
+      .cta-b:hover { color: var(--navy-deep); background: var(--gold); }
+      .cta-c { min-height: 36px; border-bottom: 1px solid var(--gold); }
+      .cta-c:hover { border-color: var(--gold-light); color: #fff; }
+      .cta-d { padding: 0 0 0 20px; border: 1px solid var(--gold); border-radius: 10px; overflow: hidden; }
+      .cta-d span { width: 48px; height: 48px; display: grid; place-items: center; border-left: 1px solid #061d3340; color: var(--navy-deep); background: var(--gold); }
+      .cta-d:hover { color: #fff; }
+      .cta-d:hover span { background: var(--gold-light); }
+      @media (max-width: 680px) { main { padding: 24px 18px 40px; } header { margin-bottom: 40px; } .options { grid-template-columns: 1fr; } article { min-height: 190px; } }
+      @media (prefers-reduced-motion: reduce) { .cta, .cta span { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Comparativo de interface</p>
+        <h1>Você dirige seu mundo, <em>e nós te levamos até lá.</em></h1>
+        <p class="intro">Quatro tratamentos para o CTA principal da hero. Todos preservam a paleta, o contraste e o tom operacional premium da Betinhos.</p>
+      </header>
+      <section class="options" aria-label="Opções de CTA">
+        <article><div class="option-meta"><strong>Opção 01 · Sólido</strong><span>Presença máxima</span></div><p class="option-copy">CTA dourado com raio discreto. Mantém conversão e reduz o aspecto de bloco rígido.</p><a class="cta cta-a" href="#">Solicitar atendimento <span>↗</span></a></article>
+        <article><div class="option-meta"><strong>Opção 02 · Contorno</strong><span>Mais leve</span></div><p class="option-copy">A borda mantém o CTA visível sem competir com a fotografia e o título.</p><a class="cta cta-b" href="#">Solicitar atendimento <span>↗</span></a></article>
+        <article><div class="option-meta"><strong>Opção 03 · Editorial</strong><span>Mais elegante</span></div><p class="option-copy">Funciona como chamada editorial: texto, seta e uma linha de apoio no lugar do retângulo.</p><a class="cta cta-c" href="#">Solicitar atendimento <span>↗</span></a></article>
+        <article><div class="option-meta"><strong>Opção 04 · Dividido</strong><span>Mais tátil</span></div><p class="option-copy">Texto preserva leveza; a seta ganha um compartimento dourado com área de toque clara.</p><a class="cta cta-d" href="#">Solicitar atendimento <span>↗</span></a></article>
+      </section>
+    </main>
+  </body>
+</html>

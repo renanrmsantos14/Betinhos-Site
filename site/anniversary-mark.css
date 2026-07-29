@@ -1,0 +1,369 @@
+:where(betinhos-anniversary.anniversary-mark) {
+  --anniversary-background: #061d33;
+  --anniversary-outline: #d9b263;
+  --anniversary-label: #f0d89a;
+  --anniversary-text: #f4f0e7;
+  --anniversary-border: #ffffff2b;
+  --anniversary-number-size: clamp(118px, 10vw, 168px);
+  --anniversary-label-offset: clamp(58px, 4.2vw, 82px);
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  min-width: 0;
+  color: var(--anniversary-text);
+  background: var(--anniversary-background);
+}
+
+betinhos-anniversary.anniversary-mark[tone="light"] {
+  --anniversary-background: #fcfcfb;
+  --anniversary-outline: #b17a00;
+  --anniversary-label: #8b6100;
+  --anniversary-text: #001a3d;
+  --anniversary-border: #e2e8f0;
+}
+
+betinhos-anniversary.anniversary-mark[tone="transparent"] {
+  --anniversary-background: transparent;
+}
+
+.anniversary-mark__body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 3vw, 52px);
+  min-width: 0;
+  height: 100%;
+}
+
+.anniversary-mark__number {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  width: max-content;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--anniversary-outline);
+  font: 400 var(--anniversary-number-size) / 1 var(--serif, Georgia, serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.anniversary-mark__glyph {
+  position: relative;
+  display: block;
+  line-height: 1;
+}
+
+.anniversary-mark__glyph + .anniversary-mark__glyph {
+  margin-inline-start: 0;
+}
+
+.anniversary-mark__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  height: 100%;
+  padding-block: 4px;
+}
+
+.anniversary-mark__label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: calc(-1 * var(--anniversary-label-offset));
+  width: max-content;
+  max-width: 190px;
+  margin: 0;
+  padding: 5px 10px;
+  color: var(--anniversary-label);
+  background: var(--anniversary-background);
+  font: 700 8px/1.4 var(--sans, "Manrope", "Segoe UI", sans-serif);
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+}
+
+.anniversary-mark__message {
+  display: block;
+  max-width: 270px;
+  color: var(--anniversary-text);
+  font: 400 clamp(16px, 1.25vw, 20px)/1.35 var(--serif, Georgia, serif);
+}
+
+.anniversary-mark__signature {
+  display: grid;
+  align-content: center;
+  gap: 11px;
+  box-sizing: border-box;
+  width: min(100%, 340px);
+  margin-block: auto;
+  padding-left: 110px;
+}
+
+.anniversary-mark__route {
+  display: grid;
+  grid-template-columns: 7px minmax(32px, 1fr) 7px;
+  align-items: center;
+  width: min(100%, 230px);
+}
+
+.anniversary-mark__route::before,
+.anniversary-mark__route::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--anniversary-outline);
+  border-radius: 50%;
+}
+
+.anniversary-mark__route-line {
+  height: 1px;
+  background: var(--anniversary-outline);
+}
+
+.anniversary-mark__since {
+  color: var(--anniversary-text);
+  font: 500 clamp(20px, 1.8vw, 28px)/1 var(--serif, Georgia, serif);
+  letter-spacing: -0.02em;
+}
+
+.anniversary-mark__values {
+  max-width: 250px;
+  color: var(--anniversary-label);
+  font: 700 8px/1.55 var(--sans, "Manrope", "Segoe UI", sans-serif);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.anniversary-mark__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  min-height: 24px;
+  color: var(--anniversary-label);
+  font: 700 8px/1 var(--sans, "Manrope", "Segoe UI", sans-serif);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 150ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.anniversary-mark__link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px rgba(33, 89, 210, .22);
+}
+
+.anniversary-mark__arrow {
+  font-size: 12px;
+  transition: transform 200ms cubic-bezier(.23, 1, .32, 1);
+}
+
+betinhos-anniversary.anniversary-mark[size="sm"] {
+  --anniversary-number-size: 80px;
+  --anniversary-label-offset: 42px;
+}
+
+betinhos-anniversary.anniversary-mark[size="md"] {
+  --anniversary-number-size: 112px;
+  --anniversary-label-offset: 58px;
+}
+
+betinhos-anniversary.anniversary-mark[size="lg"] {
+  --anniversary-number-size: 168px;
+}
+
+betinhos-anniversary.anniversary-mark[compact] .anniversary-mark__message,
+betinhos-anniversary.anniversary-mark[compact] .anniversary-mark__link {
+  display: none;
+}
+
+betinhos-anniversary.anniversary-mark[compact] {
+  padding: 20px;
+}
+
+betinhos-anniversary.anniversary-mark[compact] .anniversary-mark__body {
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 16px;
+}
+
+betinhos-anniversary.anniversary-mark[compact] .anniversary-mark__content {
+  justify-content: flex-start;
+  gap: 8px;
+  height: auto;
+  padding: 0;
+}
+
+betinhos-anniversary.anniversary-mark[compact] .anniversary-mark__label {
+  position: static;
+  width: auto;
+  max-width: 180px;
+  padding: 0;
+  background: transparent;
+  transform: none;
+}
+
+betinhos-anniversary.anniversary-mark[variant="panel"] {
+  container-type: inline-size;
+  display: block;
+  width: min(100%, 720px);
+  min-height: 220px;
+  padding: 28px 36px;
+  border: 1px solid var(--anniversary-border);
+}
+
+betinhos-anniversary.anniversary-mark[variant="hero"] {
+  container-type: inline-size;
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  padding: 28px clamp(32px, 4vw, 72px);
+  border-right: 1px solid var(--anniversary-border);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .anniversary-mark__link:hover {
+    color: #ffffff;
+  }
+
+  betinhos-anniversary.anniversary-mark[tone="light"]
+    .anniversary-mark__link:hover {
+    color: #0b2d5a;
+  }
+
+  .anniversary-mark__link:hover .anniversary-mark__arrow {
+    transform: translate(3px, 3px);
+  }
+}
+
+@container (max-width: 350px) {
+  .anniversary-mark__body {
+    grid-template-columns: 122px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .anniversary-mark__number {
+    font-size: 104px;
+  }
+
+  .anniversary-mark__label {
+    left: -62px;
+    max-width: 118px;
+    padding: 4px 7px;
+    font-size: 6px;
+    white-space: normal;
+  }
+
+  .anniversary-mark__message {
+    max-width: 180px;
+    padding-left: 62px;
+    font-size: 12px;
+  }
+
+  .anniversary-mark__signature {
+    gap: 7px;
+    padding-left: 62px;
+  }
+
+  .anniversary-mark__route {
+    width: min(100%, 150px);
+  }
+
+  .anniversary-mark__since {
+    font-size: 18px;
+  }
+
+  .anniversary-mark__values {
+    font-size: 6px;
+    letter-spacing: 0.11em;
+  }
+
+  .anniversary-mark__link {
+    font-size: 7px;
+  }
+}
+
+@container (max-width: 270px) {
+  .anniversary-mark__body {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 16px;
+  }
+
+  .anniversary-mark__number {
+    font-size: 88px;
+  }
+
+  .anniversary-mark__content {
+    justify-content: flex-start;
+    gap: 8px;
+    height: auto;
+    padding: 0;
+  }
+
+  .anniversary-mark__label {
+    position: static;
+    width: auto;
+    max-width: 180px;
+    padding: 0;
+    background: transparent;
+    transform: none;
+  }
+
+  .anniversary-mark__message {
+    padding-left: 0;
+  }
+
+  .anniversary-mark__signature {
+    padding-left: 0;
+  }
+}
+
+@media (width <= 1050px) {
+  betinhos-anniversary.anniversary-mark[variant="hero"] {
+    padding-inline: 28px;
+  }
+}
+
+@media (width <= 680px) {
+  betinhos-anniversary.anniversary-mark[variant="hero"] {
+    padding: 14px 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--anniversary-border);
+  }
+
+  betinhos-anniversary.anniversary-mark[variant="hero"]
+    .anniversary-mark__link {
+    display: none;
+  }
+}
+
+betinhos-anniversary.anniversary-mark
+  .anniversary-mark__glyph
+  .anniversary-mark__label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 87%;
+  width: max-content;
+  max-width: calc(100% - 16px);
+  margin: 0;
+  padding: 4px 6px;
+  background: var(--anniversary-background);
+  -webkit-text-stroke: 0;
+  font-size: clamp(6px, 0.055em, 8px);
+  line-height: 1;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anniversary-mark__link,
+  .anniversary-mark__arrow {
+    transition: none;
+  }
+}

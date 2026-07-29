@@ -67,7 +67,7 @@
   }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
 
   document.querySelectorAll(
-    '.section-head, .legacy-content, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .protocol-grid article, .office-photo, .office-copy, .footprint > div, .team-grid article, .trust > div, .google-reviews > *, .faq-intro, .faq-list details, .contact > *, footer > *'
+    '.section-head, .legacy-content, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .office-photo, .office-copy, .team-grid article, .trust > div, .google-reviews > *, .faq-intro, .faq-list details, .contact > *, footer > *'
   ).forEach((element, index) => {
     element.classList.add('reveal');
     element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 3) * 70}ms`);
@@ -82,4 +82,51 @@
   const syncHeader = () => header?.classList.toggle('is-scrolled', scrollY > 24);
   syncHeader();
   addEventListener('scroll', syncHeader, { passive: true });
+
+  const journey = document.querySelector('.security-journey');
+  if (journey) {
+    const steps = [...journey.querySelectorAll('[data-journey-step]')];
+    const timers = [];
+    let hasPlayed = false;
+
+    const setStep = (activeIndex) => {
+      const progress = steps.length > 1 ? activeIndex / (steps.length - 1) : 1;
+      journey.style.setProperty('--journey-progress', progress);
+
+      steps.forEach((step, index) => {
+        step.classList.toggle('is-current', index === activeIndex);
+        step.classList.toggle('is-complete', index < activeIndex);
+        step.classList.toggle('is-active', index <= activeIndex);
+      });
+    };
+
+    const playJourney = () => {
+      if (hasPlayed) return;
+      hasPlayed = true;
+      journey.classList.add('is-journey-visible');
+
+      if (reducedMotion.matches) {
+        setStep(steps.length - 1);
+        return;
+      }
+
+      steps.forEach((_, index) => {
+        timers.push(setTimeout(() => setStep(index), 280 + index * 620));
+      });
+    };
+
+    const journeyObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      playJourney();
+      journeyObserver.disconnect();
+    }, { rootMargin: '0px 0px -18% 0px', threshold: 0.16 });
+
+    journeyObserver.observe(journey);
+    reducedMotion.addEventListener('change', () => {
+      if (!reducedMotion.matches) return;
+      timers.forEach(clearTimeout);
+      playJourney();
+      setStep(steps.length - 1);
+    });
+  }
 })();

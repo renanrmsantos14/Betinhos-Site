@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Componente 40 anos | Betinhos</title>
+    <link rel="stylesheet" href="/assets/index-D7fnJsCl.css" />
+    <link rel="stylesheet" href="/anniversary-mark.css" />
+    <script type="module" src="/anniversary-mark.js"></script>
+    <style>
+      body {
+        min-height: 100vh;
+        padding: 48px;
+        background: #f0f0f0;
+      }
+      main {
+        display: grid;
+        gap: 32px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .showcase {
+        width: min(100%, 720px);
+      }
+      .showcase--compact {
+        width: min(100%, 270px);
+        min-height: 190px;
+      }
+      @media (width <= 560px) {
+        body {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <betinhos-anniversary
+        class="showcase"
+        years="40"
+        label="Anos"
+        tone="dark"
+        size="lg"
+        variant="panel"
+      ></betinhos-anniversary>
+      <betinhos-anniversary
+        class="showcase"
+        years="40"
+        label="Anos"
+        tone="light"
+        size="md"
+        variant="panel"
+      ></betinhos-anniversary>
+      <betinhos-anniversary
+        class="showcase showcase--compact"
+        years="40"
+        label="Anos"
+        tone="dark"
+        size="sm"
+        compact
+      ></betinhos-anniversary>
+    </main>
+  </body>
+</html>

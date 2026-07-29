@@ -1,97 +1,60 @@
 (() => {
-  const list = document.querySelector(".service-list");
-  const template = document.querySelector("#service-vehicle-template");
-  if (!list || !template) return;
+  const track = document.querySelector("#servicos-frota");
+  const previous = document.querySelector(".fleet-catalog-prev");
+  const next = document.querySelector(".fleet-catalog-next");
+  if (!track || !previous || !next) return;
 
-  const articles = Array.from(list.querySelectorAll("article"));
-  const coarsePointer = window.matchMedia("(hover: none), (pointer: coarse)");
-  const vehicles = [
-    {
-      name: "corolla",
-      body: "/fleet/corolla-2026/corolla-2026-base-vidros-transparentes.png",
-      wheel: "/fleet/corolla-2026/corolla-2026-roda.png",
-      wheelTop: "54.1%",
-      wheelSize: "13.4%",
-      frontLeft: "15.6%",
-      rearLeft: "70.85%",
-      shadowTop: "65%",
-    },
-    {
-      name: "commander",
-      body: "/fleet/commander-2026/body.png",
-      wheel: "/fleet/commander-2026/wheel.png",
-      wheelTop: "62.5%",
-      wheelSize: "13.4%",
-      frontLeft: "15.85%",
-      rearLeft: "69.8%",
-      shadowTop: "76%",
-    },
-    {
-      name: "master",
-      body: "/fleet/master-2026/body.png",
-      wheel: "/fleet/master-2026/wheel.png",
-      wheelTop: "63.8%",
-      wheelSize: "11.8%",
-      frontLeft: "11.2%",
-      rearLeft: "71.05%",
-      shadowTop: "76%",
-    },
-    {
-      name: "sprinter",
-      body: "/fleet/sprinter-2026/body.png",
-      wheel: "/fleet/sprinter-2026/wheel.png",
-      wheelTop: "66%",
-      wheelSize: "11.3%",
-      frontLeft: "9.9%",
-      rearLeft: "69.7%",
-      shadowTop: "77%",
-    },
-  ];
-  const articleVehicles = [
-    vehicles[0],
-    vehicles[1],
-    vehicles[2],
-    vehicles[3],
-    vehicles[0],
-    vehicles[1],
-  ];
+  const cards = Array.from(track.querySelectorAll(".service-card"));
+  let activeIndex = 0;
+  let frame = 0;
 
-  articles.forEach((article, index) => {
-    article.append(template.content.cloneNode(true));
-    const vehicle = articleVehicles[index];
-    const car = article.querySelector(".service-car");
-    car.dataset.vehicle = vehicle.name;
-    car.style.setProperty("--wheel-top", vehicle.wheelTop);
-    car.style.setProperty("--wheel-size", vehicle.wheelSize);
-    car.style.setProperty("--wheel-front-left", vehicle.frontLeft);
-    car.style.setProperty("--wheel-rear-left", vehicle.rearLeft);
-    car.style.setProperty("--shadow-top", vehicle.shadowTop);
-    article.querySelector(".service-car-body").src = vehicle.body;
-    article.querySelectorAll(".service-car-wheel").forEach((wheel) => {
-      wheel.src = vehicle.wheel;
+  const update = () => {
+    const trackBounds = track.getBoundingClientRect();
+    const trackCenter = trackBounds.left + trackBounds.width / 2;
+    activeIndex = cards.reduce((closest, card, index) => {
+      const currentBounds = card.getBoundingClientRect();
+      const closestBounds = cards[closest].getBoundingClientRect();
+      const currentDistance = Math.abs(currentBounds.left + currentBounds.width / 2 - trackCenter);
+      const closestDistance = Math.abs(
+        closestBounds.left + closestBounds.width / 2 - trackCenter,
+      );
+      return currentDistance < closestDistance ? index : closest;
+    }, 0);
+
+    cards.forEach((card, index) => {
+      if (index === activeIndex) card.setAttribute("aria-current", "true");
+      else card.removeAttribute("aria-current");
     });
-  });
 
-  if (!coarsePointer.matches) return;
+    previous.disabled = activeIndex === 0;
+    next.disabled = activeIndex === cards.length - 1;
+  };
 
-  if (!("IntersectionObserver" in window)) {
-    articles.forEach((article) => article.classList.add("is-active"));
-    return;
-  }
+  const moveTo = (index) => {
+    const targetIndex = Math.max(0, Math.min(cards.length - 1, index));
+    track.scrollTo({
+      left:
+        cards[targetIndex].offsetLeft -
+        track.offsetLeft -
+        (track.clientWidth - cards[targetIndex].clientWidth) / 2,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-active");
-        observer.unobserve(entry.target);
-      });
+  previous.addEventListener("click", () => moveTo(activeIndex - 1));
+  next.addEventListener("click", () => moveTo(activeIndex + 1));
+
+  track.addEventListener(
+    "scroll",
+    () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
     },
-    {
-      rootMargin: "0px 0px -4%",
-      threshold: 0.08,
-    },
+    { passive: true },
   );
 
-  articles.forEach((article) => observer.observe(article));
+  window.addEventListener("resize", update, { passive: true });
+  update();
 })();
