@@ -412,7 +412,7 @@
 @media (min-width: 681px) {
   .hero {
     --hero-rail-height: 220px;
-    --hero-video-min-height: 720px;
+    --hero-video-min-height: 85svh;
     height: max(100svh, calc(var(--hero-video-min-height) + var(--hero-rail-height)));
     min-height: calc(var(--hero-video-min-height) + var(--hero-rail-height));
   }
