@@ -353,7 +353,7 @@ betinhos-anniversary.anniversary-mark
   max-width: calc(100% - 16px);
   margin: 0;
   padding: 4px 6px;
-  background: var(--anniversary-background);
+  background: transparent;
   -webkit-text-stroke: 0;
   font-size: clamp(6px, 0.055em, 8px);
   line-height: 1;
