@@ -3908,20 +3908,24 @@ body:before {
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.site-footer__social,
-.site-footer__channels a {
-  color: #c7d1d6;
-  font: 500 10px/1 var(--sans);
+.site-footer__social {
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ffffff42;
+  border-radius: 8px;
+  color: #f0d79c !important;
+  display: inline-flex;
 }
-.site-footer__social::before,
-.site-footer__channels a::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  margin-right: 5px;
-  border: 1px solid currentColor;
-  border-radius: 2px;
-  display: inline-block;
+.site-footer__social svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 .site-footer__channels img { width: 20px; height: 15px; object-fit: cover; }
 .site-footer a:focus-visible {
@@ -3932,6 +3936,7 @@ body:before {
   .site-footer__nav a:hover,
   .site-footer__bottom a:hover { color: #f0d79c; transform: translateX(2px); }
   .site-footer__whatsapp:hover { background: #ffffff0d; transform: translateY(-2px); }
+  .site-footer__social:hover { border-color: #f0d79c; background: #ffffff0d; transform: translateY(-2px) !important; }
 }
 .site-footer a:active { transform: scale(.97); }
 @media (width <= 820px) {
