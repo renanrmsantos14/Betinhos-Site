@@ -1045,7 +1045,7 @@ h2 {
   display: grid;
 }
 .team-grid {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 12px;
   margin-top: 85px;
   display: grid;
@@ -1340,10 +1340,6 @@ footer small {
   }
   .team-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  .team-grid article:last-child {
-    grid-column: 1/3;
-    width: 50%;
   }
   .client-logos img {
     height: 100px;
