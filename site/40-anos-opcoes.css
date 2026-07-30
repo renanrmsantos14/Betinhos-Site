@@ -123,6 +123,9 @@ button, a { font: inherit; }
   --mark-bg: var(--navy);
   --mark-number: var(--ivory);
   --mark-accent: var(--gold);
+  --mark-size: clamp(190px, 18vw, 282px);
+  --mark-stroke: clamp(1.5px, 0.18vw, 2.5px);
+  --mark-knockout: clamp(5px, 0.55vw, 8px);
   position: relative;
   width: 290px;
   height: 218px;
@@ -130,6 +133,9 @@ button, a { font: inherit; }
 }
 
 .anniversary-lockup--primary {
+  --mark-size: clamp(300px, 36vw, 548px);
+  --mark-stroke: clamp(1.5px, 0.18vw, 2.5px);
+  --mark-knockout: clamp(5px, 0.55vw, 8px);
   align-self: center;
   justify-self: center;
   width: clamp(350px, 39vw, 600px);
@@ -138,23 +144,46 @@ button, a { font: inherit; }
 
 .anniversary-number {
   position: absolute;
-  inset: 50% auto auto 50%;
-  color: transparent;
-  -webkit-text-stroke: clamp(1.5px, 0.18vw, 2.5px) var(--mark-number);
-  font: 400 clamp(190px, 18vw, 282px) / 0.74 var(--serif);
+  inset: 0;
+  display: block;
+  font: 400 var(--mark-size) / 0.74 var(--serif);
   font-variant-numeric: lining-nums tabular-nums;
-  letter-spacing: -0.115em;
-  transform: translate(-52%, -50%);
+}
+
+.anniversary-number > i {
+  position: absolute;
+  top: 50%;
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: var(--mark-stroke) var(--mark-number);
+  font-style: normal;
+  transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
-.anniversary-lockup--primary .anniversary-number {
-  font-size: clamp(300px, 36vw, 548px);
+.anniversary-zero {
+  z-index: 1;
+  left: 62.5%;
+}
+
+.anniversary-four {
+  z-index: 2;
+  left: 37.5%;
+  color: var(--mark-bg) !important;
+  -webkit-text-stroke: var(--mark-knockout) var(--mark-bg) !important;
+}
+
+.anniversary-four::after {
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: var(--mark-stroke) var(--mark-number);
+  content: "4";
 }
 
 .anniversary-cut {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 49.5%;
   left: 50%;
   display: flex;
@@ -327,12 +356,14 @@ button, a { font: inherit; }
   --mark-bg: var(--navy);
   --mark-number: var(--ivory);
   --mark-accent: var(--gold);
+  --mark-size: 176px;
+  --mark-stroke: 1.5px;
+  --mark-knockout: 5px;
   width: 180px;
   height: 136px;
   transform: scale(0.86);
 }
 
-.anniversary-lockup--small .anniversary-number { font-size: 176px; }
 .anniversary-lockup--small .anniversary-cut { height: 19px; font-size: 7px; }
 .anniversary-lockup--small .anniversary-dates { right: 12%; font-size: 6px; }
 .anniversary-lockup--small .anniversary-dates i { width: 15px; }
@@ -346,13 +377,11 @@ button, a { font: inherit; }
   --mark-bg: var(--paper);
   --mark-number: var(--navy);
   --mark-accent: #9a6d27;
+  --mark-size: 94px;
+  --mark-stroke: 1px;
+  --mark-knockout: 3px;
   width: 96px;
   height: 74px;
-}
-
-.anniversary-lockup--micro .anniversary-number {
-  font-size: 94px;
-  -webkit-text-stroke-width: 1px;
 }
 
 .anniversary-lockup--micro .anniversary-cut {
@@ -399,11 +428,12 @@ footer a { color: var(--gold-light); text-decoration: none; }
   .intro h1 { font-size: clamp(52px, 16vw, 76px); }
   .signature-stage { overflow: hidden; }
   .anniversary-lockup--primary {
+    --mark-size: 320px;
+    --mark-knockout: 6px;
     width: 350px;
     height: 280px;
     margin: 68px 0;
   }
-  .anniversary-lockup--primary .anniversary-number { font-size: 320px; }
   .application-grid { grid-template-columns: 1fr; }
   .application { min-height: 420px; border-right: 0; }
   .application-horizontal, .application-micro { grid-column: auto; }
