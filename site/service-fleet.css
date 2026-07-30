@@ -188,6 +188,14 @@
   font: 600 20px/1 Geist, Arial, sans-serif;
 }
 
+.service-card-passengers__label {
+  color: #5d4b27;
+  font: 650 9px/1 Geist, Arial, sans-serif;
+  letter-spacing: 0.08em;
+  margin-left: 2px;
+  text-transform: uppercase;
+}
+
 .service-card-passengers svg {
   fill: none;
   flex: 0 0 auto;

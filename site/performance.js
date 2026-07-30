@@ -67,7 +67,7 @@
   }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
 
   document.querySelectorAll(
-    '.section-head, .legacy-content, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .office-photo, .office-copy, .team-grid article, .trust > div, .google-reviews > *, .faq-intro, .faq-list details, .contact > *, footer > *'
+    '.section-head, .legacy-content, .company-intro__visual, .company-intro__story, .company-intro__services li, .fleet-showcase article, .service-list article, .protection-copy, .protection-visual, .office-photo, .office-copy, .team-grid article, .trust > div, .google-reviews > *, .faq-intro, .faq-list details, .contact > *, footer > *'
   ).forEach((element, index) => {
     element.classList.add('reveal');
     element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 3) * 70}ms`);
@@ -75,7 +75,7 @@
   });
 
   document.querySelectorAll(
-    '.fleet-showcase article, .protection-visual, .office-photo, .team-grid article > div'
+    '.company-intro__visual, .fleet-showcase article, .protection-visual, .office-photo, .team-grid article > div'
   ).forEach((element) => element.classList.add('reveal-media'));
 
   const header = document.querySelector('.site-header');
