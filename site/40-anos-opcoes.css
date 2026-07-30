@@ -288,11 +288,15 @@ button, a { font: inherit; }
 .application-meta p { margin: 0; }
 .application-dark { color: var(--ivory); background: var(--navy); }
 .application-dark .application-meta { color: #aeb9c0; }
+.application-dark .anniversary-lockup {
+  --mark-number: var(--gold);
+  --mark-accent: var(--ivory);
+}
 
 .application-light .anniversary-lockup {
   --mark-bg: var(--paper);
   --mark-number: var(--navy);
-  --mark-accent: #9a6d27;
+  --mark-accent: var(--gold);
 }
 
 .application-horizontal {
