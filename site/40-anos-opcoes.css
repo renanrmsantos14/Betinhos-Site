@@ -4,6 +4,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Geist";
+  src: url("/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --navy: #061d33;
   --navy-deep: #041522;
@@ -112,7 +119,7 @@ button, a { font: inherit; }
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 620px;
+  min-height: 680px;
   overflow: hidden;
   padding: clamp(26px, 4vw, 58px);
   border-right: 1px solid var(--line-dark);
@@ -152,46 +159,65 @@ button, a { font: inherit; }
 .mark {
   position: relative;
   place-self: center;
-  width: min(100%, 500px);
-  aspect-ratio: 1.55;
+  width: min(100%, 540px);
+  height: 360px;
 }
 
 .number {
   position: absolute;
-  inset: 50% auto auto 50%;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--gold);
-  font: 400 clamp(180px, 19vw, 300px) / 0.72 var(--serif);
-  letter-spacing: -0.07em;
-  transform: translate(-52%, -50%);
+  inset: 0;
+  display: block;
   white-space: nowrap;
+}
+
+.number i {
+  position: absolute;
+  display: block;
+  font-style: normal;
+  line-height: 0.72;
 }
 
 .cut {
   position: absolute;
   z-index: 1;
   color: var(--gold-light);
-  background: var(--navy);
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(9px, 0.8vw, 12px);
   font-weight: 700;
-  letter-spacing: 0.38em;
+  letter-spacing: 0.42em;
 }
 
+.option-one h2 { font-size: clamp(28px, 2.3vw, 40px); }
+.mark-one .number { font-family: var(--serif); }
+.mark-one .number i:first-child {
+  top: 48px;
+  left: 7%;
+  color: var(--ivory);
+  font-size: clamp(220px, 20vw, 318px);
+  font-weight: 400;
+}
+.mark-one .number i:last-child {
+  top: 4px;
+  right: 3%;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold);
+  font-size: clamp(260px, 23vw, 360px);
+}
 .mark-one .cut {
-  top: 48%;
-  left: 51%;
-  padding: 7px 14px;
-  transform: translate(-50%, -50%) rotate(-7deg);
+  top: 52%;
+  left: 46%;
+  padding: 6px 12px;
+  color: var(--gold-light);
+  background: var(--navy);
+  transform: translate(-50%, -50%);
 }
 
 .mark-one .route {
   position: absolute;
-  top: 50%;
-  left: 8%;
-  width: 84%;
+  top: 52%;
+  left: 4%;
+  width: 91%;
   height: 1px;
   background: var(--gold);
-  transform: rotate(-7deg);
 }
 
 .mark-one .route::before, .mark-one .route::after {
@@ -208,33 +234,88 @@ button, a { font: inherit; }
 .mark-one .route::after { right: 0; }
 
 .option-two { color: var(--ink); background: var(--paper); }
+.option-two h2 {
+  font-family: "Geist", var(--sans);
+  font-size: clamp(21px, 1.7vw, 28px);
+  font-weight: 520;
+  letter-spacing: -0.045em;
+}
 .option-two .option-head span, .option-two > p { color: #756b5c; }
-.option-two .number { -webkit-text-stroke-color: #9a6d27; }
+.mark-two {
+  width: min(100%, 500px);
+  height: 330px;
+}
+.mark-two .number {
+  color: var(--navy);
+  font-family: "Geist", var(--sans);
+  font-weight: 720;
+  letter-spacing: -0.11em;
+}
+.mark-two .number i:first-child {
+  top: 18px;
+  left: 2%;
+  font-size: clamp(230px, 22vw, 336px);
+}
+.mark-two .number i:last-child {
+  right: -1%;
+  bottom: -2px;
+  font-size: clamp(180px, 17vw, 268px);
+}
 .option-two .cut {
-  top: 50%;
-  left: 7%;
-  width: 86%;
-  padding: 12px 0;
-  color: var(--paper);
-  background: var(--navy);
-  text-align: center;
-  transform: translateY(-50%);
+  top: 49%;
+  right: 0;
+  width: 60%;
+  padding: 8px 14px 8px 28px;
+  color: var(--navy);
+  background: var(--paper);
+  border-top: 1px solid #9a6d27;
+  border-bottom: 1px solid #9a6d27;
+  text-align: right;
 }
 
-.mark-three .number { color: var(--gold); -webkit-text-stroke: 0; }
+.option-three h2 {
+  font-family: "Geist", var(--sans);
+  font-size: clamp(20px, 1.6vw, 27px);
+  font-weight: 340;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.mark-three {
+  width: min(100%, 420px);
+  height: 390px;
+}
+.mark-three .number {
+  color: var(--gold);
+  font-family: "Arial Narrow", "Geist", sans-serif;
+  font-weight: 300;
+}
+.mark-three .number i {
+  left: 50%;
+  font-size: 250px;
+  transform: translateX(-50%) scaleX(0.64);
+}
+.mark-three .number i:first-child { top: -8px; }
+.mark-three .number i:last-child {
+  top: 168px;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--gold);
+}
 .mark-three .cut {
   top: 50%;
-  left: 67%;
-  padding: 12px 7px;
-  color: var(--navy);
-  background: var(--gold-light);
+  left: 50%;
+  padding: 12px 7px 12px 9px;
+  color: var(--gold-light);
+  background: var(--navy);
+  border-left: 1px solid var(--gold);
+  border-right: 1px solid var(--gold);
   writing-mode: vertical-rl;
   transform: translate(-50%, -50%);
 }
 
 .mark-three .since {
   position: absolute;
-  bottom: 9%;
+  right: 0;
+  bottom: 2%;
   left: 50%;
   color: #9baab3;
   font-size: 9px;
@@ -243,22 +324,46 @@ button, a { font: inherit; }
 }
 
 .option-four { background: var(--navy-deep); }
-.mark-four .number { -webkit-text-stroke-width: 1px; }
+.option-four h2 {
+  font-size: clamp(30px, 2.5vw, 44px);
+  font-style: italic;
+}
+.mark-four {
+  width: min(100%, 520px);
+  height: 340px;
+}
+.mark-four .number { font-family: var(--serif); }
+.mark-four .number i:first-child {
+  top: 72px;
+  left: 10%;
+  z-index: 1;
+  color: var(--gold);
+  font-size: clamp(190px, 18vw, 280px);
+  font-style: italic;
+}
+.mark-four .number i:last-child {
+  top: 8px;
+  right: 7%;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ivory);
+  font-size: clamp(270px, 23vw, 370px);
+  opacity: 0.82;
+}
 .mark-four .cut {
-  top: 49%;
-  left: 50%;
-  width: 68%;
-  padding: 10px 0;
+  top: 53%;
+  left: 49%;
+  width: 58%;
+  padding: 8px 0;
   color: var(--navy-deep);
-  background: var(--gold);
+  background: var(--ivory);
   text-align: center;
-  transform: translate(-50%, -50%) rotate(11deg);
+  transform: translate(-50%, -50%) rotate(-12deg);
 }
 
 .mark-four .years {
   position: absolute;
-  right: 6%;
-  bottom: 10%;
+  right: 2%;
+  bottom: 4%;
   color: var(--gold-light);
   font-size: 9px;
   letter-spacing: 0.18em;
@@ -292,8 +397,14 @@ footer a { color: var(--gold-light); text-decoration: none; }
   .intro h1 { margin-top: 34px; font-size: clamp(52px, 16vw, 76px); }
   .intro-copy { margin-top: 28px; }
   .options { grid-template-columns: 1fr; }
-  .option { min-height: 520px; border-right: 0; }
-  .number { font-size: clamp(176px, 58vw, 240px); }
+  .option { min-height: 580px; border-right: 0; }
+  .mark { width: min(100%, 420px); transform: scale(0.88); }
+  .mark-one .number i:first-child { font-size: 250px; }
+  .mark-one .number i:last-child { font-size: 290px; }
+  .mark-two .number i:first-child { font-size: 250px; }
+  .mark-two .number i:last-child { font-size: 205px; }
+  .mark-four .number i:first-child { font-size: 215px; }
+  .mark-four .number i:last-child { font-size: 295px; }
   footer { align-items: flex-start; flex-direction: column; }
 }
 
