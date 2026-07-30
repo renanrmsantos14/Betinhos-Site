@@ -171,7 +171,6 @@ button, a { font: inherit; }
   left: 37.5%;
   color: var(--mark-bg) !important;
   -webkit-text-stroke: var(--mark-knockout) var(--mark-bg) !important;
-  clip-path: inset(0 0 13% 0);
 }
 
 .anniversary-four::after {
@@ -180,27 +179,6 @@ button, a { font: inherit; }
   color: transparent;
   -webkit-text-stroke: var(--mark-stroke) var(--mark-number);
   content: "4";
-}
-
-.anniversary-four-foot {
-  position: absolute;
-  z-index: 2;
-  top: 87%;
-  left: 18%;
-  width: 36%;
-  height: var(--mark-knockout);
-  background: var(--mark-bg);
-  transform: translateY(-50%);
-}
-
-.anniversary-four-foot::after {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  border-top: var(--mark-stroke) solid var(--mark-number);
-  content: "";
-  transform: translateY(-50%);
 }
 
 .anniversary-cut {
