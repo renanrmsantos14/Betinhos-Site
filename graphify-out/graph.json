@@ -148,6 +148,30 @@
       "_origin": "ast"
     },
     {
+      "id": "tests_mobile_spec",
+      "label": "mobile.spec.mjs",
+      "file_type": "code",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_mobile_spec_browsercandidates",
+      "label": "browserCandidates",
+      "file_type": "code",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_mobile_spec_openmobilepage",
+      "label": "openMobilePage()",
+      "file_type": "code",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
       "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota",
       "label": "query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "file_type": "document",
@@ -474,6 +498,74 @@
       "confidence": "EXTRACTED",
       "source_file": "site/service-fleet.js",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "ref_node_assert_strict",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "ref_node_fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "ref_node_test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "ref_playwright",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "ref_vite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "tests_mobile_spec_browsercandidates",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_mobile_spec",
+      "target": "tests_mobile_spec_openmobilepage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/mobile.spec.mjs",
+      "source_location": "L37",
       "weight": 1.0
     },
     {

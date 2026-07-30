@@ -111,7 +111,7 @@
 
 .office-carousel__tabs button {
   border: 1px solid transparent;
-  min-width: 38px;
+  min-width: 44px;
   opacity: 0.58;
   position: relative;
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, opacity 160ms ease, transform 120ms var(--ease-out);
@@ -208,7 +208,7 @@
   letter-spacing: 0.16em;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .office.section {
     grid-template-columns: 1fr;
     gap: 38px;
@@ -230,7 +230,7 @@
 @media (max-width: 420px) {
   .office-carousel__footer { align-items: stretch; flex-direction: column; gap: 0; padding: 12px 0; }
   .office-carousel__navigation { justify-content: space-between; }
-  .office-carousel__tabs button { min-width: 36px; }
+  .office-carousel__tabs button { min-width: 44px; }
   .office-carousel__buttons { padding-left: 8px; }
 
   .office-copy {

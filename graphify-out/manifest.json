@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "site/i18n.js": {
-    "mtime": 1785428195.0259912,
-    "ast_hash": "8b8919fc2f30ce06f97a7dff78a9d0cc",
+    "mtime": 1785431347.3359985,
+    "ast_hash": "2d28d2782b78d10144ab1dc969d6bcba",
     "semantic_hash": ""
   },
   "site/fleet/corolla-2026/corolla-2026-roda.png": {
@@ -290,14 +290,14 @@
     "semantic_hash": "5652124ac8666e73ec524ebac9bcf270"
   },
   "site/mobile-navigation.js": {
-    "mtime": 1785409971.7194757,
-    "ast_hash": "98a76ce0597b02236f3837279b71813f",
-    "semantic_hash": "98a76ce0597b02236f3837279b71813f"
+    "mtime": 1785430759.8382213,
+    "ast_hash": "2d0bd153abe1fed51aa2ad444b401dda",
+    "semantic_hash": ""
   },
   "site/office-carousel.js": {
-    "mtime": 1785409971.7315056,
-    "ast_hash": "97dc62fa5471365000b03bc6e59647fd",
-    "semantic_hash": "97dc62fa5471365000b03bc6e59647fd"
+    "mtime": 1785430766.1213648,
+    "ast_hash": "8907742fc033f9defdac3ce18bf8cd80",
+    "semantic_hash": ""
   },
   "site/section-order.js": {
     "mtime": 1785409972.032269,
@@ -457,6 +457,11 @@
   "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md": {
     "mtime": 1785421025.9866447,
     "ast_hash": "15838ae64532b7c48928a734cf9f054f",
+    "semantic_hash": ""
+  },
+  "tests/mobile.spec.mjs": {
+    "mtime": 1785431542.65786,
+    "ast_hash": "96019975aa055288bd8e2eef64bf4b1a",
     "semantic_hash": ""
   }
 }

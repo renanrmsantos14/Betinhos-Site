@@ -68,7 +68,7 @@ main > section[id] {
   scroll-margin-top: calc(var(--fixed-header-height) + 16px);
 }
 
-@media (width <= 680px) {
+@media (width <= 1050px) {
   :root {
     --fixed-header-height: 78px;
     --fixed-header-height-compact: 62px;
@@ -129,7 +129,9 @@ main > section[id] {
     inset: 0;
     display: flex;
     flex-direction: column;
-    padding: 20px 20px max(24px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: max(20px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
     background: #f4f0e7;
     color: #101820;
     opacity: 0;
@@ -214,7 +216,7 @@ main > section[id] {
   }
 
   .mobile-menu-footer .lang-switch button {
-    min-width: 38px;
+    min-width: 44px;
     min-height: 44px;
     padding-inline: 8px;
     border-right-color: rgb(16 24 32 / 0.28);
@@ -234,7 +236,7 @@ main > section[id] {
   }
 }
 
-@media (width >= 681px) {
+@media (width >= 1051px) {
   .mobile-menu,
   .mobile-menu-toggle {
     display: none;

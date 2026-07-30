@@ -825,7 +825,6 @@
     [".anniversary-mark__label", "hero.years"],
     [".hero-destinations-intro h2", "hero.coverage"],
     [".hero-destinations-intro p", "hero.coverageText"],
-    [".legacy .eyebrow", "legacy.tag"],
     [".legacy h2", "legacy.title"],
     [".legacy .lead", "legacy.text"],
     [".legacy .history-details", "legacy.details"],
@@ -1044,6 +1043,7 @@
     "Nossa equipe avaliará seu perfil": ["Nossa equipe avaliará seu perfil", "Our team will review your profile", "Nuestro equipo evaluará su perfil"],
     "Campos com * são obrigatórios.": ["Campos com * são obrigatórios.", "Fields marked * are required.", "Los campos con * son obligatorios."],
     "Nome completo *": ["Nome completo *", "Full name *", "Nombre completo *"],
+    "E-mail *": ["E-mail *", "Email *", "Correo electrónico *"],
     "Telefone *": ["Telefone *", "Phone *", "Teléfono *"],
     "Cidade *": ["Cidade *", "City *", "Ciudad *"],
     "Área de interesse *": ["Área de interesse *", "Area of interest *", "Área de interés *"],
@@ -1076,6 +1076,7 @@
     "Vale do Paraíba": ["Vale do Paraíba", "Paraíba Valley", "Valle del Paraíba"],
     "© 2026 Betinhos Executive Service. Todos os direitos reservados.": ["© 2026 Betinhos Executive Service. Todos os direitos reservados.", "© 2026 Betinhos Executive Service. All rights reserved.", "© 2026 Betinhos Executive Service. Todos los derechos reservados."],
     "Privacidade e uso de dados": ["Privacidade e uso de dados", "Privacy and data use", "Privacidad y uso de datos"]
+    ,"Pular para o conteúdo": ["Pular para o conteúdo", "Skip to content", "Saltar al contenido"]
   };
 
   const STATIC_ATTRIBUTES = [
@@ -1084,6 +1085,13 @@
     [".mobile-menu-toggle", "aria-label", ["Abrir menu", "Open menu", "Abrir menú"]],
     [".mobile-menu-close", "aria-label", ["Fechar menu", "Close menu", "Cerrar menú"]],
     [".mobile-menu-nav", "aria-label", ["Navegação móvel", "Mobile navigation", "Navegación móvil"]],
+    [".mobile-menu", "aria-label", ["Menu principal", "Main menu", "Menú principal"]],
+    [".hero-locations article:nth-child(1) img", "alt", ["Arco da Inovação em São José dos Campos", "Innovation Arch in São José dos Campos", "Arco de la Innovación en São José dos Campos"]],
+    [".hero-locations article:nth-child(2) img", "alt", ["Palacete 10 de Julho em Pindamonhangaba", "10 de Julho Palace in Pindamonhangaba", "Palacete 10 de Julho en Pindamonhangaba"]],
+    [".hero-locations article:nth-child(3) img", "alt", ["Basílica de Aparecida no Vale do Paraíba", "Basilica of Aparecida in the Paraíba Valley", "Basílica de Aparecida en el Valle del Paraíba"]],
+    [".hero-locations article:nth-child(4) img", "alt", ["Avenida Paulista em São Paulo", "Paulista Avenue in São Paulo", "Avenida Paulista en São Paulo"]],
+    [".hero-locations article:nth-child(5) img", "alt", ["Pão de Açúcar no Rio de Janeiro", "Sugarloaf Mountain in Rio de Janeiro", "Pan de Azúcar en Río de Janeiro"]],
+    [".office-carousel", "aria-roledescription", ["carrossel", "carousel", "carrusel"]],
     [".careers-intro ul", "aria-label", ["Etapas da candidatura", "Application steps", "Etapas de la solicitud"]],
     [".careers-form textarea", "placeholder", ["Conte brevemente sobre sua experiência.", "Briefly describe your experience.", "Cuente brevemente sobre su experiencia."]],
     [".site-footer__logo", "aria-label", ["Voltar ao início", "Back to home", "Volver al inicio"]],
@@ -1099,7 +1107,7 @@
 
   const renderStaticTranslations = () => {
     const languageIndex = staticLanguageIndex[activeLanguage];
-    document.querySelectorAll(".careers, footer").forEach((root) => {
+    document.querySelectorAll(".careers, footer, .hero-locations, .skip-link").forEach((root) => {
       const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {
@@ -1112,6 +1120,8 @@
     STATIC_ATTRIBUTES.forEach(([selector, attribute, values]) => {
       document.querySelectorAll(selector).forEach((element) => element.setAttribute(attribute, values[languageIndex]));
     });
+    const anniversary = document.querySelector("betinhos-anniversary");
+    if (anniversary) anniversary.setAttribute("label", translate("hero.years"));
   };
 
   let activeLanguage = "pt";

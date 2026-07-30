@@ -38,6 +38,10 @@
       event.preventDefault();
       selectSlide(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
       if (event.target.matches("[data-office-dot]")) tabs[activeIndex]?.focus();
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      selectSlide(event.key === "Home" ? 0 : slides.length - 1);
+      if (event.target.matches("[data-office-dot]")) tabs[activeIndex]?.focus();
     }
   });
 

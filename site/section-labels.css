@@ -5,7 +5,7 @@
   gap: 12px;
   margin: 0 0 22px;
   color: #001a3d !important;
-  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-family: var(--sans);
   font-size: clamp(15px, 1.25vw, 17px);
   font-weight: 600 !important;
   letter-spacing: -0.01em;
@@ -24,7 +24,7 @@
 
 .solutions .section-head .eyebrow {
   color: #d9b263 !important;
-  font-family: "Manrope", "Segoe UI", sans-serif !important;
+  font-family: var(--sans) !important;
   font-size: clamp(15px, 1.25vw, 17px) !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em !important;

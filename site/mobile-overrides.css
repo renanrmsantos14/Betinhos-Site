@@ -1,0 +1,104 @@
+/* Mobile resilience: loaded last to preserve the existing visual language. */
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  padding: 12px 16px;
+  background: #fcfcfb;
+  color: #061d33;
+  font: 700 14px/1 var(--sans);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (width <= 1050px) {
+  .team-grid p {
+    color: #b8c2c8;
+  }
+
+  .fleet-catalog-filter,
+  .company-intro__action,
+  .site-footer__social {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .company-intro__action {
+    padding-bottom: 0;
+  }
+
+  .site-footer__social {
+    width: 44px;
+    height: 44px;
+  }
+
+  .request-form input,
+  .request-form select,
+  .careers-form input,
+  .careers-form select,
+  .careers-form textarea,
+  #whatsapp-widget-message {
+    font-size: 16px;
+  }
+
+  .request-form input,
+  .request-form select,
+  .careers-form input:not([type="hidden"]):not([type="checkbox"]),
+  .careers-form select {
+    min-height: 44px;
+  }
+
+  .careers-form > label:not(.careers-file):not(.careers-consent):not(.careers-presentation),
+  .careers-form-row > label {
+    height: auto;
+    min-height: 64px;
+  }
+
+  .careers-form > label:not(.careers-file):not(.careers-consent):not(.careers-presentation) > input,
+  .careers-form-row > label > input,
+  .careers-form-row > label > select {
+    height: 44px;
+    min-height: 44px;
+  }
+
+  .careers-consent {
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .careers-form input[type="file"]::file-selector-button {
+    min-height: 44px;
+  }
+}
+
+@media (width <= 680px) {
+  .hero-destinations-intro {
+    padding-right: 76px;
+  }
+}
+
+@media (width <= 680px) and (height <= 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-copy {
+    padding: 0 22px 210px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(34px, 6vw, 40px);
+  }
+
+  .hero-actions {
+    flex-flow: row wrap;
+  }
+
+  .hero-actions a:first-child {
+    width: auto;
+  }
+}

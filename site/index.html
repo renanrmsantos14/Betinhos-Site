@@ -22,12 +22,6 @@
       data-rsc-css-href="/assets/index-D7fnJsCl.css"
       data-precedence="vite-rsc/importer-resources"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
-    />
     <link rel="stylesheet" href="/service-fleet.css" />
     <link rel="stylesheet" href="/company-intro.css" />
     <link rel="stylesheet" href="/anniversary-mark.css" />
@@ -36,6 +30,7 @@
     <link rel="stylesheet" href="/contact-section.css" />
     <link rel="stylesheet" href="/section-labels.css" />
     <link rel="stylesheet" href="/history-section.css" />
+    <link rel="stylesheet" href="/mobile-overrides.css" />
     <title>Betinhos Executive Service | Transporte executivo</title>
     <meta
       name="description"
@@ -210,7 +205,8 @@
       <img src="/logo-betinhos.png" alt="" width="142" height="68" />
       <span class="site-loader-line" aria-hidden="true"><i></i></span>
     </div>
-    <main>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <main id="main-content">
       <section class="hero" id="inicio">
         <video
           class="hero-video"
@@ -227,7 +223,7 @@
           <source src="/hero-video.webm" type="video/webm" media="(min-width: 900px)" />
           <source src="/hero-video-web.mp4" type="video/mp4" media="(min-width: 900px)" />
         </video>
-        <header class="site-header">
+        <header class="site-header" role="banner">
           <a href="#inicio" class="logo" aria-label="Betinhos Executive Service — início"
             ><img
               class="logo-full"
@@ -251,7 +247,7 @@
             ><a href="#trabalhe-conosco">Trabalhe conosco</a>
           </nav>
           <div class="header-actions">
-            <div class="lang-switch" aria-label="Selecionar idioma">
+            <div class="lang-switch" role="group" aria-label="Selecionar idioma">
               <button type="button" class="active" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true"><img class="language-flag" src="/flags/br.svg" alt="" width="20" height="15" /></button
               ><button type="button" data-lang="en" aria-label="English" title="English" aria-pressed="false"><img class="language-flag" src="/flags/us.svg" alt="" width="20" height="15" /></button
               ><button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false"><img class="language-flag" src="/flags/es.svg" alt="" width="20" height="15" /></button>
@@ -269,7 +265,7 @@
             </svg>
           </button>
         </header>
-        <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <aside class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal" aria-hidden="true" inert>
           <div class="mobile-menu-top">
             <img class="mobile-menu-brand" src="/assets/logo-betinhos-b.png" alt="Betinhos Executive Service" />
             <button class="mobile-menu-close" type="button" aria-label="Fechar menu">
@@ -286,7 +282,7 @@
             <a href="#trabalhe-conosco">Trabalhe conosco</a>
           </nav>
           <div class="mobile-menu-footer">
-            <div class="lang-switch" aria-label="Selecionar idioma">
+            <div class="lang-switch" role="group" aria-label="Selecionar idioma">
               <button type="button" class="active" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true"><img class="language-flag" src="/flags/br.svg" alt="" width="20" height="15" /></button>
               <button type="button" data-lang="en" aria-label="English" title="English" aria-pressed="false"><img class="language-flag" src="/flags/us.svg" alt="" width="20" height="15" /></button>
               <button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false"><img class="language-flag" src="/flags/es.svg" alt="" width="20" height="15" /></button>
@@ -683,7 +679,7 @@
               <div class="history-slides">
                 <figure class="history-slide is-active" id="history-slide-1" data-history-slide role="tabpanel" aria-labelledby="history-tab-1" aria-hidden="false">
                   <div class="history-slide__media">
-                    <img src="/history/fusca-1986.png" alt="Fusca branco, primeiro veículo da história da Betinhos" width="816" height="558" />
+                    <img src="/history/fusca-1986.png" alt="Fusca branco, primeiro veículo da história da Betinhos" width="816" height="558" loading="lazy" decoding="async" fetchpriority="low" />
                   </div>
                   <figcaption><span>1986</span><strong>O começo</strong><p>Um Fusca, uma visão de futuro e muito caminho pela frente.</p></figcaption>
                 </figure>
@@ -827,6 +823,7 @@
         </div>
         <form
           class="careers-form"
+          aria-labelledby="careers-title"
           action="https://formsubmit.co/junior@betinhos.com.br"
           method="POST"
           enctype="multipart/form-data"
@@ -940,10 +937,10 @@
       <section class="contact section" id="contato">
         <img src="/logo-betinhos.png" alt="" />
         <p class="eyebrow gold">Fale com a operação</p>
-        <h2>
+        <h2 id="contact-title">
           Quando sua presença é essencial, a nossa operação já está pronta.
         </h2>
-        <form class="request-form" id="request-form">
+        <form class="request-form" id="request-form" aria-labelledby="contact-title">
           <label>
             Serviço
             <select name="servico" required>
@@ -995,7 +992,7 @@
           Sua solicitação será aberta no WhatsApp para você revisar antes do envio.
         </p>
       </section>
-      <footer class="site-footer" aria-labelledby="footer-brand">
+      <footer class="site-footer" role="contentinfo" aria-labelledby="footer-brand">
         <div class="site-footer__brand">
           <a href="#inicio" class="site-footer__logo" aria-label="Voltar ao início">
             <img src="/logo-betinhos.png" alt="Betinhos Executive Service" />
