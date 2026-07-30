@@ -6,6 +6,16 @@
     <meta name="theme-color" content="#021426" />
     <link rel="preload" as="image" href="/logo-betinhos.png" />
     <link rel="preload" as="image" href="/hero-poster.webp" fetchpriority="high" />
+    <link rel="preload" as="font" href="/assets/centabel-book.ttf" type="font/ttf" crossorigin />
+    <style>
+      @font-face {
+        font-family: "Centabel Book";
+        src: url("/assets/centabel-book.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+    </style>
     <link
       rel="stylesheet"
       href="/assets/index-D7fnJsCl.css"
@@ -19,6 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
     />
     <link rel="stylesheet" href="/service-fleet.css" />
+    <link rel="stylesheet" href="/company-intro.css" />
     <link rel="stylesheet" href="/anniversary-mark.css" />
     <link rel="stylesheet" href="/fixed-header.css" />
     <link rel="stylesheet" href="/office-section.css" />
@@ -355,16 +366,33 @@
           </div>
         </div>
       </section>
+      <section class="company-intro section" aria-labelledby="company-intro-title">
+        <div class="company-intro__summary">
+          <p class="eyebrow">A Betinhos</p>
+          <h2 id="company-intro-title">Transporte executivo para quem não pode perder tempo.</h2>
+        </div>
+        <div class="company-intro__content">
+          <p class="company-intro__lead">Há quatro décadas, a Betinhos Executive Service conduz pessoas, agendas e operações corporativas com cuidado real em cada etapa.</p>
+          <p class="company-intro__text">Não entregamos apenas um carro e um motorista. Planejamos o deslocamento conforme o contexto: traslados executivos, grupos, veículos blindados e apoio a pequenas cargas.</p>
+        </div>
+        <p class="company-intro__years"><strong>40</strong><span>anos cuidando de cada trajeto.</span></p>
+        <ul class="company-intro__services" role="list">
+          <li>Traslados executivos e aeroportos</li>
+          <li>Grupos, eventos e delegações</li>
+          <li>Veículos blindados e operações sensíveis</li>
+          <li>Pequenas cargas com transporte seguro</li>
+        </ul>
+      </section>
       <section class="solutions section" id="solucoes">
         <div class="section-head">
           <div>
             <p class="eyebrow">Frota e serviços</p>
-            <h2>Cada deslocamento pede uma leitura própria.</h2>
+            <h2>Frota, serviço e protocolo para cada operação.</h2>
           </div>
           <p>
-            Da agenda executiva diária a movimentos de maior sensibilidade,
-            combinamos veículo, profissional e protocolo de acordo com a
-            operação.
+            Do traslado executivo ao deslocamento de grupos, escolhemos a
+            categoria certa e coordenamos cada detalhe para que sua agenda
+            siga no ritmo previsto.
           </p>
         </div>
         <div class="fleet-catalog">
