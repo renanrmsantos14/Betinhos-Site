@@ -1,0 +1,20 @@
+# Graphify deste site e estrutural/code-only: index.html e midias exigem extracao semantica.
+*.css
+*.html
+*.jpeg
+*.jpg
+*.json
+*.md
+*.mp4
+*.png
+*.svg
+*.ttf
+*.webm
+*.webp
+*.woff2
+*.yaml
+*.yml
+
+# Bundles gerados nao representam a arquitetura autoral.
+site/assets/
+site/dist/

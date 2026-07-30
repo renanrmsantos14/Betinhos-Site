@@ -40,9 +40,50 @@
 }
 
 .fleet-catalog-bar {
+  align-items: center;
   display: flex;
-  justify-content: flex-end;
-  padding-bottom: 14px;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 18px;
+}
+
+.fleet-catalog-filters {
+  align-items: center;
+  display: flex;
+  gap: clamp(18px, 2.6vw, 38px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.fleet-catalog-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.fleet-catalog-filter {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #aeb9c0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font: 650 11px/1.2 Geist, Arial, sans-serif;
+  letter-spacing: 0.12em;
+  padding: 10px 0 9px;
+  text-transform: uppercase;
+  transition:
+    border-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fleet-catalog-filter.is-active {
+  border-color: var(--gold2);
+  color: #f7f4ec;
+}
+
+.fleet-catalog-filter:focus-visible {
+  border-color: var(--gold2);
+  outline: 2px solid var(--gold2);
+  outline-offset: 4px;
 }
 
 .fleet-catalog-controls {
@@ -103,6 +144,7 @@
   display: flex;
   gap: clamp(18px, 2.4vw, 36px);
   margin: 0;
+  overflow-anchor: none;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   padding: 2px 0 24px;
@@ -123,19 +165,23 @@
   border-radius: 0;
   box-shadow: none;
   display: grid;
-  flex: 0 0 min(58vw, 720px);
+  flex: 0 0 min(41vw, 530px);
   gap: 0 24px;
   grid-template-areas:
     "media media"
     "copy action";
   grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-rows: clamp(280px, 30vw, 420px) auto;
+  grid-template-rows: clamp(182px, calc(24vw - 48px), 282px) auto;
   min-height: 0;
   overflow: visible;
   padding: 0;
   scroll-snap-align: center;
   transition:
     transform 150ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.solutions .service-list article[hidden] {
+  display: none;
 }
 
 .service-card-copy {
@@ -216,7 +262,7 @@
   justify-content: center;
   min-height: 0;
   overflow: hidden;
-  padding: clamp(24px, 3vw, 48px);
+  padding: clamp(0px, calc(3vw - 24px), 24px);
   position: relative;
 }
 
@@ -239,16 +285,16 @@
   box-shadow: none;
   color: #f7f4ec;
   display: inline-flex;
-  font: 650 14px/1.2 Geist, Arial, sans-serif;
-  gap: 16px;
+  font: 650 13px/1.2 Geist, Arial, sans-serif;
+  gap: 10px;
   grid-area: action;
   isolation: isolate;
   justify-self: end;
   letter-spacing: 0.01em;
-  min-height: 56px;
-  min-width: 304px;
+  min-height: 44px;
+  min-width: 148px;
   margin-top: 16px;
-  padding: 0 16px 0 18px;
+  padding: 0 12px;
   text-decoration: none;
   text-transform: none;
   touch-action: manipulation;
@@ -276,14 +322,14 @@
   display: block;
   fill: none;
   flex: 0 0 auto;
-  height: 22px;
+  height: 18px;
   padding: 0;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
   transition: transform 150ms cubic-bezier(0.23, 1, 0.32, 1);
-  width: 22px;
+  width: 18px;
 }
 
 .solutions .service-list .service-card-action:focus-visible {
@@ -303,6 +349,10 @@
     background: var(--gold);
     border-color: var(--gold);
     color: var(--navy);
+  }
+
+  .fleet-catalog-filter:hover {
+    color: #f7f4ec;
   }
 
   .solutions .service-list article:hover {
@@ -338,8 +388,8 @@
   }
 
   .solutions .service-list article {
-    flex-basis: min(76vw, 580px);
-    grid-template-rows: clamp(250px, 48vw, 340px);
+    flex-basis: min(64vw, 470px);
+    grid-template-rows: clamp(230px, 42vw, 310px);
   }
 }
 
@@ -350,6 +400,19 @@
 
   .fleet-catalog-bar {
     align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-start;
+  }
+
+  .fleet-catalog-filters {
+    flex: 1 1 100%;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .fleet-catalog-controls {
+    margin-left: auto;
   }
 
   .solutions .service-list {
@@ -365,7 +428,7 @@
       "copy"
       "action";
     grid-template-columns: 1fr;
-    grid-template-rows: clamp(220px, 60vw, 300px) auto auto;
+    grid-template-rows: clamp(172px, calc(60vw - 48px), 252px) auto auto;
   }
 
   .service-card-media img {
@@ -378,15 +441,16 @@
   }
 
   .solutions .service-list .service-card-action {
-    justify-self: stretch;
+    justify-self: start;
     margin-top: 20px;
-    min-width: 0;
-    width: 100%;
+    min-width: 148px;
+    width: auto;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .fleet-catalog-button,
+  .fleet-catalog-filter,
   .solutions .service-list,
   .solutions .service-list article,
   .service-card-media img,
@@ -451,20 +515,16 @@
 
 .hero-copy h1 {
   max-width: 780px;
-  font-size: clamp(56px, 7vw, 96px);
+  font-size: clamp(39px, 4.9vw, 67px);
   line-height: 0.92;
   letter-spacing: -0.045em;
 }
 
-.hero-copy > p.hero-lead {
-  max-width: 620px;
-  margin: 36px 0 0;
-  padding: 0;
-  color: #f4f0e7;
-  font-size: clamp(18px, 1.35vw, 21px);
-  font-weight: 500;
-  line-height: 1.42;
-  letter-spacing: 0;
+.hero-divider {
+  width: min(100%, 620px);
+  height: 1px;
+  margin-top: 36px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .hero-actions {
@@ -481,15 +541,13 @@
 
   .hero-copy h1 {
     max-width: 360px;
-    font-size: clamp(34px, 9vw, 36px);
+    font-size: clamp(24px, 6.3vw, 25px);
     line-height: 0.94;
   }
 
-  .hero-copy > p.hero-lead {
-    max-width: 27ch;
+  .hero-divider {
+    width: min(100%, 27ch);
     margin-top: 28px;
-    font-size: 16px;
-    line-height: 1.45;
   }
 
   .hero-actions {

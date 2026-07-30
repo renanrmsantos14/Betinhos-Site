@@ -119,9 +119,23 @@
   border-radius: 10px;
   color: #5d656a;
   gap: 4px;
-  min-height: 72px;
-  padding: 10px 12px 8px;
+  padding: 7px 12px 5px;
   transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent):not(.careers-presentation),
+.careers-form-row > label {
+  align-content: center;
+  height: 56px;
+  min-height: 56px;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent):not(.careers-presentation) > input,
+.careers-form-row > label > input,
+.careers-form-row > label > select {
+  height: 22px;
+  min-height: 0;
+  padding: 0 2px;
 }
 
 .careers-form > label:not(.careers-file):not(.careers-consent):hover,
@@ -154,6 +168,17 @@
 
 .careers-form textarea::placeholder {
   color: #64748b;
+}
+
+.careers-form textarea {
+  min-height: 48px;
+  overflow-y: hidden;
+  resize: none;
+}
+
+.careers-presentation {
+  height: auto;
+  min-height: 0;
 }
 
 .careers-form input:focus-visible,

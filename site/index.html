@@ -298,9 +298,7 @@
             <span>Você dirige seu mundo,</span><span>e nós te</span
             ><span>levamos até lá.</span>
           </h1>
-          <p class="hero-lead">
-            Da origem ao destino, cada detalhe sob controle.
-          </p>
+          <div class="hero-divider" aria-hidden="true"></div>
           <div class="hero-actions">
             <a href="#contato"
               >Solicitar atendimento
@@ -344,23 +342,23 @@
             <div class="hero-locations">
               <article>
                 <img src="/cities/sao-jose-dos-campos.jpg" alt="Arco da Inovação em São José dos Campos" width="736" height="919" />
-                <span><small>01</small><strong>São José dos Campos</strong></span>
+                <span><strong>São José dos Campos</strong></span>
               </article>
               <article>
                 <img src="/cities/pindamonhangaba.jpg" alt="Palacete 10 de Julho em Pindamonhangaba" width="700" height="464" loading="lazy" />
-                <span><small>02</small><strong>Pindamonhangaba</strong></span>
+                <span><strong>Pindamonhangaba</strong></span>
               </article>
               <article>
                 <img src="/cities/vale-do-paraiba.jpg" alt="Basílica de Aparecida no Vale do Paraíba" width="500" height="268" loading="lazy" />
-                <span><small>03</small><strong>Vale do Paraíba</strong></span>
+                <span><strong>Vale do Paraíba</strong></span>
               </article>
               <article>
                 <img src="/cities/sao-paulo.jpg" alt="Avenida Paulista em São Paulo" width="960" height="540" loading="lazy" />
-                <span><small>04</small><strong>São Paulo</strong></span>
+                <span><strong>São Paulo</strong></span>
               </article>
               <article>
                 <img src="/cities/rio-de-janeiro.jpg" alt="Pão de Açúcar no Rio de Janeiro" width="960" height="640" loading="lazy" />
-                <span><small>05</small><strong>Rio de Janeiro</strong></span>
+                <span><strong>Rio de Janeiro</strong></span>
               </article>
             </div>
           </div>
@@ -427,6 +425,12 @@
         </div>
         <div class="fleet-catalog">
           <div class="fleet-catalog-bar">
+            <div class="fleet-catalog-filters" role="group" aria-label="Tipos de veículos">
+              <button class="fleet-catalog-filter is-active" type="button" data-fleet-filter="all" aria-pressed="true">Todos</button>
+              <button class="fleet-catalog-filter" type="button" data-fleet-filter="executive" aria-pressed="false">Executivos</button>
+              <button class="fleet-catalog-filter" type="button" data-fleet-filter="armored" aria-pressed="false">Blindados</button>
+              <button class="fleet-catalog-filter" type="button" data-fleet-filter="van" aria-pressed="false">Vans</button>
+            </div>
             <div class="fleet-catalog-controls" aria-label="Navegação da frota">
               <button class="fleet-catalog-button fleet-catalog-prev" type="button" aria-label="Veículo anterior">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -441,7 +445,7 @@
             </div>
           </div>
           <div class="service-list" id="servicos-frota" role="list" aria-label="Categorias de veículos">
-            <article class="service-card" role="listitem" data-vehicle="virtus">
+            <article class="service-card" role="listitem" data-vehicle="virtus" data-fleet-groups="executive">
               <div class="service-card-copy">
                 <h3>Sedan médio</h3>
                 <p class="service-card-description">
@@ -453,10 +457,10 @@
                 <img src="/fleet/cards/virtus.png" alt="Veículo preto da categoria Sedan médio" width="1717" height="917" loading="lazy" decoding="async" />
               </div>
               <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Volkswagen%20Virtus.">
-                <span class="service-card-action__label">Consultar disponibilidade</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
               </a>
             </article>
-            <article class="service-card" role="listitem" data-vehicle="corolla">
+            <article class="service-card" role="listitem" data-vehicle="corolla" data-fleet-groups="executive">
               <div class="service-card-copy">
                 <h3>Sedan executivo</h3>
                 <p class="service-card-description">
@@ -468,10 +472,10 @@
                 <img src="/fleet/cards/corolla.png" alt="Veículo preto da categoria Sedan executivo" width="1717" height="917" loading="lazy" decoding="async" />
               </div>
               <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Toyota%20Corolla.">
-                <span class="service-card-action__label">Consultar disponibilidade</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
               </a>
             </article>
-            <article class="service-card" role="listitem" data-vehicle="commander">
+            <article class="service-card" role="listitem" data-vehicle="commander" data-fleet-groups="armored">
               <div class="service-card-copy">
                 <h3>SUV blindada</h3>
                 <p class="service-card-description">
@@ -483,10 +487,10 @@
                 <img src="/fleet/cards/commander.png" alt="Veículo preto da categoria SUV blindada" width="1717" height="917" loading="lazy" decoding="async" />
               </div>
               <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Jeep%20Commander.">
-                <span class="service-card-action__label">Consultar disponibilidade</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
               </a>
             </article>
-            <article class="service-card" role="listitem" data-vehicle="master">
+            <article class="service-card" role="listitem" data-vehicle="master" data-fleet-groups="van">
               <div class="service-card-copy">
                 <h3>Van executiva</h3>
                 <p class="service-card-description">
@@ -498,10 +502,10 @@
                 <img src="/fleet/cards/master.png" alt="Veículo preto da categoria Van executiva" width="1717" height="917" loading="lazy" decoding="async" />
               </div>
               <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20da%20Renault%20Master.">
-                <span class="service-card-action__label">Consultar disponibilidade</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
               </a>
             </article>
-            <article class="service-card" role="listitem" data-vehicle="sprinter">
+            <article class="service-card" role="listitem" data-vehicle="sprinter" data-fleet-groups="armored van">
               <div class="service-card-copy">
                 <h3>Van blindada</h3>
                 <p class="service-card-description">
@@ -513,7 +517,7 @@
                 <img src="/fleet/cards/sprinter.png" alt="Veículo preto da categoria Van blindada" width="1717" height="917" loading="lazy" decoding="async" />
               </div>
               <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20da%20Mercedes-Benz%20Sprinter.">
-                <span class="service-card-action__label">Consultar disponibilidade</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
               </a>
             </article>
           </div>
@@ -621,58 +625,16 @@
             não vê é justamente o que sustenta cada viagem.
           </p>
           <div class="office-metrics">
-            <div><strong>24/7</strong><span>OPERATION</span></div>
-            <div><strong>3</strong><span>LANGUAGES</span></div>
-            <div><strong>40</strong><span>YEARS</span></div>
+            <div><strong>10 MIL+</strong><span>SERVIÇOS POR ANO</span></div>
+            <div><strong>6,5%</strong><span>TURNOVER ANUAL</span></div>
+            <div><strong>4,16</strong><span>NÍVEL SIGMA MÉDIO</span></div>
           </div>
-        </div>
-      </section>
-      <section class="trust section">
-        <div>
-          <p class="eyebrow">Relações de longo prazo</p>
-          <h2>Confiança construída em operações reais.</h2>
-          <p>
-            Experiência no atendimento a organizações globais, com disciplina de
-            prazo, infraestrutura e alinhamento corporativo.
-          </p>
-        </div>
-        <div class="client-logos">
-          <img
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-            src="/clients/johnson.png"
-            alt="Johnson &amp; Johnson"
-          /><img
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-            src="/clients/kenvue.png"
-            alt="Kenvue"
-          /><img
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-            src="/clients/embraer.png"
-            alt="Embraer"
-          /><img
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-            src="/clients/tenaris.png"
-            alt="Tenaris"
-          />
-        </div>
-        <div class="trust-facts" aria-label="Indicadores da operação">
-          <div><strong>40</strong><span>anos de história</span></div>
-          <div><strong>24/7</strong><span>operação monitorada</span></div>
-          <div><strong>3</strong><span>idiomas de atendimento</span></div>
         </div>
       </section>
       <section class="google-reviews section" aria-labelledby="google-reviews-title">
         <div class="google-reviews-copy">
           <p class="eyebrow gold">Avaliações no Google</p>
-          <h2 id="google-reviews-title">Experiências compartilhadas por nossos clientes.</h2>
+          <h2 id="google-reviews-title">Avaliações sobre a Betinhos.</h2>
           <p>
             Consulte a nota e as avaliações diretamente na ficha oficial da
             Betinhos. As informações exibidas são atualizadas pelo Google.
@@ -788,7 +750,7 @@
                 loading="lazy"
                 decoding="async"
                 fetchpriority="low"
-                src="/team/junior.webp"
+                src="/team/junior-standard.jpg"
                 alt="Júnior de Paula"
               />
             </div>
@@ -903,11 +865,11 @@
               </select>
             </label>
           </div>
-          <label>
+          <label class="careers-presentation">
             Apresentação
             <textarea
               name="Apresentação"
-              rows="4"
+              rows="2"
               placeholder="Conte brevemente sobre sua experiência."
             ></textarea>
           </label>
@@ -1160,5 +1122,6 @@
     <script src="/section-order.js" defer></script>
     <script src="/history-carousel.js" defer></script>
     <script src="/office-carousel.js" defer></script>
+    <script src="/careers-textarea.js" defer></script>
   </body>
 </html>

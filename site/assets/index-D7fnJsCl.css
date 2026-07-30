@@ -1457,6 +1457,7 @@ body { background: var(--navy); color: #f7f4ec; }
 .protocol { background: #e9e4d9; color: var(--ink); }
 .office { background: #061522; color: #f7f4ec; }
 .team { background: #102f45; color: #f7f4ec; }
+.team h2 { font-size: clamp(39px, 4.7vw, 68px); }
 .contact { background: var(--gold); color: var(--navy); }
 .legacy .eyebrow, .trust .eyebrow { color: #9a6d27; }
 .solutions .eyebrow, .protection .eyebrow, .team .eyebrow, .contact .eyebrow { color: var(--gold2); }
@@ -1882,7 +1883,6 @@ body:before {
 .hero-copy h1 span:nth-child(3) {
   animation-delay: 0.36s;
   color: var(--gold2);
-  font-style: italic;
 }
 .hero-copy > p:last-of-type {
   animation: hero-in 0.8s 0.46s both;
@@ -1985,12 +1985,6 @@ body:before {
 }
 .team-grid article:hover img {
   transform: scale(1.035);
-}
-.team-grid article:nth-child(2) img {
-  transform: translateY(-4%) scale(1.08);
-}
-.team-grid article:nth-child(2):hover img {
-  transform: translateY(-4%) scale(1.115);
 }
 .client-logos img {
   transition:
@@ -3563,12 +3557,21 @@ body:before {
   transition: transform 420ms cubic-bezier(.23, 1, .32, 1);
 }
 .hero-locations article span {
-  inset: auto 8px 8px;
+  inset: auto auto 8px 50%;
+  width: max-content;
+  max-width: calc(100% - 16px);
   padding: 9px 10px 10px;
   border: 0;
   border-radius: 8px;
-  background: #001a3df2;
+  background: #ffffffb8;
   box-shadow: none;
+  color: #001a3d;
+  align-items: center;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.hero-locations article strong {
+  color: #001a3d;
 }
 .hero-locations article strong {
   font-size: clamp(10px, 0.8vw, 13px);
@@ -3782,7 +3785,8 @@ body:before {
     border-radius: 8px;
   }
   .hero-locations article span {
-    inset: auto 6px 6px;
+    inset: auto auto 6px 50%;
+    max-width: calc(100% - 12px);
     padding: 7px 8px 8px;
     border-radius: 7px;
   }

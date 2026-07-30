@@ -183,7 +183,6 @@
   color: #c7d1d6;
   font: 400 12px/1.55 var(--sans);
   margin: 0;
-  max-width: 39ch;
   padding: 6px 0 0;
 }
 
@@ -504,6 +503,75 @@
 @media (hover: hover) and (pointer: fine) {
   .history-carousel__button:hover { background: var(--ink); border-color: var(--ink); color: #f7f4ec; }
   .history-carousel__dots button:hover { border-color: #d6cfc2; }
+}
+
+@media (min-width: 901px) {
+  .history-carousel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(172px, 13vw, 196px);
+  }
+
+  .history-carousel__controls {
+    align-items: stretch;
+    border-bottom: 1px solid #c9c1b2;
+    border-left: 1px solid #c9c1b2;
+    border-top: 0;
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+    margin-top: 0;
+    min-height: 0;
+  }
+
+  .history-carousel__status {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .history-carousel__navigation {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+  }
+
+  .history-carousel__dots {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 72px);
+  }
+
+  .history-carousel__dots button {
+    border-bottom: 1px solid #d6cfc2;
+    border-right: 0;
+    min-height: 0;
+    min-width: 0;
+    padding: 12px 14px;
+  }
+
+  .history-carousel__dots button::before {
+    height: auto;
+    inset: 0 auto 0 0;
+    width: 3px;
+  }
+
+  .history-carousel__buttons {
+    border-left: 0;
+    border-top: 1px solid #d6cfc2;
+    justify-content: flex-end;
+    padding: 10px 14px;
+  }
+
+  .history-carousel__button {
+    height: 38px;
+    width: 38px;
+  }
 }
 
 @media (max-width: 680px) {
