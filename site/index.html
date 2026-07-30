@@ -520,67 +520,60 @@
         </div>
       </section>
       <section
-        class="protocol section security-journey"
+        class="protocol section readiness-panel"
         id="seguranca"
-        aria-labelledby="security-journey-title"
+        aria-labelledby="readiness-title"
       >
-        <div class="security-journey-intro">
-          <p class="eyebrow">Segurança em movimento</p>
-          <h2 id="security-journey-title">
-            <span class="security-title-line-1">A agenda muda.</span>
-            <span class="security-title-line-2">O cuidado permanece.</span>
-          </h2>
-          <p class="security-journey-copy">
-            Cada viagem passa por uma sequência de decisões antes, durante e
-            depois do deslocamento.
-          </p>
+        <header class="readiness-panel__intro">
+          <p class="eyebrow">O que acontece antes do embarque</p>
+          <h2 id="readiness-title"><span class="readiness-title-line-1">Tranquilidade para o passageiro.</span> <span class="readiness-title-line-2">Trabalho coordenado nos bastidores.</span></h2>
+          <p class="readiness-panel__copy">Cada serviço passa por planejamento, preparação e acompanhamento antes de ser concluído.</p>
+        </header>
+
+        <div class="readiness-panel__stages" role="list">
+          <article class="readiness-stage" data-readiness-stage role="listitem">
+            <header class="readiness-stage__heading">
+              <span class="readiness-stage__index" aria-hidden="true">01</span>
+              <div><p>ANTES DO SERVIÇO</p><h3>Planejamento</h3></div>
+            </header>
+            <ul class="readiness-stage__checks">
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Briefing confirmado</h4><p>Conferimos horários, passageiros, endereços e necessidades do serviço.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Necessidades identificadas</h4><p>Registramos bagagens, pontos de encontro e orientações do atendimento.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Rota e alternativas avaliadas</h4><p>Revisamos trajeto, trânsito previsto, restrições e caminhos possíveis.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Veículo e motorista definidos</h4><p>Alinhamos categoria, capacidade e profissional ao perfil do serviço.</p></div></li>
+            </ul>
+          </article>
+
+          <article class="readiness-stage" data-readiness-stage role="listitem">
+            <header class="readiness-stage__heading">
+              <span class="readiness-stage__index" aria-hidden="true">02</span>
+              <div><p>ANTES DO EMBARQUE</p><h3>Preparação e execução</h3></div>
+            </header>
+            <ul class="readiness-stage__checks">
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Equipe orientada</h4><p>O motorista recebe agenda, rota, contatos e orientações específicas.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Veículo e apresentação conferidos</h4><p>Verificamos as condições de atendimento e a apresentação profissional.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Ponto de encontro confirmado</h4><p>Local, referências e detalhes de acesso são conferidos antes da partida.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Embarque conduzido</h4><p>O passageiro é recebido com pontualidade, atenção e discrição.</p></div></li>
+            </ul>
+          </article>
+
+          <article class="readiness-stage" data-readiness-stage role="listitem">
+            <header class="readiness-stage__heading">
+              <span class="readiness-stage__index" aria-hidden="true">03</span>
+              <div><p>ATÉ A CHEGADA</p><h3>Acompanhamento e conclusão</h3></div>
+            </header>
+            <ul class="readiness-stage__checks">
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Marcos do serviço acompanhados</h4><p>A operação acompanha os momentos combinados ao longo do atendimento.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Operação disponível</h4><p>A equipe permanece disponível para orientar ajustes durante o trajeto.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Chegada registrada</h4><p>Confirmamos a chegada ao destino e o encerramento do deslocamento.</p></div></li>
+              <li><span class="readiness-check" aria-hidden="true"></span><div><h4>Atendimento encerrado</h4><p>As informações finais são organizadas e o serviço é concluído.</p></div></li>
+            </ul>
+          </article>
         </div>
 
-        <div class="security-journey-operation">
-          <div class="security-journey-heading">
-            <span>DO AGENDAMENTO À CHEGADA</span>
-          </div>
-
-          <ol class="security-journey-events">
-            <li class="security-journey-event" data-journey-step>
-              <span class="security-journey-phase">ANTES DA VIAGEM</span>
-              <span class="security-journey-number" aria-hidden="true">01</span>
-              <h3>Agendamento recebido</h3>
-              <p>Recebemos horários, passageiros, endereços e necessidades da viagem.</p>
-            </li>
-            <li class="security-journey-event" data-journey-step>
-              <span class="security-journey-number" aria-hidden="true">02</span>
-              <h3>Análise de rota e trânsito</h3>
-              <p>Avaliamos o trajeto, o trânsito previsto, restrições e alternativas.</p>
-            </li>
-            <li class="security-journey-event" data-journey-step>
-              <span class="security-journey-number" aria-hidden="true">03</span>
-              <h3>Planejamento operacional</h3>
-              <p>Definimos margens, horários de apresentação e pontos que exigem atenção.</p>
-            </li>
-            <li class="security-journey-event" data-journey-step>
-              <span class="security-journey-number" aria-hidden="true">04</span>
-              <h3>Briefing da equipe</h3>
-              <p>O motorista recebe agenda, rota, contatos e orientações específicas.</p>
-            </li>
-            <li class="security-journey-event" data-journey-step>
-              <span class="security-journey-number" aria-hidden="true">05</span>
-              <h3>Verificação pré-embarque</h3>
-              <p>Conferimos o veículo, a apresentação do motorista e os itens do embarque.</p>
-            </li>
-            <li class="security-journey-event security-journey-event--phase" data-journey-step>
-              <span class="security-journey-phase">DURANTE A VIAGEM</span>
-              <span class="security-journey-number" aria-hidden="true">06</span>
-              <h3>Acompanhamento da viagem</h3>
-              <p>A equipe acompanha os marcos combinados e permanece disponível ao motorista.</p>
-            </li>
-            <li class="security-journey-event security-journey-event--phase" data-journey-step>
-              <span class="security-journey-phase">ENCERRAMENTO</span>
-              <span class="security-journey-number" aria-hidden="true">07</span>
-              <h3>Chegada e encerramento</h3>
-              <p>Registramos a chegada e concluímos o atendimento.</p>
-            </li>
-          </ol>
+        <div class="readiness-panel__closing">
+          <p>O passageiro vê o trajeto. Nossa equipe acompanha tudo o que o torna possível.</p>
+          <a href="#contato"><span class="readiness-panel__cta-label">Planejar um serviço</span><span aria-hidden="true">↗</span></a>
         </div>
       </section>
       <section class="office section">

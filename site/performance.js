@@ -83,41 +83,41 @@
   syncHeader();
   addEventListener('scroll', syncHeader, { passive: true });
 
-  const journey = document.querySelector('.security-journey');
-  if (journey) {
-    const steps = [...journey.querySelectorAll('[data-journey-step]')];
+  const readinessPanel = document.querySelector('.readiness-panel');
+  if (readinessPanel) {
+    const stages = [...readinessPanel.querySelectorAll('[data-readiness-stage]')];
     const timers = [];
     let hasPlayed = false;
 
-    const showAllSteps = () => steps.forEach((step) => step.classList.add('is-active'));
+    const showAllStages = () => stages.forEach((stage) => stage.classList.add('is-ready'));
 
-    const playJourney = () => {
+    const playReadiness = () => {
       if (hasPlayed) return;
       hasPlayed = true;
-      journey.classList.add('is-journey-visible');
+      readinessPanel.classList.add('is-readiness-visible');
 
       if (reducedMotion.matches) {
-        showAllSteps();
+        showAllStages();
         return;
       }
 
-      steps.forEach((step, index) => {
-        timers.push(setTimeout(() => step.classList.add('is-active'), 180 + index * 70));
+      stages.forEach((stage, index) => {
+        timers.push(setTimeout(() => stage.classList.add('is-ready'), 160 + index * 120));
       });
     };
 
-    const journeyObserver = new IntersectionObserver(([entry]) => {
+    const readinessObserver = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) return;
-      playJourney();
-      journeyObserver.disconnect();
+      playReadiness();
+      readinessObserver.disconnect();
     }, { rootMargin: '0px 0px -18% 0px', threshold: 0.16 });
 
-    journeyObserver.observe(journey);
+    readinessObserver.observe(readinessPanel);
     reducedMotion.addEventListener('change', () => {
       if (!reducedMotion.matches) return;
       timers.forEach(clearTimeout);
-      playJourney();
-      showAllSteps();
+      playReadiness();
+      showAllStages();
     });
   }
 })();
