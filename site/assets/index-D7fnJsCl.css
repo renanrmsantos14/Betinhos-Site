@@ -1986,6 +1986,12 @@ body:before {
 .team-grid article:hover img {
   transform: scale(1.035);
 }
+.team-grid article:nth-child(2) img {
+  transform: translateY(-4%) scale(1.08);
+}
+.team-grid article:nth-child(2):hover img {
+  transform: translateY(-4%) scale(1.115);
+}
 .client-logos img {
   transition:
     filter 0.4s ease,
