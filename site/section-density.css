@@ -1,0 +1,159 @@
+/* Compact section rhythm: keep the editorial identity without oversized whitespace. */
+.section:not(.hero) {
+  padding-block: clamp(48px, 5.5vw, 72px);
+}
+
+.section-head,
+.team-head {
+  gap: clamp(28px, 5vw, 72px);
+}
+
+.solutions .section-head {
+  padding-bottom: clamp(20px, 2.2vw, 30px);
+}
+
+.solutions .fleet-shell {
+  margin-top: clamp(18px, 2vw, 28px);
+}
+
+.company-intro.section,
+.office.section {
+  gap: clamp(24px, 3vw, 48px);
+  padding-block: clamp(42px, 4.5vw, 60px);
+}
+
+.company-intro__body,
+.office-copy > p:not(.eyebrow) {
+  margin-block: 20px 26px;
+}
+
+.protocol.readiness-panel {
+  padding-block: clamp(44px, 5vw, 68px);
+}
+
+.google-reviews {
+  gap: clamp(28px, 4vw, 64px);
+}
+
+.google-reviews-copy > p:last-of-type {
+  margin: 20px 0 26px;
+}
+
+.history-section {
+  padding-block: clamp(44px, 4.5vw, 62px);
+}
+
+.history-layout {
+  gap: clamp(28px, 3.5vw, 50px);
+  padding-top: clamp(22px, 2.2vw, 30px);
+}
+
+.history-copy {
+  margin-top: clamp(20px, 2vw, 28px);
+}
+
+.history-intro blockquote {
+  margin-top: clamp(20px, 2vw, 28px);
+}
+
+.history-slides,
+.history-slide {
+  min-height: clamp(390px, 47vh, 450px);
+}
+
+.team-grid {
+  margin-top: clamp(34px, 4vw, 54px);
+}
+
+.careers,
+.faq {
+  gap: clamp(32px, 5vw, 72px);
+}
+
+.careers-intro h2 {
+  margin: 18px 0 22px;
+}
+
+.faq-intro > p:last-child {
+  margin-top: 20px;
+}
+
+.contact {
+  min-height: min(620px, 82svh);
+}
+
+.contact > img {
+  margin-bottom: 28px;
+}
+
+.contact > a {
+  margin-top: 32px;
+}
+
+@media (min-width: 900px) and (max-height: 900px) {
+  .section:not(.hero) {
+    padding-block: clamp(36px, 5vh, 50px);
+  }
+
+  .company-intro.section,
+  .office.section,
+  .history-section {
+    padding-block: clamp(36px, 4.5vh, 48px);
+  }
+
+  .company-intro__media,
+  .office-carousel__slides {
+    min-height: 0;
+    max-height: 420px;
+  }
+
+  .team-grid {
+    margin-top: 32px;
+  }
+
+  .contact {
+    min-height: calc(100svh - var(--fixed-header-height, 78px));
+  }
+}
+
+@media (max-width: 680px) {
+  .section:not(.hero) {
+    padding-block: 44px;
+  }
+
+  .company-intro.section,
+  .office.section,
+  .history-section {
+    padding-block: 40px;
+  }
+
+  .section-head > p,
+  .team-head > p {
+    margin-top: 22px;
+  }
+
+  .history-layout {
+    padding-top: 20px;
+  }
+
+  .history-copy {
+    margin-top: 18px;
+  }
+
+  .history-carousel {
+    margin-top: 24px;
+  }
+
+  .team-grid {
+    margin-top: 30px;
+  }
+
+  .careers,
+  .faq {
+    gap: 30px;
+  }
+
+  .contact {
+    min-height: auto;
+  }
+}
