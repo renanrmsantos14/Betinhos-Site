@@ -171,6 +171,7 @@ button, a { font: inherit; }
   left: 37.5%;
   color: var(--mark-bg) !important;
   -webkit-text-stroke: var(--mark-knockout) var(--mark-bg) !important;
+  clip-path: inset(0 0 13% 0);
 }
 
 .anniversary-four::after {
@@ -179,6 +180,27 @@ button, a { font: inherit; }
   color: transparent;
   -webkit-text-stroke: var(--mark-stroke) var(--mark-number);
   content: "4";
+}
+
+.anniversary-four-foot {
+  position: absolute;
+  z-index: 2;
+  top: 87%;
+  left: 18%;
+  width: 36%;
+  height: var(--mark-knockout);
+  background: var(--mark-bg);
+  transform: translateY(-50%);
+}
+
+.anniversary-four-foot::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  border-top: var(--mark-stroke) solid var(--mark-number);
+  content: "";
+  transform: translateY(-50%);
 }
 
 .anniversary-cut {
@@ -206,29 +228,6 @@ button, a { font: inherit; }
   font-size: clamp(11px, 1.1vw, 16px);
 }
 
-.anniversary-dates {
-  position: absolute;
-  right: 13.5%;
-  bottom: 5%;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--mark-accent);
-  font: 630 8px/1 var(--sans);
-  letter-spacing: 0.16em;
-}
-
-.anniversary-dates i {
-  width: 24px;
-  height: 1px;
-  background: currentColor;
-}
-
-.anniversary-lockup--primary .anniversary-dates {
-  right: 14%;
-  font-size: clamp(9px, 0.8vw, 12px);
-}
-
 .signature-copy {
   display: flex;
   flex-direction: column;
@@ -237,15 +236,8 @@ button, a { font: inherit; }
   border-left: 1px solid var(--line-dark);
 }
 
-.signature-index {
-  margin: 0 0 auto;
-  color: var(--gold);
-  font-size: 9px;
-  font-weight: 650;
-  letter-spacing: 0.17em;
-}
-
 .signature-copy h2 {
+  margin-top: auto;
   max-width: 8ch;
   margin: 0 0 28px;
   font: 400 clamp(36px, 3.2vw, 52px) / 0.96 var(--serif);
@@ -365,8 +357,6 @@ button, a { font: inherit; }
 }
 
 .anniversary-lockup--small .anniversary-cut { height: 19px; font-size: 7px; }
-.anniversary-lockup--small .anniversary-dates { right: 12%; font-size: 6px; }
-.anniversary-lockup--small .anniversary-dates i { width: 15px; }
 
 .application-micro {
   grid-column: 1 / -1;
