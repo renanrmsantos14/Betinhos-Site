@@ -1040,22 +1040,22 @@ h2 {
 }
 .readiness-stage:nth-child(2) .readiness-stage__media img {
   padding: 14px 8px 0;
-  object-position: center;
-  transform: translate(-14%, 8px) scale(1.08);
+  object-position: center bottom;
+  transform: translate(-12%, 8px) scale(.94);
 }
 .readiness-stage:nth-child(3) .readiness-stage__media img {
   padding: 12px 18px;
-  transform: translateY(8px) scale(.94);
+  transform: translateY(-8px) scale(.84);
 }
 .readiness-stage.is-ready .readiness-stage__media img {
   opacity: 1;
   transform: none;
 }
 .readiness-stage:nth-child(2).is-ready .readiness-stage__media img {
-  transform: translateX(-14%) scale(1.08);
+  transform: translateX(-12%) scale(.94);
 }
 .readiness-stage:nth-child(3).is-ready .readiness-stage__media img {
-  transform: scale(.94);
+  transform: translateY(-16px) scale(.84);
 }
 .readiness-stage__heading {
   grid-template-columns: 36px minmax(0, 1fr);
