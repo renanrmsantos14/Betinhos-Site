@@ -16,6 +16,20 @@
 }
 
 @media (width <= 1050px) {
+  .site-header,
+  .hero-bottom {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .site-header {
+    background: rgb(2 20 38 / 94%);
+  }
+
+  .hero-bottom {
+    background: rgb(6 29 51 / 92%);
+  }
+
   .team-grid p {
     color: #b8c2c8;
   }
@@ -100,5 +114,157 @@
 
   .hero-actions a:first-child {
     width: auto;
+  }
+}
+
+/* Mobile hero: editorial image, concise actions and a lighter destination rail. */
+@media (width <= 680px) {
+  .hero {
+    height: max(100svh, 820px);
+    min-height: 820px;
+    background-position: 56% center;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, #0214268c 0%, #0214263d 30%, #021426d9 72%, #021426 100%),
+      linear-gradient(90deg, #021426bf 0%, #02142633 76%);
+  }
+
+  .hero-copy {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    padding: 112px 20px 274px;
+  }
+
+  .hero-copy h1 {
+    max-width: 350px;
+    font-size: clamp(37px, 10.7vw, 46px);
+    line-height: .94;
+    letter-spacing: -.035em;
+  }
+
+  .hero-copy h1 span {
+    white-space: normal;
+  }
+
+  .hero-divider {
+    width: 72px;
+    margin-top: 24px;
+    background: #f0d89ab8;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    gap: 12px;
+    width: min(100%, 350px);
+    margin-top: 22px;
+  }
+
+  .hero-actions a:first-child {
+    width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    padding-inline: 18px 14px;
+    font-size: 9px;
+  }
+
+  .hero-actions a:last-child {
+    align-self: flex-start;
+    min-height: 36px;
+    border-bottom-color: #f4f0e766;
+    font-size: 8px;
+  }
+
+  .hero-bottom {
+    grid-template-rows: 86px 154px;
+    height: 240px;
+    background: #061d33f7;
+  }
+
+  .hero-anniversary-panel {
+    grid-template-columns: 118px minmax(0, 1fr);
+  }
+
+  .hero-anniversary-panel .hero-anniversary {
+    padding: 8px 14px;
+  }
+
+  .hero-anniversary-panel .anniversary-mark__number {
+    font-size: 76px;
+  }
+
+  .hero-destinations-intro {
+    justify-items: start;
+    padding: 12px 18px;
+  }
+
+  .hero-destinations-intro::before {
+    width: 30px;
+    margin: 0 0 8px;
+  }
+
+  .hero-destinations-intro h2 {
+    max-width: none;
+    margin: 0;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .hero-destinations-intro p {
+    display: none;
+  }
+
+  .hero-locations {
+    grid-template-columns: repeat(5, 116px);
+    gap: 7px;
+    padding: 8px 10px 10px;
+    scroll-padding-inline: 10px;
+  }
+
+  .hero-locations article span {
+    inset: auto auto 6px 50%;
+    padding: 6px 7px 7px;
+  }
+
+  .hero-locations article strong {
+    font-size: 8px;
+  }
+}
+
+@media (width <= 680px) and (height <= 500px) and (orientation: landscape) {
+  .hero {
+    height: 720px;
+    min-height: 720px;
+  }
+
+  .hero-copy {
+    justify-content: flex-start;
+    padding: 92px 22px 244px;
+  }
+
+  .hero-copy h1 {
+    max-width: 520px;
+    font-size: clamp(34px, 6vw, 40px);
+  }
+
+  .hero-actions {
+    flex-flow: row wrap;
+    width: auto;
+  }
+
+  .hero-actions a:first-child {
+    width: auto;
+    min-width: 210px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (width <= 680px) {
+  .hero {
+    background-attachment: scroll;
   }
 }
