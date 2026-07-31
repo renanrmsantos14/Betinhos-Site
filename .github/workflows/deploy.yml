@@ -11,12 +11,12 @@ permissions:
 
 concurrency:
   group: deploy-locaweb
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
