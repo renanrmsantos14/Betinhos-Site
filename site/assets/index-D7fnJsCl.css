@@ -949,25 +949,48 @@ h2 {
 .readiness-panel__closing a {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 188px;
   min-height: 48px;
-  padding: 0 22px;
-  border: 1px solid #d8ad6173;
+  padding: 0 14px 0 18px;
+  border: 1px solid #f0d89ab8;
+  border-radius: 10px;
+  background: #ffffff06;
   color: #f7f4ec;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
+  font: 650 13px/1.2 Geist, Arial, sans-serif;
+  letter-spacing: .01em;
   text-decoration: none;
-  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease-out;
+  touch-action: manipulation;
+  transition: background-color 150ms cubic-bezier(.23, 1, .32, 1), border-color 150ms cubic-bezier(.23, 1, .32, 1), box-shadow 150ms cubic-bezier(.23, 1, .32, 1), transform 150ms cubic-bezier(.23, 1, .32, 1);
+}
+.readiness-panel__cta-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 150ms cubic-bezier(.23, 1, .32, 1);
+}
+.readiness-panel__closing a:focus-visible {
+  border-color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #f0d89a4d;
 }
 .readiness-panel__closing a:active {
   transform: scale(.97);
 }
 @media (hover: hover) and (pointer: fine) {
   .readiness-panel__closing a:hover {
-    border-color: #d8ad61;
-    background: #d8ad61;
-    color: #08223a;
+    border-color: #f0d89a;
+    background: #ffffff0f;
+  }
+  .readiness-panel__closing a:hover .readiness-panel__cta-icon {
+    transform: translate(3px, -3px);
   }
 }
 @media (width<=1040px) {
