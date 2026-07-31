@@ -102,7 +102,7 @@
       }
 
       stages.forEach((stage, index) => {
-        timers.push(setTimeout(() => stage.classList.add('is-ready'), 160 + index * 120));
+        timers.push(setTimeout(() => stage.classList.add('is-ready'), 120 + index * 70));
       });
     };
 
