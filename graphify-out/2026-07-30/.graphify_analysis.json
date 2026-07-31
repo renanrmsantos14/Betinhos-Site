@@ -1,0 +1,94 @@
+{
+  "communities": {
+    "0": [
+      "site_anniversary_mark_betinhosanniversary",
+      "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
+      "site_anniversary_mark_betinhosanniversary_connectedcallback",
+      "site_anniversary_mark_betinhosanniversary_constructor",
+      "site_anniversary_mark_betinhosanniversary_render"
+    ],
+    "1": [
+      "site_anniversary_mark",
+      "site_anniversary_mark_anniversary_attributes",
+      "site_anniversary_mark_createelement"
+    ],
+    "2": [
+      "site_service_fleet",
+      "site_service_fleet_fleet_vehicle_order",
+      "site_service_fleet_initializeservicefleet"
+    ],
+    "3": [
+      "site_careers_textarea"
+    ],
+    "4": [
+      "site_history_carousel"
+    ],
+    "5": [
+      "site_i18n"
+    ],
+    "6": [
+      "site_mobile_navigation"
+    ],
+    "7": [
+      "site_office_carousel"
+    ],
+    "8": [
+      "site_performance"
+    ],
+    "9": [
+      "site_section_order"
+    ]
+  },
+  "cohesion": {
+    "0": 0.6,
+    "1": 0.6666666666666666,
+    "2": 0.6666666666666666,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "site_anniversary_mark_betinhosanniversary",
+      "label": "BetinhosAnniversary",
+      "degree": 5
+    },
+    {
+      "id": "site_anniversary_mark_createelement",
+      "label": "createElement()",
+      "degree": 2
+    },
+    {
+      "id": "site_anniversary_mark_anniversary_attributes",
+      "label": "ANNIVERSARY_ATTRIBUTES",
+      "degree": 1
+    },
+    {
+      "id": "site_service_fleet_fleet_vehicle_order",
+      "label": "FLEET_VEHICLE_ORDER",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `BetinhosAnniversary` connect `BetinhosAnniversary` to `anniversary-mark.js`?",
+      "why": "High betweenness centrality (0.085) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `createElement()` connect `anniversary-mark.js` to `BetinhosAnniversary`?",
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `ANNIVERSARY_ATTRIBUTES`, `FLEET_VEHICLE_ORDER` to the rest of the system?",
+      "why": "2 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

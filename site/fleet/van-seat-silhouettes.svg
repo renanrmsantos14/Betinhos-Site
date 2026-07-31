@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220">
+  <defs>
+    <linearGradient id="seat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b0e" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#020507" stop-opacity=".72"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation=".65"/>
+    </filter>
+    <g id="side-seat">
+      <rect x="116" y="16" width="38" height="46" rx="13" fill="url(#seat)" transform="rotate(4 135 39)"/>
+      <path d="M116 65c18-4 34 6 36 23l7 60c2 15-8 27-23 29l-26 3c-14 2-25-9-23-23l11-70c2-12 8-19 18-22Z" fill="url(#seat)"/>
+      <path d="M36 158c0-10 8-17 18-17h65c17 0 30 8 39 22l12 19H51c-10 0-17-4-21-12-3-6-1-12 6-12Z" fill="url(#seat)"/>
+      <path d="M102 177h17l-6 38H96Z" fill="#020507" fill-opacity=".74"/>
+      <path d="M71 128h41" fill="none" stroke="#151d22" stroke-opacity=".52" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <g filter="url(#soft)" opacity=".9">
+    <g transform="translate(-10 7) scale(.92)"><use href="#side-seat"/></g>
+    <g transform="translate(176 3) scale(.96)"><use href="#side-seat"/></g>
+    <g transform="translate(371 0)"><use href="#side-seat"/></g>
+    <g transform="translate(574 5) scale(.94)"><use href="#side-seat"/></g>
+  </g>
+</svg>

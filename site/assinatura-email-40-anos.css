@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Centabel";
+  src: url("/assets/centabel-book.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --signature-navy: #061d33;
+  --signature-gold: #d9b263;
+  --signature-ivory: #f4f0e7;
+  --signature-paper: #fcfcfb;
+  --signature-ink: #101820;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--signature-ink);
+  background: #e9e7e2;
+  font-family: "Geist", "Segoe UI", sans-serif;
+}
+
+.signature-gallery {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+.gallery-head {
+  margin-bottom: 52px;
+}
+
+.gallery-head p,
+.option-name {
+  margin: 0;
+  color: #745a31;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.gallery-head h1 {
+  margin: 16px 0 0;
+  color: var(--signature-navy);
+  font: 400 54px/0.95 "Centabel", Georgia, serif;
+}
+
+.signature-option + .signature-option { margin-top: 56px; }
+.option-name { margin-bottom: 14px; }
+
+.email-signature {
+  display: grid;
+  grid-template-columns: 208px minmax(0, 1fr);
+  width: 720px;
+  height: 220px;
+  overflow: hidden;
+  border: 1px solid rgba(6, 29, 51, 0.16);
+  background: var(--signature-paper);
+  box-shadow: 0 14px 36px rgba(6, 29, 51, 0.11);
+}
+
+.anniversary-panel {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.email-signature--dark .anniversary-panel {
+  background: var(--signature-navy);
+}
+
+.email-signature--dark .anniversary-panel::after {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  height: 1px;
+  background: rgba(244, 240, 231, 0.2);
+  content: "";
+}
+
+.email-signature--light .anniversary-panel {
+  background: var(--signature-ivory);
+}
+
+.email-signature--light .anniversary-panel::after {
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  right: 0;
+  width: 1px;
+  background: rgba(6, 29, 51, 0.18);
+  content: "";
+}
+
+.anniversary-lockup--email {
+  --mark-size: 168px;
+  --mark-stroke: 1.6px;
+  --mark-knockout: 5px;
+  width: 174px;
+  height: 132px;
+}
+
+.email-signature--dark .anniversary-lockup--email {
+  --mark-bg: var(--signature-navy);
+  --mark-number: var(--signature-gold);
+  --mark-accent: var(--signature-paper);
+}
+
+.email-signature--light .anniversary-lockup--email {
+  --mark-bg: var(--signature-ivory);
+  --mark-number: var(--signature-navy);
+  --mark-accent: var(--signature-gold);
+}
+
+.anniversary-lockup--email .anniversary-cut {
+  width: 76%;
+  height: 20px;
+  font-size: 7px;
+}
+
+.signature-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 0;
+  padding: 22px 28px 20px 32px;
+}
+
+.signature-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.signature-brand img {
+  width: 34px;
+  height: 34px;
+}
+
+.signature-brand span {
+  display: flex;
+  flex-direction: column;
+}
+
+.signature-brand strong {
+  color: var(--signature-navy);
+  font: 400 23px/0.82 "Centabel", Georgia, serif;
+  letter-spacing: 0.015em;
+}
+
+.signature-brand small {
+  margin-top: 3px;
+  color: #765b2f;
+  font: 700 6px/1 "Geist", "Segoe UI", sans-serif;
+  letter-spacing: 0.22em;
+}
+
+.signature-person {
+  align-self: center;
+}
+
+.signature-person h2 {
+  margin: 0;
+  color: var(--signature-navy);
+  font: 400 32px/1 "Centabel", Georgia, serif;
+  letter-spacing: -0.025em;
+}
+
+.person-rule {
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin-top: 10px;
+  background: var(--signature-gold);
+}
+
+.signature-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 34px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(6, 29, 51, 0.13);
+}
+
+.contact-primary,
+.contact-phones {
+  display: grid;
+  gap: 4px;
+}
+
+.signature-contact a {
+  color: #2d3d49;
+  font-size: 10px;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.contact-primary a:first-child {
+  color: #7c5b25;
+  font-weight: 650;
+}
+
+.contact-phones {
+  grid-template-columns: repeat(3, auto);
+  gap: 12px;
+}
+
+.contact-phones a + a {
+  position: relative;
+}
+
+.contact-phones a + a::before {
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--signature-gold);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.email-signature--light .signature-content {
+  background: var(--signature-paper);
+}
+
+@media (max-width: 780px) {
+  .signature-gallery {
+    width: min(100% - 24px, 720px);
+    padding-top: 36px;
+    overflow-x: auto;
+  }
+
+  .email-signature {
+    transform-origin: left top;
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "communities": {
+    "0": [
+      "site_index_categoria_blindados",
+      "site_index_categoria_executivos",
+      "site_index_categoria_vans",
+      "site_index_frota_de_veiculos",
+      "site_index_jeep_commander",
+      "site_index_mercedes_benz_sprinter",
+      "site_index_renault_master",
+      "site_index_toyota_corolla",
+      "site_index_volkswagen_virtus"
+    ],
+    "1": [
+      "site_anniversary_mark",
+      "site_anniversary_mark_anniversary_attributes",
+      "site_anniversary_mark_betinhosanniversary",
+      "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
+      "site_anniversary_mark_betinhosanniversary_connectedcallback",
+      "site_anniversary_mark_betinhosanniversary_constructor",
+      "site_anniversary_mark_betinhosanniversary_render",
+      "site_anniversary_mark_createelement"
+    ],
+    "2": [
+      "site_service_fleet",
+      "site_service_fleet_fleet_vehicle_order",
+      "site_service_fleet_initializeservicefleet"
+    ],
+    "3": [
+      "site_careers_textarea"
+    ],
+    "4": [
+      "site_history_carousel"
+    ],
+    "5": [
+      "site_i18n"
+    ],
+    "6": [
+      "site_mobile_navigation"
+    ],
+    "7": [
+      "site_office_carousel"
+    ],
+    "8": [
+      "site_performance"
+    ],
+    "9": [
+      "site_section_order"
+    ]
+  },
+  "cohesion": {
+    "0": 0.3333333333333333,
+    "1": 0.35714285714285715,
+    "2": 0.6666666666666666,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "site_anniversary_mark_betinhosanniversary",
+      "label": "BetinhosAnniversary",
+      "degree": 5
+    },
+    {
+      "id": "site_index_frota_de_veiculos",
+      "label": "Frota de veículos",
+      "degree": 5
+    },
+    {
+      "id": "site_index_jeep_commander",
+      "label": "Jeep Commander",
+      "degree": 3
+    },
+    {
+      "id": "site_index_mercedes_benz_sprinter",
+      "label": "Mercedes-Benz Sprinter",
+      "degree": 3
+    },
+    {
+      "id": "site_index_categoria_executivos",
+      "label": "Categoria Executivos",
+      "degree": 3
+    },
+    {
+      "id": "site_anniversary_mark_createelement",
+      "label": "createElement()",
+      "degree": 2
+    },
+    {
+      "id": "site_index_volkswagen_virtus",
+      "label": "Volkswagen Virtus",
+      "degree": 2
+    },
+    {
+      "id": "site_index_toyota_corolla",
+      "label": "Toyota Corolla",
+      "degree": 2
+    },
+    {
+      "id": "site_index_renault_master",
+      "label": "Renault Master",
+      "degree": 2
+    },
+    {
+      "id": "site_index_categoria_blindados",
+      "label": "Categoria Blindados",
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `ANNIVERSARY_ATTRIBUTES`, `FLEET_VEHICLE_ORDER` to the rest of the system?",
+      "why": "2 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

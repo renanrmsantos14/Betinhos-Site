@@ -1,0 +1,275 @@
+/* Contact finish: institutional blue background and WCAG-aware contrast. */
+.contact {
+  background: #061d33;
+  color: #ffffff;
+}
+
+.contact .eyebrow {
+  color: #e8edf5;
+}
+
+.contact h2,
+.request-note {
+  color: #ffffff;
+}
+
+.request-form {
+  background: #fcfcfb;
+  color: #172033;
+}
+
+.request-form input,
+.request-form select {
+  color: #172033;
+  border-bottom-color: #64748b;
+}
+
+.request-form input:focus,
+.request-form select:focus {
+  border-color: #001a3d;
+  outline: 3px solid rgb(232 237 245 / 0.72);
+  outline-offset: 2px;
+}
+
+.request-form button,
+.request-form button:hover {
+  background: #001a3d;
+  color: #ffffff;
+}
+
+/* Formulários: campos estruturados, mesma hierarquia operacional. */
+.request-form {
+  gap: 12px;
+  padding: clamp(16px, 2vw, 24px);
+}
+
+.request-form label {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  color: #475569;
+  min-height: 72px;
+}
+
+.request-form label:hover {
+  border-color: #c7d2e2;
+}
+
+.request-form label:focus-within {
+  border-color: #6c91e8;
+  box-shadow: 0 0 0 3px rgb(33 89 210 / 0.11);
+}
+
+.request-form input,
+.request-form select {
+  border-bottom: 0;
+  color: #172033;
+}
+
+.request-form button {
+  border-radius: 10px;
+  min-height: 48px;
+}
+
+.careers {
+  background: #f7f4ec;
+  color: #10202b;
+}
+
+.careers-intro .eyebrow,
+.careers-intro li strong {
+  color: #9a6d27;
+}
+
+.careers-intro h2,
+.careers-form label {
+  color: #10202b;
+}
+
+.careers-intro > p:last-of-type,
+.careers-file small,
+.careers-note,
+.careers-required {
+  color: #475569;
+}
+
+.careers-intro ul,
+.careers-intro li,
+.careers-form {
+  border-color: #cfc8bb;
+}
+
+.careers-form {
+  background: #f4f0e7;
+  border: 1px solid #d4cec2;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgb(16 32 43 / 0.06);
+  gap: 16px;
+  padding: clamp(18px, 2.5vw, 28px);
+}
+
+.careers-form-row {
+  gap: 12px;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent),
+.careers-form-row > label {
+  background: #fbfaf6;
+  border: 1px solid #d9d4ca;
+  border-radius: 10px;
+  color: #5d656a;
+  gap: 4px;
+  padding: 7px 12px 5px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent):not(.careers-presentation),
+.careers-form-row > label {
+  align-content: center;
+  height: 56px;
+  min-height: 56px;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent):not(.careers-presentation) > input,
+.careers-form-row > label > input,
+.careers-form-row > label > select {
+  height: 22px;
+  min-height: 0;
+  padding: 0 2px;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent):hover,
+.careers-form-row > label:hover {
+  border-color: #c4b99f;
+}
+
+.careers-form > label:not(.careers-file):not(.careers-consent):focus-within,
+.careers-form-row > label:focus-within {
+  border-color: #9a6d27;
+  box-shadow: 0 0 0 3px rgb(154 109 39 / 0.14);
+}
+
+.careers-form input,
+.careers-form select,
+.careers-form textarea {
+  color: #10202b;
+  border-bottom: 0;
+  font-weight: 500;
+}
+
+.careers-form select {
+  color-scheme: light;
+}
+
+.careers-form option {
+  background: #f7f4ec;
+  color: #10202b;
+}
+
+.careers-form textarea::placeholder {
+  color: #64748b;
+}
+
+.careers-form textarea {
+  min-height: 48px;
+  overflow-y: hidden;
+  resize: none;
+}
+
+.careers-presentation {
+  height: auto;
+  min-height: 0;
+}
+
+.careers-form input:focus-visible,
+.careers-form select:focus-visible,
+.careers-form textarea:focus-visible {
+  box-shadow: none;
+}
+
+.careers-file {
+  background: #fbfaf6;
+  border: 1px dashed #b9ad93;
+  border-radius: 10px;
+  gap: 8px;
+  padding: 12px;
+}
+
+.careers-file:focus-within {
+  border-color: #9a6d27;
+  box-shadow: 0 0 0 3px rgb(154 109 39 / 0.14);
+}
+
+.careers-form input[type="file"] {
+  border: 0;
+  min-height: 42px;
+  padding: 0;
+}
+
+.careers-form input[type="file"]::file-selector-button,
+.careers-form button,
+.careers-form button:hover {
+  background: #001a3d;
+  border-color: #001a3d;
+  color: #ffffff;
+}
+
+.careers-form input[type="file"]::file-selector-button {
+  border-radius: 8px;
+  min-height: 36px;
+}
+
+.careers-consent {
+  border-radius: 8px;
+  color: #5d656a !important;
+  padding: 4px 0;
+}
+
+.careers-form button {
+  border-radius: 10px;
+  box-shadow: none;
+  min-height: 48px;
+}
+
+.careers-form__submit-icon {
+  height: 18px;
+  margin-right: 10px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+  width: 18px;
+}
+
+.careers-form button > span {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .careers-form button:hover {
+    box-shadow: 0 12px 30px rgb(0 26 61 / 0.22);
+  }
+
+  .careers-form button:hover .careers-form__submit-icon {
+    transform: translateX(3px);
+  }
+}
+
+.careers-form button:focus-visible {
+  box-shadow: 0 0 0 3px rgb(154 109 39 / 0.28);
+  outline: 0;
+}
+
+.careers-consent input {
+  accent-color: #001a3d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .request-form label,
+  .careers-form > label:not(.careers-file):not(.careers-consent),
+  .careers-form-row > label,
+  .careers-form__submit-icon {
+    transition: none;
+  }
+}

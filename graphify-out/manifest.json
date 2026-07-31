@@ -1,0 +1,482 @@
+{
+  "package.json": {
+    "mtime": 1785409970.3955057,
+    "ast_hash": "9bfd2aa9166ba8c8dfe76411d84ba1a5",
+    "semantic_hash": ""
+  },
+  "site/assets/framework-DjPHiq1u.js": {
+    "mtime": 1785247534.4934916,
+    "ast_hash": "bfcb0e396624ce2ee39eff09b55a8c32",
+    "semantic_hash": ""
+  },
+  "site/assets/layout-segment-context-B39s5b50.js": {
+    "mtime": 1785247534.50349,
+    "ast_hash": "ae0d54c5853b93f4857571d453a4da22",
+    "semantic_hash": ""
+  },
+  "site/assets/rolldown-runtime-S-ySWqyJ.js": {
+    "mtime": 1785247534.5077844,
+    "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
+    "semantic_hash": ""
+  },
+  "site/performance.js": {
+    "mtime": 1785504826.0872064,
+    "ast_hash": "10089f7bc2faa3ef7768f2df35dfa28e",
+    "semantic_hash": ""
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1785243887.7924626,
+    "ast_hash": "f016b2e00e379799d949c3cde5c47eb1",
+    "semantic_hash": ""
+  },
+  "site/index.html": {
+    "mtime": 1785419819.923918,
+    "ast_hash": "13b1384fd940c81afc9b08167c6c93dd",
+    "semantic_hash": ""
+  },
+  "site/assets/logo-betinhos-b.png": {
+    "mtime": 1764071784.2389493,
+    "ast_hash": "0fb821aa945a9f66577cff5ed43f5c7f",
+    "semantic_hash": ""
+  },
+  "site/clients/embraer.png": {
+    "mtime": 1785247534.5098011,
+    "ast_hash": "4fa02ab9ee94c9088a67fe4e1b7d26c7",
+    "semantic_hash": ""
+  },
+  "site/clients/johnson.png": {
+    "mtime": 1785247534.5215912,
+    "ast_hash": "5ef3d948737febca2bee682e0d04334d",
+    "semantic_hash": ""
+  },
+  "site/clients/kenvue.png": {
+    "mtime": 1785247534.5245936,
+    "ast_hash": "f3a2e4c8dadf51925351896fe2ddf126",
+    "semantic_hash": ""
+  },
+  "site/clients/tenaris.png": {
+    "mtime": 1785247534.5255966,
+    "ast_hash": "0617edea6027dba6d6dd34fbd6a5f5d4",
+    "semantic_hash": ""
+  },
+  "site/favicon.svg": {
+    "mtime": 1785409971.0847242,
+    "ast_hash": "bad73399db88eda9c19b6ca0e99d1797",
+    "semantic_hash": ""
+  },
+  "site/file.svg": {
+    "mtime": 1785247534.529797,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "site/fleet-editorial.png": {
+    "mtime": 1785247534.5497441,
+    "ast_hash": "c76e5fb824e27c91fdd198a16c46ed2f",
+    "semantic_hash": ""
+  },
+  "site/fleet/armored.png": {
+    "mtime": 1785247534.6084802,
+    "ast_hash": "42e398a9254abe13ee3cee186c433082",
+    "semantic_hash": ""
+  },
+  "site/fleet/executive.png": {
+    "mtime": 1785247534.6550188,
+    "ast_hash": "f0b4751638b327769a60a89e349e8d88",
+    "semantic_hash": ""
+  },
+  "site/fleet/sedan.png": {
+    "mtime": 1785247534.6798155,
+    "ast_hash": "776be8bb468b230fd2cb2426276b26cd",
+    "semantic_hash": ""
+  },
+  "site/fleet/van-executive.png": {
+    "mtime": 1785247534.7529192,
+    "ast_hash": "62c76e6fc0d0b93f3e12d37a0d02d536",
+    "semantic_hash": ""
+  },
+  "site/globe.svg": {
+    "mtime": 1785247534.7589185,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "site/hero-night-airport.png": {
+    "mtime": 1785247534.789867,
+    "ast_hash": "755f651a20d781a1d54416167d6ca163",
+    "semantic_hash": ""
+  },
+  "site/hero-source.jpeg": {
+    "mtime": 1785247534.800206,
+    "ast_hash": "2aa9317418ba2aa5cbffcd27d8f6d16c",
+    "semantic_hash": ""
+  },
+  "site/logo-betinhos.png": {
+    "mtime": 1785247534.8588223,
+    "ast_hash": "e4a00a047a89d0b5f8a751327b0f5591",
+    "semantic_hash": ""
+  },
+  "site/office/office-main.png": {
+    "mtime": 1785247534.88921,
+    "ast_hash": "1eeb92c696a1275b1b050d7b47a367f0",
+    "semantic_hash": ""
+  },
+  "site/team/deborah.jpg": {
+    "mtime": 1785247534.8944845,
+    "ast_hash": "a917296931e2b389834889e45ac3df34",
+    "semantic_hash": ""
+  },
+  "site/team/juliana.jpg": {
+    "mtime": 1785247534.9186556,
+    "ast_hash": "51eaf30d7ad7e67d5d50c0c3e9e0ce82",
+    "semantic_hash": ""
+  },
+  "site/team/junior.png": {
+    "mtime": 1785247534.9235654,
+    "ast_hash": "5d8ff7137cb3aa66a3268cfe98aa7822",
+    "semantic_hash": ""
+  },
+  "site/team/marcos.jpg": {
+    "mtime": 1785247534.9325817,
+    "ast_hash": "16779c5e7d6d84b1a9c23ae93589dbd4",
+    "semantic_hash": ""
+  },
+  "site/team/renan.jpg": {
+    "mtime": 1785247534.9491634,
+    "ast_hash": "67ed2328e9b20ef5b71ab4fef7922bad",
+    "semantic_hash": ""
+  },
+  "site/window.svg": {
+    "mtime": 1785247534.9549668,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "site/hero-video.mp4": {
+    "mtime": 1785247534.84976,
+    "ast_hash": "95219140312c69856d9e380a20cafe18",
+    "semantic_hash": ""
+  },
+  "site/hero-video-web.mp4": {
+    "mtime": 1785409971.5265357,
+    "ast_hash": "b33d3ad17a18199da3b55b7cb82e5bf6",
+    "semantic_hash": ""
+  },
+  "site/hero-poster.webp": {
+    "mtime": 1785409971.4929914,
+    "ast_hash": "25309d3b1c2f847629fce94262c8d3a0",
+    "semantic_hash": ""
+  },
+  "site/hero-video.webm": {
+    "mtime": 1785409971.605721,
+    "ast_hash": "750dbcfdf0fa48397cd55dfe920146c6",
+    "semantic_hash": ""
+  },
+  "implementation_plan.md": {
+    "mtime": 1785409970.3905559,
+    "ast_hash": "94d5bdde75eadf864846c073d08f43d9",
+    "semantic_hash": ""
+  },
+  "task.md": {
+    "mtime": 1785409972.1380863,
+    "ast_hash": "e30a1d698cbda92ad4819b837eca0121",
+    "semantic_hash": ""
+  },
+  "site/flags/br.svg": {
+    "mtime": 1785409971.094726,
+    "ast_hash": "92fc6153bcbb7cf496739e02c35545a1",
+    "semantic_hash": ""
+  },
+  "site/flags/es.svg": {
+    "mtime": 1785409971.1027226,
+    "ast_hash": "c3853709f676abcc9c50ce691004cdb5",
+    "semantic_hash": ""
+  },
+  "site/flags/us.svg": {
+    "mtime": 1785409971.105742,
+    "ast_hash": "eadfb4edb150845cd371f170956ca9ac",
+    "semantic_hash": ""
+  },
+  "site/i18n.js": {
+    "mtime": 1785507976.7837143,
+    "ast_hash": "20b8e5ab458700a3555fac40c298e6fa",
+    "semantic_hash": ""
+  },
+  "site/fleet/corolla-2026/corolla-2026-roda.png": {
+    "mtime": 1785409971.330325,
+    "ast_hash": "99e6be9466c881750a95cb145b1d68bb",
+    "semantic_hash": ""
+  },
+  "site/service-fleet.js": {
+    "mtime": 1785420462.7272444,
+    "ast_hash": "40e5c74db39236cfdae0a5aff25b02d1",
+    "semantic_hash": "40e5c74db39236cfdae0a5aff25b02d1"
+  },
+  "site/fleet/corolla-2026/corolla-2026-base-vidros-transparentes.png": {
+    "mtime": 1785409971.317775,
+    "ast_hash": "33a2063e890d7a864b329cd10d28e64a",
+    "semantic_hash": ""
+  },
+  "site/fleet/commander-2026/body.png": {
+    "mtime": 1785409971.249261,
+    "ast_hash": "8dea457560f4343697eaff3815099547",
+    "semantic_hash": ""
+  },
+  "site/fleet/commander-2026/wheel.png": {
+    "mtime": 1785409971.2638013,
+    "ast_hash": "fcd1cb28610a3e52aa4e8606d633d42d",
+    "semantic_hash": ""
+  },
+  "site/fleet/master-2026/body.png": {
+    "mtime": 1785409971.3593216,
+    "ast_hash": "08f06228dbab382397d14b84936504b8",
+    "semantic_hash": ""
+  },
+  "site/fleet/master-2026/wheel.png": {
+    "mtime": 1785409971.4359326,
+    "ast_hash": "683a2c639affb9c3e128e56547e0d8d2",
+    "semantic_hash": ""
+  },
+  "site/fleet/sprinter-2026/body.png": {
+    "mtime": 1785409971.4679313,
+    "ast_hash": "9f40a89789e1ed99d96195721103e95d",
+    "semantic_hash": ""
+  },
+  "site/fleet/sprinter-2026/wheel.png": {
+    "mtime": 1785409971.485002,
+    "ast_hash": "16ab69f857fd43f01175c09eb0330307",
+    "semantic_hash": ""
+  },
+  "PRODUCT.md": {
+    "mtime": 1785409970.340222,
+    "ast_hash": "4d111cede6abb4ea034fdc4f0384aa2b",
+    "semantic_hash": ""
+  },
+  "site/cities/pindamonhangaba.jpg": {
+    "mtime": 1785409970.4230993,
+    "ast_hash": "a9e45d83a1372728bc6660f2fd230298",
+    "semantic_hash": ""
+  },
+  "site/cities/rio-de-janeiro.jpg": {
+    "mtime": 1785409970.437051,
+    "ast_hash": "f597b9bb197bf13b12fca951cf9031bf",
+    "semantic_hash": ""
+  },
+  "site/cities/sao-jose-dos-campos.jpg": {
+    "mtime": 1785409970.4561033,
+    "ast_hash": "dea753a71fbe81a3f96121ba4e92efce",
+    "semantic_hash": ""
+  },
+  "site/cities/sao-paulo.jpg": {
+    "mtime": 1785409970.4663737,
+    "ast_hash": "ac5cf8d3bc12f3902e7581e2dda5285c",
+    "semantic_hash": ""
+  },
+  "site/cities/vale-do-paraiba.jpg": {
+    "mtime": 1785409970.475377,
+    "ast_hash": "722f1dbee90330389d255e32679f6a18",
+    "semantic_hash": ""
+  },
+  "site/fleet/van-seat-silhouettes.svg": {
+    "mtime": 1785409971.488002,
+    "ast_hash": "bb6e770ad4d2dfd16bb6562d1bc72f70",
+    "semantic_hash": ""
+  },
+  "site/anniversary-mark.js": {
+    "mtime": 1785507292.7061195,
+    "ast_hash": "a8c77980a87f062d0e7802e977858fe0",
+    "semantic_hash": ""
+  },
+  "site/history-carousel.js": {
+    "mtime": 1785409971.610719,
+    "ast_hash": "5652124ac8666e73ec524ebac9bcf270",
+    "semantic_hash": "5652124ac8666e73ec524ebac9bcf270"
+  },
+  "site/mobile-navigation.js": {
+    "mtime": 1785430759.8382213,
+    "ast_hash": "2d0bd153abe1fed51aa2ad444b401dda",
+    "semantic_hash": ""
+  },
+  "site/office-carousel.js": {
+    "mtime": 1785430766.1213648,
+    "ast_hash": "8907742fc033f9defdac3ce18bf8cd80",
+    "semantic_hash": ""
+  },
+  "site/section-order.js": {
+    "mtime": 1785409972.032269,
+    "ast_hash": "c2fedca8170d37487c77b0582721d78d",
+    "semantic_hash": "c2fedca8170d37487c77b0582721d78d"
+  },
+  "AGENTS.md": {
+    "mtime": 1785412386.5460584,
+    "ast_hash": "02c608f7eb0949b65c7e60349162157c",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-29/00-scope.md": {
+    "mtime": 1785409970.319382,
+    "ast_hash": "8e4f35d7ba7e3ef31d0f3a87b66b28e0",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-29/01-evidence.md": {
+    "mtime": 1785409970.320664,
+    "ast_hash": "e774f226dc9b3889b12f0dd8b1f2e908",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-29/02-scorecard.md": {
+    "mtime": 1785409970.3216832,
+    "ast_hash": "08a3091dd3b6c449b77a2fee3f620d7b",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-29/03-verdict.md": {
+    "mtime": 1785409970.3242252,
+    "ast_hash": "39c75954cbc5ba402b8e9a8bb93ce7a7",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-29/04-handoff-prompt.md": {
+    "mtime": 1785409970.3252227,
+    "ast_hash": "0aeabd9fc1de2cfaadc8256e6b0f28dd",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-30/00-scope.md": {
+    "mtime": 1785413103.873273,
+    "ast_hash": "8c2bd272c742376f3be7df5881dabc50",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-30/01-evidence.md": {
+    "mtime": 1785413105.174818,
+    "ast_hash": "4191ba76eea0dbeafad8e5582329a714",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-30/02-scorecard.md": {
+    "mtime": 1785413107.641525,
+    "ast_hash": "77a6a0e82bf612f546ae1844a2cbcf94",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-30/03-verdict.md": {
+    "mtime": 1785413108.8341837,
+    "ast_hash": "0535ad996a90f12ae6eb03b3cf418ea2",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-30/04-handoff-prompt.md": {
+    "mtime": 1785413110.5261707,
+    "ast_hash": "11938e4da9954786200f991112351ba6",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785409970.344473,
+    "ast_hash": "9db395b887364f706ec0ec59653ff66d",
+    "semantic_hash": ""
+  },
+  "site/components/anniversary-mark.html": {
+    "mtime": 1785409970.4791336,
+    "ast_hash": "6c9af7b15a6e5583cba2e79ea59296b2",
+    "semantic_hash": ""
+  },
+  "site/components/anniversary-mark.md": {
+    "mtime": 1785409970.4813485,
+    "ast_hash": "3b3046621a4e33713201dc098fd35e91",
+    "semantic_hash": ""
+  },
+  "site/cta-options.html": {
+    "mtime": 1785409970.486347,
+    "ast_hash": "c1785c5c4a97e21d4d588449e33b934d",
+    "semantic_hash": ""
+  },
+  "DESIGN-IS-2026-07-29/security-after-desktop.png": {
+    "mtime": 1785409970.338221,
+    "ast_hash": "367f680b48dbc8fdf31e881e044ac3f8",
+    "semantic_hash": ""
+  },
+  "site/company/betinhos-fleet-operation.png": {
+    "mtime": 1785413365.540493,
+    "ast_hash": "28dd08c8b73abe90a1301ec6157b6e8a",
+    "semantic_hash": ""
+  },
+  "site/fleet/cards/commander.png": {
+    "mtime": 1785409971.1282742,
+    "ast_hash": "5ee6c9b21fb612a73950ccd5ddab2172",
+    "semantic_hash": ""
+  },
+  "site/fleet/cards/corolla.png": {
+    "mtime": 1785409971.1412754,
+    "ast_hash": "af625d3f8bc3fd2852a81f3383b70ea9",
+    "semantic_hash": ""
+  },
+  "site/fleet/cards/master.png": {
+    "mtime": 1785409971.1800165,
+    "ast_hash": "623f10e26b92214df95281c86b8d8a70",
+    "semantic_hash": ""
+  },
+  "site/fleet/cards/sprinter.png": {
+    "mtime": 1785409971.1950243,
+    "ast_hash": "a2427d47c6e9222f7898b946180a574e",
+    "semantic_hash": ""
+  },
+  "site/fleet/cards/virtus.png": {
+    "mtime": 1785409971.2236688,
+    "ast_hash": "113c44cdc6205d70e41f73a06bbb9e2c",
+    "semantic_hash": ""
+  },
+  "site/history/fusca-1986.png": {
+    "mtime": 1785409971.636266,
+    "ast_hash": "4945551afa29749b2fd1b7bd16617a93",
+    "semantic_hash": ""
+  },
+  "site/history/primeiro-seda.png": {
+    "mtime": 1785409971.6835663,
+    "ast_hash": "5c09a70dd77284a80b06e8bd5cc325a0",
+    "semantic_hash": ""
+  },
+  "site/history/sr-betinho.png": {
+    "mtime": 1785409971.7025054,
+    "ast_hash": "e6bb4f3c9777a0c5c12f73e598d502b3",
+    "semantic_hash": ""
+  },
+  "site/office/office-meeting-room-alt.png": {
+    "mtime": 1785409971.7821968,
+    "ast_hash": "170790f772d88de5b36758b17099bc23",
+    "semantic_hash": ""
+  },
+  "site/office/office-meeting-room.png": {
+    "mtime": 1785409971.8936133,
+    "ast_hash": "85474dcd2130b4c08edac97eadc36a66",
+    "semantic_hash": ""
+  },
+  "site/office/office-operations.png": {
+    "mtime": 1785409971.99499,
+    "ast_hash": "96134cb5bd5ba7751c1d6e576f1e7759",
+    "semantic_hash": ""
+  },
+  "site/careers-textarea.js": {
+    "mtime": 1785414870.171434,
+    "ast_hash": "750146a2e2a57234f10a6db1e70665f4",
+    "semantic_hash": "750146a2e2a57234f10a6db1e70665f4"
+  },
+  "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md": {
+    "mtime": 1785420808.1940396,
+    "ast_hash": "2ad2b3593f3e5d1f6ea73838bfc084d3",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md": {
+    "mtime": 1785421025.9866447,
+    "ast_hash": "15838ae64532b7c48928a734cf9f054f",
+    "semantic_hash": ""
+  },
+  "tests/mobile.spec.mjs": {
+    "mtime": 1785508104.6118462,
+    "ast_hash": "45a6775ff5a9d59ad27800f08fcf64ee",
+    "semantic_hash": ""
+  },
+  "site/40-anos-opcoes.js": {
+    "mtime": 1785440955.6370442,
+    "ast_hash": "452ce4b1abf0b0a2b5c28afb08119589",
+    "semantic_hash": ""
+  },
+  "site/40-anos-cores.js": {
+    "mtime": 1785441799.871561,
+    "ast_hash": "f216cb6404161474309c18a3edeba059",
+    "semantic_hash": ""
+  },
+  "scripts/build-site-css.mjs": {
+    "mtime": 1785504638.9530468,
+    "ast_hash": "00e1fc23b8b990ef528838606b4b3e98",
+    "semantic_hash": ""
+  }
+}

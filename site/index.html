@@ -1,352 +1,1027 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Betinhos Executive Service - site em manuten&ccedil;&atilde;o.">
-    <title>Betinhos Executive Service | Manuten&ccedil;&atilde;o</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#021426" />
+    <link rel="preload" as="image" href="/media/logo-betinhos-320.webp" />
+    <link rel="preload" as="image" href="/hero-poster.webp" fetchpriority="high" />
+    <link rel="preload" as="font" href="/assets/centabel-book.ttf" type="font/ttf" crossorigin />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap');
-
       @font-face {
-        font-display: swap;
-        font-family: 'Centabel Book';
+        font-family: "Centabel Book";
+        src: url("/assets/centabel-book.ttf") format("truetype");
         font-style: normal;
         font-weight: 400;
-        src: url('assets/centabel-book.ttf') format('truetype');
-      }
-
-      :root {
-        --ink: #112b42;
-        --muted: #5e6d7a;
-        --gold: #b58a36;
-        --gold-soft: #eadfc9;
-        --paper: #fcfcfb;
-        --line: #e4e8e9;
-        --ease-out: cubic-bezier(.23, 1, .32, 1);
-      }
-
-      * { box-sizing: border-box; }
-
-      html { background: var(--paper); }
-
-      body {
-        background:
-          radial-gradient(circle at 87% 8%, rgba(181, 138, 54, .12), transparent 28rem),
-          linear-gradient(135deg, #fcfcfb 0%, #f5f3ef 100%);
-        color: var(--ink);
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        margin: 0;
-        min-height: 100vh;
-      }
-
-      a { color: inherit; }
-
-      .page {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        max-width: 1220px;
-        min-height: 100vh;
-        padding: 28px clamp(20px, 5vw, 72px) 30px;
-      }
-
-      header {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .brand {
-        align-items: center;
-        display: inline-flex;
-        gap: 12px;
-        text-decoration: none;
-      }
-
-      .brand-mark {
-        border: 0;
-        border-radius: 50%;
-        display: block;
-        flex: 0 0 54px;
-        height: 54px;
-        object-fit: contain;
-        width: 54px;
-      }
-
-      .brand-name {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: .14em;
-        line-height: 1.35;
-        text-transform: uppercase;
-      }
-
-      .language {
-        align-items: center;
-        background: rgba(255, 255, 255, .72);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        display: flex;
-        gap: 3px;
-        padding: 4px;
-      }
-
-      .language button {
-        align-items: center;
-        background: transparent;
-        border: 0;
-        border-radius: 999px;
-        cursor: pointer;
-        display: inline-flex;
-        height: 34px;
-        justify-content: center;
-        line-height: 1;
-        padding: 5px 8px;
-        transition: background 160ms ease, transform 160ms ease;
-        width: 38px;
-      }
-
-      .language img { border-radius: 2px; display: block; height: 16px; object-fit: cover; width: 24px; }
-      .language button:hover { background: #f0ece4; }
-      .language button:active { transform: scale(.96); }
-      .language button[aria-pressed="true"] { background: var(--ink); }
-
-      main {
-        align-items: center;
-        display: grid;
-        flex: 1;
-        gap: clamp(42px, 7vw, 88px);
-        grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-        padding: clamp(58px, 10vh, 120px) 0 72px;
-      }
-
-      .intro { animation: rise-in 650ms var(--ease-out) both; }
-
-      .eyebrow {
-        align-items: center;
-        color: var(--gold);
-        display: flex;
-        font-size: 11px;
-        font-weight: 700;
-        gap: 11px;
-        letter-spacing: .18em;
-        margin: 0 0 24px;
-        text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        background: var(--gold);
-        content: "";
-        height: 1px;
-        width: 34px;
-      }
-
-      h1 {
-        font-family: 'Centabel Book', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-        font-size: clamp(3rem, 7vw, 6.4rem);
-        font-weight: 400;
-        letter-spacing: -.055em;
-        line-height: .94;
-        margin: 0;
-        max-width: 690px;
-      }
-
-      h1 em { color: var(--gold); font-style: normal; }
-
-      .intro-text {
-        color: var(--muted);
-        font-size: clamp(1rem, 1.5vw, 1.18rem);
-        line-height: 1.7;
-        margin: 30px 0 0;
-        max-width: 570px;
-      }
-
-      .contact-panel {
-        animation: rise-in 650ms 120ms var(--ease-out) both;
-        background: rgba(255, 255, 255, .75);
-        border: 1px solid rgba(228, 232, 233, .95);
-        border-radius: 22px;
-        box-shadow: 0 24px 60px rgba(17, 43, 66, .08);
-        padding: clamp(22px, 4vw, 34px);
-      }
-
-      .panel-heading { margin-bottom: 20px; }
-
-      .panel-heading h2 {
-        font-family: 'Centabel Book', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-        font-size: 1.7rem;
-        font-weight: 400;
-        margin: 0 0 8px;
-      }
-
-      .panel-heading p { color: var(--muted); font-size: .9rem; line-height: 1.5; margin: 0; }
-
-      .contact-list { display: grid; gap: 10px; }
-
-      .contact {
-        border-top: 1px solid var(--line);
-        padding-top: 16px;
-      }
-
-      .contact:first-child { border-top: 0; padding-top: 0; }
-
-      .contact-name { font-size: .98rem; font-weight: 700; margin: 0; }
-      .contact-role { color: var(--muted); font-size: .83rem; margin: 4px 0 11px; }
-
-      .contact-links { display: flex; flex-wrap: wrap; gap: 8px 16px; }
-
-      .contact-links a {
-        color: var(--ink);
-        font-size: .83rem;
-        text-decoration: none;
-        transition: color 160ms ease;
-      }
-
-      .contact-links a:hover { color: var(--gold); }
-      .contact-links a:focus-visible, .language button:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; }
-
-      footer {
-        border-top: 1px solid var(--line);
-        color: #75818a;
-        display: flex;
-        font-size: .76rem;
-        justify-content: space-between;
-        padding-top: 18px;
-      }
-
-      @keyframes rise-in {
-        from { opacity: 0; transform: translateY(16px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      @media (max-width: 760px) {
-        .page { padding-top: 20px; }
-        main { grid-template-columns: 1fr; padding: 72px 0 56px; }
-        h1 { font-size: clamp(3rem, 16vw, 5.4rem); }
-        .contact-panel { max-width: 560px; width: 100%; }
-        footer { gap: 16px; line-height: 1.5; }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+        font-display: swap;
       }
     </style>
+    <link rel="stylesheet" href="/assets/site.min.css" />
+    <title>Betinhos Executive Service | Transporte executivo</title>
+    <meta
+      name="description"
+      content="Transporte executivo, veículos blindados e proteção para operações corporativas em São Paulo, Vale do Paraíba e Rio de Janeiro."
+    />
+    <link rel="icon" type="image/png" href="/media/favicon-64.png" sizes="64x64" />
+    <style data-vinext-fonts>
+      /* cyrillic-ext */
+      @font-face {
+        font-family: "Geist";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2)
+          format("woff2");
+        unicode-range:
+          U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+          U+FE2E-FE2F;
+      }
+      /* cyrillic */
+      @font-face {
+        font-family: "Geist";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      /* vietnamese */
+      @font-face {
+        font-family: "Geist";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2)
+          format("woff2");
+        unicode-range:
+          U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+          U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+          U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: "Geist";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2)
+          format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: "Geist";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2)
+          format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      .__font_geist_0tvmz3h {
+        font-family: "Geist", sans-serif;
+      }
+
+      .__variable_geist_0tvmz3h {
+        --font-geist-sans: "Geist", sans-serif;
+      }
+
+    </style>
   </head>
-  <body>
-    <div class="page">
-      <header>
-        <a class="brand" href="/" aria-label="Betinhos Executive Service">
-          <img class="brand-mark" src="./assets/logo-betinhos-b.png" alt="Betinhos Executive Service" width="54" height="54" fetchpriority="high">
-          <span class="brand-name">Betinhos<br>Executive Service</span>
-        </a>
-        <nav class="language" aria-label="Sele&ccedil;&atilde;o de idioma">
-          <button type="button" data-lang="pt" aria-label="Portugu&ecirc;s" aria-pressed="true"><img src="https://flagcdn.io/flags/4x3/br.svg" alt=""></button>
-          <button type="button" data-lang="en" aria-label="English" aria-pressed="false"><img src="https://flagcdn.io/flags/4x3/us.svg" alt=""></button>
-          <button type="button" data-lang="es" aria-label="Espa&ntilde;ol" aria-pressed="false"><img src="https://flagcdn.io/flags/4x3/es.svg" alt=""></button>
-        </nav>
-      </header>
-
-      <main>
-        <section class="intro" aria-labelledby="page-title">
-          <p class="eyebrow" data-i18n="eyebrow">Comunicado</p>
-          <h1 id="page-title" data-i18n="title">Estamos preparando<br><em>algo especial.</em></h1>
-          <p class="intro-text" data-i18n="description">Nosso site est&aacute; em manuten&ccedil;&atilde;o. Em breve, estaremos de volta para continuar cuidando dos seus deslocamentos com a discri&ccedil;&atilde;o, pontualidade e seguran&ccedil;a que voc&ecirc; espera.</p>
-        </section>
-
-        <aside class="contact-panel" aria-labelledby="contact-title">
-          <div class="panel-heading">
-            <h2 id="contact-title" data-i18n="contactTitle">Fale conosco</h2>
-            <p data-i18n="contactIntro">Nossa equipe continua dispon&iacute;vel durante a manuten&ccedil;&atilde;o.</p>
+  <body
+    class="is-loading __variable_geist_0tvmz3h antialiased"
+  >
+    <div class="site-loader" role="status" aria-label="Carregando site">
+      <img src="/media/logo-betinhos-320.webp" alt="" width="142" height="79" />
+      <span class="site-loader-line" aria-hidden="true"><i></i></span>
+    </div>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <main id="main-content">
+      <section class="hero" id="inicio">
+        <video
+          class="hero-video"
+          muted=""
+          autoplay=""
+          loop=""
+          playsinline=""
+          preload="none"
+          poster="/hero-poster.webp"
+          width="1280"
+          height="720"
+          aria-hidden="true"
+        >
+          <source data-src="/hero-video.webm" type="video/webm" />
+          <source data-src="/hero-video-web.mp4" type="video/mp4" />
+        </video>
+        <header class="site-header" role="banner">
+          <a href="#inicio" class="logo" aria-label="Betinhos Executive Service — início"
+            ><img
+              class="logo-full"
+              src="/media/logo-betinhos-320.webp"
+              alt="Betinhos Executive Service"
+              decoding="async"
+              fetchpriority="high"
+            /><img
+              class="logo-mark"
+              src="/media/logo-betinhos-b-160.webp"
+              alt=""
+              aria-hidden="true"
+              decoding="async"
+            /></a>
+          <nav class="desktop-nav" aria-label="Navegação principal">
+            <a href="#a-empresa">A empresa</a
+            ><a href="#solucoes">Frota e serviços</a
+            ><a href="#seguranca">Processo</a
+            ><a href="#estrutura">Estrutura</a
+            ><a href="#empresa">História</a
+            ><a href="#equipe">Time</a
+            ><a href="#faq">FAQ</a
+            ><a href="#contato">Contato</a
+            ><a href="#trabalhe-conosco">Trabalhe conosco</a>
+          </nav>
+          <div class="header-actions">
+            <div class="lang-switch" role="group" aria-label="Selecionar idioma">
+              <button type="button" class="active" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true"><img class="language-flag" src="/flags/br.svg" alt="" width="20" height="15" /></button
+              ><button type="button" data-lang="en" aria-label="English" title="English" aria-pressed="false"><img class="language-flag" src="/flags/us.svg" alt="" width="20" height="15" /></button
+              ><button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false"><img class="language-flag" src="/flags/es-compact.svg" alt="" width="20" height="15" /></button>
+            </div>
           </div>
-          <div class="contact-list">
-            <article class="contact">
-              <p class="contact-name">J&uacute;nior de Paula</p>
-              <p class="contact-role" data-i18n="roleConcierge">Concierge (Bilingual)</p>
-              <div class="contact-links">
-                <a href="https://wa.me/5512997236961" target="_blank" rel="noopener" aria-label="WhatsApp J&uacute;nior de Paula">+55 12 99723 6961</a>
-                <a href="mailto:junior@betinhos.com.br">junior@betinhos.com.br</a>
-              </div>
-            </article>
-            <article class="contact">
-              <p class="contact-name">Deborah Keila</p>
-              <p class="contact-role" data-i18n="roleOperations">Operations Manager</p>
-              <div class="contact-links">
-                <a href="https://wa.me/5512996159093" target="_blank" rel="noopener" aria-label="WhatsApp Deborah Keila">+55 12 99615 9093</a>
-                <a href="mailto:deborah.keila@betinhos.com.br">deborah.keila@betinhos.com.br</a>
-              </div>
-            </article>
-            <article class="contact">
-              <p class="contact-name">Juliana Rodrigues</p>
-              <p class="contact-role" data-i18n="roleFinance">Finance Manager</p>
-              <div class="contact-links">
-                <a href="https://wa.me/5512996159085" target="_blank" rel="noopener" aria-label="WhatsApp Juliana Rodrigues">+55 12 99615 9085</a>
-                <a href="mailto:financeiro@betinhos.com.br">financeiro@betinhos.com.br</a>
-              </div>
-            </article>
+          <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5m-16.5 5.25h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </header>
+        <aside class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal" aria-hidden="true" inert>
+          <div class="mobile-menu-top">
+            <img class="mobile-menu-brand" src="/media/logo-betinhos-b-160.webp" alt="Betinhos Executive Service" width="160" height="160" />
+            <button class="mobile-menu-close" type="button" aria-label="Fechar menu">
+              <span></span><span></span>
+            </button>
+          </div>
+          <nav class="mobile-menu-nav" aria-label="Navegação móvel">
+            <a href="#a-empresa">A empresa</a>
+            <a href="#solucoes">Frota e serviços</a>
+            <a href="#seguranca">Processo</a>
+            <a href="#estrutura">Estrutura</a>
+            <a href="#empresa">História</a>
+            <a href="#equipe">Time</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+            <a href="#trabalhe-conosco">Trabalhe conosco</a>
+          </nav>
+          <div class="mobile-menu-footer">
+            <div class="lang-switch" role="group" aria-label="Selecionar idioma">
+              <button type="button" class="active" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true"><img class="language-flag" src="/flags/br.svg" alt="" width="20" height="15" /></button>
+              <button type="button" data-lang="en" aria-label="English" title="English" aria-pressed="false"><img class="language-flag" src="/flags/us.svg" alt="" width="20" height="15" /></button>
+              <button type="button" data-lang="es" aria-label="Español" title="Español" aria-pressed="false"><img class="language-flag" src="/flags/es-compact.svg" alt="" width="20" height="15" /></button>
+            </div>
           </div>
         </aside>
-      </main>
+        <div class="hero-copy">
+          <h1>
+            <span>Você dirige seu mundo,</span><span>e nós te</span
+            ><span>levamos até lá.</span>
+          </h1>
+          <div class="hero-divider" aria-hidden="true"></div>
+          <div class="hero-actions">
+            <a href="#contato"
+              >Solicitar atendimento
+              <svg class="hero-cta-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 17 17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </a>
+            <a href="#solucoes"
+              >Conhecer a frota
+              <svg class="hero-secondary-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14"></path>
+                <path d="m19 12-7 7-7-7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <a class="hero-scroll-cue" href="#hero-destinations" aria-label="Ver mais">
+          <span>Ver mais</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </a>
+        <div class="hero-bottom" id="hero-destinations">
+          <div class="hero-anniversary-panel">
+            <betinhos-anniversary
+              class="hero-anniversary"
+              years="40"
+              label="ANOS"
+              tone="dark"
+              size="lg"
+              variant="hero"
+            ></betinhos-anniversary>
+            <div class="hero-destinations-intro">
+              <h2>Destinos em operação</h2>
+              <p>Presença nos principais eixos executivos do Sudeste.</p>
+            </div>
+          </div>
+          <div class="hero-coverage">
+            <div class="hero-locations">
+              <article>
+                <img src="/media/cities/sao-jose-dos-campos-480.webp" srcset="/media/cities/sao-jose-dos-campos-480.webp 480w, /media/cities/sao-jose-dos-campos-736.webp 736w" sizes="(max-width: 680px) 72vw, 20vw" alt="Arco da Inovação em São José dos Campos" width="736" height="919" decoding="async" />
+                <span><strong>São José dos Campos</strong></span>
+              </article>
+              <article>
+                <img src="/media/cities/pindamonhangaba-480.webp" srcset="/media/cities/pindamonhangaba-480.webp 480w, /media/cities/pindamonhangaba-700.webp 700w" sizes="(max-width: 680px) 72vw, 20vw" alt="Palacete 10 de Julho em Pindamonhangaba" width="700" height="464" loading="lazy" decoding="async" />
+                <span><strong>Pindamonhangaba</strong></span>
+              </article>
+              <article>
+                <img src="/media/cities/vale-do-paraiba-480.webp" srcset="/media/cities/vale-do-paraiba-480.webp 480w, /media/cities/vale-do-paraiba-500.webp 500w" sizes="(max-width: 680px) 72vw, 20vw" alt="Basílica de Aparecida no Vale do Paraíba" width="500" height="268" loading="lazy" decoding="async" />
+                <span><strong>Vale do Paraíba</strong></span>
+              </article>
+              <article>
+                <img src="/media/cities/sao-paulo-480.webp" srcset="/media/cities/sao-paulo-480.webp 480w, /media/cities/sao-paulo-960.webp 960w" sizes="(max-width: 680px) 72vw, 20vw" alt="Avenida Paulista em São Paulo" width="960" height="540" loading="lazy" decoding="async" />
+                <span><strong>São Paulo</strong></span>
+              </article>
+              <article>
+                <img src="/media/cities/rio-de-janeiro-480.webp" srcset="/media/cities/rio-de-janeiro-480.webp 480w, /media/cities/rio-de-janeiro-960.webp 960w" sizes="(max-width: 680px) 72vw, 20vw" alt="Pão de Açúcar no Rio de Janeiro" width="960" height="640" loading="lazy" decoding="async" />
+                <span><strong>Rio de Janeiro</strong></span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="company-intro section" id="a-empresa" aria-labelledby="company-intro-title">
+        <div class="company-intro__story">
+          <p class="eyebrow">A empresa</p>
+          <h2 id="company-intro-title">Transporte executivo com estrutura para cuidar da sua agenda.</h2>
+          <p class="company-intro__lead">A Betinhos Executive Service planeja e executa deslocamentos terrestres premium para empresas, executivos, famílias, equipes e convidados.</p>
+          <p class="company-intro__text">Coordenamos veículos, motoristas, horários, bagagens e pontos de encontro do primeiro contato à chegada. Assim, cada traslado acontece com pontualidade, discrição e acompanhamento próximo.</p>
+          <ul class="company-intro__principles" role="list">
+            <li>Pontualidade planejada</li>
+            <li>Atendimento discreto</li>
+            <li>Operação acompanhada</li>
+          </ul>
+          <a class="company-intro__action" href="#contato">
+            <span>Falar com a operação</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </a>
+        </div>
+        <figure class="company-intro__visual">
+          <img
+            data-lazy-src="/media/company/betinhos-fleet-operation-960.webp"
+            data-lazy-srcset="/media/company/betinhos-fleet-operation-480.webp 480w, /media/company/betinhos-fleet-operation-960.webp 960w, /media/company/betinhos-fleet-operation-1440.webp 1440w"
+            sizes="(max-width: 680px) 100vw, 50vw"
+            alt="Frota de veículos executivos pretos da Betinhos alinhada para atendimento"
+            width="1086"
+            height="814"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <ol class="company-intro__services" aria-label="Serviços da Betinhos">
+          <li>
+            <span>01</span>
+            <div><strong>Agendas executivas</strong><p>Aeroportos, reuniões, roteiros de visitas e espera coordenada.</p></div>
+          </li>
+          <li>
+            <span>02</span>
+            <div><strong>Grupos e eventos</strong><p>Vans para equipes, delegações, bagagens e múltiplos pontos.</p></div>
+          </li>
+          <li>
+            <span>03</span>
+            <div><strong>Proteção e discrição</strong><p>Veículos blindados para viagens que pedem segurança adicional.</p></div>
+          </li>
+          <li>
+            <span>04</span>
+            <div><strong>Pequenas cargas</strong><p>Documentos, materiais e volumes transportados com acompanhamento.</p></div>
+          </li>
+        </ol>
+      </section>
+      <section class="solutions section" id="solucoes">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Frota e serviços</p>
+            <h2>Uma frota para diferentes formas de viajar.</h2>
+          </div>
+          <p>
+            Compare categoria, capacidade e uso recomendado. Nossa equipe
+            confirma a disponibilidade e organiza os detalhes pelo WhatsApp.
+          </p>
+        </div>
+        <div class="fleet-catalog">
+          <div class="fleet-catalog-bar">
+            <div class="fleet-catalog-filters" role="group" aria-label="Tipos de veículos">
+              <button class="fleet-catalog-filter is-active" type="button" data-fleet-filter="all" aria-pressed="true">Todos</button>
+              <button class="fleet-catalog-filter" type="button" data-fleet-filter="executive" aria-pressed="false">Executivos</button>
+              <button class="fleet-catalog-filter" type="button" data-fleet-filter="armored" aria-pressed="false">Blindados</button>
+              <button class="fleet-catalog-filter" type="button" data-fleet-filter="van" aria-pressed="false">Vans</button>
+            </div>
+            <div class="fleet-catalog-controls" aria-label="Navegação da frota">
+              <button class="fleet-catalog-button fleet-catalog-prev" type="button" aria-label="Veículo anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button class="fleet-catalog-button fleet-catalog-next" type="button" aria-label="Próximo veículo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="service-list" id="servicos-frota" role="list" aria-label="Categorias de veículos">
+            <article class="service-card" role="listitem" data-vehicle="virtus" data-fleet-groups="executive">
+              <div class="service-card-copy">
+                <h3>Sedan médio</h3>
+                <p class="service-card-description">
+                  Conforto e eficiência para traslados urbanos e agendas executivas.
+                </p>
+              </div>
+              <div class="service-card-media">
+                <span class="service-card-passengers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg><b>3</b><span class="service-card-passengers__label">passageiros</span></span>
+                <img data-lazy-src="/media/fleet/cards/virtus-960.webp" data-lazy-srcset="/media/fleet/cards/virtus-480.webp 480w, /media/fleet/cards/virtus-960.webp 960w, /media/fleet/cards/virtus-1440.webp 1440w" sizes="(max-width: 680px) 86vw, 32vw" alt="Veículo preto da categoria Sedan médio" width="1717" height="917" loading="lazy" decoding="async" />
+              </div>
+              <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Volkswagen%20Virtus.">
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+              </a>
+            </article>
+            <article class="service-card" role="listitem" data-vehicle="corolla" data-fleet-groups="executive">
+              <div class="service-card-copy">
+                <h3>Sedan executivo</h3>
+                <p class="service-card-description">
+                  Mais espaço e refinamento para aeroportos, reuniões e roadshows.
+                </p>
+              </div>
+              <div class="service-card-media">
+                <span class="service-card-passengers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg><b>3</b><span class="service-card-passengers__label">passageiros</span></span>
+                <img data-lazy-src="/media/fleet/cards/corolla-960.webp" data-lazy-srcset="/media/fleet/cards/corolla-480.webp 480w, /media/fleet/cards/corolla-960.webp 960w, /media/fleet/cards/corolla-1440.webp 1440w" sizes="(max-width: 680px) 86vw, 32vw" alt="Veículo preto da categoria Sedan executivo" width="1717" height="917" loading="lazy" decoding="async" />
+              </div>
+              <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Toyota%20Corolla.">
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+              </a>
+            </article>
+            <article class="service-card" role="listitem" data-vehicle="commander" data-fleet-groups="armored">
+              <div class="service-card-copy">
+                <h3>SUV blindada</h3>
+                <p class="service-card-description">
+                  Presença, conforto e versatilidade para agendas de maior exigência.
+                </p>
+              </div>
+              <div class="service-card-media">
+                <span class="service-card-passengers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg><b>4</b><span class="service-card-passengers__label">passageiros</span></span>
+                <img data-lazy-src="/media/fleet/cards/commander-960.webp" data-lazy-srcset="/media/fleet/cards/commander-480.webp 480w, /media/fleet/cards/commander-960.webp 960w, /media/fleet/cards/commander-1440.webp 1440w" sizes="(max-width: 680px) 86vw, 32vw" alt="Veículo preto da categoria SUV blindada" width="1717" height="917" loading="lazy" decoding="async" />
+              </div>
+              <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Jeep%20Commander.">
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+              </a>
+            </article>
+            <article class="service-card" role="listitem" data-vehicle="master" data-fleet-groups="van">
+              <div class="service-card-copy">
+                <h3>Van executiva</h3>
+                <p class="service-card-description">
+                  Capacidade e coordenação para grupos, delegações e eventos.
+                </p>
+              </div>
+              <div class="service-card-media">
+                <span class="service-card-passengers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg><b>14</b><span class="service-card-passengers__label">passageiros</span></span>
+                <img data-lazy-src="/media/fleet/cards/master-960.webp" data-lazy-srcset="/media/fleet/cards/master-480.webp 480w, /media/fleet/cards/master-960.webp 960w, /media/fleet/cards/master-1440.webp 1440w" sizes="(max-width: 680px) 86vw, 32vw" alt="Veículo preto da categoria Van executiva" width="1717" height="917" loading="lazy" decoding="async" />
+              </div>
+              <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20da%20Renault%20Master.">
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+              </a>
+            </article>
+            <article class="service-card" role="listitem" data-vehicle="sprinter" data-fleet-groups="armored van">
+              <div class="service-card-copy">
+                <h3>Van blindada</h3>
+                <p class="service-card-description">
+                  Conforto ampliado para grupos e operações corporativas de longa duração.
+                </p>
+              </div>
+              <div class="service-card-media">
+                <span class="service-card-passengers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg><b>14</b><span class="service-card-passengers__label">passageiros</span></span>
+                <img data-lazy-src="/media/fleet/cards/sprinter-960.webp" data-lazy-srcset="/media/fleet/cards/sprinter-480.webp 480w, /media/fleet/cards/sprinter-960.webp 960w, /media/fleet/cards/sprinter-1440.webp 1440w" sizes="(max-width: 680px) 86vw, 32vw" alt="Veículo preto da categoria Van blindada" width="1717" height="917" loading="lazy" decoding="async" />
+              </div>
+              <a class="service-card-action" href="https://wa.me/5512997236961?text=Ol%C3%A1%2C%20Betinhos.%20Gostaria%20de%20consultar%20a%20disponibilidade%20da%20Mercedes-Benz%20Sprinter.">
+                <span class="service-card-action__label">Consultar</span><svg class="service-card-action__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="protocol section readiness-panel"
+        id="seguranca"
+        aria-labelledby="readiness-title"
+      >
+        <header class="readiness-panel__intro">
+          <p class="eyebrow">O que acontece antes do embarque</p>
+          <h2 id="readiness-title"><span class="readiness-title-line-1">Por trás de cada viagem,</span> <span class="readiness-title-line-2">processo e tecnologia em movimento.</span></h2>
+          <p class="readiness-panel__copy">Planejamos cada detalhe, conectamos equipe e motorista e acompanhamos a operação até a chegada.</p>
+        </header>
 
-      <footer>
-        <span data-i18n="footer">Betinhos Executive Service</span>
-        <span>&copy; <span id="year"></span></span>
+        <div class="readiness-panel__stages" role="list">
+          <article class="readiness-stage" data-readiness-stage role="listitem">
+            <div class="readiness-stage__media">
+              <img loading="lazy" decoding="async" data-lazy-src="/media/process/planejamento-960.webp" data-lazy-srcset="/media/process/planejamento-480.webp 480w, /media/process/planejamento-960.webp 960w, /media/process/planejamento-1440.webp 1440w" sizes="(max-width: 680px) 100vw, 34vw" width="3846" height="2344" alt="Notebook exibindo o formulário operacional de agendamento da Betinhos" />
+            </div>
+            <header class="readiness-stage__heading">
+              <span class="readiness-stage__index" aria-hidden="true">01</span>
+              <div><p>ANTES DO SERVIÇO</p><h3>Planejamento</h3></div>
+            </header>
+            <p class="readiness-stage__summary">Dados do serviço, rota, veículo e motorista organizados em uma única operação.</p>
+          </article>
+
+          <article class="readiness-stage" data-readiness-stage role="listitem">
+            <div class="readiness-stage__media">
+              <img loading="lazy" decoding="async" data-lazy-src="/media/process/preparacao-embarque-960.webp" data-lazy-srcset="/media/process/preparacao-embarque-480.webp 480w, /media/process/preparacao-embarque-960.webp 960w, /media/process/preparacao-embarque-1440.webp 1440w" sizes="(max-width: 680px) 100vw, 34vw" width="2354" height="2188" alt="Celular exibindo o aplicativo operacional usado pelos motoristas da Betinhos" />
+            </div>
+            <header class="readiness-stage__heading">
+              <span class="readiness-stage__index" aria-hidden="true">02</span>
+              <div><p>ANTES DO EMBARQUE</p><h3>Preparação e execução</h3></div>
+            </header>
+            <p class="readiness-stage__summary">Motorista orientado pelo app, com agenda e informações do serviço sempre à mão.</p>
+          </article>
+
+          <article class="readiness-stage" data-readiness-stage role="listitem">
+            <div class="readiness-stage__media">
+              <img loading="lazy" decoding="async" data-lazy-src="/media/process/acompanhamento-monitor-960.webp" data-lazy-srcset="/media/process/acompanhamento-monitor-480.webp 480w, /media/process/acompanhamento-monitor-960.webp 960w, /media/process/acompanhamento-monitor-1440.webp 1440w" sizes="(max-width: 680px) 100vw, 34vw" width="1600" height="1671" alt="Monitor exibindo o acompanhamento dos veículos da Betinhos em tempo real" />
+            </div>
+            <header class="readiness-stage__heading">
+              <span class="readiness-stage__index" aria-hidden="true">03</span>
+              <div><p>ATÉ A CHEGADA</p><h3>Acompanhamento e conclusão</h3></div>
+            </header>
+            <p class="readiness-stage__summary">Acompanhamento da operação em tempo real e conclusão registrada.</p>
+          </article>
+        </div>
+
+        <div class="readiness-panel__closing">
+          <p>Para o passageiro, uma viagem tranquila. Nos bastidores, tecnologia e coordenação em cada etapa.</p>
+          <a href="#contato"><span class="readiness-panel__cta-label">Planejar um serviço</span><svg class="readiness-panel__cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg></a>
+        </div>
+      </section>
+      <section class="office section" id="estrutura">
+        <div class="office-carousel" data-office-carousel aria-roledescription="carrossel" aria-label="Fotos da estrutura da Betinhos">
+          <div class="office-carousel__slides">
+            <figure class="office-carousel__slide is-active" id="office-slide-1" data-office-slide role="tabpanel" aria-labelledby="office-tab-1">
+              <img loading="lazy" decoding="async" fetchpriority="low" data-lazy-src="/media/office/office-main-960.webp" data-lazy-srcset="/media/office/office-main-480.webp 480w, /media/office/office-main-960.webp 960w" sizes="(max-width: 680px) 100vw, 58vw" width="960" height="720" alt="Base operacional da Betinhos em São José dos Campos" />
+              <figcaption class="office-carousel__caption">BASE OPERACIONAL · SÃO JOSÉ DOS CAMPOS</figcaption>
+            </figure>
+            <figure class="office-carousel__slide" id="office-slide-2" data-office-slide role="tabpanel" aria-labelledby="office-tab-2" aria-hidden="true">
+              <img loading="lazy" decoding="async" data-lazy-src="/media/office/office-operations-960.webp" data-lazy-srcset="/media/office/office-operations-480.webp 480w, /media/office/office-operations-960.webp 960w, /media/office/office-operations-1440.webp 1440w" sizes="(max-width: 680px) 100vw, 58vw" width="1600" height="1200" alt="Estações de trabalho da equipe operacional da Betinhos" />
+              <figcaption class="office-carousel__caption">EQUIPE E COORDENAÇÃO</figcaption>
+            </figure>
+            <figure class="office-carousel__slide" id="office-slide-3" data-office-slide role="tabpanel" aria-labelledby="office-tab-3" aria-hidden="true">
+              <img loading="lazy" decoding="async" data-lazy-src="/media/office/office-meeting-room-960.webp" data-lazy-srcset="/media/office/office-meeting-room-480.webp 480w, /media/office/office-meeting-room-960.webp 960w" sizes="(max-width: 680px) 100vw, 58vw" width="960" height="1280" alt="Sala de reuniões da Betinhos" />
+              <figcaption class="office-carousel__caption">PLANEJAMENTO E TREINAMENTO</figcaption>
+            </figure>
+            <figure class="office-carousel__slide" id="office-slide-4" data-office-slide role="tabpanel" aria-labelledby="office-tab-4" aria-hidden="true">
+              <img loading="lazy" decoding="async" data-lazy-src="/media/office/office-meeting-room-alt-960.webp" data-lazy-srcset="/media/office/office-meeting-room-alt-480.webp 480w, /media/office/office-meeting-room-alt-960.webp 960w" sizes="(max-width: 680px) 100vw, 58vw" width="960" height="1280" alt="Sala de reuniões da Betinhos vista de outro ângulo" />
+              <figcaption class="office-carousel__caption">AMBIENTE DE DECISÃO</figcaption>
+            </figure>
+          </div>
+          <div class="office-carousel__footer">
+            <p class="office-carousel__status" aria-live="polite"><strong data-office-counter>01</strong><span aria-hidden="true">/ 04</span></p>
+            <div class="office-carousel__navigation">
+              <div class="office-carousel__tabs" role="tablist" aria-label="Selecionar foto da estrutura">
+                <button class="is-active" id="office-tab-1" type="button" role="tab" data-office-dot aria-controls="office-slide-1" aria-label="Ver foto 1 de 4" aria-selected="true">01</button>
+                <button id="office-tab-2" type="button" role="tab" data-office-dot aria-controls="office-slide-2" aria-label="Ver foto 2 de 4" aria-selected="false" tabindex="-1">02</button>
+                <button id="office-tab-3" type="button" role="tab" data-office-dot aria-controls="office-slide-3" aria-label="Ver foto 3 de 4" aria-selected="false" tabindex="-1">03</button>
+                <button id="office-tab-4" type="button" role="tab" data-office-dot aria-controls="office-slide-4" aria-label="Ver foto 4 de 4" aria-selected="false" tabindex="-1">04</button>
+              </div>
+              <div class="office-carousel__buttons">
+                <button type="button" data-office-prev aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg></button>
+                <button type="button" data-office-next aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="office-copy">
+          <p class="eyebrow gold">Estrutura real</p>
+          <h2>Uma operação com base, equipe e comando.</h2>
+          <p>
+            Nossa base em São José dos Campos concentra atendimento,
+            coordenação, tecnologia e treinamento. A estrutura que o passageiro
+            não vê é justamente o que sustenta cada viagem.
+          </p>
+          <div class="office-metrics">
+            <div><strong>10 MIL+</strong><span>SERVIÇOS POR ANO</span></div>
+            <div><strong>6,5%</strong><span>TURNOVER ANUAL</span></div>
+            <div><strong>4,16</strong><span>NÍVEL SIGMA MÉDIO</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="google-reviews section" aria-labelledby="google-reviews-title">
+        <div class="google-reviews-copy">
+          <p class="eyebrow gold">Avaliações no Google</p>
+          <h2 id="google-reviews-title">Avaliações sobre a Betinhos.</h2>
+          <p>
+            Consulte a nota e as avaliações diretamente na ficha oficial da
+            Betinhos. As informações exibidas são atualizadas pelo Google.
+          </p>
+          <a
+            href="https://g.page/r/CQfpe-Ywr1wmEAI/review"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Avaliar a Betinhos no Google <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="google-reviews-widget" aria-label="Avaliações da Betinhos no Google" data-trustindex-src="https://cdn.trustindex.io/loader.js?09584807771b946d01368ea2d0f">
+          <noscript>
+            <a href="https://g.page/r/CQfpe-Ywr1wmEAI/review">
+              Google Reviews
+            </a>
+          </noscript>
+        </div>
+      </section>
+      <section class="legacy section history-section" id="empresa" aria-labelledby="history-title">
+        <div class="history-shell">
+          <div class="history-carousel__topline">
+            <span>EXPLORAR NOSSA HISTÓRIA</span>
+            <span class="history-range">1986 - 2026</span>
+          </div>
+
+          <div class="history-layout">
+            <header class="history-intro">
+              <div class="history-heading">
+                <h2 id="history-title">O caminho que nos trouxe até aqui.</h2>
+              </div>
+              <div class="history-copy">
+                <p class="lead">Em 1986, com as mãos firmes no volante de um Fusca, o Sr. Betinho começou uma jornada feita de presença, trabalho e respeito.</p>
+                <p class="history-details">Em cada madrugada, em cada dia de chuva ou de correria, transportava mais que passageiros: levava sonhos e construía confiança. A frota cresceu, a operação evoluiu e a essência permaneceu a mesma.</p>
+              </div>
+              <blockquote>Alcançamos muitos destinos sem esquecer o ponto de partida: o amor pelo que fazemos e o trabalho duro que nos guia até aqui.</blockquote>
+            </header>
+
+            <div class="history-carousel" data-history-carousel aria-roledescription="carrossel" aria-label="Fotos da história da Betinhos">
+              <div class="history-slides">
+                <figure class="history-slide is-active" id="history-slide-1" data-history-slide role="tabpanel" aria-labelledby="history-tab-1" aria-hidden="false">
+                  <div class="history-slide__media">
+                    <img data-lazy-src="/media/history/fusca-1986-816.webp" data-lazy-srcset="/media/history/fusca-1986-480.webp 480w, /media/history/fusca-1986-816.webp 816w" sizes="(max-width: 680px) 100vw, 58vw" alt="Fusca branco, primeiro veículo da história da Betinhos" width="816" height="558" loading="lazy" decoding="async" fetchpriority="low" />
+                  </div>
+                  <figcaption><span>1986</span><strong>O começo</strong><p>Um Fusca, uma visão de futuro e muito caminho pela frente.</p></figcaption>
+                </figure>
+                <figure class="history-slide" id="history-slide-2" data-history-slide role="tabpanel" aria-labelledby="history-tab-2" aria-hidden="true">
+                  <div class="history-slide__media">
+                    <img data-lazy-src="/media/history/primeiro-seda-960.webp" data-lazy-srcset="/media/history/primeiro-seda-480.webp 480w, /media/history/primeiro-seda-960.webp 960w, /media/history/primeiro-seda-1024.webp 1024w" sizes="(max-width: 680px) 100vw, 58vw" alt="Sedã branco utilizado nos primeiros anos de operação da Betinhos" width="1024" height="768" loading="lazy" decoding="async" />
+                  </div>
+                  <figcaption><span>PRIMEIROS ANOS</span><strong>Os primeiros destinos</strong><p>Cada novo trajeto firmava uma relação de confiança.</p></figcaption>
+                </figure>
+                <figure class="history-slide" id="history-slide-3" data-history-slide role="tabpanel" aria-labelledby="history-tab-3" aria-hidden="true">
+                  <div class="history-slide__media">
+                    <img data-lazy-src="/media/history/sr-betinho-960.webp" data-lazy-srcset="/media/history/sr-betinho-480.webp 480w, /media/history/sr-betinho-960.webp 960w, /media/history/sr-betinho-1050.webp 1050w" sizes="(max-width: 680px) 100vw, 58vw" alt="Sr. Betinho ao lado de um veículo branco da operação" width="1050" height="738" loading="lazy" decoding="async" />
+                  </div>
+                  <figcaption><span>40 ANOS</span><strong>Trabalho que permanece</strong><p>Tradição é seguir cuidando de cada pessoa no caminho.</p></figcaption>
+                </figure>
+              </div>
+
+              <div class="history-carousel__controls">
+                <p class="history-carousel__status" aria-live="polite"><strong data-history-counter>01</strong><span aria-hidden="true">/ 03</span></p>
+                <div class="history-carousel__navigation">
+                  <div class="history-carousel__dots" role="tablist" aria-label="Selecionar foto">
+                    <button class="is-active" id="history-tab-1" type="button" role="tab" data-history-dot aria-controls="history-slide-1" aria-label="Ver foto 1 de 3" aria-selected="true"><span>1986</span><strong>O começo</strong></button>
+                    <button id="history-tab-2" type="button" role="tab" data-history-dot aria-controls="history-slide-2" aria-label="Ver foto 2 de 3" aria-selected="false" tabindex="-1"><span>PRIMEIROS ANOS</span><strong>Os primeiros destinos</strong></button>
+                    <button id="history-tab-3" type="button" role="tab" data-history-dot aria-controls="history-slide-3" aria-label="Ver foto 3 de 3" aria-selected="false" tabindex="-1"><span>40 ANOS</span><strong>Trabalho que permanece</strong></button>
+                  </div>
+                  <div class="history-carousel__buttons">
+                    <button class="history-carousel__button" type="button" data-history-prev aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg></button>
+                    <button class="history-carousel__button" type="button" data-history-next aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team section" id="equipe">
+        <div class="team-head">
+          <div>
+            <p class="eyebrow gold">Nosso time</p>
+            <h2>A operação tem nome, rosto e responsabilidade.</h2>
+          </div>
+          <p>
+            Uma equipe administrativa próxima da operação e profissionais
+            preparados para servir com discrição, atenção e responsabilidade.
+          </p>
+        </div>
+        <div class="team-grid">
+          <article>
+            <div>
+              <img
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                data-lazy-src="/team/betinho.webp"
+                alt="Betinho, fundador da Betinhos"
+              />
+            </div>
+            <h3>Betinho</h3>
+            <p>Fundador</p>
+          </article>
+          <article>
+            <div>
+              <img
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                data-lazy-src="/team/junior.webp"
+                alt="Júnior de Paula"
+              />
+            </div>
+            <h3>Júnior de Paula</h3>
+            <p>Concierge · Bilíngue</p>
+          </article>
+          <article>
+            <div>
+              <img
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                data-lazy-src="/team/deborah.webp"
+                alt="Deborah Keila"
+              />
+            </div>
+            <h3>Deborah Keila</h3>
+            <p>Operations Manager</p>
+          </article>
+          <article>
+            <div>
+              <img
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                data-lazy-src="/team/juliana.webp"
+                alt="Juliana Rodrigues"
+              />
+            </div>
+            <h3>Juliana Rodrigues</h3>
+            <p>Finance Manager</p>
+          </article>
+          <article>
+            <div>
+              <img
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                data-lazy-src="/team/renan.webp"
+                alt="Renan Mendonça"
+              />
+            </div>
+            <h3>Renan Mendonça</h3>
+            <p>I.T. Manager</p>
+          </article>
+          <article>
+            <div>
+              <img
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                data-lazy-src="/team/marcos.webp"
+                alt="Marcos Souza"
+              />
+            </div>
+            <h3>Marcos Souza</h3>
+            <p>Trainee</p>
+          </article>
+        </div>
+      </section>
+      <section class="careers section" id="trabalhe-conosco" aria-labelledby="careers-title">
+        <div class="careers-intro">
+          <p class="eyebrow">Trabalhe conosco</p>
+          <h2 id="careers-title">Faça parte de uma operação que cuida de vidas.</h2>
+          <p>
+            Procuramos profissionais responsáveis, discretos e comprometidos com cada
+            agenda. Envie seus dados e currículo para nossa equipe.
+          </p>
+          <ul aria-label="Etapas da candidatura">
+            <li><strong>01</strong><span>Preencha seus dados</span></li>
+            <li><strong>02</strong><span>Anexe seu currículo</span></li>
+            <li><strong>03</strong><span>Nossa equipe avaliará seu perfil</span></li>
+          </ul>
+        </div>
+        <form
+          class="careers-form"
+          aria-labelledby="careers-title"
+          action="https://formsubmit.co/renan.mendonca@betinhos.com.br"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input type="hidden" name="_subject" value="Nova candidatura pelo site Betinhos" />
+          <input type="hidden" name="_template" value="table" />
+          <input class="careers-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+          <p class="careers-required">Campos com * são obrigatórios.</p>
+          <label>
+            Nome completo *
+            <input name="Nome" type="text" autocomplete="name" required />
+          </label>
+          <div class="careers-form-row">
+            <label>
+              E-mail *
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Telefone *
+              <input name="Telefone" type="tel" autocomplete="tel" required />
+            </label>
+          </div>
+          <div class="careers-form-row">
+            <label>
+              Cidade *
+              <input name="Cidade" type="text" autocomplete="address-level2" required />
+            </label>
+            <label>
+              Área de interesse *
+              <select name="Área de interesse" required>
+                <option value="">Selecione</option>
+                <option>Motorista executivo</option>
+                <option>Operação e atendimento</option>
+                <option>Administrativo</option>
+                <option>Outra área</option>
+              </select>
+            </label>
+          </div>
+          <label class="careers-presentation">
+            Apresentação
+            <textarea
+              name="Apresentação"
+              rows="2"
+              placeholder="Conte brevemente sobre sua experiência."
+            ></textarea>
+          </label>
+          <label class="careers-file">
+            Currículo *
+            <input
+              name="attachment"
+              type="file"
+              accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              aria-describedby="careers-file-help"
+              required
+            />
+            <small id="careers-file-help">PDF, DOC ou DOCX, com até 10 MB.</small>
+          </label>
+          <label class="careers-consent">
+            <input name="Autorização de dados" type="checkbox" value="Autorizado" required />
+            <span>
+              Autorizo o uso destes dados exclusivamente para avaliação e contato sobre
+              oportunidades profissionais. *
+            </span>
+          </label>
+          <button type="submit">
+            <svg class="careers-form__submit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+            Enviar candidatura <span aria-hidden="true">↗</span>
+          </button>
+          <p class="careers-note">
+            O envio é protegido contra spam. No primeiro uso, a Betinhos precisará
+            confirmar o endereço de recebimento.
+          </p>
+        </form>
+      </section>
+      <section class="faq section" id="faq" aria-labelledby="faq-title">
+        <div class="faq-intro">
+          <p class="eyebrow gold" data-i18n="faqTag">Perguntas frequentes</p>
+          <h2 id="faq-title" data-i18n="faqTitle">O que você precisa saber antes da partida.</h2>
+          <p data-i18n="faqIntro">Respostas diretas sobre reservas, cobertura e padrão operacional.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary><span data-i18n="faqQ1">Como solicito um transporte executivo?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA1">Envie seu briefing pelo formulário ou WhatsApp. Nossa equipe confirma veículo, motorista, horários e pontos de encontro.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ2">Com quanta antecedência devo reservar?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA2">Recomendamos reservar assim que a agenda estiver definida. Demandas imediatas são atendidas conforme disponibilidade operacional.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ3">O atendimento funciona 24 horas?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA3">Sim — a operação funciona 24 horas por dia, todos os dias. O agendamento e o atendimento para novas solicitações acontecem em horário comercial.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ4">Vocês atendem aeroportos e outras cidades?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA4">Sim. Atendemos aeroportos, hotéis, empresas e eventos em São Paulo, Vale do Paraíba, Rio de Janeiro e rotas interestaduais.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ5">Há motoristas bilíngues e veículos blindados?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA5">Sim. Disponibilizamos profissionais bilíngues, veículos executivos, vans e opções blindadas conforme cada operação.</p>
+          </details>
+          <details>
+            <summary><span data-i18n="faqQ6">Como a segurança da viagem é acompanhada?</span><i aria-hidden="true"></i></summary>
+            <p data-i18n="faqA6">A segurança começa antes de o carro chegar à sua casa: garantimos que o motorista esteja descansado e que o veículo esteja em conformidade com as leis vigentes e com a manutenção preventiva em dia. Planejamos rotas e contingências, monitoramos a operação em tempo real e mantemos comunicação ativa com as equipes envolvidas.</p>
+          </details>
+        </div>
+      </section>
+      <section class="contact section" id="contato">
+        <img src="/media/logo-betinhos-320.webp" alt="" width="320" height="178" loading="lazy" decoding="async" />
+        <p class="eyebrow gold">Fale com a operação</p>
+        <h2 id="contact-title">
+          Quando sua presença é essencial, a nossa operação já está pronta.
+        </h2>
+        <form class="request-form" id="request-form" aria-labelledby="contact-title">
+          <label>
+            Serviço
+            <select name="servico" required>
+              <option value="">Selecione</option>
+              <option>Carro executivo</option>
+              <option>Carro blindado</option>
+              <option>Van executiva</option>
+              <option>Van blindada</option>
+              <option>Motorista bilíngue</option>
+              <option>Proteção executiva</option>
+            </select>
+          </label>
+          <label>
+            Data
+            <input name="data" type="date" required />
+          </label>
+          <label>
+            Origem
+            <input
+              name="origem"
+              type="text"
+              autocomplete="street-address"
+              placeholder="Cidade ou local"
+              required
+            />
+          </label>
+          <label>
+            Destino
+            <input
+              name="destino"
+              type="text"
+              placeholder="Cidade ou local"
+              required
+            />
+          </label>
+          <label>
+            Passageiros
+            <input name="passageiros" type="number" min="1" max="99" value="1" required />
+          </label>
+          <button type="submit">
+            <svg class="request-form__submit-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2 11 13" />
+              <path d="m22 2-7 20-4-9-9-4Z" />
+            </svg>
+            Enviar briefing pelo WhatsApp <span>↗</span>
+          </button>
+        </form>
+        <p class="request-note">
+          Sua solicitação será aberta no WhatsApp para você revisar antes do envio.
+        </p>
+      </section>
+      <footer class="site-footer" role="contentinfo" aria-labelledby="footer-brand">
+        <div class="site-footer__brand">
+          <div class="site-footer__brand-lockup">
+            <a href="#inicio" class="site-footer__logo" aria-label="Voltar ao início">
+              <img src="/media/logo-betinhos-320.webp" alt="Betinhos Executive Service" width="320" height="178" loading="lazy" decoding="async" />
+            </a>
+            <betinhos-anniversary
+              class="site-footer__anniversary"
+              years="40"
+              label="ANOS"
+              tone="dark"
+              size="sm"
+            ></betinhos-anniversary>
+          </div>
+          <p id="footer-brand">Transporte executivo, proteção executiva e operação corporativa para agendas que não podem parar.</p>
+          <a class="site-footer__whatsapp" href="https://wa.me/5512997236961" target="_blank" rel="noopener noreferrer">
+            <span>Falar com a operação</span>
+            <svg class="site-footer__whatsapp-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17 17 7" />
+              <path d="M8 7h9v9" />
+            </svg>
+          </a>
+          <div class="site-footer__channels" aria-label="Canais e idiomas">
+            <span>Siga-nos</span>
+            <a class="site-footer__social" href="https://www.instagram.com/betinhosexecutiveservice/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Betinhos" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
+            </a>
+            <a class="site-footer__social" href="https://br.linkedin.com/company/betinhosexecutiveservice" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Betinhos" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M8 10v6M8 7.5v.01M12 16v-3.4c0-1.9 3.5-2.1 3.5 0V16M12 12.2c0-1.5-1.3-2.2-2.3-2.2" /></svg>
+            </a>
+            <span class="site-footer__languages">Idiomas</span>
+            <img src="/flags/br.svg" alt="Português" width="20" height="15" />
+            <img src="/flags/us.svg" alt="English" width="20" height="15" />
+            <img src="/flags/es-compact.svg" alt="Español" width="20" height="15" />
+          </div>
+        </div>
+        <nav class="site-footer__nav" aria-label="Navegação institucional">
+          <h2>Institucional</h2>
+          <a href="#empresa">A Betinhos</a>
+          <a href="#solucoes">Frota e serviços</a>
+          <a href="#equipe">Nossa equipe</a>
+          <a href="#trabalhe-conosco">Trabalhe conosco</a>
+        </nav>
+        <nav class="site-footer__nav" aria-label="Navegação de atendimento">
+          <h2>Atendimento</h2>
+          <a href="#contato">Solicitar transporte</a>
+          <a href="#faq">Perguntas frequentes</a>
+        </nav>
+        <section class="site-footer__contacts" aria-labelledby="footer-contacts-title">
+          <h2 id="footer-contacts-title">Contatos diretos</h2>
+          <ul>
+            <li>
+              <strong>Júnior de Paula</strong>
+              <span>Concierge bilíngue</span>
+              <a href="tel:+5512997236961">+55 12 99723-6961</a>
+              <a href="mailto:junior@betinhos.com.br">junior@betinhos.com.br</a>
+            </li>
+            <li>
+              <strong>Deborah Keila</strong>
+              <span>Operations Manager</span>
+              <a href="tel:+5512996159093">+55 12 99615-9093</a>
+              <a href="mailto:deborah.keila@betinhos.com.br">deborah.keila@betinhos.com.br</a>
+            </li>
+            <li>
+              <strong>Juliana Rodrigues</strong>
+              <span>Finance Manager</span>
+              <a href="tel:+5512996159085">+55 12 99615-9085</a>
+              <a href="mailto:financeiro@betinhos.com.br">financeiro@betinhos.com.br</a>
+            </li>
+          </ul>
+        </section>
+        <div class="site-footer__location">
+          <h2>Cobertura</h2>
+          <ul class="site-footer__coverage">
+            <li>São José dos Campos</li>
+            <li>Pindamonhangaba</li>
+            <li>Vale do Paraíba</li>
+            <li>Rio de Janeiro</li>
+            <li>São Paulo</li>
+          </ul>
+        </div>
+        <div class="site-footer__bottom">
+          <small>© 2026 Betinhos Executive Service. Todos os direitos reservados.</small>
+          <a href="#contato">Privacidade e uso de dados</a>
+        </div>
       </footer>
-    </div>
-
-    <script>
-      const translations = {
-        pt: {
-          eyebrow: 'Comunicado',
-          title: 'Estamos preparando<br><em>algo especial.</em>',
-          description: 'Nosso site est&aacute; em manuten&ccedil;&atilde;o. Em breve, estaremos de volta para continuar cuidando dos seus deslocamentos com a discri&ccedil;&atilde;o, pontualidade e seguran&ccedil;a que voc&ecirc; espera.',
-          contactTitle: 'Fale conosco',
-          contactIntro: 'Nossa equipe continua dispon&iacute;vel durante a manuten&ccedil;&atilde;o.',
-          roleConcierge: 'Concierge (Bilingual)',
-          roleOperations: 'Operations Manager',
-          roleFinance: 'Finance Manager',
-          footer: 'Betinhos Executive Service'
-        },
-        en: {
-          eyebrow: 'Announcement',
-          title: 'We are preparing<br><em>something special.</em>',
-          description: 'Our website is currently under maintenance. We will be back soon, continuing to care for your journeys with the discretion, punctuality, and safety you expect.',
-          contactTitle: 'Contact us',
-          contactIntro: 'Our team remains available during maintenance.',
-          roleConcierge: 'Concierge (Bilingual)',
-          roleOperations: 'Operations Manager',
-          roleFinance: 'Finance Manager',
-          footer: 'Betinhos Executive Service'
-        },
-        es: {
-          eyebrow: 'Comunicado',
-          title: 'Estamos preparando<br><em>algo especial.</em>',
-          description: 'Nuestro sitio web est&aacute; en mantenimiento. Pronto estaremos de vuelta para seguir cuidando sus desplazamientos con la discreci&oacute;n, puntualidad y seguridad que usted espera.',
-          contactTitle: 'Hable con nosotros',
-          contactIntro: 'Nuestro equipo sigue disponible durante el mantenimiento.',
-          roleConcierge: 'Concierge (Biling&uuml;e)',
-          roleOperations: 'Gerente de Operaciones',
-          roleFinance: 'Gerente de Finanzas',
-          footer: 'Betinhos Executive Service'
-        }
-      };
-
-      const buttons = document.querySelectorAll('[data-lang]');
-      const elements = document.querySelectorAll('[data-i18n]');
-      const setLanguage = (language) => {
-        const copy = translations[language] || translations.pt;
-        document.documentElement.lang = language === 'pt' ? 'pt-BR' : language;
-        elements.forEach((element) => { element.innerHTML = copy[element.dataset.i18n]; });
-        buttons.forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.lang === language)); });
-        try { localStorage.setItem('betinhos-language', language); } catch (error) { /* storage can be unavailable */ }
-      };
-
-      buttons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-      document.getElementById('year').textContent = new Date().getFullYear();
-      let savedLanguage = 'pt';
-      try { savedLanguage = localStorage.getItem('betinhos-language') || 'pt'; } catch (error) { /* storage can be unavailable */ }
-      setLanguage(savedLanguage);
-    </script>
+    </main>
+    <aside class="whatsapp-widget" aria-label="Atendimento pelo WhatsApp">
+      <section class="whatsapp-panel" id="whatsapp-panel" hidden>
+        <header>
+          <img src="/media/logo-betinhos-b-160.webp" alt="" class="whatsapp-brand-mark" width="160" height="160" />
+          <div class="whatsapp-brand-copy">
+            <span class="whatsapp-eyebrow">Concierge executivo</span>
+            <strong>Betinhos</strong>
+          </div>
+          <button type="button" class="whatsapp-close" aria-label="Fechar atendimento">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="m5 5 10 10M15 5 5 15" />
+            </svg>
+          </button>
+        </header>
+        <div class="whatsapp-message">
+          <strong>Como podemos ajudar?</strong>
+          <span>Conte o que precisa. Nossa equipe orienta sua operação.</span>
+        </div>
+        <form id="whatsapp-widget-form">
+          <label for="whatsapp-widget-message">Mensagem</label>
+          <textarea id="whatsapp-widget-message" rows="3">Olá, Betinhos. Gostaria de informações sobre transporte executivo.</textarea>
+          <button type="submit">
+            Enviar pelo WhatsApp
+            <span aria-hidden="true">↗</span>
+          </button>
+          <small>Você revisa a mensagem antes de enviar.</small>
+        </form>
+      </section>
+      <button
+        type="button"
+        class="whatsapp-trigger"
+        aria-controls="whatsapp-panel"
+        aria-expanded="false"
+        aria-label="Falar no WhatsApp"
+      >
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3a13 13 0 0 0-11 20l-2 6 6-2A13 13 0 1 0 16 3Zm0 23a10 10 0 0 1-5-1.4l-.7-.4-3.5 1.1 1.1-3.4-.4-.7A10 10 0 1 1 16 26Zm5.6-7.5c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.3 8.3 0 0 1-2.5-1.6 9.2 9.2 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.3-.6c.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4a3.7 3.7 0 0 0-1.1 2.7c0 1.6 1.1 3.1 1.3 3.3s2.3 3.6 5.7 5c.8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
+        </svg>
+        <span>Falar no WhatsApp</span>
+      </button>
+    </aside>
+    <script type="module" src="/anniversary-mark.js"></script>
+    <script src="/service-fleet.js" defer></script>
+    <script src="/performance.js" defer></script>
+    <script src="/i18n.js" defer></script>
+    <script src="/mobile-navigation.js" defer></script>
+    <script src="/section-order.js" defer></script>
+    <script src="/history-carousel.js" defer></script>
+    <script src="/office-carousel.js" defer></script>
+    <script src="/careers-textarea.js" defer></script>
   </body>
 </html>

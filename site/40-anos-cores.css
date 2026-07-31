@@ -1,0 +1,175 @@
+:root {
+  --navy: #061d33;
+  --paper: #fcfcfb;
+  --ivory: #f4f0e7;
+  --gold: #d9b263;
+}
+
+body {
+  min-width: 0;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--ivory);
+  background: var(--navy);
+}
+
+.comparison-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 84px;
+  padding: 16px clamp(20px, 4vw, 64px);
+  border-bottom: 1px solid rgba(244, 240, 231, 0.18);
+}
+
+.comparison-brand img {
+  display: block;
+  width: clamp(128px, 12vw, 174px);
+  height: auto;
+}
+
+.comparison-language {
+  display: flex;
+  border: 1px solid rgba(244, 240, 231, 0.22);
+}
+
+.comparison-language button {
+  min-width: 44px;
+  min-height: 40px;
+  border: 0;
+  border-right: 1px solid rgba(244, 240, 231, 0.22);
+  color: #aeb9c0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.comparison-language button:last-child { border-right: 0; }
+.comparison-language button[aria-pressed="true"] {
+  color: var(--navy);
+  background: var(--gold);
+}
+
+.comparison-language button:focus-visible,
+.comparison-brand:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.comparison-intro {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 48px;
+  padding: clamp(68px, 8vw, 118px) clamp(20px, 4vw, 64px);
+}
+
+.comparison-intro p {
+  margin: 8px 0 0;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.comparison-intro h1 {
+  margin: 0;
+  font: 400 clamp(50px, 6.5vw, 92px) / 0.88 "Centabel", Georgia, serif;
+  letter-spacing: -0.045em;
+}
+
+.color-models {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 650px;
+  border-top: 1px solid rgba(244, 240, 231, 0.18);
+}
+
+.color-model {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: clamp(28px, 4vw, 58px);
+}
+
+.color-model + .color-model {
+  border-left: 1px solid rgba(244, 240, 231, 0.18);
+}
+
+.color-model > header {
+  position: absolute;
+  top: clamp(28px, 4vw, 52px);
+  right: clamp(28px, 4vw, 52px);
+  left: clamp(28px, 4vw, 52px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.color-model > header span {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.color-model > header h2 {
+  margin: 0;
+  font: 400 clamp(24px, 2.4vw, 34px) / 1 "Centabel", Georgia, serif;
+  text-align: right;
+}
+
+.color-model--dark {
+  color: var(--ivory);
+  background: var(--navy);
+}
+
+.color-model--light {
+  color: var(--navy);
+  background: var(--paper);
+}
+
+.color-model--light > header span { color: #936a2d; }
+
+.anniversary-lockup--color {
+  --mark-size: clamp(280px, 27vw, 410px);
+  --mark-stroke: 2px;
+  --mark-knockout: 7px;
+  width: clamp(310px, 32vw, 480px);
+  height: clamp(250px, 27vw, 390px);
+}
+
+.color-model--dark .anniversary-lockup--color {
+  --mark-bg: var(--navy);
+  --mark-number: var(--gold);
+  --mark-accent: var(--paper);
+}
+
+.color-model--light .anniversary-lockup--color {
+  --mark-bg: var(--paper);
+  --mark-number: var(--navy);
+  --mark-accent: var(--gold);
+}
+
+.anniversary-lockup--color .anniversary-cut {
+  height: clamp(25px, 2.4vw, 34px);
+  font-size: clamp(9px, 0.9vw, 13px);
+}
+
+@media (max-width: 720px) {
+  .comparison-header { min-height: 74px; }
+  .comparison-intro { display: block; padding-block: 64px; }
+  .comparison-intro h1 { margin-top: 28px; font-size: clamp(48px, 14vw, 68px); }
+  .color-models { grid-template-columns: 1fr; }
+  .color-model { min-height: 540px; }
+  .color-model + .color-model {
+    border-top: 1px solid rgba(6, 29, 51, 0.16);
+    border-left: 0;
+  }
+  .anniversary-lockup--color {
+    --mark-size: 290px;
+    width: 330px;
+    height: 270px;
+  }
+}
