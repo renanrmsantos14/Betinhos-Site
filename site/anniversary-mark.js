@@ -55,14 +55,33 @@ class BetinhosAnniversary extends HTMLElement {
     labelElement.id = `${this.instanceId}-label`;
     labelElement.setAttribute("aria-hidden", "true");
 
-    years.split("").forEach((digit, index) => {
-      const glyph = createElement("span", "anniversary-mark__glyph", digit);
-      if (index === years.length - 1) {
-        glyph.classList.add("anniversary-mark__glyph--last");
-      }
-      glyph.setAttribute("aria-hidden", "true");
-      number.append(glyph);
-    });
+    if (years === "40") {
+      number.classList.add("anniversary-mark__number--layered");
+
+      const zero = createElement(
+        "span",
+        "anniversary-mark__digit anniversary-mark__zero",
+        "0",
+      );
+      const four = createElement(
+        "span",
+        "anniversary-mark__digit anniversary-mark__four",
+        "4",
+      );
+
+      zero.setAttribute("aria-hidden", "true");
+      four.setAttribute("aria-hidden", "true");
+      number.append(zero, four);
+    } else {
+      years.split("").forEach((digit, index) => {
+        const glyph = createElement("span", "anniversary-mark__glyph", digit);
+        if (index === years.length - 1) {
+          glyph.classList.add("anniversary-mark__glyph--last");
+        }
+        glyph.setAttribute("aria-hidden", "true");
+        number.append(glyph);
+      });
+    }
     number.append(labelElement);
     number.setAttribute("aria-label", `${years} ${label}`);
     labelledBy.push(number.id);

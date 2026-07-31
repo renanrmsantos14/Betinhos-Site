@@ -1,11 +1,15 @@
 :where(betinhos-anniversary.anniversary-mark) {
   --anniversary-background: #061d33;
   --anniversary-outline: #d9b263;
-  --anniversary-label: #f0d89a;
+  --anniversary-label: #fcfcfb;
   --anniversary-text: #f4f0e7;
   --anniversary-border: #ffffff2b;
   --anniversary-number-size: clamp(118px, 10vw, 168px);
   --anniversary-label-offset: clamp(58px, 4.2vw, 82px);
+  --anniversary-stroke: 2px;
+  --anniversary-knockout: 6px;
+  --anniversary-band-height: 24px;
+  --anniversary-band-font-size: 8px;
   display: inline-block;
   width: max-content;
   max-width: 100%;
@@ -16,8 +20,8 @@
 
 betinhos-anniversary.anniversary-mark[tone="light"] {
   --anniversary-background: #fcfcfb;
-  --anniversary-outline: #b17a00;
-  --anniversary-label: #8b6100;
+  --anniversary-outline: #001a3d;
+  --anniversary-label: #d9b263;
   --anniversary-text: #001a3d;
   --anniversary-border: #e2e8f0;
 }
@@ -173,11 +177,19 @@ betinhos-anniversary.anniversary-mark[tone="transparent"] {
 betinhos-anniversary.anniversary-mark[size="sm"] {
   --anniversary-number-size: 80px;
   --anniversary-label-offset: 42px;
+  --anniversary-stroke: 1.4px;
+  --anniversary-knockout: 4px;
+  --anniversary-band-height: 12px;
+  --anniversary-band-font-size: 4.5px;
 }
 
 betinhos-anniversary.anniversary-mark[size="md"] {
   --anniversary-number-size: 112px;
   --anniversary-label-offset: 58px;
+  --anniversary-stroke: 1.6px;
+  --anniversary-knockout: 5px;
+  --anniversary-band-height: 17px;
+  --anniversary-band-font-size: 6px;
 }
 
 betinhos-anniversary.anniversary-mark[size="lg"] {
@@ -369,6 +381,95 @@ betinhos-anniversary.anniversary-mark
   line-height: 1;
   white-space: nowrap;
   transform: translate(-50%, -50%);
+}
+
+.anniversary-mark__number--layered {
+  position: relative;
+  display: block;
+  width: 1.04em;
+  height: 0.79em;
+  color: var(--anniversary-outline);
+  -webkit-text-stroke: 0;
+  line-height: 0.74;
+}
+
+.anniversary-mark__number--layered .anniversary-mark__digit {
+  position: absolute;
+  top: 50%;
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: var(--anniversary-stroke) var(--anniversary-outline);
+  font: inherit;
+  font-style: normal;
+  line-height: 0.74;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.anniversary-mark__number--layered .anniversary-mark__zero {
+  z-index: 1;
+  left: 62.5%;
+}
+
+.anniversary-mark__number--layered .anniversary-mark__four {
+  z-index: 2;
+  left: 37.5%;
+  color: var(--anniversary-background);
+  -webkit-text-stroke: var(--anniversary-knockout)
+    var(--anniversary-background);
+}
+
+.anniversary-mark__number--layered .anniversary-mark__four::after {
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: var(--anniversary-stroke) var(--anniversary-outline);
+  content: "4";
+}
+
+betinhos-anniversary.anniversary-mark
+  .anniversary-mark__number--layered
+  > .anniversary-mark__label {
+  position: absolute;
+  z-index: 3;
+  top: 49.5%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 73%;
+  max-width: none;
+  height: var(--anniversary-band-height);
+  margin: 0;
+  padding: 0;
+  color: var(--anniversary-label);
+  background: var(--anniversary-background);
+  border-top: 1px solid var(--anniversary-label);
+  border-bottom: 1px solid var(--anniversary-label);
+  -webkit-text-stroke: 0;
+  font: 680 var(--anniversary-band-font-size) / 1
+    var(--sans, "Manrope", "Segoe UI", sans-serif);
+  letter-spacing: 0.52em;
+  text-indent: 0.52em;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+@container (max-width: 350px) {
+  betinhos-anniversary.anniversary-mark[size="lg"] {
+    --anniversary-band-height: 17px;
+    --anniversary-band-font-size: 6px;
+  }
+}
+
+@media (width <= 680px) {
+  betinhos-anniversary.anniversary-mark[variant="hero"] {
+    --anniversary-stroke: 1.4px;
+    --anniversary-knockout: 4px;
+    --anniversary-band-height: 12px;
+    --anniversary-band-font-size: 4.5px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
