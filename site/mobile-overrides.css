@@ -123,7 +123,7 @@
     height: max(100svh, 820px);
     min-height: 820px;
     background-image: url(/hero-mobile-fleet.webp);
-    background-position: 47% center;
+    background-position: left top;
     background-size: cover;
   }
 

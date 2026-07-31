@@ -6,10 +6,6 @@
   --anniversary-border: #ffffff2b;
   --anniversary-number-size: clamp(118px, 10vw, 168px);
   --anniversary-label-offset: clamp(58px, 4.2vw, 82px);
-  --anniversary-stroke: 2px;
-  --anniversary-knockout: 6px;
-  --anniversary-band-height: 24px;
-  --anniversary-band-font-size: 8px;
   display: inline-block;
   width: max-content;
   max-width: 100%;
@@ -177,23 +173,32 @@ betinhos-anniversary.anniversary-mark[tone="transparent"] {
 betinhos-anniversary.anniversary-mark[size="sm"] {
   --anniversary-number-size: 80px;
   --anniversary-label-offset: 42px;
-  --anniversary-stroke: 1.4px;
-  --anniversary-knockout: 4px;
-  --anniversary-band-height: 12px;
-  --anniversary-band-font-size: 4.5px;
 }
 
 betinhos-anniversary.anniversary-mark[size="md"] {
   --anniversary-number-size: 112px;
   --anniversary-label-offset: 58px;
-  --anniversary-stroke: 1.6px;
-  --anniversary-knockout: 5px;
-  --anniversary-band-height: 17px;
-  --anniversary-band-font-size: 6px;
 }
 
 betinhos-anniversary.anniversary-mark[size="lg"] {
   --anniversary-number-size: 168px;
+}
+
+.site-footer__brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+betinhos-anniversary.site-footer__anniversary {
+  --anniversary-background: #061522;
+  --anniversary-number-size: 68px;
+  flex: 0 0 auto;
+  background: transparent;
+}
+
+.site-footer__anniversary .anniversary-mark__body {
+  display: block;
 }
 
 betinhos-anniversary.anniversary-mark[compact] .anniversary-mark__message,
@@ -383,53 +388,66 @@ betinhos-anniversary.anniversary-mark
   transform: translate(-50%, -50%);
 }
 
-.anniversary-mark__number--layered {
-  position: relative;
+.anniversary-mark__number--source {
   display: block;
-  width: 1.04em;
-  height: 0.79em;
-  color: var(--anniversary-outline);
+  width: max-content;
   -webkit-text-stroke: 0;
-  line-height: 0.74;
 }
 
-.anniversary-mark__number--layered .anniversary-mark__digit {
+.anniversary-mark__number--source .anniversary-lockup--site {
+  --mark-bg: var(--anniversary-background);
+  --mark-number: var(--anniversary-outline);
+  --mark-accent: var(--anniversary-label);
+  --mark-size: 1em;
+  --mark-stroke: 2px;
+  --mark-knockout: 7px;
+  position: relative;
+  display: block;
+  width: 1.185185em;
+  height: 1em;
+  color: var(--mark-number);
+}
+
+.anniversary-number {
+  position: absolute;
+  inset: 0;
+  display: block;
+  font: 400 var(--mark-size) / 0.74 var(--serif, Georgia, serif);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.anniversary-number > i {
   position: absolute;
   top: 50%;
   display: block;
   color: transparent;
-  -webkit-text-stroke: var(--anniversary-stroke) var(--anniversary-outline);
-  font: inherit;
+  -webkit-text-stroke: var(--mark-stroke) var(--mark-number);
   font-style: normal;
-  line-height: 0.74;
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
-.anniversary-mark__number--layered .anniversary-mark__zero {
+.anniversary-zero {
   z-index: 1;
   left: 62.5%;
 }
 
-.anniversary-mark__number--layered .anniversary-mark__four {
+.anniversary-four {
   z-index: 2;
   left: 37.5%;
-  color: var(--anniversary-background);
-  -webkit-text-stroke: var(--anniversary-knockout)
-    var(--anniversary-background);
+  color: var(--mark-bg) !important;
+  -webkit-text-stroke: var(--mark-knockout) var(--mark-bg) !important;
 }
 
-.anniversary-mark__number--layered .anniversary-mark__four::after {
+.anniversary-four::after {
   position: absolute;
   inset: 0;
   color: transparent;
-  -webkit-text-stroke: var(--anniversary-stroke) var(--anniversary-outline);
+  -webkit-text-stroke: var(--mark-stroke) var(--mark-number);
   content: "4";
 }
 
-betinhos-anniversary.anniversary-mark
-  .anniversary-mark__number--layered
-  > .anniversary-mark__label {
+.anniversary-cut {
   position: absolute;
   z-index: 3;
   top: 49.5%;
@@ -437,39 +455,16 @@ betinhos-anniversary.anniversary-mark
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   width: 73%;
-  max-width: none;
-  height: var(--anniversary-band-height);
-  margin: 0;
-  padding: 0;
-  color: var(--anniversary-label);
-  background: var(--anniversary-background);
-  border-top: 1px solid var(--anniversary-label);
-  border-bottom: 1px solid var(--anniversary-label);
-  -webkit-text-stroke: 0;
-  font: 680 var(--anniversary-band-font-size) / 1
-    var(--sans, "Manrope", "Segoe UI", sans-serif);
+  height: 8.74486%;
+  color: var(--mark-accent);
+  background: var(--mark-bg);
+  border-top: 1px solid var(--mark-accent);
+  border-bottom: 1px solid var(--mark-accent);
+  font: 680 0.0333333em/1 var(--sans, "Manrope", "Segoe UI", sans-serif);
   letter-spacing: 0.52em;
   text-indent: 0.52em;
-  white-space: nowrap;
   transform: translate(-50%, -50%);
-}
-
-@container (max-width: 350px) {
-  betinhos-anniversary.anniversary-mark[size="lg"] {
-    --anniversary-band-height: 17px;
-    --anniversary-band-font-size: 6px;
-  }
-}
-
-@media (width <= 680px) {
-  betinhos-anniversary.anniversary-mark[variant="hero"] {
-    --anniversary-stroke: 1.4px;
-    --anniversary-knockout: 4px;
-    --anniversary-band-height: 12px;
-    --anniversary-band-font-size: 4.5px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

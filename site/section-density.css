@@ -101,10 +101,14 @@
     padding-block: clamp(36px, 4.5vh, 48px);
   }
 
-  .company-intro__media,
-  .office-carousel__slides {
+  .company-intro__media {
     min-height: 0;
     max-height: 420px;
+  }
+
+  .office-carousel__slides {
+    height: clamp(340px, 46vh, 420px);
+    min-height: 340px;
   }
 
   .team-grid {

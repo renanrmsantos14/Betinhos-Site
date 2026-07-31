@@ -4,6 +4,142 @@
   "output_tokens": 0,
   "nodes": [
     {
+      "id": "scripts_build_site_css",
+      "label": "build-site-css.mjs",
+      "file_type": "code",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_site_css_sources",
+      "label": "sources",
+      "file_type": "code",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_site_css_css",
+      "label": "css",
+      "file_type": "code",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores",
+      "label": "40-anos-cores.js",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores_translations",
+      "label": "translations",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores_anniversarywords",
+      "label": "anniversaryWords",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores_languagebuttons",
+      "label": "languageButtons",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores_setlanguage",
+      "label": "setLanguage()",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores_requestedlanguage",
+      "label": "requestedLanguage",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L72",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_cores_savedlanguage",
+      "label": "savedLanguage",
+      "file_type": "code",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes",
+      "label": "40-anos-opcoes.js",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes_translations",
+      "label": "translations",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes_labels",
+      "label": "labels",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes_buttons",
+      "label": "buttons",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L74",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes_setlanguage",
+      "label": "setLanguage()",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L76",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes_requestedlanguage",
+      "label": "requestedLanguage",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L101",
+      "_origin": "ast"
+    },
+    {
+      "id": "site_40_anos_opcoes_savedlanguage",
+      "label": "savedLanguage",
+      "file_type": "code",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L102",
+      "_origin": "ast"
+    },
+    {
       "id": "site_anniversary_mark",
       "label": "anniversary-mark.js",
       "file_type": "code",
@@ -380,6 +516,152 @@
   ],
   "links": [
     {
+      "source": "scripts_build_site_css",
+      "target": "ref_node_fs_promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_site_css",
+      "target": "ref_esbuild",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_site_css",
+      "target": "scripts_build_site_css_sources",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_site_css",
+      "target": "scripts_build_site_css_css",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_translations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_anniversarywords",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_languagebuttons",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_setlanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_requestedlanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_savedlanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_translations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_labels",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_buttons",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_setlanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_requestedlanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_savedlanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
       "source": "site_anniversary_mark",
       "target": "site_anniversary_mark_anniversary_attributes",
       "relation": "contains",
@@ -479,7 +761,7 @@
       "context": "argument",
       "confidence": "INFERRED",
       "source_file": "site/anniversary-mark.js",
-      "source_location": "L123",
+      "source_location": "L152",
       "weight": 1.0
     },
     {

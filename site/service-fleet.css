@@ -206,51 +206,39 @@
 }
 
 .service-card-passengers {
-  align-items: center;
+  align-items: baseline;
   background: transparent;
   border: 0;
   color: var(--navy);
   display: flex;
-  font: 500 18px/1 Geist, Arial, sans-serif;
-  gap: 4px;
-  left: 14px;
-  letter-spacing: 0.08em;
+  gap: 6px;
+  left: 18px;
   min-height: 0;
   padding: 0;
   position: absolute;
-  top: 14px;
-  text-transform: uppercase;
+  top: 18px;
   z-index: 1;
 }
 
 .solutions .service-list .service-card-passengers {
   color: var(--navy);
-  font-size: 18px;
-  letter-spacing: 0;
-  text-transform: none;
 }
 
 .service-card-passengers b {
-  font: 600 20px/1 Geist, Arial, sans-serif;
+  color: inherit;
+  font: 600 20px/.9 Geist, Arial, sans-serif;
+  letter-spacing: -0.03em;
 }
 
 .service-card-passengers__label {
-  color: #5d4b27;
-  font: 650 9px/1 Geist, Arial, sans-serif;
-  letter-spacing: 0.08em;
-  margin-left: 2px;
+  color: var(--navy) !important;
+  font: 600 8px/1 Geist, Arial, sans-serif;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .service-card-passengers svg {
-  fill: none;
-  flex: 0 0 auto;
-  height: 18px;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
-  width: 18px;
+  display: none;
 }
 
 .service-card-media {
@@ -568,7 +556,6 @@
 }
 
 .hero-anniversary-panel .hero-anniversary {
-  --anniversary-background: transparent;
   background: transparent;
 }
 

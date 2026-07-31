@@ -24,6 +24,19 @@
   box-shadow: 0 8px 24px rgb(0 18 45 / 0.22);
 }
 
+.site-header .desktop-nav {
+  position: absolute;
+  left: 50%;
+  gap: clamp(10px, 1.25vw, 24px);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.site-header .header-actions {
+  grid-column: 3;
+  justify-self: end;
+}
+
 .site-header .logo {
   display: grid;
   place-items: center start;

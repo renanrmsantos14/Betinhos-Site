@@ -20,9 +20,9 @@
     "semantic_hash": ""
   },
   "site/performance.js": {
-    "mtime": 1785417887.9343643,
-    "ast_hash": "f11717310531de649f51c469b5541fa8",
-    "semantic_hash": "f11717310531de649f51c469b5541fa8"
+    "mtime": 1785504826.0872064,
+    "ast_hash": "10089f7bc2faa3ef7768f2df35dfa28e",
+    "semantic_hash": ""
   },
   ".github/workflows/deploy.yml": {
     "mtime": 1785243887.7924626,
@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "site/i18n.js": {
-    "mtime": 1785431347.3359985,
-    "ast_hash": "2d28d2782b78d10144ab1dc969d6bcba",
+    "mtime": 1785507976.7837143,
+    "ast_hash": "20b8e5ab458700a3555fac40c298e6fa",
     "semantic_hash": ""
   },
   "site/fleet/corolla-2026/corolla-2026-roda.png": {
@@ -280,9 +280,9 @@
     "semantic_hash": ""
   },
   "site/anniversary-mark.js": {
-    "mtime": 1785409970.4035144,
-    "ast_hash": "28499841985793c6815c92e915980e79",
-    "semantic_hash": "28499841985793c6815c92e915980e79"
+    "mtime": 1785507292.7061195,
+    "ast_hash": "a8c77980a87f062d0e7802e977858fe0",
+    "semantic_hash": ""
   },
   "site/history-carousel.js": {
     "mtime": 1785409971.610719,
@@ -460,8 +460,23 @@
     "semantic_hash": ""
   },
   "tests/mobile.spec.mjs": {
-    "mtime": 1785431542.65786,
-    "ast_hash": "96019975aa055288bd8e2eef64bf4b1a",
+    "mtime": 1785508104.6118462,
+    "ast_hash": "45a6775ff5a9d59ad27800f08fcf64ee",
+    "semantic_hash": ""
+  },
+  "site/40-anos-opcoes.js": {
+    "mtime": 1785440955.6370442,
+    "ast_hash": "452ce4b1abf0b0a2b5c28afb08119589",
+    "semantic_hash": ""
+  },
+  "site/40-anos-cores.js": {
+    "mtime": 1785441799.871561,
+    "ast_hash": "f216cb6404161474309c18a3edeba059",
+    "semantic_hash": ""
+  },
+  "scripts/build-site-css.mjs": {
+    "mtime": 1785504638.9530468,
+    "ast_hash": "00e1fc23b8b990ef528838606b4b3e98",
     "semantic_hash": ""
   }
 }

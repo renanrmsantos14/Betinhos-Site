@@ -396,7 +396,9 @@ test("language stays synchronized across URL, storage, DOM, reload and browser h
     "carousel",
   );
   assert.equal(
-    await page.locator(".anniversary-mark__number").getAttribute("aria-label"),
+    await page
+      .locator(".hero-anniversary .anniversary-mark__number")
+      .getAttribute("aria-label"),
     "40 YEARS",
   );
 
@@ -456,5 +458,35 @@ test("mobile carousels and fleet controls expose their state after interaction",
     await page.locator("[data-history-slide].is-active").getAttribute("id"),
     "history-slide-2",
   );
+  await context.close();
+});
+
+test("hero anniversary masks the zero like the color reference", async () => {
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const page = await context.newPage();
+
+  const readMaskColors = async (path, rootSelector) => {
+    await page.goto(`${BASE_URL}${path}`, { waitUntil: "domcontentloaded" });
+    await page.waitForSelector(`${rootSelector} .anniversary-four`);
+
+    return page.locator(rootSelector).evaluate((root) => {
+      const fourStyle = getComputedStyle(root.querySelector(".anniversary-four"));
+      const cutStyle = getComputedStyle(root.querySelector(".anniversary-cut"));
+
+      return {
+        fourColor: fourStyle.color,
+        fourStrokeColor: fourStyle.webkitTextStrokeColor,
+        cutBackground: cutStyle.backgroundColor,
+      };
+    });
+  };
+
+  const reference = await readMaskColors(
+    "/40-anos-cores.html?lang=pt",
+    ".color-model--dark",
+  );
+  const hero = await readMaskColors("/?lang=pt", ".hero-anniversary");
+
+  assert.deepEqual(hero, reference);
   await context.close();
 });

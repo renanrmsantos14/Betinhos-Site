@@ -47,31 +47,41 @@ class BetinhosAnniversary extends HTMLElement {
     const body = createElement("span", "anniversary-mark__body");
     const number = createElement("strong", "anniversary-mark__number");
     const content = createElement("span", "anniversary-mark__content");
-    const labelElement = createElement("small", "anniversary-mark__label", label);
+    const labelElement = createElement(
+      years === "40" ? "span" : "small",
+      years === "40" ? "anniversary-cut" : "anniversary-mark__label",
+      label,
+    );
     const labelledBy = [];
 
     number.id = `${this.instanceId}-number`;
     number.setAttribute("aria-label", years);
-    labelElement.id = `${this.instanceId}-label`;
+    if (years !== "40") labelElement.id = `${this.instanceId}-label`;
     labelElement.setAttribute("aria-hidden", "true");
 
     if (years === "40") {
-      number.classList.add("anniversary-mark__number--layered");
+      number.classList.add("anniversary-mark__number--source");
 
       const zero = createElement(
-        "span",
-        "anniversary-mark__digit anniversary-mark__zero",
+        "i",
+        "anniversary-zero",
         "0",
       );
       const four = createElement(
-        "span",
-        "anniversary-mark__digit anniversary-mark__four",
+        "i",
+        "anniversary-four",
         "4",
       );
+      const anniversaryNumber = createElement("span", "anniversary-number");
+      const lockup = createElement(
+        "span",
+        "anniversary-lockup anniversary-lockup--site",
+      );
 
-      zero.setAttribute("aria-hidden", "true");
-      four.setAttribute("aria-hidden", "true");
-      number.append(zero, four);
+      anniversaryNumber.setAttribute("aria-hidden", "true");
+      anniversaryNumber.append(zero, four);
+      lockup.append(anniversaryNumber, labelElement);
+      number.append(lockup);
     } else {
       years.split("").forEach((digit, index) => {
         const glyph = createElement("span", "anniversary-mark__glyph", digit);
@@ -81,8 +91,8 @@ class BetinhosAnniversary extends HTMLElement {
         glyph.setAttribute("aria-hidden", "true");
         number.append(glyph);
       });
+      number.append(labelElement);
     }
-    number.append(labelElement);
     number.setAttribute("aria-label", `${years} ${label}`);
     labelledBy.push(number.id);
 
