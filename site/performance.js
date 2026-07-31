@@ -1,4 +1,6 @@
 (() => {
+  const MINIMUM_LOADER_MS = 1000;
+  const VIDEO_READY_TIMEOUT_MS = 8000;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const desktopVideo = matchMedia('(min-width: 900px)');
   const connection = navigator.connection;
@@ -7,27 +9,53 @@
   const loadingStartedAt = performance.now();
   let loaderHidden = false;
 
+  const waitForEvent = (target, eventName) => new Promise((resolve) => {
+    target.addEventListener(eventName, resolve, { once: true });
+  });
+
+  const waitForPage = document.readyState === 'complete'
+    ? Promise.resolve()
+    : waitForEvent(window, 'load');
+  const waitForFonts = document.fonts?.ready?.catch(() => {}) || Promise.resolve();
+
   const hideLoader = () => {
     if (loaderHidden) return;
     loaderHidden = true;
-    const remainingDelay = Math.max(0, 1000 - (performance.now() - loadingStartedAt));
+    const remainingDelay = Math.max(0, MINIMUM_LOADER_MS - (performance.now() - loadingStartedAt));
     setTimeout(() => {
       document.body.classList.remove('is-loading');
       document.body.classList.add('is-ready');
+      if (!loader) return;
       loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+      setTimeout(() => loader.remove(), 400);
     }, remainingDelay);
   };
 
-  addEventListener('load', hideLoader, { once: true });
-  setTimeout(hideLoader, 2400);
-
   const canLoadVideo = () => (
-    video &&
-    desktopVideo.matches &&
-    !reducedMotion.matches &&
-    !connection?.saveData &&
-    !['slow-2g', '2g'].includes(connection?.effectiveType)
+    video
+    && desktopVideo.matches
+    && !reducedMotion.matches
+    && !connection?.saveData
+    && !['slow-2g', '2g'].includes(connection?.effectiveType)
   );
+
+  const prepareVideo = () => {
+    if (!canLoadVideo()) return Promise.resolve();
+
+    video.querySelectorAll('source[data-src]').forEach((source) => {
+      source.src = source.dataset.src;
+    });
+    video.preload = 'auto';
+    video.load();
+
+    return Promise.race([
+      Promise.race([waitForEvent(video, 'canplay'), waitForEvent(video, 'error')]),
+      new Promise((resolve) => setTimeout(resolve, VIDEO_READY_TIMEOUT_MS)),
+    ]);
+  };
+
+  const videoReady = prepareVideo();
+  Promise.all([waitForPage, waitForFonts, videoReady]).then(hideLoader);
 
   const startVideo = () => {
     if (!canLoadVideo()) return;
@@ -35,27 +63,56 @@
   };
 
   if (video) {
-    if (!canLoadVideo()) {
-      video.removeAttribute('preload');
-      video.querySelectorAll('source').forEach((item) => item.removeAttribute('src'));
-      video.load();
-    }
-
     const heroObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) startVideo();
       else video.pause();
     }, { threshold: 0.12 });
 
     heroObserver.observe(video);
-    video.addEventListener('canplay', hideLoader, { once: true });
-    video.addEventListener('playing', () => {
-      video.classList.add('is-playing');
-      hideLoader();
-    }, { once: true });
+    video.addEventListener('playing', () => video.classList.add('is-playing'), { once: true });
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) video.pause();
       else if (video.getBoundingClientRect().bottom > 0) startVideo();
     });
+  }
+
+  const loadDeferredImage = (image) => {
+    if (image.dataset.lazySrcset) image.srcset = image.dataset.lazySrcset;
+    if (image.dataset.lazySrc) image.src = image.dataset.lazySrc;
+    image.removeAttribute('data-lazy-src');
+    image.removeAttribute('data-lazy-srcset');
+  };
+
+  const deferredImages = document.querySelectorAll('img[data-lazy-src]');
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadDeferredImage(entry.target);
+        imageObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: '480px 0px', threshold: 0.01 });
+    deferredImages.forEach((image) => imageObserver.observe(image));
+  } else {
+    deferredImages.forEach(loadDeferredImage);
+  }
+
+  const reviewsWidget = document.querySelector('[data-trustindex-src]');
+  if (reviewsWidget) {
+    const loadReviews = () => {
+      if (!reviewsWidget.dataset.trustindexSrc) return;
+      const script = document.createElement('script');
+      script.src = reviewsWidget.dataset.trustindexSrc;
+      script.async = true;
+      reviewsWidget.append(script);
+      reviewsWidget.removeAttribute('data-trustindex-src');
+    };
+    const reviewsObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      loadReviews();
+      reviewsObserver.disconnect();
+    }, { rootMargin: '600px 0px', threshold: 0.01 });
+    reviewsObserver.observe(reviewsWidget);
   }
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -79,9 +136,15 @@
   ).forEach((element) => element.classList.add('reveal-media'));
 
   const header = document.querySelector('.site-header');
-  const syncHeader = () => header?.classList.toggle('is-scrolled', scrollY > 24);
+  let headerFrame = 0;
+  const syncHeader = () => {
+    headerFrame = 0;
+    header?.classList.toggle('is-scrolled', scrollY > 24);
+  };
   syncHeader();
-  addEventListener('scroll', syncHeader, { passive: true });
+  addEventListener('scroll', () => {
+    if (!headerFrame) headerFrame = requestAnimationFrame(syncHeader);
+  }, { passive: true });
 
   const readinessPanel = document.querySelector('.readiness-panel');
   if (readinessPanel) {
@@ -90,7 +153,6 @@
     let hasPlayed = false;
 
     const showAllStages = () => stages.forEach((stage) => stage.classList.add('is-ready'));
-
     const playReadiness = () => {
       if (hasPlayed) return;
       hasPlayed = true;
@@ -100,9 +162,8 @@
         showAllStages();
         return;
       }
-
       stages.forEach((stage, index) => {
-        timers.push(setTimeout(() => stage.classList.add('is-ready'), 120 + index * 70));
+        timers.push(setTimeout(() => stage.classList.add('is-ready'), 160 + index * 120));
       });
     };
 

@@ -985,7 +985,7 @@
     [".lang-switch [data-lang='es']", "title", "language.es"],
     [".site-footer__channels img[src='/flags/br.svg']", "alt", "language.pt"],
     [".site-footer__channels img[src='/flags/us.svg']", "alt", "language.en"],
-    [".site-footer__channels img[src='/flags/es.svg']", "alt", "language.es"],
+    [".site-footer__channels img[src='/flags/es-compact.svg']", "alt", "language.es"],
     [".company-intro__visual img", "alt", "companyIntro.imageAlt"],
     [".company-intro__services", "aria-label", "companyIntro.servicesLabel"],
     [".service-list", "aria-label", "fleet.label"],
@@ -1102,23 +1102,32 @@
     ,[".site-footer__social[href*='linkedin']", "aria-label", ["LinkedIn da Betinhos", "Betinhos LinkedIn", "LinkedIn de Betinhos"]]
   ];
 
-  const staticTextSources = new WeakMap();
+  const staticTextEntries = [];
   const staticLanguageIndex = { pt: 0, en: 1, es: 2 };
 
-  const renderStaticTranslations = () => {
-    const languageIndex = staticLanguageIndex[activeLanguage];
+  const collectStaticTextEntries = () => {
+    if (staticTextEntries.length) return;
     document.querySelectorAll(".careers, footer, .hero-locations, .skip-link").forEach((root) => {
       const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {
-        const source = staticTextSources.get(node) || node.textContent.replace(/\s+/g, " ").trim();
-        staticTextSources.set(node, source);
-        const translation = STATIC_TEXT[source]?.[languageIndex];
-        if (translation) node.textContent = translation;
+        const source = node.textContent.replace(/\s+/g, " ").trim();
+        if (source && STATIC_TEXT[source]) staticTextEntries.push({ node, source });
       }
     });
+  };
+
+  const renderStaticTranslations = () => {
+    const languageIndex = staticLanguageIndex[activeLanguage];
+    staticTextEntries.forEach(({ node, source }) => {
+      const translation = STATIC_TEXT[source][languageIndex];
+      if (node.textContent !== translation) node.textContent = translation;
+    });
     STATIC_ATTRIBUTES.forEach(([selector, attribute, values]) => {
-      document.querySelectorAll(selector).forEach((element) => element.setAttribute(attribute, values[languageIndex]));
+      getTargets(selector).forEach((element) => {
+        const value = values[languageIndex];
+        if (element.getAttribute(attribute) !== value) element.setAttribute(attribute, value);
+      });
     });
     const anniversary = document.querySelector("betinhos-anniversary");
     if (anniversary) anniversary.setAttribute("label", translate("hero.years"));
@@ -1127,6 +1136,11 @@
   let activeLanguage = "pt";
 
   const languageLocale = { pt: "pt-BR", en: "en-US", es: "es-ES" };
+  const targetCache = new Map();
+  const getTargets = (selector) => {
+    if (!targetCache.has(selector)) targetCache.set(selector, [...document.querySelectorAll(selector)]);
+    return targetCache.get(selector);
+  };
 
   const translate = (key) => {
     const value = CATALOG[activeLanguage][key];
@@ -1139,16 +1153,17 @@
     Array.from(element.childNodes).filter((node) => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim())[index];
 
   const setBoundText = (selector, key, index = 0) => {
-    const elements = document.querySelectorAll(selector);
+    const elements = getTargets(selector);
     if (!elements.length) {
       console.warn(`Missing i18n target: ${selector}`);
       return;
     }
     elements.forEach((element) => {
       const node = textNode(element, index);
-      if (node) node.nodeValue = translate(key);
-      else element.textContent = translate(key);
-      element.dataset.i18n = key;
+      const value = translate(key);
+      if (node && node.nodeValue !== value) node.nodeValue = value;
+      else if (!node && element.textContent !== value) element.textContent = value;
+      if (element.dataset.i18n !== key) element.dataset.i18n = key;
     });
   };
 
@@ -1156,29 +1171,33 @@
     `https://wa.me/5512997236961?text=${encodeURIComponent(message)}`;
 
   const renderFleetLinks = () => {
-    document.querySelectorAll(".service-card").forEach((card) => {
+    getTargets(".service-card").forEach((card) => {
       const vehicle = card.querySelector("h3")?.textContent.trim();
       const link = card.querySelector(":scope > a");
       if (!vehicle || !link) return;
-      link.href = whatsappUrl(
+      const href = whatsappUrl(
         CATALOG[activeLanguage]["fleet.vehicleMessage"].replace("{vehicle}", vehicle),
       );
+      if (link.href !== href) link.href = href;
     });
   };
 
   const renderFormOptions = () => {
     const keys = ["select", "executive", "armored", "van", "armoredVan", "bilingual", "protection"];
-    document.querySelectorAll("#request-form select option").forEach((option, index) => {
-      option.textContent = CATALOG[activeLanguage][`form.${keys[index]}`];
-      option.value = index === 0 ? "" : CATALOG[activeLanguage][`form.${keys[index]}`];
-      option.dataset.i18n = `form.${keys[index]}`;
+    getTargets("#request-form select option").forEach((option, index) => {
+      const key = `form.${keys[index]}`;
+      const text = CATALOG[activeLanguage][key];
+      const value = index === 0 ? "" : text;
+      if (option.textContent !== text) option.textContent = text;
+      if (option.value !== value) option.value = value;
+      if (option.dataset.i18n !== key) option.dataset.i18n = key;
     });
   };
 
   const renderServiceSpecs = () => {
-    document.querySelectorAll("[data-service-spec]").forEach((element) => {
-      element.textContent =
-        CATALOG[activeLanguage][`services.specs.${element.dataset.serviceSpec}`];
+    getTargets("[data-service-spec]").forEach((element) => {
+      const value = CATALOG[activeLanguage][`services.specs.${element.dataset.serviceSpec}`];
+      if (element.textContent !== value) element.textContent = value;
     });
   };
 
@@ -1186,33 +1205,40 @@
     const previousLanguage = activeLanguage;
     activeLanguage = CATALOG[language] ? language : "pt";
     document.documentElement.lang = languageLocale[activeLanguage];
-    document.title = translate("meta.title");
-    document.querySelector('meta[name="description"]').content = translate("meta.description");
+    if (document.title !== translate("meta.title")) document.title = translate("meta.title");
+    const description = document.querySelector('meta[name="description"]');
+    if (description.content !== translate("meta.description")) description.content = translate("meta.description");
 
-    TEXT_BINDINGS.forEach(([selector, key, index]) => setBoundText(selector, key, index));
-    ATTRIBUTE_BINDINGS.forEach(([selector, attribute, key]) => {
-      const elements = document.querySelectorAll(selector);
-      if (!elements.length) {
-        console.warn(`Missing i18n attribute target: ${selector}`);
-        return;
-      }
-      elements.forEach((element) => {
-        element.setAttribute(attribute, translate(key));
-        element.dataset[`i18n${attribute.replace(/(^|-)(\w)/g, (_, __, letter) => letter.toUpperCase())}`] = key;
+    const needsRendering = activeLanguage !== "pt" || previousLanguage !== "pt";
+    if (needsRendering) {
+      collectStaticTextEntries();
+      TEXT_BINDINGS.forEach(([selector, key, index]) => setBoundText(selector, key, index));
+      ATTRIBUTE_BINDINGS.forEach(([selector, attribute, key]) => {
+        const elements = getTargets(selector);
+        if (!elements.length) {
+          console.warn(`Missing i18n attribute target: ${selector}`);
+          return;
+        }
+        elements.forEach((element) => {
+          const value = translate(key);
+          if (element.getAttribute(attribute) !== value) element.setAttribute(attribute, value);
+          const dataKey = `i18n${attribute.replace(/(^|-)(\w)/g, (_, __, letter) => letter.toUpperCase())}`;
+          if (element.dataset[dataKey] !== key) element.dataset[dataKey] = key;
+        });
       });
-    });
 
-    renderFormOptions();
-    renderServiceSpecs();
-    renderFleetLinks();
-    renderStaticTranslations();
-    const whatsappMessage = document.querySelector("#whatsapp-widget-message");
-    const previousDefaultMessage = CATALOG[previousLanguage]["widget.defaultMessage"];
-    if (!whatsappMessage.value.trim() || whatsappMessage.value === previousDefaultMessage) {
-      whatsappMessage.value = translate("widget.defaultMessage");
+      renderFormOptions();
+      renderServiceSpecs();
+      renderFleetLinks();
+      renderStaticTranslations();
+      const whatsappMessage = document.querySelector("#whatsapp-widget-message");
+      const previousDefaultMessage = CATALOG[previousLanguage]["widget.defaultMessage"];
+      if (!whatsappMessage.value.trim() || whatsappMessage.value === previousDefaultMessage) {
+        whatsappMessage.value = translate("widget.defaultMessage");
+      }
     }
 
-    document.querySelectorAll(".lang-switch [data-lang]").forEach((button) => {
+    getTargets(".lang-switch [data-lang]").forEach((button) => {
       const active = button.dataset.lang === activeLanguage;
       button.classList.toggle("active", active);
       button.setAttribute("aria-pressed", String(active));
@@ -1233,7 +1259,7 @@
     document.dispatchEvent(new CustomEvent("betinhos:languagechange", { detail: { language: activeLanguage } }));
   };
 
-  document.querySelectorAll(".lang-switch [data-lang]").forEach((button) => {
+  getTargets(".lang-switch [data-lang]").forEach((button) => {
     button.addEventListener("click", () => applyLanguage(button.dataset.lang, { historyMode: "push" }));
   });
 

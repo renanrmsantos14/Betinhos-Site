@@ -303,10 +303,11 @@ test("mobile team roles remain readable and deep history media stays deferred", 
   });
 
   assert.ok(contrast >= 4.5, `team role contrast was ${contrast.toFixed(2)}:1`);
-  assert.equal(
-    await page.locator("img[src='/history/fusca-1986.png']").getAttribute("loading"),
-    "lazy",
+  const historyImage = page.locator(
+    "img[data-lazy-src='/media/history/fusca-1986-816.webp']",
   );
+  assert.equal(await historyImage.getAttribute("loading"), "lazy");
+  assert.equal(await historyImage.getAttribute("src"), null);
   await context.close();
 });
 
