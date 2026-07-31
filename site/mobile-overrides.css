@@ -122,13 +122,15 @@
   .hero {
     height: max(100svh, 820px);
     min-height: 820px;
-    background-position: 56% center;
+    background-image: url(/hero-mobile-fleet.webp);
+    background-position: 47% center;
+    background-size: cover;
   }
 
   .hero::before {
     background:
-      linear-gradient(180deg, #0214268c 0%, #0214263d 30%, #021426d9 72%, #021426 100%),
-      linear-gradient(90deg, #021426bf 0%, #02142633 76%);
+      linear-gradient(180deg, #0214269e 0%, #062d506b 32%, #021426d9 72%, #021426 100%),
+      linear-gradient(90deg, #031f3dcc 0%, #0a416b52 78%);
   }
 
   .hero-copy {
