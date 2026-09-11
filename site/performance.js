@@ -97,24 +97,6 @@
     deferredImages.forEach(loadDeferredImage);
   }
 
-  const reviewsWidget = document.querySelector('[data-trustindex-src]');
-  if (reviewsWidget) {
-    const loadReviews = () => {
-      if (!reviewsWidget.dataset.trustindexSrc) return;
-      const script = document.createElement('script');
-      script.src = reviewsWidget.dataset.trustindexSrc;
-      script.async = true;
-      reviewsWidget.append(script);
-      reviewsWidget.removeAttribute('data-trustindex-src');
-    };
-    const reviewsObserver = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      loadReviews();
-      reviewsObserver.disconnect();
-    }, { rootMargin: '600px 0px', threshold: 0.01 });
-    reviewsObserver.observe(reviewsWidget);
-  }
-
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
