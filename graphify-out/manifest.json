@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "site/i18n.js": {
-    "mtime": 1785507976.7837143,
-    "ast_hash": "20b8e5ab458700a3555fac40c298e6fa",
+    "mtime": 1785844678.7851508,
+    "ast_hash": "e777ca8455f4f32ae300105993fd489e",
     "semantic_hash": ""
   },
   "site/fleet/corolla-2026/corolla-2026-roda.png": {
@@ -477,6 +477,16 @@
   "scripts/build-site-css.mjs": {
     "mtime": 1785504638.9530468,
     "ast_hash": "00e1fc23b8b990ef528838606b4b3e98",
+    "semantic_hash": ""
+  },
+  "site/llms.txt": {
+    "mtime": 1785844693.899815,
+    "ast_hash": "5e46eaff7604fb9bbf3de53697a55f46",
+    "semantic_hash": ""
+  },
+  "site/robots.txt": {
+    "mtime": 1785844681.398812,
+    "ast_hash": "f1c60865feb546794b781b6d6fb6dcca",
     "semantic_hash": ""
   }
 }

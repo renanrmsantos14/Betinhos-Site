@@ -1145,6 +1145,11 @@
   let activeLanguage = "pt";
 
   const languageLocale = { pt: "pt-BR", en: "en-US", es: "es-ES" };
+  const languageUrls = {
+    pt: "https://betinhos.com.br/",
+    en: "https://betinhos.com.br/?lang=en",
+    es: "https://betinhos.com.br/?lang=es",
+  };
   const targetCache = new Map();
   const getTargets = (selector) => {
     if (!targetCache.has(selector)) targetCache.set(selector, [...document.querySelectorAll(selector)]);
@@ -1217,6 +1222,13 @@
     if (document.title !== translate("meta.title")) document.title = translate("meta.title");
     const description = document.querySelector('meta[name="description"]');
     if (description.content !== translate("meta.description")) description.content = translate("meta.description");
+    const publicUrl = languageUrls[activeLanguage];
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", publicUrl);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", translate("meta.title"));
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", translate("meta.description"));
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", publicUrl);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content", translate("meta.title"));
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content", translate("meta.description"));
 
     const needsRendering = activeLanguage !== "pt" || previousLanguage !== "pt";
     if (needsRendering) {
