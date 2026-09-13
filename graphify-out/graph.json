@@ -1,394 +1,490 @@
 {
-  "hyperedges": [],
-  "input_tokens": 0,
-  "output_tokens": 0,
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
   "nodes": [
     {
-      "id": "scripts_build_site_css",
       "label": "build-site-css.mjs",
       "file_type": "code",
       "source_file": "scripts/build-site-css.mjs",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "scripts_build_site_css",
+      "community": 6,
+      "norm_label": "build-site-css.mjs"
     },
     {
-      "id": "scripts_build_site_css_sources",
       "label": "sources",
       "file_type": "code",
       "source_file": "scripts/build-site-css.mjs",
       "source_location": "L4",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "scripts_build_site_css_sources",
+      "community": 6,
+      "norm_label": "sources"
     },
     {
-      "id": "scripts_build_site_css_css",
       "label": "css",
       "file_type": "code",
       "source_file": "scripts/build-site-css.mjs",
       "source_location": "L18",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "scripts_build_site_css_css",
+      "community": 6,
+      "norm_label": "css"
     },
     {
-      "id": "site_40_anos_cores",
       "label": "40-anos-cores.js",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores",
+      "community": 2,
+      "norm_label": "40-anos-cores.js"
     },
     {
-      "id": "site_40_anos_cores_translations",
       "label": "translations",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores_translations",
+      "community": 2,
+      "norm_label": "translations"
     },
     {
-      "id": "site_40_anos_cores_anniversarywords",
       "label": "anniversaryWords",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L40",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores_anniversarywords",
+      "community": 2,
+      "norm_label": "anniversarywords"
     },
     {
-      "id": "site_40_anos_cores_languagebuttons",
       "label": "languageButtons",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L41",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores_languagebuttons",
+      "community": 2,
+      "norm_label": "languagebuttons"
     },
     {
-      "id": "site_40_anos_cores_setlanguage",
       "label": "setLanguage()",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L43",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores_setlanguage",
+      "community": 2,
+      "norm_label": "setlanguage()"
     },
     {
-      "id": "site_40_anos_cores_requestedlanguage",
       "label": "requestedLanguage",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L72",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores_requestedlanguage",
+      "community": 2,
+      "norm_label": "requestedlanguage"
     },
     {
-      "id": "site_40_anos_cores_savedlanguage",
       "label": "savedLanguage",
       "file_type": "code",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L73",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_cores_savedlanguage",
+      "community": 2,
+      "norm_label": "savedlanguage"
     },
     {
-      "id": "site_40_anos_opcoes",
       "label": "40-anos-opcoes.js",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes",
+      "community": 3,
+      "norm_label": "40-anos-opcoes.js"
     },
     {
-      "id": "site_40_anos_opcoes_translations",
       "label": "translations",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes_translations",
+      "community": 3,
+      "norm_label": "translations"
     },
     {
-      "id": "site_40_anos_opcoes_labels",
       "label": "labels",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L73",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes_labels",
+      "community": 3,
+      "norm_label": "labels"
     },
     {
-      "id": "site_40_anos_opcoes_buttons",
       "label": "buttons",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L74",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes_buttons",
+      "community": 3,
+      "norm_label": "buttons"
     },
     {
-      "id": "site_40_anos_opcoes_setlanguage",
       "label": "setLanguage()",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L76",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes_setlanguage",
+      "community": 3,
+      "norm_label": "setlanguage()"
     },
     {
-      "id": "site_40_anos_opcoes_requestedlanguage",
       "label": "requestedLanguage",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L101",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes_requestedlanguage",
+      "community": 3,
+      "norm_label": "requestedlanguage"
     },
     {
-      "id": "site_40_anos_opcoes_savedlanguage",
       "label": "savedLanguage",
       "file_type": "code",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L102",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_40_anos_opcoes_savedlanguage",
+      "community": 3,
+      "norm_label": "savedlanguage"
     },
     {
-      "id": "site_anniversary_mark",
       "label": "anniversary-mark.js",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark",
+      "community": 1,
+      "norm_label": "anniversary-mark.js"
     },
     {
-      "id": "site_anniversary_mark_anniversary_attributes",
       "label": "ANNIVERSARY_ATTRIBUTES",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_anniversary_attributes",
+      "community": 1,
+      "norm_label": "anniversary_attributes"
     },
     {
-      "id": "site_anniversary_mark_createelement",
       "label": "createElement()",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L13",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_createelement",
+      "community": 1,
+      "norm_label": "createelement()"
     },
     {
-      "id": "site_anniversary_mark_betinhosanniversary",
       "label": "BetinhosAnniversary",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L20",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_betinhosanniversary",
+      "community": 1,
+      "norm_label": "betinhosanniversary"
     },
     {
-      "id": "site_anniversary_mark_betinhosanniversary_constructor",
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L23",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_betinhosanniversary_constructor",
+      "community": 1,
+      "norm_label": ".constructor()"
     },
     {
-      "id": "site_anniversary_mark_betinhosanniversary_connectedcallback",
       "label": ".connectedCallback()",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L29",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_betinhosanniversary_connectedcallback",
+      "community": 1,
+      "norm_label": ".connectedcallback()"
     },
     {
-      "id": "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
       "label": ".attributeChangedCallback()",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L33",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
+      "community": 1,
+      "norm_label": ".attributechangedcallback()"
     },
     {
-      "id": "site_anniversary_mark_betinhosanniversary_render",
       "label": ".render()",
       "file_type": "code",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L37",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_anniversary_mark_betinhosanniversary_render",
+      "community": 1,
+      "norm_label": ".render()"
     },
     {
-      "id": "site_careers_textarea",
       "label": "careers-textarea.js",
       "file_type": "code",
       "source_file": "site/careers-textarea.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_careers_textarea",
+      "community": 9,
+      "norm_label": "careers-textarea.js"
     },
     {
-      "id": "site_history_carousel",
       "label": "history-carousel.js",
       "file_type": "code",
       "source_file": "site/history-carousel.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_history_carousel",
+      "community": 10,
+      "norm_label": "history-carousel.js"
     },
     {
-      "id": "site_i18n",
       "label": "i18n.js",
       "file_type": "code",
       "source_file": "site/i18n.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_i18n",
+      "community": 11,
+      "norm_label": "i18n.js"
     },
     {
-      "id": "site_mobile_navigation",
       "label": "mobile-navigation.js",
       "file_type": "code",
       "source_file": "site/mobile-navigation.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_mobile_navigation",
+      "community": 12,
+      "norm_label": "mobile-navigation.js"
     },
     {
-      "id": "site_office_carousel",
       "label": "office-carousel.js",
       "file_type": "code",
       "source_file": "site/office-carousel.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_office_carousel",
+      "community": 13,
+      "norm_label": "office-carousel.js"
     },
     {
-      "id": "site_performance",
       "label": "performance.js",
       "file_type": "code",
       "source_file": "site/performance.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_performance",
+      "community": 14,
+      "norm_label": "performance.js"
     },
     {
-      "id": "site_section_order",
       "label": "section-order.js",
       "file_type": "code",
       "source_file": "site/section-order.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_section_order",
+      "community": 15,
+      "norm_label": "section-order.js"
     },
     {
-      "id": "site_service_fleet",
       "label": "service-fleet.js",
       "file_type": "code",
       "source_file": "site/service-fleet.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_service_fleet",
+      "community": 7,
+      "norm_label": "service-fleet.js"
     },
     {
-      "id": "site_service_fleet_fleet_vehicle_order",
       "label": "FLEET_VEHICLE_ORDER",
       "file_type": "code",
       "source_file": "site/service-fleet.js",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_service_fleet_fleet_vehicle_order",
+      "community": 7,
+      "norm_label": "fleet_vehicle_order"
     },
     {
-      "id": "site_service_fleet_initializeservicefleet",
       "label": "initializeServiceFleet()",
       "file_type": "code",
       "source_file": "site/service-fleet.js",
       "source_location": "L3",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "site_service_fleet_initializeservicefleet",
+      "community": 7,
+      "norm_label": "initializeservicefleet()"
     },
     {
-      "id": "tests_mobile_spec",
       "label": "mobile.spec.mjs",
       "file_type": "code",
       "source_file": "tests/mobile.spec.mjs",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "tests_mobile_spec",
+      "community": 8,
+      "norm_label": "mobile.spec.mjs"
     },
     {
-      "id": "tests_mobile_spec_browsercandidates",
       "label": "browserCandidates",
       "file_type": "code",
       "source_file": "tests/mobile.spec.mjs",
       "source_location": "L9",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "tests_mobile_spec_browsercandidates",
+      "community": 8,
+      "norm_label": "browsercandidates"
     },
     {
-      "id": "tests_mobile_spec_openmobilepage",
       "label": "openMobilePage()",
       "file_type": "code",
       "source_file": "tests/mobile.spec.mjs",
       "source_location": "L37",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "tests_mobile_spec_openmobilepage",
+      "community": 8,
+      "norm_label": "openmobilepage()"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota",
       "label": "query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota",
+      "community": 4,
+      "norm_label": "query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
       "label": "Q: Por que o grafo quase nao representa a frota?",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L10",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "community": 4,
+      "norm_label": "q: por que o grafo quase nao representa a frota?"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_answer",
       "label": "Answer",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L12",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_answer",
+      "community": 4,
+      "norm_label": "answer"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
       "label": "Outcome",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L16",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
+      "community": 4,
+      "norm_label": "outcome"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
       "label": "Source Nodes",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L20",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
+      "community": 4,
+      "norm_label": "source nodes"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota",
       "label": "query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L1",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota",
+      "community": 5,
+      "norm_label": "query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
       "label": "Q: Por que o grafo quase nao representa a frota?",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L11",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "community": 5,
+      "norm_label": "q: por que o grafo quase nao representa a frota?"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_answer",
       "label": "Answer",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L13",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_answer",
+      "community": 5,
+      "norm_label": "answer"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
       "label": "Outcome",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L17",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
+      "community": 5,
+      "norm_label": "outcome"
     },
     {
-      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
       "label": "Source Nodes",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L22",
-      "_origin": "ast"
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
+      "community": 5,
+      "norm_label": "source nodes"
     },
     {
-      "label": "Frota de veículos",
+      "label": "Frota de ve\u00edculos",
       "file_type": "document",
       "source_file": "site/index.html",
       "source_location": "L449",
@@ -398,8 +494,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "frota de veiculos",
-      "id": "site_index_frota_de_veiculos",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_frota_de_veiculos"
     },
     {
       "label": "Volkswagen Virtus",
@@ -412,8 +508,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "volkswagen virtus",
-      "id": "site_index_volkswagen_virtus",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_volkswagen_virtus"
     },
     {
       "label": "Toyota Corolla",
@@ -426,8 +522,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "toyota corolla",
-      "id": "site_index_toyota_corolla",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_toyota_corolla"
     },
     {
       "label": "Jeep Commander",
@@ -440,8 +536,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "jeep commander",
-      "id": "site_index_jeep_commander",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_jeep_commander"
     },
     {
       "label": "Renault Master",
@@ -454,8 +550,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "renault master",
-      "id": "site_index_renault_master",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_renault_master"
     },
     {
       "label": "Mercedes-Benz Sprinter",
@@ -468,8 +564,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "mercedes-benz sprinter",
-      "id": "site_index_mercedes_benz_sprinter",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_mercedes_benz_sprinter"
     },
     {
       "label": "Categoria Executivos",
@@ -482,8 +578,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "categoria executivos",
-      "id": "site_index_categoria_executivos",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_categoria_executivos"
     },
     {
       "label": "Categoria Blindados",
@@ -496,8 +592,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "categoria blindados",
-      "id": "site_index_categoria_blindados",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_categoria_blindados"
     },
     {
       "label": "Categoria Vans",
@@ -510,417 +606,374 @@
       "contributor": null,
       "community": 0,
       "norm_label": "categoria vans",
-      "id": "site_index_categoria_vans",
-      "community_name": "Frota de veículos"
+      "community_name": "Frota de ve\u00edculos",
+      "id": "site_index_categoria_vans"
     }
   ],
   "links": [
     {
-      "source": "scripts_build_site_css",
-      "target": "ref_node_fs_promises",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/build-site-css.mjs",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_build_site_css",
-      "target": "ref_esbuild",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/build-site-css.mjs",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_build_site_css",
-      "target": "scripts_build_site_css_sources",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/build-site-css.mjs",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_build_site_css",
-      "target": "scripts_build_site_css_css",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build-site-css.mjs",
       "source_location": "L18",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "scripts_build_site_css",
+      "target": "scripts_build_site_css_css",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_cores",
-      "target": "site_40_anos_cores_translations",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "site/40-anos-cores.js",
-      "source_location": "L1",
-      "weight": 1.0
+      "source_file": "scripts/build-site-css.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "scripts_build_site_css",
+      "target": "scripts_build_site_css_sources",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_cores",
-      "target": "site_40_anos_cores_anniversarywords",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L40",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_anniversarywords",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_cores",
-      "target": "site_40_anos_cores_languagebuttons",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L41",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_languagebuttons",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_cores",
-      "target": "site_40_anos_cores_setlanguage",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/40-anos-cores.js",
-      "source_location": "L43",
-      "weight": 1.0
-    },
-    {
-      "source": "site_40_anos_cores",
-      "target": "site_40_anos_cores_requestedlanguage",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L72",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_requestedlanguage",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_cores",
-      "target": "site_40_anos_cores_savedlanguage",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-cores.js",
       "source_location": "L73",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_savedlanguage",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_opcoes",
-      "target": "site_40_anos_opcoes_translations",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "site/40-anos-opcoes.js",
+      "source_file": "site/40-anos-cores.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_setlanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-cores.js",
       "source_location": "L1",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_cores",
+      "target": "site_40_anos_cores_translations",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_opcoes",
-      "target": "site_40_anos_opcoes_labels",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/40-anos-opcoes.js",
-      "source_location": "L73",
-      "weight": 1.0
-    },
-    {
-      "source": "site_40_anos_opcoes",
-      "target": "site_40_anos_opcoes_buttons",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L74",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_buttons",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_opcoes",
-      "target": "site_40_anos_opcoes_setlanguage",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-opcoes.js",
-      "source_location": "L76",
-      "weight": 1.0
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_labels",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_opcoes",
-      "target": "site_40_anos_opcoes_requestedlanguage",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L101",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_requestedlanguage",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_40_anos_opcoes",
-      "target": "site_40_anos_opcoes_savedlanguage",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/40-anos-opcoes.js",
       "source_location": "L102",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_savedlanguage",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_anniversary_mark",
-      "target": "site_anniversary_mark_anniversary_attributes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_setlanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/40-anos-opcoes.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "site_40_anos_opcoes",
+      "target": "site_40_anos_opcoes_translations",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L1",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_anniversary_mark",
+      "target": "site_anniversary_mark_anniversary_attributes",
+      "confidence_score": 1.0
     },
     {
+      "relation": "indirect_call",
+      "confidence": "INFERRED",
+      "source_file": "site/anniversary-mark.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "context": "argument",
       "source": "site_anniversary_mark",
-      "target": "site_anniversary_mark_createelement",
+      "target": "site_anniversary_mark_betinhosanniversary",
+      "confidence_score": 0.5
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L13",
-      "weight": 1.0
-    },
-    {
+      "weight": 1.0,
       "source": "site_anniversary_mark",
-      "target": "site_anniversary_mark_betinhosanniversary",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary",
-      "target": "site_anniversary_mark_betinhosanniversary_constructor",
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary",
-      "target": "site_anniversary_mark_betinhosanniversary_connectedcallback",
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary",
-      "target": "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary",
-      "target": "site_anniversary_mark_betinhosanniversary_render",
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L37",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary_connectedcallback",
-      "target": "site_anniversary_mark_betinhosanniversary_render",
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L30",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
-      "target": "site_anniversary_mark_betinhosanniversary_render",
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "site/anniversary-mark.js",
-      "source_location": "L34",
-      "weight": 1.0
-    },
-    {
-      "source": "site_anniversary_mark_betinhosanniversary_render",
       "target": "site_anniversary_mark_createelement",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "site/anniversary-mark.js",
       "source_location": "L47",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary_render",
+      "target": "site_anniversary_mark_createelement",
+      "confidence_score": 1.0
     },
     {
-      "source": "site_anniversary_mark",
-      "target": "site_anniversary_mark_betinhosanniversary",
-      "relation": "indirect_call",
-      "context": "argument",
-      "confidence": "INFERRED",
+      "relation": "method",
+      "confidence": "EXTRACTED",
       "source_file": "site/anniversary-mark.js",
-      "source_location": "L152",
-      "weight": 1.0
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary",
+      "target": "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
+      "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "site/anniversary-mark.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary",
+      "target": "site_anniversary_mark_betinhosanniversary_connectedcallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "site/anniversary-mark.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary",
+      "target": "site_anniversary_mark_betinhosanniversary_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "site/anniversary-mark.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary",
+      "target": "site_anniversary_mark_betinhosanniversary_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/anniversary-mark.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary_connectedcallback",
+      "target": "site_anniversary_mark_betinhosanniversary_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/anniversary-mark.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "site_anniversary_mark_betinhosanniversary_attributechangedcallback",
+      "target": "site_anniversary_mark_betinhosanniversary_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/service-fleet.js",
+      "source_location": "L1",
+      "weight": 1.0,
       "source": "site_service_fleet",
       "target": "site_service_fleet_fleet_vehicle_order",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/service-fleet.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
+      "source_location": "L3",
+      "weight": 1.0,
       "source": "site_service_fleet",
       "target": "site_service_fleet_initializeservicefleet",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/service-fleet.js",
-      "source_location": "L3",
-      "weight": 1.0
+      "confidence_score": 1.0
     },
     {
-      "source": "tests_mobile_spec",
-      "target": "ref_node_assert_strict",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/mobile.spec.mjs",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_mobile_spec",
-      "target": "ref_node_fs",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/mobile.spec.mjs",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_mobile_spec",
-      "target": "ref_node_test",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/mobile.spec.mjs",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_mobile_spec",
-      "target": "ref_playwright",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/mobile.spec.mjs",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_mobile_spec",
-      "target": "ref_vite",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/mobile.spec.mjs",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_mobile_spec",
-      "target": "tests_mobile_spec_browsercandidates",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/mobile.spec.mjs",
       "source_location": "L9",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "tests_mobile_spec",
+      "target": "tests_mobile_spec_browsercandidates",
+      "confidence_score": 1.0
     },
     {
-      "source": "tests_mobile_spec",
-      "target": "tests_mobile_spec_openmobilepage",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/mobile.spec.mjs",
       "source_location": "L37",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "tests_mobile_spec",
+      "target": "tests_mobile_spec_openmobilepage",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L10",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_answer",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L12",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_answer",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L16",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L20",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141328_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L11",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_answer",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L13",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_answer",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L17",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_outcome",
+      "confidence_score": 1.0
     },
     {
-      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
-      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota.md",
       "source_location": "L22",
-      "weight": 1.0
+      "weight": 1.0,
+      "source": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_q_por_que_o_grafo_quase_nao_representa_a_frota",
+      "target": "graphify_out_memory_query_20260730_141705_por_que_o_grafo_quase_nao_representa_a_frota_source_nodes",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1042,5 +1095,6 @@
       "source": "site_index_mercedes_benz_sprinter",
       "target": "site_index_categoria_vans"
     }
-  ]
+  ],
+  "hyperedges": []
 }
