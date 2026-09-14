@@ -27,7 +27,7 @@ jobs:
           cache: npm
 
       - name: Gerar CSS de produção
-        run: npm ci && npm run build:css
+        run: npm ci && npm run build:css && node scripts/build-deploy.mjs
 
       - name: Enviar site para Locaweb
         uses: locaweb/ftp-deploy@1.0.0
@@ -35,5 +35,5 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-          localDir: "site"
+          localDir: ".deploy/site"
           remoteDir: "public_html"

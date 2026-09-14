@@ -1,6 +1,5 @@
 (() => {
   const MINIMUM_LOADER_MS = 1000;
-  const VIDEO_READY_TIMEOUT_MS = 8000;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const desktopVideo = matchMedia('(min-width: 900px)');
   const connection = navigator.connection;
@@ -54,8 +53,9 @@
     ]);
   };
 
-  const videoReady = prepareVideo();
-  Promise.all([waitForPage, waitForFonts, videoReady]).then(hideLoader);
+  // The hero video is enhancement only; it must never block first paint or the loader.
+  prepareVideo();
+  Promise.all([waitForPage, waitForFonts]).then(hideLoader);
 
   const startVideo = () => {
     if (!canLoadVideo()) return;
@@ -95,24 +95,6 @@
     deferredImages.forEach((image) => imageObserver.observe(image));
   } else {
     deferredImages.forEach(loadDeferredImage);
-  }
-
-  const reviewsWidget = document.querySelector('[data-trustindex-src]');
-  if (reviewsWidget) {
-    const loadReviews = () => {
-      if (!reviewsWidget.dataset.trustindexSrc) return;
-      const script = document.createElement('script');
-      script.src = reviewsWidget.dataset.trustindexSrc;
-      script.async = true;
-      reviewsWidget.append(script);
-      reviewsWidget.removeAttribute('data-trustindex-src');
-    };
-    const reviewsObserver = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      loadReviews();
-      reviewsObserver.disconnect();
-    }, { rootMargin: '600px 0px', threshold: 0.01 });
-    reviewsObserver.observe(reviewsWidget);
   }
 
   const revealObserver = new IntersectionObserver((entries) => {
