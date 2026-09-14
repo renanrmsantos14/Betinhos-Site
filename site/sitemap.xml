@@ -3,10 +3,9 @@
   <url>
     <loc>https://betinhos.com.br/</loc>
   </url>
-  <url>
-    <loc>https://betinhos.com.br/?lang=en</loc>
-  </url>
-  <url>
-    <loc>https://betinhos.com.br/?lang=es</loc>
-  </url>
+  <url><loc>https://betinhos.com.br/servicos/transporte-executivo-corporativo/</loc></url>
+  <url><loc>https://betinhos.com.br/servicos/transfer-aeroportos/</loc></url>
+  <url><loc>https://betinhos.com.br/servicos/van-executiva-grupos-eventos/</loc></url>
+  <url><loc>https://betinhos.com.br/destinos/sao-jose-dos-campos/</loc></url>
+  <url><loc>https://betinhos.com.br/privacidade/</loc></url>
 </urlset>

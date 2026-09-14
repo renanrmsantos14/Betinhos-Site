@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build:css": "node scripts/build-site-css.mjs",
+    "build:deploy": "node scripts/build-deploy.mjs",
     "predev": "npm run build:css",
     "dev": "vite site --host 0.0.0.0 --port 27349",
-    "test:mobile": "node --test --test-concurrency=1 tests/mobile.spec.mjs"
+    "test:mobile": "node --test --test-concurrency=1 tests/mobile.spec.mjs",
+    "test:seo": "node --test tests/seo.spec.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.28.1",
