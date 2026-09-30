@@ -1,6 +1,5 @@
 (() => {
   const MINIMUM_LOADER_MS = 1000;
-  const VIDEO_READY_TIMEOUT_MS = 8000;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const desktopVideo = matchMedia('(min-width: 900px)');
   const connection = navigator.connection;
@@ -54,8 +53,9 @@
     ]);
   };
 
-  const videoReady = prepareVideo();
-  Promise.all([waitForPage, waitForFonts, videoReady]).then(hideLoader);
+  // The hero video is enhancement only; it must never block first paint or the loader.
+  prepareVideo();
+  Promise.all([waitForPage, waitForFonts]).then(hideLoader);
 
   const startVideo = () => {
     if (!canLoadVideo()) return;

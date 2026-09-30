@@ -3,8 +3,8 @@
 
   const CATALOG = {
     pt: {
-      "meta.title": "Betinhos Executive Service | Transporte executivo",
-      "meta.description": "Transporte executivo, veículos blindados e proteção para operações corporativas em São Paulo, Vale do Paraíba e Rio de Janeiro.",
+      "meta.title": "Transporte executivo em São José dos Campos | Betinhos",
+      "meta.description": "Transporte executivo corporativo em São José dos Campos e Vale do Paraíba, com atendimento sob consulta para empresas, aeroportos e eventos.",
       "nav.label": "Navegação principal",
       "nav.company": "A empresa",
       "nav.services": "Frota e serviços",
@@ -23,6 +23,7 @@
       "hero.line1": "Você dirige seu mundo,",
       "hero.line2": "e nós te",
       "hero.line3": "levamos até lá.",
+      "hero.intent": "Transporte executivo corporativo em São José dos Campos e Vale do Paraíba.",
       "hero.primary": "Solicitar atendimento",
       "hero.secondary": "Conhecer a frota",
       "hero.scrollCue": "Ver mais",
@@ -226,14 +227,14 @@
       "team.marcos.role": "Estagiário",
       "reviews.tag": "Avaliações no Google",
       "reviews.title": "Avaliações sobre a Betinhos.",
-      "reviews.text": "Consulte a nota e as avaliações diretamente na ficha oficial da Betinhos. As informações exibidas são atualizadas pelo Google.",
+      "reviews.text": "Consulte a nota e o snapshot de avaliações na ficha oficial da Betinhos.",
       "reviews.cta": "Avaliar a Betinhos no Google",
       "reviews.label": "Avaliações da Betinhos no Google",
       "reviews.card.label": "Acesso às avaliações da Betinhos no Google",
       "reviews.card.review1.text": "Serviço de primeira!!! Pontual, o carro impecável, limpo e confortável, o motorista atencioso e gentil. Indico com certeza.",
       "reviews.card.review2.text": "Excelente serviço! A Betinhos Executive Service oferece transporte com pontualidade, segurança e conforto. O atendimento e a gestão administrativa de agendamentos funciona muito bem. Todos os motoristas são extremamente profissionais, atenciosos e trabalham com extrema segurança no trânsito. Os veículos estão sempre em ótimas condições e possuem sistema de gestão da frota, o que dá mais segurança para a viagem. Recomendo a empresa pela qualidade do atendimento e pela confiança que transmite aos clientes. Parabéns pelo excelente trabalho!",
       "reviews.card.review3.text": "Excelente atendimento e serviço prestado, motorista chegou pontualmente no local combinado.",
-      "reviews.card.meta": "Fonte: Google",
+      "reviews.card.meta": "Fonte: Google · consultado em 14/09/2026",
       "reviews.card.cta": "Ver ficha completa",
       "faq.tag": "Perguntas frequentes",
       "faq.title": "O que você precisa saber antes da partida.",
@@ -285,8 +286,8 @@
       "widget.trigger": "Falar no WhatsApp"
     },
     en: {
-      "meta.title": "Betinhos Executive Service | Executive transportation",
-      "meta.description": "Executive transportation, armored vehicles and protection for corporate operations in São Paulo, Paraíba Valley and Rio de Janeiro.",
+      "meta.title": "Executive transportation in São José dos Campos | Betinhos",
+      "meta.description": "Corporate executive transportation in São José dos Campos and Vale do Paraíba, with service by quote for companies, airports and events.",
       "nav.label": "Main navigation",
       "nav.company": "The company",
       "nav.services": "Fleet & services",
@@ -305,6 +306,7 @@
       "hero.line1": "You steer your world,",
       "hero.line2": "and we",
       "hero.line3": "take you there.",
+      "hero.intent": "Corporate executive transportation in São José dos Campos and Vale do Paraíba.",
       "hero.primary": "Request service",
       "hero.secondary": "Explore the fleet",
       "hero.scrollCue": "View more",
@@ -508,14 +510,14 @@
       "team.marcos.role": "Trainee",
       "reviews.tag": "Google reviews",
       "reviews.title": "Reviews of Betinhos.",
-      "reviews.text": "View the rating and reviews directly on Betinhos' official profile. The information shown is updated by Google.",
+      "reviews.text": "View the rating and review snapshot on Betinhos' official profile.",
       "reviews.cta": "Review Betinhos on Google",
       "reviews.label": "Betinhos reviews on Google",
       "reviews.card.label": "Access Betinhos reviews on Google",
       "reviews.card.review1.text": "First-class service!!! Punctual, immaculate, clean and comfortable car, attentive and kind driver. I highly recommend it.",
       "reviews.card.review2.text": "Excellent service! Betinhos Executive Service provides transportation with punctuality, safety and comfort. The scheduling support and administrative management work very well. All drivers are highly professional, attentive and drive with great care. The vehicles are always in excellent condition, and the fleet management system adds even more security to the trip. I recommend the company for its quality of service and the trust it conveys to its clients. Congratulations on the excellent work!",
       "reviews.card.review3.text": "Excellent service and support; the driver arrived punctually at the agreed location.",
-      "reviews.card.meta": "Source: Google",
+      "reviews.card.meta": "Source: Google · consulted 14 Sep 2026",
       "reviews.card.cta": "View full profile",
       "faq.tag": "Frequently asked questions",
       "faq.title": "What you need to know before departure.",
@@ -567,8 +569,8 @@
       "widget.trigger": "Talk on WhatsApp"
     },
     es: {
-      "meta.title": "Betinhos Executive Service | Transporte ejecutivo",
-      "meta.description": "Transporte ejecutivo, vehículos blindados y protección para operaciones corporativas en São Paulo, Valle de Paraíba y Río de Janeiro.",
+      "meta.title": "Transporte ejecutivo en São José dos Campos | Betinhos",
+      "meta.description": "Transporte ejecutivo corporativo en São José dos Campos y Vale do Paraíba, con atención bajo cotización para empresas, aeropuertos y eventos.",
       "nav.label": "Navegación principal",
       "nav.company": "La empresa",
       "nav.services": "Flota y servicios",
@@ -587,6 +589,7 @@
       "hero.line1": "Usted dirige su mundo,",
       "hero.line2": "y nosotros lo",
       "hero.line3": "llevamos hasta allí.",
+      "hero.intent": "Transporte ejecutivo corporativo en São José dos Campos y Vale do Paraíba.",
       "hero.primary": "Solicitar atención",
       "hero.secondary": "Conocer la flota",
       "hero.scrollCue": "Ver más",
@@ -790,14 +793,14 @@
       "team.marcos.role": "Pasante",
       "reviews.tag": "Reseñas en Google",
       "reviews.title": "Reseñas sobre Betinhos.",
-      "reviews.text": "Consulte la calificación y las reseñas directamente en el perfil oficial de Betinhos. La información mostrada es actualizada por Google.",
+      "reviews.text": "Consulte la calificación y el snapshot de reseñas en el perfil oficial de Betinhos.",
       "reviews.cta": "Calificar a Betinhos en Google",
       "reviews.label": "Reseñas de Betinhos en Google",
       "reviews.card.label": "Acceso a las reseñas de Betinhos en Google",
       "reviews.card.review1.text": "¡Servicio de primera! Puntualidad, coche impecable, limpio y cómodo, con un conductor atento y amable. Lo recomiendo sin duda.",
       "reviews.card.review2.text": "¡Excelente servicio! Betinhos Executive Service ofrece transporte con puntualidad, seguridad y comodidad. La atención y la gestión administrativa de las reservas funcionan muy bien. Todos los conductores son muy profesionales, atentos y trabajan con gran seguridad en el tráfico. Los vehículos siempre están en excelentes condiciones y el sistema de gestión de la flota aporta aún más seguridad al viaje. Recomiendo la empresa por la calidad de su atención y la confianza que transmite a sus clientes. ¡Felicidades por el excelente trabajo!",
       "reviews.card.review3.text": "Excelente atención y servicio; el conductor llegó puntualmente al lugar acordado.",
-      "reviews.card.meta": "Fuente: Google",
+      "reviews.card.meta": "Fuente: Google · consultado el 14/09/2026",
       "reviews.card.cta": "Ver perfil completo",
       "faq.tag": "Preguntas frecuentes",
       "faq.title": "Lo que necesita saber antes de la salida.",
@@ -863,6 +866,7 @@
     [".hero-copy h1 span:nth-child(1)", "hero.line1"],
     [".hero-copy h1 span:nth-child(2)", "hero.line2"],
     [".hero-copy h1 span:nth-child(3)", "hero.line3"],
+    [".hero-intent", "hero.intent"],
     [".hero-actions a:nth-child(1)", "hero.primary"],
     [".hero-actions a:nth-child(2)", "hero.secondary"],
     [".hero-scroll-cue span", "hero.scrollCue"],
@@ -1245,7 +1249,8 @@
     if (document.title !== translate("meta.title")) document.title = translate("meta.title");
     const description = document.querySelector('meta[name="description"]');
     if (description.content !== translate("meta.description")) description.content = translate("meta.description");
-    const publicUrl = languageUrls[activeLanguage];
+    // EN/ES remain UX translations via ?lang; organic signals stay on the clean PT URL.
+    const publicUrl = languageUrls.pt;
     document.querySelector('link[rel="canonical"]')?.setAttribute("href", publicUrl);
     document.querySelector('meta[property="og:title"]')?.setAttribute("content", translate("meta.title"));
     document.querySelector('meta[property="og:description"]')?.setAttribute("content", translate("meta.description"));
