@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { after, before, test } from "node:test";
 import { chromium } from "playwright";
 import { createServer } from "vite";
@@ -366,6 +366,12 @@ test("all configured translations resolve without missing-target warnings", asyn
 
 test("language stays synchronized across URL, storage, DOM, reload and browser history", async () => {
   const { context, page } = await openMobilePage();
+  const anniversary = page.locator(".hero-anniversary .anniversary-mark__number");
+
+  assert.equal(await anniversary.evaluate((element) => element.tagName), "SPAN");
+  assert.equal(await anniversary.getAttribute("role"), "img");
+  assert.equal(await anniversary.getAttribute("aria-label"), "40 ANOS");
+
   await page.locator(".mobile-menu-toggle").click();
   await page.locator(".mobile-menu .lang-switch [data-lang='en']").click();
 
@@ -395,12 +401,7 @@ test("language stays synchronized across URL, storage, DOM, reload and browser h
     await page.locator(".office-carousel").getAttribute("aria-roledescription"),
     "carousel",
   );
-  assert.equal(
-    await page
-      .locator(".hero-anniversary .anniversary-mark__number")
-      .getAttribute("aria-label"),
-    "40 YEARS",
-  );
+  assert.equal(await anniversary.getAttribute("aria-label"), "40 YEARS");
 
   await page.locator(".mobile-menu .lang-switch [data-lang='es']").click();
   assert.match(
@@ -411,6 +412,7 @@ test("language stays synchronized across URL, storage, DOM, reload and browser h
     await page.locator(".office-carousel").getAttribute("aria-roledescription"),
     "carrusel",
   );
+  assert.equal(await anniversary.getAttribute("aria-label"), "40 AÑOS");
   await page.goBack();
   await page.waitForTimeout(100);
   assert.equal(
@@ -459,6 +461,35 @@ test("mobile carousels and fleet controls expose their state after interaction",
     "history-slide-2",
   );
   await context.close();
+});
+
+test("fleet cards use native list semantics", async () => {
+  const { context, page } = await openMobilePage();
+
+  assert.equal(await page.locator("#servicos-frota").evaluate((element) => element.tagName), "UL");
+  assert.equal(await page.locator("#servicos-frota > li.service-card").count(), 5);
+  assert.equal(await page.locator("#servicos-frota > article").count(), 0);
+  assert.equal(
+    await page.locator(".readiness-panel__stages").evaluate((element) => element.tagName),
+    "UL",
+  );
+  assert.equal(await page.locator(".readiness-panel__stages > li.readiness-stage").count(), 3);
+
+  await context.close();
+});
+
+test("llms.txt keeps Markdown links for site channels", () => {
+  const llms = readFileSync("site/llms.txt", "utf8");
+
+  assert.match(llms, /^# Betinhos Executive Service/m);
+  for (const url of [
+    "https://betinhos.com.br/",
+    "https://wa.me/5512997236961",
+    "https://www.instagram.com/betinhosexecutiveservice/",
+    "https://br.linkedin.com/company/betinhosexecutiveservice",
+  ]) {
+    assert.match(llms, new RegExp(`\\]\\(${url.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")}\\)`));
+  }
 });
 
 test("hero anniversary masks the zero like the color reference", async () => {
