@@ -45,7 +45,7 @@ class BetinhosAnniversary extends HTMLElement {
     const values = this.getAttribute("values")?.trim();
 
     const body = createElement("span", "anniversary-mark__body");
-    const number = createElement("strong", "anniversary-mark__number");
+    const number = createElement("span", "anniversary-mark__number");
     const content = createElement("span", "anniversary-mark__content");
     const labelElement = createElement(
       years === "40" ? "span" : "small",
@@ -55,6 +55,7 @@ class BetinhosAnniversary extends HTMLElement {
     const labelledBy = [];
 
     number.id = `${this.instanceId}-number`;
+    number.setAttribute("role", "img");
     number.setAttribute("aria-label", years);
     if (years !== "40") labelElement.id = `${this.instanceId}-label`;
     labelElement.setAttribute("aria-hidden", "true");
