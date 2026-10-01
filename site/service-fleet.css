@@ -152,7 +152,8 @@
   overflow-anchor: none;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  padding: 2px 0 24px;
+  overflow-y: hidden;
+  padding: 12px 0 40px;
   scroll-padding-inline: 0;
   scroll-behavior: smooth;
   scroll-snap-type: inline mandatory;
